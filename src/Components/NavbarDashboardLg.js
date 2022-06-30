@@ -6,7 +6,7 @@ import ExportIcons from '../Helpers/ExportIcons';
 
 export default function NavbarDashboardLg() {
     return (
-        <nav className="position-sticky top-0 flex-column flex-shrink-0 ps-3 py-3 text-white bg-dark vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
+        <nav className="position-sticky top-0 flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
 
             <a className="mb-md-0 me-md-auto text-white text-decoration-none">
                 <img src={Brand} width="180" className="d-none d-md-block" alt="incommun" />
@@ -18,7 +18,7 @@ export default function NavbarDashboardLg() {
 
                 <li class="nav-item">
                     <a class="nav-link rounded-0 rounded-start fs-5 font-weight-semiBold text-white">
-                        <ExportIcons.Preco />
+                        <ExportIcons.Preco className="me-2" />
                         Preços
                     </a>
 
@@ -26,28 +26,28 @@ export default function NavbarDashboardLg() {
 
                         <li class="nav-item">
                             <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.MarketingDigitalIcon />
+                                <ExportIcons.MarketingDigitalIcon className="me-2 colorIconWhite" />
                                 Marketing Digital
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.DesignGrafico />
+                                <ExportIcons.DesignGrafico className="me-2 colorIconWhite" />
                                 Design Gráfico
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5 active">
-                                <ExportIcons.WebsiteLojaOnline />
+                            <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
+                                <ExportIcons.WebsiteLojaOnline className="me-2 colorIconWhite" />
                                 Website &#38; Loja Online
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.ComunicacaoConsultoria />
+                                <ExportIcons.ComunicacaoConsultoria className="me-2 colorIconWhite" />
                                 Comunicação &#38; Consultoria
                             </a>
                         </li>
@@ -58,25 +58,84 @@ export default function NavbarDashboardLg() {
 
                 <li class="pt-4">
                     <a class="nav-link text-white fs-5 font-weight-semiBold">
-                        <svg id="icon_products" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24">
-                            <g id="summarize_white_24dp">
-                                <g id="Grupo_274" data-name="Grupo 274">
-                                    <path id="Caminho_376" data-name="Caminho 376" d="M0,0H24V24H0Z" fill="none" />
-                                </g>
-                                <g id="Grupo_276" data-name="Grupo 276" transform="translate(3 3)">
-                                    <g id="Grupo_275" data-name="Grupo 275">
-                                        <path id="Caminho_377" data-name="Caminho 377"
-                                            d="M15,3H5A2,2,0,0,0,3.01,5L3,19a2,2,0,0,0,1.99,2H19a2.006,2.006,0,0,0,2-2V9ZM8,17a1,1,0,1,1,1-1A1,1,0,0,1,8,17Zm0-4a1,1,0,1,1,1-1A1,1,0,0,1,8,13ZM8,9A1,1,0,1,1,9,8,1,1,0,0,1,8,9Zm6,1V4.5L19.5,10Z"
-                                            transform="translate(-3 -3)" fill="#fff" />
-                                    </g>
-                                </g>
-                            </g>
-                        </svg>
+                        <ExportIcons.Orcamento className="me-2" />
                         Orçamento
                     </a>
 
+                    <ul class="nav nav-pills flex-column mb-auto pt-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
+                                <ExportIcons.Ver className="me-2 colorIconWhite" />
+                                Ver orçamentos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
+                                <ExportIcons.Novo className="me-2 colorIconWhite" />
+                                Novo orçamento
+                            </a>
+                        </li>
+
+                    </ul>
+
                 </li>
+
+                <li class="pt-4">
+                    <a class="nav-link text-white fs-5 font-weight-semiBold">
+                        <ExportIcons.Cliente className='me-2 colorIconWhite' />
+                        Cliente
+                    </a>
+
+                    <ul class="nav nav-pills flex-column mb-auto pt-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
+                                <ExportIcons.Ver className='me-2 colorIconWhite' />
+                                Ver clientes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
+                                <ExportIcons.Novo className='me-2 colorIconWhite' />
+                                Novo Cliente
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="pt-4">
+                    <a class="nav-link text-white fs-5 font-weight-semiBold">
+                        <ExportIcons.Dados className='me-2 colorIconWhite' />
+                        Dados
+                    </a>
+
+                    <ul class="nav nav-pills flex-column mb-auto pt-1">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
+                                <ExportIcons.Ver className='me-2 colorIconWhite' />
+                                Ver dados
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <hr />
+
+                <div class="dropdown">
+                    <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <strong>Mariana de Lurdes</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item">Sair</a></li>
+                    </ul>
+                </div>
 
             </ul>
 

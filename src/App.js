@@ -7,6 +7,6 @@ import Dashboard from './Pages/Dashboard';
 
 export default function App() {
   return (
-    <Client.MarketingDigital />
+    <Dashboard.Home />
   );
 }
