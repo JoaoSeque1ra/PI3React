@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Breadcrumbs(props) {
     return (
-        <div className="col-md-12 col-lg-10 offset-lg-1 font-weight-semiBold font-size-1__5rem">
+        <div className="col-md-12 col-lg-10 offset-lg-1 font-weight-semiBold fs-4">
             Orçamento <span className={ changeTextColor(props) }>{ changeRoute(props) }</span>
         </div>
     );
@@ -13,5 +13,5 @@ function changeRoute(props) {
 }
 
 function changeTextColor(props) {
-    return "font-weight-bold "+ props.textColor;
+    return "fw-bold "+ props.textColor;
 }

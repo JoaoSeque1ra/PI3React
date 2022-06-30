@@ -14,7 +14,7 @@ export default function Main() {
                 <div className="row vh-100">
                     <div className="col-md-12 col-lg-7 pt-pageLeft">
                         <div className="row">
-                            <Breadcrumbs route="/ Marketing Digital" textColor="text-yellow" />
+                            <Breadcrumbs route="/ Marketing Digital" textColor="text-yellow"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
                                 <CheckBox name="Gestão de redes Sociais" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
@@ -40,8 +40,7 @@ export default function Main() {
                         </div>
                     </div>
 
-                    <div className="col-md-12 col-lg-5 d-md-flex justify-content-center align-items-center 
-                        bg-yellow pt-pageRight d-none position-fixed end-0 vh-100">
+                    <div className="col-md-12 col-lg-5 d-none d-lg-flex justify-content-center align-items-center bg-yellow pt-pageRight position-fixed end-0 vh-100">
                         <div className="row">
                             <div className="col-md-auto">
                                 <img src={ImagemMarketingDigital} className="img-fluid" alt="Marketing Digital Imagem" />

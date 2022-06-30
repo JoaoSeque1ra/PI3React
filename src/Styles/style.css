@@ -17,16 +17,21 @@
     --white: #fff;
     --black: #000;
     --borderColor: #DDDDDD;
-    --cardColorOpacity: #dddddd49;
     --checkBoxColor: #fbfbfb;
     --checkBoxColorDisable: #c9c9c9;
-    --transparent: #fefefe00;
+    --grayDashboard: #555555;
+    --grayDashboardHover: #777777;
+    --cardsColorDashboard: hsla(0, 0%, 0%, 0.03);
+
+    --cardColorOpacity: #dddddd49;
 }
 
 body {
     font-family: 'Poppins', sans-serif !important;
     scroll-behavior: smooth;
 }
+
+/*----Background color----*/
 
 .bg-yellow {
     background-color: var(--incommunYellow) !important;
@@ -40,12 +45,28 @@ body {
     background-color: var(--incommunBlue) !important;; 
 }
 
+.bg-red {
+    background-color: var(--incommunRed) !important;
+}
+
 .bg-blue-dark {
     background-color: var(--incommunBlueDark) !important;; 
 }
 
 .bg-purple {
     background-color: var(--incommunPurple) !important;
+}
+
+.bg-gray {
+    background-color: var(--grayDashboard) !important;
+}
+
+.bg-checkBox {
+    background-color: var(--checkBoxColor) !important;
+}
+
+.bg-cardsDashboard {
+    background-color: var(--cardsColorDashboard) !important;
 }
 
 .bg-borderColor {
@@ -63,6 +84,8 @@ body {
 .bg-disable {
     background-color: var(--checkBoxColorDisable);
 }
+
+/*----Text color----*/
 
 .text-black {
     color: var(--black) !important;
@@ -91,9 +114,17 @@ body {
     color: var(--incommunPurple) !important;
 }
 
-.cursor-pointer {
-    cursor: pointer;
+/*----Text weight and size----*/
+
+.font-weight-semiBold {
+    font-weight: 600;
 }
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+/*----Padding Page----*/
 
 .pt-pageLeft {
     padding-top: 9rem !important;
@@ -103,16 +134,21 @@ body {
     padding-top: 6rem !important;
 }
 
-.font-weight-semiBold {
-    font-weight: 600;
+/*----Global----*/
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
-.font-size-1__5rem {
-    font-size: 1.5rem;
+.h-70px {
+    height: 70px;
 }
 
+.vh-35 {
+    height: 35vh;
+}
 
-/*--------------NAVBAR---------------------*/
+/*--------------Navbar Client---------------------*/
 
 .navbar {
     padding: 30px 50px !important;
@@ -121,15 +157,6 @@ body {
 .navbar-toggler {
     border: 0 !important;
     color: var(--white) !important;
-}
-
-/*--------------Opções---------------------*/
-
-/*--------------checkBox---------------------*/
-
-.bg-checkBox {
-    background-color: var(--checkBoxColor) !important;
-    border-radius: 0;
 }
 
 /*--------------Icons checkBox---------------------*/
@@ -150,7 +177,8 @@ body {
     fill: var(--white);
 }
 
-/*Hover do icons*/
+/*--------------Icons Hover---------------------*/
+
 .bg-checkBox:hover .colorIconPurple{
     fill: var(--white);
 }
@@ -163,45 +191,11 @@ body {
     fill: var(--white);
 }
 
-
-
-/*--------------checkBox hover color---------------------*/
-
-.bg-checkBoxYellow:hover {
-    background-color: var(--incommunYellowDark) !important;
-}
-
-.bg-checkBoxYellow:hover .form-control {
-    color: var(--white) !important;
-}
-
-.bg-checkBoxOrange:hover {
-    background-color: var(--incommunOrangeDark) !important;
-}
-
-.bg-checkBoxOrange:hover .form-control {
-    color: var(--white) !important;
-}
-
-.bg-checkBoxBlue:hover {
-    background-color: var(--incommunBlueDark) !important;
-}
-
-.bg-checkBoxBlue:hover .form-control {
-    color: var(--white) !important;
-}
-
-.bg-checkBoxPurple:hover {
-    background-color: var(--incommunPurpleDark) !important;
-}
-
-.bg-checkBoxPurple:hover .form-control {
-    color: var(--white) !important;
-}
+/*--------------CheckBox---------------------*/
 
 input[type="checkbox"] {
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: 20px;
     appearance: none;
     background-color: var(--white) !important;
     border: var(--borderColor) 1px solid !important;
@@ -223,31 +217,50 @@ input[type="checkbox"]:checked::after {
     display: block;
 }
 
-/*--------------Mais e menos---------------------*/
+/*--------------CheckBox hover---------------------*/
 
-.bg-transparent p {
-    margin-bottom: 0;
+.bg-checkBoxYellow:hover {
+    background-color: var(--incommunYellowDark) !important;
 }
 
-/*-----------botões seguinte e anterior-----------------*/
+.bg-checkBoxOrange:hover {
+    background-color: var(--incommunOrangeDark) !important;
+}
+
+.bg-checkBoxBlue:hover {
+    background-color: var(--incommunBlueDark) !important;
+}
+
+.bg-checkBoxPurple:hover {
+    background-color: var(--incommunPurpleDark) !important;
+}
+
+.bg-checkBoxYellow:hover .form-control {
+    color: var(--white) !important;
+}
+
+.bg-checkBoxOrange:hover .form-control {
+    color: var(--white) !important;
+}
+
+.bg-checkBoxBlue:hover .form-control {
+    color: var(--white) !important;
+}
+
+.bg-checkBoxPurple:hover .form-control {
+    color: var(--white) !important;
+}
+
+/*-----------Botões Color-----------------*/
 
 .btn-yellow {
     background-color: var(--incommunYellow) !important;
     color: var(--white) !important;
 }
 
-.btn-yellow:hover {
-    background-color: var(--incommunYellowDark) !important;
-}
-
 .btn-orange {
     background-color: var(--incommunOrange) !important;
     color: var(--white) !important;
-    
-}
-
-.btn-orange:hover {
-    background-color: var(--incommunOrangeDark) !important;
 }
 
 .btn-blue {
@@ -260,16 +273,26 @@ input[type="checkbox"]:checked::after {
     color: var(--white) !important;
 }
 
-.btn-purple:hover {
-    background-color: var(--incommunPurpleDark) !important;
-}
-
 .btn-transparent {
     background-color: rgba(0,0,0,0) !important;
 }
 
+/*-----------Botões Hover-----------------*/
+
+.btn-yellow:hover {
+    background-color: var(--incommunYellowDark) !important;
+}
+
+.btn-orange:hover {
+    background-color: var(--incommunOrangeDark) !important;
+}
+
+.btn-purple:hover {
+    background-color: var(--incommunPurpleDark) !important;
+}
 
 /*-----------Cartões-----------------*/
+/*REVER FALAR COM A RAQUEL E O JOÃO*/
 .card-paidmedia-gestaoredessociais{
     text-align: center !important;
     height: 646px !important;
@@ -293,17 +316,8 @@ input[type="checkbox"]:checked::after {
     font-size: 17px !important;
 }
 
-/*-----------Media Query-----------------*/
-
-@media only screen and (max-width: 600px) {
-    .font-size-1__5rem {
-      font-size: 1.1rem;
-    }
-}
-
-
-/*Página Final*/
-
+/*-----------Agradecimento-----------------*/
+/*REVER FALAR COM A MARIANA*/
 
 .fundo-obrigada{
     position:relative;
@@ -313,10 +327,6 @@ input[type="checkbox"]:checked::after {
     font-size: 100px;
     padding: 0%;
     margin-top: 15%;
-    
-
-    
-
 }
 
 .texto-fundo{
@@ -331,11 +341,50 @@ input[type="checkbox"]:checked::after {
     background-color: #8fb5c7 !important;
 }
 
-b{
+b {
     position:relative;
     color:transparent;
     -webkit-text-stroke: 1px white;
     padding: 0%;
-
 }
 
+/*-----------Dashboard-----------------*/
+/*--------------Navbar---------------------*/
+
+.nav-link:hover {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.active {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.barNav {
+    position: absolute;
+    top: 0;
+    left: 341px;
+    border-left: 2px solid var(--grayDashboardHover);
+    height: 100%;
+}
+
+/*--------------Button---------------------*/
+
+.btn-gray {
+    background-color: var(--grayDashboard) !important;
+}
+
+.btn-gray:hover {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.btn-gray a {
+    color: var(--white) !important;
+}
+
+.page-link {
+    color: var(--black) !important;
+}
