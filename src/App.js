@@ -6,6 +6,6 @@ import Client from "./Pages/Client/index";
 
 export default function App() {
   return (
-    <Client.MarketingDigital />
+    <Client.Home />
   );
 }
