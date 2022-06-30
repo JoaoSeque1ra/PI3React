@@ -1,0 +1,341 @@
+/*--------------GLOBAL---------------------*/
+
+:root {
+    --incommunYellow: #ffcc00;
+    --incommunYellowDark: #deb200;
+    --incommunRed: #fc6049;
+    --incommunRedDark: #d01101;
+    --incommunOrange: #ffa373;
+    --incommunOrangeDark: #f55622;
+    --incommunBlue: #64c3c7;
+    --incommunBlueDark: #008183;
+    --incommunMarron: #dcd587;
+    --incommunMarronDark: #c8c059;
+    --incommunPurple: #caa9e8;
+    --incommunPurpleDark: #a46eae;
+    --incommunMenu: rgba(0,0,0,.2);
+    --white: #fff;
+    --black: #000;
+    --borderColor: #DDDDDD;
+    --cardColorOpacity: #dddddd49;
+    --checkBoxColor: #fbfbfb;
+    --checkBoxColorDisable: #c9c9c9;
+    --transparent: #fefefe00;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+.bg-yellow {
+    background-color: var(--incommunYellow) !important;
+}
+
+.bg-orange {
+    background-color: var(--incommunOrange) !important;
+}
+
+.bg-blue {
+    background-color: var(--incommunBlue) !important;; 
+}
+
+.bg-blue-dark {
+    background-color: var(--incommunBlueDark) !important;; 
+}
+
+.bg-purple {
+    background-color: var(--incommunPurple) !important;
+}
+
+.bg-borderColor {
+    background-color: var(--borderColor) !important;
+}
+
+.bg-cardColorOpacity {
+    background-color: var(--cardColorOpacity) !important;
+}
+
+.bg-navBar {
+    background-color: var(--incommunMenu);
+}
+
+.bg-disable {
+    background-color: var(--checkBoxColorDisable);
+}
+
+.text-black {
+    color: var(--black) !important;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-yellow {
+    color: var(--incommunYellow) !important;
+}
+
+.text-orange {
+    color: var(--incommunOrange) !important;
+}
+
+.text-blue {
+    color: var(--incommunBlue) !important;
+}
+
+.text-blue-dark {
+    color: var(--incommunBlueDark) !important;
+}
+.text-purple {
+    color: var(--incommunPurple) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.pt-pageLeft {
+    padding-top: 9rem !important;
+}
+
+.pt-pageRight {
+    padding-top: 6rem !important;
+}
+
+.font-weight-semiBold {
+    font-weight: 600;
+}
+
+.font-size-1__5rem {
+    font-size: 1.5rem;
+}
+
+
+/*--------------NAVBAR---------------------*/
+
+.navbar {
+    padding: 30px 50px !important;
+}
+
+.navbar-toggler {
+    border: 0 !important;
+    color: var(--white) !important;
+}
+
+/*--------------Opções---------------------*/
+
+/*--------------checkBox---------------------*/
+
+.bg-checkBox {
+    background-color: var(--checkBoxColor) !important;
+    border-radius: 0;
+}
+
+/*--------------Icons checkBox---------------------*/
+
+.colorIconOrange {
+    fill: var(--incommunOrangeDark);
+}
+
+.colorIconYellow {
+    fill: var(--incommunYellow);
+}
+
+.colorIconPurple {
+    fill: var(--incommunPurple);
+}
+
+.colorIconWhite {
+    fill: var(--white);
+}
+
+/*Hover do icons*/
+.bg-checkBox:hover .colorIconPurple{
+    fill: var(--white);
+}
+
+.bg-checkBox:hover .colorIconYellow{
+    fill: var(--white);
+}
+
+.bg-checkBox:hover .colorIconOrange{
+    fill: var(--white);
+}
+
+
+
+/*--------------checkBox hover color---------------------*/
+
+.bg-checkBoxYellow:hover {
+    background-color: var(--incommunYellowDark) !important;
+}
+
+.bg-checkBoxYellow:hover .form-control {
+    color: var(--white) !important;
+}
+
+.bg-checkBoxOrange:hover {
+    background-color: var(--incommunOrangeDark) !important;
+}
+
+.bg-checkBoxOrange:hover .form-control {
+    color: var(--white) !important;
+}
+
+.bg-checkBoxBlue:hover {
+    background-color: var(--incommunBlueDark) !important;
+}
+
+.bg-checkBoxBlue:hover .form-control {
+    color: var(--white) !important;
+}
+
+.bg-checkBoxPurple:hover {
+    background-color: var(--incommunPurpleDark) !important;
+}
+
+.bg-checkBoxPurple:hover .form-control {
+    color: var(--white) !important;
+}
+
+input[type="checkbox"] {
+    height: 18px;
+    width: 18px;
+    appearance: none;
+    background-color: var(--white) !important;
+    border: var(--borderColor) 1px solid !important;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 15px;
+    content: "\f00c";
+    display: none;
+}
+
+input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+/*--------------Mais e menos---------------------*/
+
+.bg-transparent p {
+    margin-bottom: 0;
+}
+
+/*-----------botões seguinte e anterior-----------------*/
+
+.btn-yellow {
+    background-color: var(--incommunYellow) !important;
+    color: var(--white) !important;
+}
+
+.btn-yellow:hover {
+    background-color: var(--incommunYellowDark) !important;
+}
+
+.btn-orange {
+    background-color: var(--incommunOrange) !important;
+    color: var(--white) !important;
+    
+}
+
+.btn-orange:hover {
+    background-color: var(--incommunOrangeDark) !important;
+}
+
+.btn-blue {
+    background-color: var(--incommunBlue) !important;
+    color: var(--white) !important;
+}
+
+.btn-purple {
+    background-color: var(--incommunPurple) !important;
+    color: var(--white) !important;
+}
+
+.btn-purple:hover {
+    background-color: var(--incommunPurpleDark) !important;
+}
+
+.btn-transparent {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+
+/*-----------Cartões-----------------*/
+.card-paidmedia-gestaoredessociais{
+    text-align: center !important;
+    height: 646px !important;
+    border: 1px solid var(--incommunYellow) !important;
+    border-radius: 3rem !important;
+}
+
+.card-personalizar{
+    border: 0px solid var(--cardColorOpacity) !important;
+}
+
+.card-text{
+    font-size:17px !important;
+}
+
+.card-title{
+    font-size: 22px !important;
+}
+
+.card-subtitle{
+    font-size: 17px !important;
+}
+
+/*-----------Media Query-----------------*/
+
+@media only screen and (max-width: 600px) {
+    .font-size-1__5rem {
+      font-size: 1.1rem;
+    }
+}
+
+
+/*Página Final*/
+
+
+.fundo-obrigada{
+    position:relative;
+    color:transparent;
+    text-align: center;
+    -webkit-text-stroke: 1px white;
+    font-size: 100px;
+    padding: 0%;
+    margin-top: 15%;
+    
+
+    
+
+}
+
+.texto-fundo{
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 0%;
+    font-size: 150%;
+}
+
+.bg-blue{
+    background-color: #8fb5c7 !important;
+}
+
+b{
+    position:relative;
+    color:transparent;
+    -webkit-text-stroke: 1px white;
+    padding: 0%;
+
+}
+
