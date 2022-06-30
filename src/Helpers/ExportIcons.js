@@ -8,4 +8,6 @@ import { ReactComponent as PaidMedia } from '../Assets/Svg/paidMedia.svg';
 import { ReactComponent as EmailSMS } from '../Assets/Svg/emailSms.svg';
 import { ReactComponent as OtimizacaoSEOSEM } from '../Assets/Svg/otimizacaoSEOSEM.svg';
 
-export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM };
+import { ReactComponent as Preco } from '../Assets/Svg/precoDashboard.svg';
+
+export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco };
