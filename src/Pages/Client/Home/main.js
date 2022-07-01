@@ -30,8 +30,7 @@ export default function Main() {
                         </div>
                     </div>
                     
-                    <div className="col-md-12 col-lg-5 d-md-flex justify-content-center align-items-center 
-                        bg-yellow pt-pageRight d-none d-md-block position-lg-fixed end-0 vh-100">
+                    <div className="col-md-12 col-lg-5 d-none d-lg-flex justify-content-center align-items-center bg-yellow pt-pageRight position-fixed end-0 vh-100">
                         <div className="row position-lg-fixed">
                             <div className="col-md-auto text-white fs-1 text-weight-black">
                                 ativa

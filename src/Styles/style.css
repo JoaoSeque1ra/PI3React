@@ -1,4 +1,5 @@
 /*--------------GLOBAL---------------------*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
 
 :root {
     --incommunYellow: #ffcc00;
@@ -59,10 +60,6 @@ body {
 
 .bg-gray {
     background-color: var(--grayDashboard) !important;
-}
-
-.bg-checkBox {
-    background-color: var(--checkBoxColor) !important;
 }
 
 .bg-cardsDashboard {
@@ -218,6 +215,9 @@ input[type="checkbox"]:checked::after {
 }
 
 /*--------------CheckBox hover---------------------*/
+.bg-checkBoxYellow {
+    background-color: var(--incommunYellow) !important;
+}
 
 .bg-checkBoxYellow:hover {
     background-color: var(--incommunYellowDark) !important;
@@ -249,6 +249,10 @@ input[type="checkbox"]:checked::after {
 
 .bg-checkBoxPurple:hover .form-control {
     color: var(--white) !important;
+}
+
+.bg-checkBox {
+    background-color: var(--checkBoxColor) !important;
 }
 
 /*-----------Botões Color-----------------*/
