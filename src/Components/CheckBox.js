@@ -6,7 +6,7 @@ export default function CheckBox(props) {
     const [isActive, setIsActive] = useState(false);
 
     const handleClick = event => {
-        setIsActive(current => !current); //(current == false) => (current == true)
+        setIsActive(isActive => !isActive); //(current == false) => (current == true) TRUE -> foi selecionado 
     };
 
     function changeIcon(props) {

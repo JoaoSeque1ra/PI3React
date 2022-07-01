@@ -17,17 +17,17 @@ export default function Main() {
                             <Breadcrumbs route="/ Marketing Digital" textColor="text-yellow"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox name="Gestão de redes Sociais" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox function={countOnChange1} name="Gestão de redes Sociais" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                                 <CardsCheckBox text="Responsabilizamos-nos pelo planeamento e pela estratégia nos social media." />
 
-                                <CheckBox name="Paid Media" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox function={countOnChange2} name="Paid Media" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                                 <CardsCheckBox text="Consiste na promoção de conteúdo, recorrendo a anúncios pagos, para aumentar a exposição dos conteúdos que a empresa controla (como o site, por exemplo)."/>
 
-                                <CheckBox name="Email &#38; SMS marketing" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox function={countOnChange3} name="Email &#38; SMS marketing" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                                 <CardsCheckBox text="Utilização do Email e SMS&#39;s como ferramentas para ações de marketing. 
                                 Normalmente está associado à utilização de newsletters online."/>
 
-                                <CheckBox name="Otimização SEO e SEM" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox function={countOnChange4} name="Otimização SEO e SEM" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                                 <CardsCheckBox text="Conjunto de técnicas para otimizar a presença na web para motores de pesquisa, aumentando visitas e conversões orgânicas"/>
 
 
@@ -51,4 +51,20 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function countOnChange1() {
+        console.count("teste1: ");
+    }
+
+    function countOnChange2() {
+        console.count("teste2: ");
+    }
+
+    function countOnChange3() {
+        console.count("teste3: ");
+    }
+
+    function countOnChange4() {
+        console.count("teste4: ");
+    }
 }
