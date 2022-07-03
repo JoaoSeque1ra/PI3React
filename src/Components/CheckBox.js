@@ -34,36 +34,59 @@ export default function CheckBox(props) {
     }
 
     return (
-        <div className="mt-5">
-            <div className={isActive ? onClickChangeColor(props) : changeColor(props)} onClick={handleClick}>
-                <div className={isActive ? onClickChangeColorText() : ChangeColorText()}>
+        <>
+            <div className="d-flex align-items-center">
+                <label className={isActive ? onClickChangeColor2(props) : changeColor2(props)} onClick={handleClick} htmlFor={nameCheckBox(props)}>
                     {changeIcon(props)}
                     {changeNameLabel(props)}
-                </div>
-
-                <div className="input-group-text border-0 bg-transparent">
-                    <input checked={isActive} type="checkbox" className={ changeColorCheck(props) } onChange={createEventClick(props)} defaultValue={changeNameLabel(props)}/>
-                </div>
+                    <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck2(props)} onChange={createEventOnChange(props)} value={changeNameLabel(props)} />
+                </label>
             </div>
-        </div>
+
+            {/* <div className="mt-5">
+                <div className={isActive ? onClickChangeColor(props) : changeColor(props)} onClick={handleClick} htmlFor="flexCheckDefault">
+                    <div className={isActive ? onClickChangeColorText() : ChangeColorText()}>
+                        {changeIcon(props)}
+                        {changeNameLabel(props)}
+                    </div>
+
+                    <div className="input-group-text border-0 bg-transparent">
+                        <input id="flexCheckDefault" checked={isActive} type="checkbox" className={changeColorCheck(props)} onChange={createEventClick(props)} defaultValue={changeNameLabel(props)} />
+                    </div>
+                </div>
+            </div> */}
+        </>
     );
 }
 
-function changeColor(props) {
-    return " input-js input-group input-group-lg border cursor-pointer bg-checkBox " + props.color;
+function nameCheckBox(props) {
+    return props.nameCheckBox
 }
 
-function onClickChangeColor(props) {
-    return "input-js input-group input-group-lg border cursor-pointer " + props.color;
+function changeColor2(props) {
+    return "form-check ps-3 py-2 mt-5 w-100 fs-5 border cursor-pointer bg-checkBox " + props.color;
 }
 
-function ChangeColorText() {
-    return "changeFormControl form-control border-0 bg-transparent";
+function onClickChangeColor2(props) {
+    return "form-check ps-3 py-2 mt-5 w-100 fs-5 border text-white cursor-pointer " + props.color;
 }
 
-function onClickChangeColorText() {
-    return "changeFormControl form-control border-0 bg-transparent text-white";
-}
+// function changeColor(props) {
+//     return "input-group input-group-lg border cursor-pointer bg-checkBox " + props.color;
+// }
+
+// function onClickChangeColor(props) {
+//     return "input-group input-group-lg border cursor-pointer " + props.color;
+// }
+
+// function ChangeColorText() {
+//     return "changeFormControl form-control border-0 bg-transparent";
+// }
+
+// function onClickChangeColorText() {
+//     return "changeFormControl form-control border-0 bg-transparent text-white";
+// }
+
 
 function classIcon(props) {
     return "iconCheckBox me-2 " + props.colorIcon;
@@ -73,12 +96,16 @@ function onClickChangeColorIcon() {
     return "iconCheckBox me-2 colorIconWhite ";
 }
 
-function changeColorCheck(props) {
-    return "cursor-pointer changeInput " + props.textColor;
+// function changeColorCheck(props) {
+//     return "cursor-pointer changeInput " + props.textColor;
+// }
+
+function changeColorCheck2(props) {
+    return "form-check-input float-end ms-0 me-3 " + props.textColor
 }
 
-function createEventClick(props) {
-    return props.function;
+function createEventOnChange(props) {
+    return props.onchange;
 }
 
 function changeNameLabel(props) {

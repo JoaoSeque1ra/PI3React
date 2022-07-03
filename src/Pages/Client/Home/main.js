@@ -14,13 +14,13 @@ export default function Main() {
                             <Breadcrumbs route=""/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox function={countOnChange1} name="Marketing Digital" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox1" onchange={countOnChange1} name="Marketing Digital" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox function={countOnChange2} name="Design Grafico" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox2" onchange={countOnChange2} name="Design Grafico" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox function={countOnChange3} name="Website &#38; Loja Online" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox3" onchange={countOnChange3} name="Website &#38; Loja Online" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox function={countOnChange4} name="Comunicação &#38; Consultoria" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox4" onchange={countOnChange4} name="Comunicação &#38; Consultoria" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
@@ -54,7 +54,8 @@ export default function Main() {
         console.count("teste2: ");
     }
 
-    function countOnChange3() {
+    function countOnChange3(value) {
+        console.log(value.valeu);
         console.count("teste3: ");
     }
 

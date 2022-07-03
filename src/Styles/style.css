@@ -221,18 +221,22 @@ input[type="checkbox"]:checked::after {
 
 .bg-checkBoxYellow:hover {
     background-color: var(--incommunYellowDark) !important;
+    color: var(--white) !important;
 }
 
 .bg-checkBoxOrange:hover {
     background-color: var(--incommunOrangeDark) !important;
+    color: var(--white) !important;
 }
 
 .bg-checkBoxBlue:hover {
     background-color: var(--incommunBlueDark) !important;
+    color: var(--white) !important;
 }
 
 .bg-checkBoxPurple:hover {
     background-color: var(--incommunPurpleDark) !important;
+    color: var(--white) !important;
 }
 
 .bg-checkBoxYellow:hover .form-control {
