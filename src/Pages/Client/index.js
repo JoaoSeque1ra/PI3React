@@ -6,6 +6,7 @@ import { ComunicacaoConsultoria } from "./ComunicacaoConsultoria/index";
 import { WebsiteLojaOnline } from "./WebsiteLojaOnline/index";
 import { Website } from "./Website/index";
 import { LojaOnline } from "./LojaOnline/index";
+import { Contactos } from "./Contactos/index";
 
 
-export default { Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline };
+export default { Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline, Contactos };
