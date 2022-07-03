@@ -12,6 +12,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="client/" element={<Client.Home />}/>
+        <Route path="client/identidade-visual" element={<Client.IdentidadeVisual />}/>
         <Route path="client/marketing-digital" element={<Client.MarketingDigital />}/>
         <Route path="client/design-grafico" element={<Client.DesignGrafico />}/>
         <Route path="client/comunicacao-consultoria" element={<Client.ComunicacaoConsultoria />}/>
