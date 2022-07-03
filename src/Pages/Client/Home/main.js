@@ -14,13 +14,13 @@ export default function Main() {
                             <Breadcrumbs route=""/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox nameCheckBox="checkBox1" onchange={countOnChange1} name="Marketing Digital" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox1" onChange={countOnChange1} name="Marketing Digital" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox nameCheckBox="checkBox2" onchange={countOnChange2} name="Design Grafico" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox2" onChange={countOnChange2} name="Design Grafico" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox nameCheckBox="checkBox3" onchange={countOnChange3} name="Website &#38; Loja Online" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox3" onChange={countOnChange3} name="Website &#38; Loja Online" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox nameCheckBox="checkBox4" onchange={countOnChange4} name="Comunicação &#38; Consultoria" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="checkBox4" onChange={countOnChange4} name="Comunicação &#38; Consultoria" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
@@ -46,20 +46,27 @@ export default function Main() {
         </main>
     );
 
-    function countOnChange1() {
-        console.count("teste1: ");
+    function countOnChange1(props) {
+        console.log(props.target.checked)
+        console.log(props.target.value)
+        console.count("teste1: ")
     }
 
-    function countOnChange2() {
-        console.count("teste2: ");
+    function countOnChange2(props) {
+        console.log(props.target.checked)
+        console.log(props.target.value)
+        console.count("teste2: ")
     }
 
-    function countOnChange3(value) {
-        console.log(value.valeu);
-        console.count("teste3: ");
+    function countOnChange3(props) {
+        console.log(props.target.checked)
+        console.log(props.target.value)
+        console.count("teste3: ")
     }
 
-    function countOnChange4() {
-        console.count("teste4: ");
+    function countOnChange4(props) {
+        console.log(props.target.checked)
+        console.log(props.target.value)
+        console.count("teste4: ")
     }
 }

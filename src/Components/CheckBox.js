@@ -6,7 +6,7 @@ export default function CheckBox(props) {
     const [isActive, setIsActive] = useState(false);
 
     const handleClick = event => {
-        setIsActive(isActive => !isActive); //(current == false) => (current == true) TRUE -> foi selecionado 
+        setIsActive(isActive => !isActive); //(current == false) => (current == true) TRUE -> foi selecionado
     };
 
     function changeIcon(props) {
@@ -38,7 +38,7 @@ export default function CheckBox(props) {
             <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={nameCheckBox(props)}>
                 {changeIcon(props)}
                 {changeNameLabel(props)}
-                <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={handleClick} value={changeNameLabel(props)} />
+                <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={handleClick} onChange={createEventOnChange(props)} value={changeNameLabel(props)} />
             </label>
         </div>
     );
@@ -69,7 +69,7 @@ function changeColorCheck(props) {
 }
 
 function createEventOnChange(props) {
-    return props.onchange;
+    return props.onChange;
 }
 
 function changeNameLabel(props) {
