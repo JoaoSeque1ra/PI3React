@@ -219,6 +219,18 @@ input[type="checkbox"]:checked::after {
     background-color: var(--incommunYellow) !important;
 }
 
+.bg-checkBoxOrange{
+    background-color: var(--incommunOrange) !important;
+}
+
+.bg-checkBoxBlue {
+    background-color: var(--incommunBlue) !important;
+}
+
+.bg-checkBoxPurple {
+    background-color: var(--incommunPurple) !important;
+}
+
 .bg-checkBoxYellow:hover {
     background-color: var(--incommunYellowDark) !important;
     color: var(--white) !important;
@@ -236,22 +248,6 @@ input[type="checkbox"]:checked::after {
 
 .bg-checkBoxPurple:hover {
     background-color: var(--incommunPurpleDark) !important;
-    color: var(--white) !important;
-}
-
-.bg-checkBoxYellow:hover .form-control {
-    color: var(--white) !important;
-}
-
-.bg-checkBoxOrange:hover .form-control {
-    color: var(--white) !important;
-}
-
-.bg-checkBoxBlue:hover .form-control {
-    color: var(--white) !important;
-}
-
-.bg-checkBoxPurple:hover .form-control {
     color: var(--white) !important;
 }
 
