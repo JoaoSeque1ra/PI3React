@@ -16,7 +16,7 @@ import { ReactComponent as Ver} from '../Assets/Svg/ver.svg';
 import { ReactComponent as Novo } from '../Assets/Svg/novo.svg';
 
 import { ReactComponent as MarketingComunicacao } from '../Assets/Svg/marketingComunicacao.svg';
-import { ReactComponent as OrganizacaoEventos } from '../Assets/Svg/organizacaoEvetos.svg';
+import { ReactComponent as OrganizacaoEventos } from '../Assets/Svg/organizacaoEventos.svg';
 
 
 export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, OrganizacaoEventos };
