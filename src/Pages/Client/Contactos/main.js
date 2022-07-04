@@ -17,9 +17,29 @@ export default function Main() {
                             <Breadcrumbs route="/ Contactos" textColor="text-purple"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                
+                                <div className="mt-5">
+                                    <div className="input-group input-group-lg border cursor-pointer ">
+                                        <input type="text" class="form-control cursor-pointer border-0 rounded-0" placeholder="Nome"/>
+                                    </div>
+                                </div>
 
-                                
+                                <div className="mt-5">
+                                    <div className="input-group input-group-lg border cursor-pointer ">
+                                        <input type="text" className="form-control cursor-pointer border-0 rounded-0" placeholder="Email"/>
+                                    </div>
+                                </div>
+
+                                <div className="mt-5">
+                                    <div className="input-group input-group-lg border cursor-pointer ">
+                                        <input type="text" className="form-control cursor-pointer border-0 rounded-0" placeholder="Telefone"/>
+                                    </div>
+                                </div>
+
+                                <div className="my-5">
+                                    <div className="input-group input-group-lg border cursor-pointer ">
+                                        <input type="text" className="form-control cursor-pointer border-0 rounded-0" placeholder="Empresa*"/>
+                                    </div>
+                                </div>                             
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
