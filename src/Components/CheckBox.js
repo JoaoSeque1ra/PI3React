@@ -29,6 +29,8 @@ export default function CheckBox(props) {
                 return < Icons.OtimizacaoSEOSEM className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Marketing e Comunicação":
                 return < Icons.MarketingComunicacao className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Organização de eventos":
+                return < Icons.OrganizacaoEventos className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             default:
                 console.log("Erro ao carregar icon");
                 break;
