@@ -16,6 +16,20 @@ import { ReactComponent as Ver} from '../Assets/Svg/ver.svg';
 import { ReactComponent as Novo } from '../Assets/Svg/novo.svg';
 
 import { ReactComponent as MarketingComunicacao } from '../Assets/Svg/marketingComunicacao.svg';
+import { ReactComponent as OrganizacaoEventos } from '../Assets/Svg/organizacaoEventos.svg';
+
+import { ReactComponent as IdentidadeVisual } from '../Assets/Svg/identidadeVisual.svg';
+import { ReactComponent as BrandingRebranding } from '../Assets/Svg/brandingRebranding.svg';
+import { ReactComponent as EstrategiaMarca } from '../Assets/Svg/estrategiaMarca.svg';
+import { ReactComponent as RegistoMarca } from '../Assets/Svg/registoMarca.svg';
+import { ReactComponent as DesignEditorial } from '../Assets/Svg/designEditorial.svg';
+
+import { ReactComponent as AnaliseConcorrencia } from '../Assets/Svg/analiseConcorrencia.svg';
+import { ReactComponent as CriacaoLogotipo } from '../Assets/Svg/criacaoLogotipo.svg';
+import { ReactComponent as PaletaCores } from '../Assets/Svg/paletaCores.svg';
+import { ReactComponent as SloganMarca } from '../Assets/Svg/sloganMarca.svg';
+import { ReactComponent as ManualNormasGraficas } from '../Assets/Svg/manualNormasGraficas.svg';
+import { ReactComponent as Estacionario } from '../Assets/Svg/estacionario.svg';
 
 import { ReactComponent as NumeroPaginas } from '../Assets/Svg/numeroPaginas.svg';
 import { ReactComponent as Add } from '../Assets/Svg/add.svg';

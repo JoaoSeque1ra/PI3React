@@ -33,12 +33,12 @@ export default function Main() {
                                 consequentemente, satisfaça os seus clientes. A estratégia tem que ser pensada e coordenada para
                                 atuar a longo prazo." />
 
-                                <CheckBox name="Registo de marca" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox name="Registo de Marca" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="O registo da marca permite salvaguardar a sua empresa de imitações ou utilizações indevidas,
                                 garantindo o reconhecimento da sua empresa no mercado. Ajuda a diminuir, ainda, a contrafação e
                                 concorrência desleal. Vamos manter a sua marca protegida?" />
 
-                                <CheckBox name="Design editorial" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox name="Design Editorial" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="Trata-se do arranjo visual através de elementos do design como alinhamento, fontes, cores,
                                 tipografia. Significa que para organizar o conteúdo é necessário seguir regras e padrões." />
 
