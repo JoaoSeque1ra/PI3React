@@ -24,7 +24,6 @@ export default function Main() {
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
-                                <Buttons color="bg-transparent" text="Anterior" />
                                 <Buttons color="btn-yellow" text="Seguinte" />
                             </div>
                         </div>

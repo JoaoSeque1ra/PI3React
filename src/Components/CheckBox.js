@@ -30,7 +30,7 @@ export default function CheckBox(props) {
             case "Marketing e Comunicação":
                 return < Icons.MarketingComunicacao className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             default:
-                console.log("Erro ao carregar icon");
+                console.log("Erro ao carregar icon no componente CheckBox");
                 break;
         }
     }
