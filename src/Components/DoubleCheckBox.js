@@ -25,9 +25,27 @@ export default function DoubleCheckBox(props) {
         <div className='col-12'>
             <div className='row'>
 
-                <div className='col-12 col-lg-6'>
+                <div className='col-12 col-lg-6  mt-5'>
 
-                    teste
+                    <div className="d-flex align-items-center">
+                        <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={nameCheckBox1(props)}>
+                            {changeIcon(props)}
+                            {changeNameLabel1(props)}
+                            <input id={nameCheckBox1(props)} type="checkbox" className={changeColorCheck(props)} onClick={handleClick} onChange={createEventOnChange(props)} defaultValue={changeNameLabel1(props)}/>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div className='col-12 col-lg-6 mt-5'>
+
+                    <div className="d-flex align-items-center">
+                        <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={nameCheckBox2(props)}>
+                            {changeIcon(props)}
+                            {changeNameLabel2(props)}
+                            <input id={nameCheckBox2(props)} type="checkbox" className={changeColorCheck(props)} onClick={handleClick} defaultValue={changeNameLabel2(props)} onChange={createEventOnChange(props)}  />
+                        </label>
+                    </div>
 
                 </div>
 
@@ -44,10 +62,24 @@ export default function DoubleCheckBox(props) {
     );
 }
 
-function nameCheckBox(props) {
-    return props.nameCheckBox
+function nameCheckBox1(props) {
+    return props.nameCheckBox1
 }
 
+function nameCheckBox2(props) {
+    return props.nameCheckBox1
+}
+
+function changeNameLabel1(props) {
+    return props.name1;
+}
+
+function changeNameLabel2(props) {
+    return props.name2;
+}
+
+
+//-------------------------------
 function changeColor(props) {
     return "form-check ps-3 py-2 w-100 fs-5 border cursor-pointer bg-checkBox " + props.color;
 }
@@ -72,6 +104,3 @@ function createEventOnChange(props) {
     return props.onChange;
 }
 
-function changeNameLabel(props) {
-    return props.name;
-}

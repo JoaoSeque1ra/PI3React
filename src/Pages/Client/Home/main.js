@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
 import Buttons from '../../../Components/Buttons';
 
 export default function Main() {
+    const [marketingDigital, setMarketingDigital] = useState(false)
+    const [designGrafico, setDesignGrafico] = useState(false)
+    const [websiteLojaOnLine, setWebsiteLojaOnLine] = useState(false)
+    const [comunicacaoConsultoria, setComunicacaoConsultoria] = useState(false)
+
     return (
         <main>
             <div className="container-fluid">
@@ -14,13 +19,13 @@ export default function Main() {
                             <Breadcrumbs route=""/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox nameCheckBox="checkBox1" onChange={countOnChange1} name="Marketing Digital" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="marketingDigital" onChange={() => setMarketingDigital(!marketingDigital)} name="Marketing Digital" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox nameCheckBox="checkBox2" onChange={countOnChange2} name="Design Grafico" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="designGrafico" onChange={() => setDesignGrafico(!designGrafico)} name="Design Grafico" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox nameCheckBox="checkBox3" onChange={countOnChange3} name="Website &#38; Loja Online" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="websiteLojaOnLine" onChange={() => setWebsiteLojaOnLine(!websiteLojaOnLine)} name="Website &#38; Loja Online" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
 
-                                <CheckBox nameCheckBox="checkBox4" onChange={countOnChange4} name="Comunicação &#38; Consultoria" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox nameCheckBox="comunicacaoConsultoria" onChange={() => setComunicacaoConsultoria(!comunicacaoConsultoria)} name="Comunicação &#38; Consultoria" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
@@ -44,28 +49,4 @@ export default function Main() {
             </div>
         </main>
     );
-
-    function countOnChange1(props) {
-        console.log(props.target.checked)
-        console.log(props.target.value)
-        console.count("teste1: ")
-    }
-
-    function countOnChange2(props) {
-        console.log(props.target.checked)
-        console.log(props.target.value)
-        console.count("teste2: ")
-    }
-
-    function countOnChange3(props) {
-        console.log(props.target.checked)
-        console.log(props.target.value)
-        console.count("teste3: ")
-    }
-
-    function countOnChange4(props) {
-        console.log(props.target.checked)
-        console.log(props.target.value)
-        console.count("teste4: ")
-    }
 }

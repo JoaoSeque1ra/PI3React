@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
 import CheckBoxNumberPage from '../../../Components/CheckBoxNumberPage';
-import DoubleCheckBox from '../../../Components/DoubleCheckBox';
+//import DoubleCheckBox from '../../../Components/DoubleCheckBox';
 import CardsCheckBox from '../../../Components/CardsCheckBox';
 import Buttons from '../../../Components/Buttons';
 
 import ImagemWebsite from "../../../Assets/Images/lojas_online-1.png";
 
 export default function Main() {
+    const [website, setWebsite] = useState(false);
+    const [landingPage, setLandingPage] = useState(false);
+    const [comPortfolio, setComPortfolio] = useState(false);
+    const [comAlojamento, setComAlojamento] = useState(false);
+    const [comDominio, setComDominio] = useState(false);
+
     return(
         <main>
             <div className="container-fluid">
@@ -19,10 +25,9 @@ export default function Main() {
                             <Breadcrumbs route="/ Website" textColor="text-purple"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <DoubleCheckBox />
-                                <CheckBox name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={() => setWebsite(!website)} onChange={teste} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
-                                <CheckBox name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onChange={()=> setLandingPage(!landingPage)} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                 <CheckBoxNumberPage colorIcon="colorIconWhite"/>
 
@@ -30,7 +35,7 @@ export default function Main() {
                                 <CardsCheckBox text="Um portfolio é uma coleção de trabalhos que ajuda o cliente a perceber o tipo de serviços que a sua empresa já realizou." />
 
                                 <CheckBox name="Com criação de conteúdos textuais" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
-                                <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommum?" />
+                                <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommun?" />
 
                                 <CheckBox name="Com alojamento" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="O alojamento web permite que a sua loja não só esteja online como atualiza regularmente o seu hardware para um melhor desempenho e maior proteção." />
@@ -58,4 +63,8 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function teste() {
+        console.log(website)
+    }
 }

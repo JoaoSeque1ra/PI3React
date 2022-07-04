@@ -5,7 +5,7 @@ import Icons from '../Helpers/ExportIcons';
 export default function CheckBox(props) {
     const [isActive, setIsActive] = useState(false);
 
-    const handleClick = event => {
+    function handleClick() {
         setIsActive(isActive => !isActive); //(current == false) => (current == true) TRUE -> foi selecionado
     };
 
@@ -40,7 +40,7 @@ export default function CheckBox(props) {
             <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={nameCheckBox(props)}>
                 {changeIcon(props)}
                 {changeNameLabel(props)}
-                <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={handleClick} onChange={createEventOnChange(props)} value={changeNameLabel(props)} />
+                <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={() => {handleClick(); createEventOnClick(props)}} onChange={createEventOnChange(props)} value={changeNameLabel(props)} />
             </label>
         </div>
     );
@@ -72,6 +72,10 @@ function changeColorCheck(props) {
 
 function createEventOnChange(props) {
     return props.onChange;
+}
+
+function createEventOnClick(props) {
+    return props.onClick;
 }
 
 function changeNameLabel(props) {
