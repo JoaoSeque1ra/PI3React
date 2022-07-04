@@ -17,7 +17,7 @@ export default function Main() {
                             <Breadcrumbs route="/ Comunicação &#38; Consultoria" textColor="text-yellow"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox name="Consultoria de Marketing e Comunicação" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
+                                <CheckBox name="Marketing e Comunicação" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />
                                 <CardsCheckBox text="Consultoria é o acompanhamento ao nosso cliente em planos de comunicação publicidade e marketing.
                                 Desenhamos uma estratégia adaptada ao nosso cliente que são apresentadas e discutidas para objetivos
                                 positivos e lineares." />
