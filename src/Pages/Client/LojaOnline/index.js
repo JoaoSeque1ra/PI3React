@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../../../Components/NavbarClient';
 import Main from './main';
 
-export function IdentidadeVisual() {
+export function LojaOnline() {
     return (  
         <>
             <Navbar />

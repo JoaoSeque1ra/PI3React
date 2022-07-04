@@ -27,6 +27,8 @@ export default function CheckBox(props) {
                 return < Icons.EmailSMS className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Otimização SEO e SEM":
                 return < Icons.OtimizacaoSEOSEM className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Marketing e Comunicação":
+                return < Icons.MarketingComunicacao className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             default:
                 console.log("Erro ao carregar icon");
                 break;

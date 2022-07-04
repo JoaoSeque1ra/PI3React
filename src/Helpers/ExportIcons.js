@@ -15,5 +15,8 @@ import { ReactComponent as Dados } from '../Assets/Svg/dados.svg';
 import { ReactComponent as Ver} from '../Assets/Svg/ver.svg';
 import { ReactComponent as Novo } from '../Assets/Svg/novo.svg';
 
+import { ReactComponent as MarketingComunicacao } from '../Assets/Svg/marketingComunicacao.svg';
 
-export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados };
+
+
+export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao };

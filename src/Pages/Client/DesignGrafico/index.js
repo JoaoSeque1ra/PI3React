@@ -1,9 +1,13 @@
 import React from 'react';
 
-export function DesignGrafico () {
+import Navbar from '../../../Components/NavbarClient';
+import Main from './main';
+
+export function DesignGrafico() {
     return (  
         <>
-
+            <Navbar />
+            <Main />
         </>
     );
 }

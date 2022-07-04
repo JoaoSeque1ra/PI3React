@@ -1,9 +1,13 @@
 import React from 'react';
 
-export function ComunicacaoConsultoria () {
+import Navbar from '../../../Components/NavbarClient';
+import Main from './main';
+
+export function ComunicacaoConsultoria() {
     return (  
         <>
-        
+            <Navbar />
+            <Main />
         </>
     );
 }
