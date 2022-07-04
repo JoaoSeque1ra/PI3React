@@ -3,12 +3,13 @@ import React from 'react';
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
 import CheckBoxNumberPage from '../../../Components/CheckBoxNumberPage';
+import DoubleCheckBox from '../../../Components/DoubleCheckBox';
 import CardsCheckBox from '../../../Components/CardsCheckBox';
 import Buttons from '../../../Components/Buttons';
 
 import ImagemWebsite from "../../../Assets/Images/lojas_online-1.png";
 
-export default function MainWebsite() {
+export default function Main() {
     return(
         <main>
             <div className="container-fluid">
@@ -18,11 +19,12 @@ export default function MainWebsite() {
                             <Breadcrumbs route="/ Website" textColor="text-purple"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
+                                <DoubleCheckBox />
                                 <CheckBox name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                 <CheckBox name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
-                                <CheckBoxNumberPage onChange={testNumberPage} colorIcon="colorIconWhite"/>
+                                <CheckBoxNumberPage colorIcon="colorIconWhite"/>
 
                                 <CheckBox name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um portfolio é uma coleção de trabalhos que ajuda o cliente a perceber o tipo de serviços que a sua empresa já realizou." />
@@ -56,8 +58,4 @@ export default function MainWebsite() {
             </div>
         </main>
     );
-
-    function testNumberPage(props) {
-        console.log(props)
-    }
 }
