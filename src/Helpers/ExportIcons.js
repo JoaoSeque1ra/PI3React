@@ -35,4 +35,4 @@ import { ReactComponent as NumeroPaginas } from '../Assets/Svg/numeroPaginas.svg
 import { ReactComponent as Add } from '../Assets/Svg/add.svg';
 import { ReactComponent as Remove } from '../Assets/Svg/remove.svg';
 
-export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove };
+export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove, OrganizacaoEventos, IdentidadeVisual, BrandingRebranding, EstrategiaMarca, RegistoMarca, DesignEditorial, AnaliseConcorrencia, CriacaoLogotipo, PaletaCores, SloganMarca, ManualNormasGraficas, Estacionario };
