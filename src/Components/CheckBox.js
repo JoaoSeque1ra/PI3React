@@ -53,6 +53,14 @@ export default function CheckBox(props) {
                     return < Icons.ManualNormasGraficas className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Estacionário":
                     return < Icons.Estacionario className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Website":
+                    return < Icons.Website className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Lojas online | E-commerce":
+                    return < Icons.LojaOnlineEcommerce className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Suporte & manutenção":
+                    return < Icons.SuporteManutencao className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Servidor & Domínio":
+                    return < Icons.ServidorDominio className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             default:
                 console.log("Erro ao carregar icon no componente CheckBox");
                 break;

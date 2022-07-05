@@ -31,8 +31,13 @@ import { ReactComponent as SloganMarca } from '../Assets/Svg/sloganMarca.svg';
 import { ReactComponent as ManualNormasGraficas } from '../Assets/Svg/manualNormasGraficas.svg';
 import { ReactComponent as Estacionario } from '../Assets/Svg/estacionario.svg';
 
+import { ReactComponent as Website } from '../Assets/Svg/website.svg';
+import { ReactComponent as LojaOnlineEcommerce } from '../Assets/Svg/lojaOnlineEcommerce.svg';
+import { ReactComponent as SuporteManutencao } from '../Assets/Svg/suporteManutencao.svg';
+import { ReactComponent as ServidorDominio } from '../Assets/Svg/servidorDominio.svg';
+
 import { ReactComponent as NumeroPaginas } from '../Assets/Svg/numeroPaginas.svg';
 import { ReactComponent as Add } from '../Assets/Svg/add.svg';
 import { ReactComponent as Remove } from '../Assets/Svg/remove.svg';
 
-export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove, OrganizacaoEventos, IdentidadeVisual, BrandingRebranding, EstrategiaMarca, RegistoMarca, DesignEditorial, AnaliseConcorrencia, CriacaoLogotipo, PaletaCores, SloganMarca, ManualNormasGraficas, Estacionario };
+export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove, OrganizacaoEventos, IdentidadeVisual, BrandingRebranding, EstrategiaMarca, RegistoMarca, DesignEditorial, AnaliseConcorrencia, CriacaoLogotipo, PaletaCores, SloganMarca, ManualNormasGraficas, Estacionario, Website, LojaOnlineEcommerce, SuporteManutencao, ServidorDominio };
