@@ -50,17 +50,33 @@ export default function CheckBox(props) {
             case "Slogan para Marca":
                 return < Icons.SloganMarca className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Manual de Normas Gráficas":
-                    return < Icons.ManualNormasGraficas className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+                return < Icons.ManualNormasGraficas className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Estacionário":
-                    return < Icons.Estacionario className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+                return < Icons.Estacionario className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Website":
-                    return < Icons.Website className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+                return < Icons.Website className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Lojas online | E-commerce":
                     return < Icons.LojaOnlineEcommerce className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Suporte & manutenção":
-                    return < Icons.SuporteManutencao className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+                return < Icons.SuporteManutencao className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             case "Servidor & Domínio":
-                    return < Icons.ServidorDominio className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+                 return < Icons.ServidorDominio className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Landing Page":
+                return < Icons.LandingPage className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Com portfólio":
+                return < Icons.Portfolio className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Com criação de conteúdos textuais":
+                return < Icons.CriacaoConteudosTextuais className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Com alojamento":
+                return < Icons.Alojamento className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Com domínio":
+                return < Icons.Dominio className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Número de páginas":
+                return < Icons.NumeroPaginas className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Com Integração":
+                return < Icons.Integracao className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
+            case "Assessoria e criação de conteúdo":
+                return < Icons.AssessoriaCriacaoConteudo className={isActive ? onClickChangeColorIcon() : classIcon(props)} />
             default:
                 console.log("Erro ao carregar icon no componente CheckBox");
                 break;
