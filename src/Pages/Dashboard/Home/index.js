@@ -1,11 +1,13 @@
 import React from 'react';
 
-import NavbarDashboardLg from '../../../Components/NavbarDashboardLg';
+import NavbarDashboardMd from '../../../Components/NavbarDashboardMd';
+import Main from './main';
 
-export function Home () {
+export function Home() {
     return ( 
         <>
-            <NavbarDashboardLg />
+            <NavbarDashboardMd />
+            <Main />
         </> 
     );
 }

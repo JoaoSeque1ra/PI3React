@@ -48,6 +48,10 @@ import { ReactComponent as NumeroPaginas } from '../Assets/Svg/numeroPaginas.svg
 import { ReactComponent as Add } from '../Assets/Svg/add.svg';
 import { ReactComponent as Remove } from '../Assets/Svg/remove.svg';
 
+import { ReactComponent as EditOrcamento } from '../Assets/Svg/editOrcamento.svg';
+import { ReactComponent as AddClient } from '../Assets/Svg/addClient.svg';
+
+
 export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove, OrganizacaoEventos, 
 IdentidadeVisual, BrandingRebranding, EstrategiaMarca, RegistoMarca, DesignEditorial, AnaliseConcorrencia, CriacaoLogotipo, PaletaCores, SloganMarca, ManualNormasGraficas, Estacionario, Website, LojaOnlineEcommerce, SuporteManutencao, ServidorDominio, LandingPage,
-Portfolio, CriacaoConteudosTextuais, Alojamento, Dominio, Integracao, AssessoriaCriacaoConteudo };
+Portfolio, CriacaoConteudosTextuais, Alojamento, Dominio, Integracao, AssessoriaCriacaoConteudo, AddClient, EditOrcamento };
