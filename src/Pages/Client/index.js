@@ -9,6 +9,7 @@ import { LojaOnline } from "./LojaOnline/index";
 import { Contactos } from "./Contactos/index";
 import { Obrigado } from "./Obrigado/index";
 import { GestaoRedesSociais } from "./GestaoRedesSociais/index";
+import { PaidMedia } from "./PaidMedia/index";
 
 
-export default { Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline, Contactos, Obrigado, GestaoRedesSociais };
+export default { Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline, Contactos, Obrigado, GestaoRedesSociais, PaidMedia };
