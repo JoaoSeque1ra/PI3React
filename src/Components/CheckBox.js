@@ -107,11 +107,11 @@ function onClickChangeColor(props) {
 }
 
 function classIcon(props) {
-    return "iconCheckBox me-2 " + props.colorIcon;
+    return "me-2 " + props.colorIcon;
 }
 
 function onClickChangeColorIcon() {
-    return "iconCheckBox me-2 colorIconWhite ";
+    return "me-2 colorIconWhite";
 }
 
 function changeColorCheck(props) {

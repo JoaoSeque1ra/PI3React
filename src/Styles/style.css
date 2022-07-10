@@ -181,7 +181,7 @@ body {
 }
 
 .colorIconWhite {
-    fill: var(--white);
+    fill: var(--white) !important;
 }
 
 .colorIconBlack {
