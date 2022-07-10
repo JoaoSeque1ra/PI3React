@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavbarDashboardMd from '../../../Components/NavbarDashboard/NavbarDashboardMd';
+import NavbarDashboardMd from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardMd';
 import Main from './main';
 
 export function Home() {

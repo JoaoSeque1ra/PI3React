@@ -1,39 +1,31 @@
 import React from 'react';
 
-import Brand from '../../Assets/Images/logotipoincommun.png';
+import Brand from '../../../Assets/Images/logotipoincommun.png';
 import NavbarItem from './NavbarItem';
 
-import ExportIcons from '../../Helpers/ExportIcons';
+import { Link } from 'react-router-dom';
 
-export default function NavbarDashboardMd() {
+export default function NavbarDashboardLg() {
     return (
-    <nav className="position-sticky top-0 navbar navbar-dark bg-gray d-flex d-lg-none">
-    <div className="container-fluid">
+        <nav className="position-sticky top-0 flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
 
-        <a className="navbar-brand" href="#">
-            <img src={Brand} alt="Incommun" height="24" className="d-inline-block align-text-top" />
-        </a>
+            <a className="mb-md-0 me-md-auto text-white text-decoration-none">
+                <img src={Brand} width="180" className="d-none d-md-block cursor-pointer" alt="incommun" />
+            </a>
 
-        <button className="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-        </button>
-    </div>
+            <hr />
 
-    <div className="collapse" id="navbarToggleExternalContent">
-        <div className="barNav"></div>
-
-        <div className="bg-gray p-4">
             <ul className="nav nav-pills flex-column mb-auto">
+
                 <li className="nav-item">
 
                     <NavbarItem text="Preços" font="fs-5 font-weight-semiBold" />
 
-
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <NavbarItem text="Marketing Digital" font="fw-normal ps-5" />
+                        <Link to="">
+                            <NavbarItem text="Marketing Digital" font="fw-normal ps-5" />
+                        </Link>
 
                         <NavbarItem text="Design Gráfico" font="fw-normal ps-5" />
 
@@ -42,7 +34,9 @@ export default function NavbarDashboardMd() {
                         <NavbarItem text="Comunicação &#38; Consultoria" font="fw-normal ps-5" />
 
                     </ul>
+
                 </li>
+
                 <li className="pt-4">
 
                     <NavbarItem text="Orçamento" font="fs-5 font-weight-semiBold" />
@@ -54,7 +48,9 @@ export default function NavbarDashboardMd() {
                         <NavbarItem text="Novo orçamento" font="fw-normal ps-5" />
 
                     </ul>
+
                 </li>
+
                 <li className="pt-4">
 
                     <NavbarItem text="Cliente" font="fs-5 font-weight-semiBold" />
@@ -66,29 +62,35 @@ export default function NavbarDashboardMd() {
                         <NavbarItem text="Novo cliente" font="fw-normal ps-5" />
 
                     </ul>
+
                 </li>
+
                 <li className="pt-4">
 
                     <NavbarItem text="Dados" font="fs-5 font-weight-semiBold" />
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
-                        
+
                         <NavbarItem text="Ver dados" font="fw-normal ps-5" />
 
                     </ul>
 
-                    <ul className="nav nav-pills flex-column mb-auto pt-5">
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white">
-                                Sair
-                            </a>
-                        </li>
-                    </ul>
                 </li>
 
             </ul>
-        </div>
 
-    </div>
-</nav>);
+            <hr />
+
+            <div className="dropdown">
+                <a className="d-flex align-items-center text-white text-decoration-none dropdown-toggle cursor-pointer"
+                    id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <strong>Mariana de Lurdes</strong>
+                </a>
+                <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a className="dropdown-item">Sair</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    );
 }

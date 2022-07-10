@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ExportIcons from '../../Helpers/ExportIcons';
+import ExportIcons from '../../../Helpers/ExportIcons';
 
 export default function NavbarItem({text, font}) {
     return (
