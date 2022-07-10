@@ -27,6 +27,8 @@ function changeIcon(text) {
             return < ExportIcons.Ver className="me-2 colorIconWhite" />
         case "Novo orçamento":
             return < ExportIcons.Novo className="me-2 colorIconWhite" />
+        case "Orçamento":
+            return < ExportIcons.Orcamento className="me-2 colorIconWhite" />
         case "Ver clientes":
             return < ExportIcons.Ver className="me-2 colorIconWhite" />
         case "Novo cliente":

@@ -27,88 +27,54 @@ export default function NavbarDashboardMd() {
         <div className="bg-gray p-4">
             <ul className="nav nav-pills flex-column mb-auto">
                 <li className="nav-item">
-                    <a className="nav-link rounded-0 rounded-start fs-5 font-weight-semiBold text-white">
-                        <ExportIcons.Preco className="me-2" />
-                        Preços
-                    </a>
+
+                    <NavbarItem text="Preços" font="fs-5 font-weight-semiBold" />
+
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.DesignGrafico className="me-2 colorIconWhite" />
-                                Design Gráfico
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.WebsiteLojaOnline className="me-2 colorIconWhite" />
-                                Website &#38; Loja Online
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.ComunicacaoConsultoria className="me-2 colorIconWhite" />
-                                Comunicação &#38; Consultoria
-                            </a>
-                        </li>
+                        <NavbarItem text="Marketing Digital" font="fw-normal ps-5" />
+
+                        <NavbarItem text="Design Gráfico" font="fw-normal ps-5" />
+
+                        <NavbarItem text="Website &#38; Loja Online" font="fw-normal ps-5" />
+
+                        <NavbarItem text="Comunicação &#38; Consultoria" font="fw-normal ps-5" />
+
                     </ul>
                 </li>
                 <li className="pt-4">
-                    <a className="nav-link text-white fs-5 font-weight-semiBold">
-                        <ExportIcons.Orcamento className="me-2" />
-                        Orçamento
-                    </a>
+
+                    <NavbarItem text="Orçamento" font="fs-5 font-weight-semiBold" />
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.Ver className="me-2 colorIconWhite" />
-                                Ver orçamentos
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.Novo className="me-2 colorIconWhite" />
-                                Novo orçamento
-                            </a>
-                        </li>
+
+                        <NavbarItem text="Ver orçamentos" font="fw-normal ps-5" />
+
+                        <NavbarItem text="Novo orçamento" font="fw-normal ps-5" />
+
                     </ul>
                 </li>
                 <li className="pt-4">
-                    <a className="nav-link text-white fs-5 font-weight-semiBold">
-                        <ExportIcons.Cliente className='me-2 colorIconWhite' />
-                        Cliente
-                    </a>
+
+                    <NavbarItem text="Cliente" font="fs-5 font-weight-semiBold" />
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.Ver className='me-2 colorIconWhite' />
-                                Ver clientes
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.Novo className='me-2 colorIconWhite' />
-                                Novo cliente
-                            </a>
-                        </li>
+
+                        <NavbarItem text="Ver clientes" font="fw-normal ps-5" />
+
+                        <NavbarItem text="Novo cliente" font="fw-normal ps-5" />
+
                     </ul>
                 </li>
                 <li className="pt-4">
-                    <a className="nav-link text-white fs-5 font-weight-semiBold">
-                        <ExportIcons.Dados className='me-2 colorIconWhite' />
-                        Dados
-                    </a>
+
+                    <NavbarItem text="Dados" font="fs-5 font-weight-semiBold" />
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.Ver className='me-2 colorIconWhite' />
-                                Ver dados
-                            </a>
-                        </li>
+                        
+                        <NavbarItem text="Ver dados" font="fw-normal ps-5" />
+
                     </ul>
 
                     <ul className="nav nav-pills flex-column mb-auto pt-5">
@@ -119,6 +85,7 @@ export default function NavbarDashboardMd() {
                         </li>
                     </ul>
                 </li>
+
             </ul>
         </div>
 

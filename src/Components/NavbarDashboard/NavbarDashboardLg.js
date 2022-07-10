@@ -39,10 +39,8 @@ export default function NavbarDashboardLg() {
                 </li>
 
                 <li className="pt-4">
-                    <a className="nav-link text-white fs-5 font-weight-semiBold">
-                        <ExportIcons.Orcamento className="me-2" />
-                        Orçamento
-                    </a>
+
+                    <NavbarItem text="Orçamento" font="fs-5 font-weight-semiBold" />
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
