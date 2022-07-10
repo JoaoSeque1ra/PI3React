@@ -169,7 +169,6 @@ export default function Main() {
                         <TableTrLg id="0080" nome="Paulo Real" valor="250,00€" data="7&frasl;março&frasl;2022" estado="Novo"/>
 
                         <TableTrLg id="0079" nome="Mario Guerreiro" valor="10.050,00€" data="2&frasl;março&frasl;2022" estado="Novo"/>
-
                           
                       </tbody>
 
