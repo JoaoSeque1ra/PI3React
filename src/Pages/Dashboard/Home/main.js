@@ -2,6 +2,9 @@ import React from "react";
 
 import NavbarDashboardLg from "../../../Components/NavbarDashboard/NavbarDashboardLg";
 import ExportIcons from "../../../Helpers/ExportIcons";
+import ButtonDashboard from "../../../Components/Dashboard/Button";
+import TableTrMd from "../../../Components/Dashboard/TableTrMd";
+import TableTrLg from "../../../Components/Dashboard/TableTrLg";
 
 export default function Main() {
   return (
@@ -10,64 +13,54 @@ export default function Main() {
 
       <div className="container-fluid">
         <div className="row mt-5">
+
           <div className="col-lg-10 offset-lg-1">
             <div className="row">
-              <div className="col-4 font-weight-semiBold fs-4">
+
+              <div className="col-8 col-lg-6 font-weight-semiBold fs-4">
                 Últimos Orçamentos
               </div>
 
-              <div className="col-4 text-end">
-                <div className="col-12 text-lg-end">
-                  <button
-                    type="button"
-                    className="btn btn-gray btn-lg rounded-0"
-                  >
-                    <ExportIcons.AddClient />
+              <div className="col-2 col-lg-3 text-end">
 
-                    <a href="" className="text-decoration-none ps-2">
-                      Novo Cliente
-                    </a>
-                  </button>
-                </div>
+                <ButtonDashboard text="Novo Cliente" />
+
               </div>
-              <div className="col-4 text-end">
-                <div className="col-12 text-lg-end">
-                  <button
-                    type="button"
-                    className="btn btn-gray btn-lg rounded-0"
-                  >
-                    <ExportIcons.Novo className="colorIconWhite" />
-                    <a href="" className="text-decoration-none ps-2">
-                      Novo Orçamento
-                    </a>
-                  </button>
-                </div>
+
+              <div className="col-2 col-lg-3 text-end">
+
+                <ButtonDashboard text="Novo Orçamento" />
+
               </div>
 
               <div className="col-12">
-                <div className="row align-items-center pt-3 mt-2">
-                  <div className="col-12 col-lg-4">
-                    <select
-                      className="form-select form-select-sm"
-                      aria-label=".form-select-sm example"
-                    >
+                <div className="row mt-4">
+
+                  <div className="col-10 col-lg-4">
+
+                    <select className="form-select">
                       <option selected>Ações por lotes</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
+
                   </div>
 
-                  <div className="col-12 col-lg-8 pt-3 pt-lg-0 text-lg-start">
-                    <button type="submit" className="btn btn-secondary ">
+                  <div className="col-2 col-lg-8 text-lg-start">
+
+                    <button type="submit" className="btn btn-secondary">
                       Aplicar
                     </button>
+
                   </div>
+
                 </div>
               </div>
 
               <div className="col-12">
                 <div className="row pt-5">
+
                   <div className="table-responsive d-flex d-lg-none">
                     <table className="table table-hover table-striped">
                       <thead>
@@ -88,337 +81,27 @@ export default function Main() {
                       </thead>
 
                       <tbody className="align-middle">
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0088
-                          </th>
-                          <td>Marcelo Machado</td>
-                          <td className="text-end">50,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrMd id="0088" nome="Marcelo Machado" valor="50,00€" />
+                        
+                        <TableTrMd id="0087" nome="Antonio Rodrigues" valor="100,00€" />
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0087
-                          </th>
-                          <td>Antonio Rodrigues</td>
-                          <td className="text-end">100,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
+                        <TableTrMd id="0086" nome="Rui Matias" valor="450,00€" />
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                    <ExportIcons.Ver />
+                        <TableTrMd id="0085" nome="Mario Guerreiro" valor="1.450,00€" />
 
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrMd id="0084" nome="Ana Batista" valor="850,00€" />
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0086
-                          </th>
-                          <td>Rui Matias</td>
-                          <td className="text-end">450,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                    <ExportIcons.EditOrcamento/>
+                        <TableTrMd id="0083" nome="Tiago Pinto" valor="450,00€" />
 
-                                </button>
-                              </a>
+                        <TableTrMd id="0082" nome="Joana Nicolau" valor="650,00€" />
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrMd id="0081" nome="Bruno Cunha" valor="3.850,00€" />
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0085
-                          </th>
-                          <td>Mario Guerreiro</td>
-                          <td className="text-end">1.500,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
+                        <TableTrMd id="0080" nome="Paulo Real" valor="250,00€" />
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrMd id="0079" nome="Mario Guerreiro" valor="10.050,00€" />
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0084
-                          </th>
-                          <td>Ana Batista</td>
-                          <td className="text-end">850,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0083
-                          </th>
-                          <td>Tiago Pinto</td>
-                          <td className="text-end">450,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0082
-                          </th>
-                          <td>Joana Nicolau</td>
-                          <td className="text-end">650,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0081
-                          </th>
-                          <td>Bruno Cunha</td>
-                          <td className="text-end">3.500,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0080
-                          </th>
-                          <td>Paulo Real</td>
-                          <td className="text-end">250,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0079
-                          </th>
-                          <td>Mario Guerreiro</td>
-                          <td className="text-end">5.500,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
                       </tbody>
 
                       <tfoot>
@@ -466,395 +149,28 @@ export default function Main() {
                       </thead>
 
                       <tbody className="align-middle">
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0088
-                          </th>
-                          <td>Marcelo Machado</td>
-                          <td>20&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-50 w-md-100 py-2 bg-red text-center text-break text-white rounded">
-                              Nova
-                            </div>
-                          </td>
-                          <td className="text-end">50,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrLg id="0088" nome="Marcelo Machado" valor="50,00€" data="20&frasl;março&frasl;2022" estado="Novo"/>
+                        
+                        <TableTrLg id="0087" nome="Antonio Rodrigues" valor="100,00€" data="20&frasl;março&frasl;2022" estado="Novo"/>
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0087
-                          </th>
-                          <td>Antonio Rodrigues</td>
-                          <td>19&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-50 w-md-100 py-2 bg-red text-center text-break text-white rounded">
-                              Nova
-                            </div>
-                          </td>
-                          <td className="text-end">100,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
+                        <TableTrLg id="0086" nome="Rui Matias" valor="450,00€" data="19&frasl;março&frasl;2022" estado="Novo"/>
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrLg id="0085" nome="Mario Guerreiro" valor="1.450,00€" data="15&frasl;março&frasl;2022" estado="Novo"/>
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0086
-                          </th>
-                          <td>Rui Matias</td>
-                          <td>19&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-50 w-md-100 py-2 bg-red text-center text-break text-white rounded">
-                              Nova
-                            </div>
-                          </td>
-                          <td className="text-end">450,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
+                        <TableTrLg id="0084" nome="Ana Batista" valor="850,00€" data="12&frasl;março&frasl;2022" estado="Novo"/>
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrLg id="0083" nome="Tiago Pinto" valor="450,00€" data="12&frasl;março&frasl;2022" estado="Novo"/>
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0085
-                          </th>
-                          <td>Mario Guerreiro</td>
-                          <td>17&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-75 w-md-100 py-2 bg-yellow text-center text-break text-white rounded">
-                              Em tratamento
-                            </div>
-                          </td>
-                          <td className="text-end">1.500,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
+                        <TableTrLg id="0082" nome="Joana Nicolau" valor="650,00€" data="8&frasl;março&frasl;2022" estado="Novo"/>
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrLg id="0081" nome="Bruno Cunha" valor="3.850,00€" data="7&frasl;março&frasl;2022" estado="Novo"/>
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0084
-                          </th>
-                          <td>Ana Batista</td>
-                          <td>17&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-75 w-md-100 py-2 bg-yellow text-center text-break text-white rounded">
-                              Em tratamento
-                            </div>
-                          </td>
-                          <td className="text-end">850,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
+                        <TableTrLg id="0080" nome="Paulo Real" valor="250,00€" data="7&frasl;março&frasl;2022" estado="Novo"/>
 
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                        <TableTrLg id="0079" nome="Mario Guerreiro" valor="10.050,00€" data="2&frasl;março&frasl;2022" estado="Novo"/>
 
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0083
-                          </th>
-                          <td>Tiago Pinto</td>
-                          <td>15&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-50 w-md-100 py-2 bg-gray text-center text-break text-white rounded">
-                              Enviado
-                            </div>
-                          </td>
-                          <td className="text-end">450,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0082
-                          </th>
-                          <td>Joana Nicolau</td>
-                          <td>12&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-75 w-md-100 py-2 bg-blue text-center text-break text-white rounded">
-                              Confirmado
-                            </div>
-                          </td>
-                          <td className="text-end">650,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0081
-                          </th>
-                          <td>Bruno Cunha</td>
-                          <td>10&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-75 w-md-100 py-2 bg-blue text-center text-break text-white rounded">
-                              Confirmado
-                            </div>
-                          </td>
-                          <td className="text-end">3.500,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0080
-                          </th>
-                          <td>Paulo Real</td>
-                          <td>8&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-50 w-md-100 py-2 bg-grayHover text-center text-break text-white rounded">
-                              Cancelado
-                            </div>
-                          </td>
-                          <td className="text-end">250,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <th className="fw-normal" scope="row">
-                            #0079
-                          </th>
-                          <td>Mario Guerreiro</td>
-                          <td>6&frasl;março&frasl;2022</td>
-                          <td className="d-flex justify-content-center">
-                            <div className="w-50 w-md-100 py-2 bg-grayHover text-center text-break text-white rounded">
-                              Cancelado
-                            </div>
-                          </td>
-                          <td className="text-end">5.500,00€</td>
-                          <td className="text-center">
-                            <div
-                              className="btn-group"
-                              role="group"
-                              aria-label="Basic example"
-                            >
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded me-2"
-                                >
-                                  <ExportIcons.EditOrcamento/>
-                                </button>
-                              </a>
-
-                              <a href="">
-                                <button
-                                  type="button"
-                                  className="btn btn-light border border-light rounded"
-                                >
-                                  <ExportIcons.Ver />
-                                </button>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
+                          
                       </tbody>
 
                       <tfoot>
