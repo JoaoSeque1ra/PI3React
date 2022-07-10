@@ -1,7 +1,6 @@
 import React from "react";
 
 import NavbarDashboardLg from "../../../Components/NavbarDashboard/NavbarDashboardLg";
-import ExportIcons from "../../../Helpers/ExportIcons";
 import ButtonDashboard from "../../../Components/Dashboard/Button";
 import TableTrMd from "../../../Components/Dashboard/TableTrMd";
 import TableTrLg from "../../../Components/Dashboard/TableTrLg";
