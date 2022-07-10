@@ -1,6 +1,6 @@
 import React from "react";
 
-import NavbarDashboardLg from "../../../Components/NavbarDashboardLg";
+import NavbarDashboardLg from "../../../Components/NavbarDashboard/NavbarDashboardLg";
 import ExportIcons from "../../../Helpers/ExportIcons";
 
 export default function Main() {

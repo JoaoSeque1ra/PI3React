@@ -384,7 +384,7 @@ b {
 .barNav {
     position: absolute;
     top: 0;
-    left: 341px;
+    left: 400px;
     border-left: 2px solid var(--grayDashboardHover);
     height: 100%;
 }

@@ -1,21 +1,31 @@
 import React from 'react';
 
-import Brand from "../Assets/Images/logotipoincommun.png";
+import Brand from '../../Assets/Images/logotipoincommun.png';
+import NavbarItem from './NavbarItem';
 
-import ExportIcons from '../Helpers/ExportIcons';
+import ExportIcons from '../../Helpers/ExportIcons';
 
-export default function NavbarDashboardLg() {
+export default function NavbarDashboardMd() {
     return (
-        <nav className="position-sticky top-0 flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
+    <nav className="position-sticky top-0 navbar navbar-dark bg-gray d-flex d-lg-none">
+    <div className="container-fluid">
 
-            <a className="mb-md-0 me-md-auto text-white text-decoration-none">
-                <img src={Brand} width="180" className="d-none d-md-block" alt="incommun" />
-            </a>
+        <a className="navbar-brand" href="#">
+            <img src={Brand} alt="Incommun" height="24" className="d-inline-block align-text-top" />
+        </a>
 
-            <hr />
+        <button className="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+    </div>
 
+    <div className="collapse" id="navbarToggleExternalContent">
+        <div className="barNav"></div>
+
+        <div className="bg-gray p-4">
             <ul className="nav nav-pills flex-column mb-auto">
-
                 <li className="nav-item">
                     <a className="nav-link rounded-0 rounded-start fs-5 font-weight-semiBold text-white">
                         <ExportIcons.Preco className="me-2" />
@@ -26,36 +36,24 @@ export default function NavbarDashboardLg() {
 
                         <li className="nav-item">
                             <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
-                                <ExportIcons.MarketingDigitalIcon className="me-2 colorIconWhite" />
-                                Marketing Digital
-                            </a>
-                        </li>
-
-                        <li className="nav-item">
-                            <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
                                 <ExportIcons.DesignGrafico className="me-2 colorIconWhite" />
                                 Design Gráfico
                             </a>
                         </li>
-
                         <li className="nav-item">
                             <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
                                 <ExportIcons.WebsiteLojaOnline className="me-2 colorIconWhite" />
                                 Website &#38; Loja Online
                             </a>
                         </li>
-
                         <li className="nav-item">
                             <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
                                 <ExportIcons.ComunicacaoConsultoria className="me-2 colorIconWhite" />
                                 Comunicação &#38; Consultoria
                             </a>
                         </li>
-
                     </ul>
-
                 </li>
-
                 <li className="pt-4">
                     <a className="nav-link text-white fs-5 font-weight-semiBold">
                         <ExportIcons.Orcamento className="me-2" />
@@ -63,25 +61,20 @@ export default function NavbarDashboardLg() {
                     </a>
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
-
                         <li className="nav-item">
                             <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
                                 <ExportIcons.Ver className="me-2 colorIconWhite" />
                                 Ver orçamentos
                             </a>
                         </li>
-
                         <li className="nav-item">
                             <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
                                 <ExportIcons.Novo className="me-2 colorIconWhite" />
                                 Novo orçamento
                             </a>
                         </li>
-
                     </ul>
-
                 </li>
-
                 <li className="pt-4">
                     <a className="nav-link text-white fs-5 font-weight-semiBold">
                         <ExportIcons.Cliente className='me-2 colorIconWhite' />
@@ -89,25 +82,20 @@ export default function NavbarDashboardLg() {
                     </a>
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
-
                         <li className="nav-item">
                             <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
                                 <ExportIcons.Ver className='me-2 colorIconWhite' />
                                 Ver clientes
                             </a>
                         </li>
-
                         <li className="nav-item">
                             <a className="nav-link rounded-0 rounded-start fw-normal text-white ps-5">
                                 <ExportIcons.Novo className='me-2 colorIconWhite' />
-                                Novo Cliente
+                                Novo cliente
                             </a>
                         </li>
-
                     </ul>
-
                 </li>
-
                 <li className="pt-4">
                     <a className="nav-link text-white fs-5 font-weight-semiBold">
                         <ExportIcons.Dados className='me-2 colorIconWhite' />
@@ -123,22 +111,17 @@ export default function NavbarDashboardLg() {
                         </li>
                     </ul>
 
-                </li>
-
-                <hr />
-
-                <div className="dropdown">
-                    <a className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <strong>Mariana de Lurdes</strong>
-                    </a>
-                    <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                        <li><a className="dropdown-item">Sair</a></li>
+                    <ul className="nav nav-pills flex-column mb-auto pt-5">
+                        <li className="nav-item">
+                            <a className="nav-link rounded-0 rounded-start fw-normal text-white">
+                                Sair
+                            </a>
+                        </li>
                     </ul>
-                </div>
-
+                </li>
             </ul>
+        </div>
 
-        </nav>
-    );
+    </div>
+</nav>);
 }
