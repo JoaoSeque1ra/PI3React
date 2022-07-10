@@ -19,6 +19,8 @@ function changeIcon(text) {
             return < ExportIcons.AddClient className="me-md-2 colorIconWhite" />
         case "Novo Orçamento":
             return < ExportIcons.Novo className="me-md-2 colorIconWhite" />
+        case "Guardar":
+            return < ExportIcons.Guardar className="me-md-2 colorIconWhite" />
         default:
             console.log("Erro ao carregar icon no componente CheckBox");
             break;

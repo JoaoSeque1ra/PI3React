@@ -23,6 +23,7 @@ export default function App() {
         <Route path="client/obrigado" element={<Client.Obrigado />}/>
 
         <Route path="dashboard/" element={<Dashboard.Home />}/>
+        <Route path="dashboard/marketing-digital" element={<Dashboard.MarketingDigital />}/>
       </Routes>
     </Router>
   );
