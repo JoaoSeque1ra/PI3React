@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavbarDashboardMd from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardMd';
-import Main from '../Criar/main';
+import Main from '../CriarCliente/main';
 
 export function CriarCliente() {
     return (  
