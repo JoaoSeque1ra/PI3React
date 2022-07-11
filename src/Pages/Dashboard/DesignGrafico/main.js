@@ -25,17 +25,17 @@ export default function Main() {
 
                             {/* Identidade Visual */}
 
-                            <div class="col-12 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Identidade Visual
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.Criação de Logótipo
                                             </div>
 
@@ -113,10 +113,10 @@ export default function Main() {
 
                             {/* Branding & Rebranding */}
 
-                            <div class="col-12 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Branding &#38; Rebranding
                                     </div>
 
@@ -149,10 +149,10 @@ export default function Main() {
 
                             {/* Estratégia de marca */}
                             
-                            <div class="col-12 ps-lg-4 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 ps-lg-4 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-md-12 col-lg-2 fs-4 font-weight-semiBold text-break">
+                                    <div className="col-md-12 col-lg-2 fs-4 font-weight-semiBold text-break">
                                         Estratégia de marca
                                     </div>
 
@@ -163,10 +163,10 @@ export default function Main() {
 
                             {/* Registo de marca */}
                             
-                            <div class="col-12 ps-lg-4 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 ps-lg-4 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-md-12 col-lg-2 fs-4 font-weight-semiBold text-break">
+                                    <div className="col-md-12 col-lg-2 fs-4 font-weight-semiBold text-break">
                                         Registo de marca
                                     </div>
 
@@ -177,10 +177,10 @@ export default function Main() {
 
                             {/* Design editorial */}
                             
-                            <div class="col-12 ps-lg-4 my-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 ps-lg-4 my-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-md-12 col-lg-2 fs-4 font-weight-semiBold text-break">
+                                    <div className="col-md-12 col-lg-2 fs-4 font-weight-semiBold text-break">
                                         Design editorial
                                     </div>
 
