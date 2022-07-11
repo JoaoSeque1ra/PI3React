@@ -10,11 +10,11 @@ export default function Main() {
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
 
-            <div class="container-fluid">
-                <div class="row mt-5">
+            <div className="container-fluid">
+                <div className="row mt-5">
 
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="row">
+                    <div className="col-lg-10 offset-lg-1">
+                        <div className="row">
 
                             <BreadcrumbsDashboard route1="Preços" route2="/ Website &#38; Loja Online" />
 
@@ -24,17 +24,17 @@ export default function Main() {
 
                             {/* Website */}
 
-                            <div class="col-12 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Website
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
                                             
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.Número de páginas
                                             </div>
 
@@ -47,10 +47,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 2.Landing page
                                             </div>
 
@@ -59,10 +59,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 3.Portfólio
                                             </div>
 
@@ -71,10 +71,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 4.Criação de conteúdos textuais
                                             </div>
 
@@ -83,10 +83,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 5.Com alojamento
                                             </div>
 
@@ -95,10 +95,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 6.Com domínio
                                             </div>
 
@@ -112,17 +112,17 @@ export default function Main() {
 
                             {/* Lojas Online | E-Commerce */}
 
-                            <div class="col-12 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Lojas Online | E-Commerce
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.Número de páginas
                                             </div>
 
@@ -135,15 +135,15 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-5">
+                                    <div className="col-12">
+                                        <div className="row pt-5">
 
-                                            <div class="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 2.Com integração
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
                                                     <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.1.Produtos
@@ -154,8 +154,8 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
                                                     <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.2.Contactos
@@ -166,8 +166,8 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
                                                     <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.3.Equipas
@@ -178,8 +178,8 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
                                                     <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.4.Outros
@@ -193,13 +193,13 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-5">
+                                    <div className="col-12">
+                                        <div className="row pt-5">
 
-                                            <div class="col-12 col-lg-6">
-                                                <div class="row pt-4">
+                                            <div className="col-12 col-lg-6">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                    <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                         3.Com domínio
                                                     </div>
 
@@ -208,10 +208,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 col-lg-6">
-                                                <div class="row pt-4">
+                                            <div className="col-12 col-lg-6">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                    <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                         4.Com alojamento
                                                     </div>
 
@@ -220,10 +220,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 col-lg-6">
-                                                <div class="row pt-4">
+                                            <div className="col-12 col-lg-6">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                    <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                         5.Com criação de conteúdos textuais
                                                     </div>
 
@@ -240,20 +240,20 @@ export default function Main() {
 
                             {/* Suporte & Manutenção */}
 
-                            <div class="col-12 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Suporte &#38; Manutenção
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-5">
+                                    <div className="col-12">
+                                        <div className="row pt-5">
 
-                                            <div class="col-12 col-lg-6">
-                                                <div class="row">
+                                            <div className="col-12 col-lg-6">
+                                                <div className="row">
 
-                                                    <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                    <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                         1.Com domínio
                                                     </div>
 
@@ -262,10 +262,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 col-lg-6">
-                                                <div class="row">
+                                            <div className="col-12 col-lg-6">
+                                                <div className="row">
 
-                                                    <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                    <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                         2.Suporte
                                                     </div>
 
@@ -282,17 +282,17 @@ export default function Main() {
 
                             {/* Servidor & Domínio */}
 
-                            <div class="col-12 my-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 my-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Servidor &#38; Domínio
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.Espaço disco SSD
                                             </div>
 
@@ -307,10 +307,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 2.Domínios permitidos
                                             </div>
 
@@ -325,10 +325,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 3.Base de dados
                                             </div>
 
@@ -343,10 +343,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 4.Contas de Email
                                             </div>
 
@@ -361,10 +361,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 5.Certificado SSL
                                             </div>
 
