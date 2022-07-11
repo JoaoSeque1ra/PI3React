@@ -22,11 +22,11 @@ export default function Main() {
                                 <ButtonDashboard text="Guardar"/>
                             </div>
 
-                            <div class="col-12 mt-5">
-                                <div class="row gx-5">
+                            <div className="col-12 mt-5">
+                                <div className="row gx-5">
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row py-4 bg-cardsDashboard h-100">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.Marketing
@@ -37,8 +37,8 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6 mt-5 mt-lg-0">
-                                        <div class="row py-4 bg-cardsDashboard h-100">
+                                    <div className="col-12 col-lg-6 mt-5 mt-lg-0">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 2.Comunicação
@@ -52,11 +52,11 @@ export default function Main() {
                                 </div>
                             </div>
 
-                            <div class="col-12 mt-5">
-                                <div class="row gx-5">
+                            <div className="col-12 mt-5">
+                                <div className="row gx-5">
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row py-4 bg-cardsDashboard h-100">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 3.Evento
@@ -67,8 +67,8 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6 mt-5 mt-lg-0">
-                                        <div class="row py-4 bg-cardsDashboard h-100">
+                                    <div className="col-12 col-lg-6 mt-5 mt-lg-0">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 4.Assessoria
