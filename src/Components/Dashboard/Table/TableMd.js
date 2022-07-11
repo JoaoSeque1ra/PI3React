@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import TableTrMd from '../TableTrMd';
+import TableTrMd from './TableTrMd';
 
 // Ele faz a ligação nesta pagina
 

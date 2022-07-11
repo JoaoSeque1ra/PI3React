@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import TableTrLg from '../TableTrLg';
+import TableTrLg from './TableTrLg';
 
 export default function TableLg({campo1, campo2, campo3, campo4, campo5, campo6}) {
     const teste = {

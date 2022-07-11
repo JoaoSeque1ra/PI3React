@@ -3,7 +3,8 @@ import React from 'react';
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
-import TableTrMd from '../../../Components/Dashboard/TableTrMd';
+import TableMd from '../../../Components/Dashboard/Table/TableMd';
+import TableLg from '../../../Components/Dashboard/Table/TableLg';
 
 export default function Main() {
     return (  
@@ -25,6 +26,9 @@ export default function Main() {
                             <div class="col-12">
                                 <div class="row pt-5">
 
+                                    <TableMd campo1="Orçamento" campo2="Nome" campo3="Total" campo4="Ações"/>
+
+                                    <TableLg campo1="Orçamento" campo2="Nome" campo3="Data" campo4="Estado" campo5="Total" campo6="Ações"/>
 
                                 </div>
                             </div>
