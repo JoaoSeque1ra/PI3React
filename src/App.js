@@ -27,10 +27,13 @@ export default function App() {
         <Route path="dashboard/" element={<Dashboard.Home />}/>
         <Route path="dashboard/marketing-digital" element={<Dashboard.MarketingDigital />}/>
         <Route path="dashboard/website-loja-online" element={<Dashboard.WebsiteLojaOnline />}/>
-        <Route path="dashboard/criar-cliente" element={<Dashboard.CriarCliente />}/>
 
         <Route path="dashboard/design-grafico" element={<Dashboard.DesignGrafico />}/>
         <Route path="dashboard/comunicacao-consultoria" element={<Dashboard.ComunicacaoConsultoria />}/>
+
+        <Route path="dashboard/criar-cliente" element={<Dashboard.CriarCliente />}/>
+        <Route path="dashboard/editar-cliente" element={<Dashboard.EditarCliente />}/>
+        
       </Routes>
     </Router>
   );
