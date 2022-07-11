@@ -21,6 +21,8 @@ export default function App() {
         <Route path="client/loja-online" element={<Client.LojaOnline />}/>
         <Route path="client/contactos" element={<Client.Contactos />}/>
         <Route path="client/obrigado" element={<Client.Obrigado />}/>
+        <Route path="client/gestao-redes-sociais" element={<Client.GestaoRedesSociais />}/>
+        <Route path="client/paid-media" element={<Client.PaidMedia />}/>
 
         <Route path="dashboard/" element={<Dashboard.Home />}/>
         <Route path="dashboard/marketing-digital" element={<Dashboard.MarketingDigital />}/>
