@@ -14,8 +14,8 @@ export default function Main() {
             <div className="container-fluid">
                 <div className="row mt-5">
 
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="row">
+                    <div className="col-lg-10 offset-lg-1">
+                        <div className="row">
 
                             <BreadcrumbsDashboard route2="Orçamentos"/>
 
@@ -23,8 +23,8 @@ export default function Main() {
                                 <ButtonDashboard text="Novo Orçamento"/>
                             </div>
 
-                            <div class="col-12">
-                                <div class="row pt-5">
+                            <div className="col-12">
+                                <div className="row pt-5">
 
                                     <TableMd campo1="Orçamento" campo2="Nome" campo3="Total" campo4="Ações"/>
 
