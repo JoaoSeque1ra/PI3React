@@ -8,6 +8,8 @@ import { Website } from "./Website/index";
 import { LojaOnline } from "./LojaOnline/index";
 import { Contactos } from "./Contactos/index";
 import { Obrigado } from "./Obrigado/index";
+import { GestaoRedesSociais } from "./GestaoRedesSociais/index";
+import { PaidMedia } from "./PaidMedia/index";
 
 
-export default { Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline, Contactos, Obrigado };
+export default { Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline, Contactos, Obrigado, GestaoRedesSociais, PaidMedia };
