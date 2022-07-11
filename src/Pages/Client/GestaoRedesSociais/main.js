@@ -10,7 +10,7 @@ export default function Main() {
             <div className="container-fluid">
                 <div className="row">
 
-                    <div className="col-md-12 offset-lg-1 col-lg-10 font-weight-semiBold font-size-1__5rem pt-pageLeft">
+                    <div className="pt-pageLeft">
                         <Breadcrumbs route="/ Marketing Digital / Gestão de Redes Sociais" textColor="text-yellow"/>
                     </div>
 
