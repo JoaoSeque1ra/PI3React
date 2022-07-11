@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function NavbarDashboardLg() {
     return (
-        <nav className="position-sticky top-0 flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
+        <nav className="sticky-top flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
 
             <a className="mb-md-0 me-md-auto text-white text-decoration-none">
                 <img src={Brand} width="180" className="d-none d-md-block cursor-pointer" alt="incommun" />
@@ -23,9 +23,7 @@ export default function NavbarDashboardLg() {
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <Link to="">
-                            <NavbarItem text="Marketing Digital" font="fw-normal ps-5" />
-                        </Link>
+                        <NavbarItem text="Marketing Digital" font="fw-normal ps-5" />
 
                         <NavbarItem text="Design Gráfico" font="fw-normal ps-5" />
 

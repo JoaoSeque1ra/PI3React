@@ -3,22 +3,257 @@ import React from 'react';
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
+import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 export default function Main() {
     return (  
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
 
-            <div class="container-fluid">
-                <div class="row mt-5">
+            <div className="container-fluid">
+                <div className="row mt-5">
 
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="row">
+                    <div className="col-lg-10 offset-lg-1">
+                        <div className="row">
                             <BreadcrumbsDashboard route1="Preços" route2="/ Marketing Digital"/>
 
-                            <div class="col-3 col-lg-4 text-end">
+                            <div className="col-3 col-lg-4 text-end">
                                 <ButtonDashboard text="Guardar"/>
                             </div>
+
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
+
+                                    <div className="col-12">
+                                        <div className="row pt-4">
+
+                                            <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                                Gestão de redes Sociais
+                                            </div>
+
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                1.Packs
+                                            </div>
+
+                                            <PacksInput nomePack="Start" valor="0,00&#8364;" onChange={()=> console.count("1: ")}/>
+
+                                            <PacksInput nomePack="Boost" valor="0,00&#8364;" onChange={()=> console.count("2: ")}/>
+
+                                            <PacksInput nomePack="Bomb" valor="0,00&#8364;" onChange={()=> console.count("3: ")}/>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div className="col-12">
+                                        <div className="row pt-4">
+
+                                            <div className="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                2.Pack Personalizado
+                                            </div>
+
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
+
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                        2.1.Facebook
+                                                    </div>
+
+                                                    <PacksInput nomePack="Por publicação" valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                                    <PacksInput nomePack="Por storie" valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                                    <PacksInput nomePack="Por reel" valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                                </div>
+                                            </div>
+
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
+
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                        2.2.Instagram
+                                                    </div>
+
+                                                    <PacksInput nomePack="Por publicação" valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                                    <PacksInput nomePack="Por storie" valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                                    <PacksInput nomePack="Por reel" valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                                </div>
+                                            </div>
+
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
+
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                        2.3.Twitter
+                                                    </div>
+            
+                                                    <PacksInput nomePack="Por publicação" valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                                    <PacksInput nomePack="Por storie" valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                                    <PacksInput nomePack="Por reel" valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                                </div>
+                                            </div>
+
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
+
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                        2.4.TikTok
+                                                    </div>
+            
+                                                    <PacksInput nomePack="Por publicação" valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                                    <PacksInput nomePack="Por storie" valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                                    <PacksInput nomePack="Por reel" valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                                </div>
+                                            </div>
+
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
+
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                        2.5.Linkedin
+                                                    </div>
+            
+                                                    <PacksInput nomePack="Por publicação" valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                                    <PacksInput nomePack="Por storie" valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                                    <PacksInput nomePack="Por reel" valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                                </div>
+                                            </div>
+
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
+
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                        2.6.Youtube
+                                                    </div>
+            
+                                                    <PacksInput nomePack="Por publicação" valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                                    <PacksInput nomePack="Por storie" valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                                    <PacksInput nomePack="Por reel" valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                                </div>
+                                            </div>
+
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
+
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                        2.7.Google My Business
+                                                    </div>
+            
+                                                    <PacksInput nomePack="Por publicação" valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                                    <PacksInput nomePack="Por storie" valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                                    <PacksInput nomePack="Por reel" valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 ps-lg-5">
+                                        <div class="row pt-4">
+
+                                            <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                2.8.Cover
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 ps-lg-5">
+                                        <div class="row pt-4">
+
+                                            <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                2.9.Design para publicações
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" onChange={()=> console.count("5: ")}/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 ps-lg-5">
+                                        <div class="row pt-4">
+
+                                            <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                2.10.Copywriting
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 ps-lg-5">
+                                        <div class="row pt-4">
+
+                                            <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                2.11.Planificação Editorial
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" onChange={()=> console.count("6: ")}/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 ps-lg-5">
+                                        <div class="row pt-4">
+
+                                            <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                2.12.Consultoria Digital
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 ps-lg-5">
+                                        <div class="row pt-4">
+
+                                            <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                2.13.Gestão de Campanhas
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 ps-lg-5">
+                                        <div class="row pt-4">
+
+                                            <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                2.14.Relatório Mensal
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" onChange={()=> console.count("4: ")}/>
+
+                                        </div>
+                                    </div>
+                                    
+                               </div>
+                            </div>
+
 
                         </div>
                     </div>
