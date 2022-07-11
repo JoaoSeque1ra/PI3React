@@ -3,46 +3,23 @@ import React from 'react';
 import ExportIcons from '../../../Helpers/ExportIcons';
 
 export default function NavbarItem({text, font}) {
-    switch(text) {
-        case "Preços":
-            return(
-                <div className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
-                    {changeIcon(text)}
-                    {text}
-                </div>
-            )
-        case "Orçamento":
-            return(
-                <div className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
-                    {changeIcon(text)}
-                    {text}
-                </div>
-            )
-        case "Cliente":
-            return(
-                <div className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
-                    {changeIcon(text)}
-                    {text}
-                </div>
-            )
-        case "Dados":
-            return(
-                <div className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
-                    {changeIcon(text)}
-                    {text}
-                </div>
-            )
-        default:
-            return (
-                <li className="nav-item">
-                    <a className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
-                        {changeIcon(text)}
-                        {text}
-                    </a>
-                </li>
-            )
+    if(text === "Preços" || text === "Orçamento" || text === "Cliente"|| text === "Dados") {
+        return(
+            <div className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
+                {changeIcon(text)}
+                {text}
+            </div>
+        )
     }
 
+    return (
+        <li className="nav-item">
+            <a className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
+                {changeIcon(text)}
+                {text}
+            </a>
+        </li>
+    )
     
 }
 
