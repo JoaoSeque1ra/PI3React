@@ -4,7 +4,7 @@ import ExportIcons from '../../Helpers/ExportIcons';
 
 export default function ButtonDashboard({text}) {
     return (
-        <button type="button" className="btn btn-gray btn-lg rounded-0 text-white">
+        <button type="button" className="btn btn-gray btn-lg rounded-0 text-white text-break">
             {changeIcon(text)}
             <div className='d-none d-md-inline'>
                 {text}

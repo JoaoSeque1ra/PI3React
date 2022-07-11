@@ -2,8 +2,8 @@ import React from "react";
 
 import NavbarDashboardLg from "../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg";
 import ButtonDashboard from "../../../Components/Dashboard/Button";
-import TableTrMd from "../../../Components/Dashboard/TableTrMd";
-import TableTrLg from "../../../Components/Dashboard/TableTrLg";
+import TableMd from "../../../Components/Dashboard/Table/TableMd";
+import TableLg from "../../../Components/Dashboard/Table/TableLg";
 
 export default function Main() {
   return (
@@ -32,7 +32,7 @@ export default function Main() {
 
               </div>
 
-              <div className="col-12">
+              {/* <div className="col-12">
                 <div className="row mt-4">
 
                   <div className="col-10 col-lg-4">
@@ -55,146 +55,15 @@ export default function Main() {
                   </div>
 
                 </div>
-              </div>
+              </div> */}
 
               <div className="col-12">
                 <div className="row pt-5">
 
-                  <div className="table-responsive d-flex d-lg-none">
-                    <table className="table table-hover table-striped">
-                      <thead>
-                        <tr>
-                          <th className="fw-light" scope="col">
-                            Orçamento
-                          </th>
-                          <th className="fw-light" scope="col">
-                            Nome
-                          </th>
-                          <th className="fw-light text-end" scope="col">
-                            Total
-                          </th>
-                          <th className="fw-light text-center" scope="col">
-                            Ações
-                          </th>
-                        </tr>
-                      </thead>
-
-                      <tbody className="align-middle">
-
-                        <TableTrMd id="0088" nome="Marcelo Machado" valor="50,00€" />
-                        
-                        <TableTrMd id="0087" nome="Antonio Rodrigues" valor="100,00€" />
-
-                        <TableTrMd id="0086" nome="Rui Matias" valor="450,00€" />
-
-                        <TableTrMd id="0085" nome="Mario Guerreiro" valor="1.450,00€" />
-
-                        <TableTrMd id="0084" nome="Ana Batista" valor="850,00€" />
-
-                        <TableTrMd id="0083" nome="Tiago Pinto" valor="450,00€" />
-
-                        <TableTrMd id="0082" nome="Joana Nicolau" valor="650,00€" />
-
-                        <TableTrMd id="0081" nome="Bruno Cunha" valor="3.850,00€" />
-
-                        <TableTrMd id="0080" nome="Paulo Real" valor="250,00€" />
-
-                        <TableTrMd id="0079" nome="Mario Guerreiro" valor="10.050,00€" />
-
-                      </tbody>
-
-                      <tfoot>
-                        <tr>
-                          <th className="fw-light" scope="col">
-                            Orçamento
-                          </th>
-                          <th className="fw-light" scope="col">
-                            Nome
-                          </th>
-                          <th className="fw-light text-end" scope="col">
-                            Total
-                          </th>
-                          <th className="fw-light text-center" scope="col">
-                            Ações
-                          </th>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-
-                  <div className="table-responsive d-none d-lg-flex">
-                    <table className="table table-hover table-striped">
-                      <thead>
-                        <tr>
-                          <th className="fw-light" scope="col">
-                            Orçamento
-                          </th>
-                          <th className="fw-light" scope="col">
-                            Nome
-                          </th>
-                          <th className="fw-light" scope="col">
-                            Data
-                          </th>
-                          <th className="fw-light text-center" scope="col">
-                            Estado
-                          </th>
-                          <th className="fw-light text-end" scope="col">
-                            Total
-                          </th>
-                          <th className="fw-light text-center" scope="col">
-                            Ações
-                          </th>
-                        </tr>
-                      </thead>
-
-                      <tbody className="align-middle">
-
-                        <TableTrLg id="0088" nome="Marcelo Machado" valor="50,00€" data="20&frasl;março&frasl;2022" estado="Novo"/>
-                        
-                        <TableTrLg id="0087" nome="Antonio Rodrigues" valor="100,00€" data="20&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0086" nome="Rui Matias" valor="450,00€" data="19&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0085" nome="Mario Guerreiro" valor="1.450,00€" data="15&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0084" nome="Ana Batista" valor="850,00€" data="12&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0083" nome="Tiago Pinto" valor="450,00€" data="12&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0082" nome="Joana Nicolau" valor="650,00€" data="8&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0081" nome="Bruno Cunha" valor="3.850,00€" data="7&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0080" nome="Paulo Real" valor="250,00€" data="7&frasl;março&frasl;2022" estado="Novo"/>
-
-                        <TableTrLg id="0079" nome="Mario Guerreiro" valor="10.050,00€" data="2&frasl;março&frasl;2022" estado="Novo"/>
-                          
-                      </tbody>
-
-                      <tfoot>
-                        <tr>
-                          <th className="fw-light" scope="col">
-                            Orçamento
-                          </th>
-                          <th className="fw-light" scope="col">
-                            Nome
-                          </th>
-                          <th className="fw-light" scope="col">
-                            Data
-                          </th>
-                          <th className="fw-light text-center" scope="col">
-                            Estado
-                          </th>
-                          <th className="fw-light text-end" scope="col">
-                            Total
-                          </th>
-                          <th className="fw-light text-center" scope="col">
-                            Ações
-                          </th>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
+                  <TableMd campo1="Orçamento" campo2="Nome" campo3="Total" campo4="Ações"/>
+                  
+                  <TableLg campo1="Orçamento" campo2="Nome" campo3="Data" campo4="Estado" campo5="Total" campo6="Ações" />
+                  
                 </div>
               </div>
             </div>

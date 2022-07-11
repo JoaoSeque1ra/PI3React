@@ -29,6 +29,7 @@ export default function App() {
         <Route path="dashboard/website-loja-online" element={<Dashboard.WebsiteLojaOnline />}/>
         <Route path="dashboard/design-grafico" element={<Dashboard.DesignGrafico />}/>
         <Route path="dashboard/comunicacao-consultoria" element={<Dashboard.ComunicacaoConsultoria />}/>
+        <Route path="dashboard/orcamentos" element={<Dashboard.Orcamentos />}/>
       </Routes>
     </Router>
   );
