@@ -51,14 +51,6 @@ export default function DoubleCheckBox(props) {
 
             </div>
         </div>
-
-        // <div className="d-flex align-items-center mt-5">
-        //     <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={nameCheckBox(props)}>
-        //         {changeIcon(props)}
-        //         {changeNameLabel(props)}
-        //         <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={handleClick} onChange={createEventOnChange(props)} value={changeNameLabel(props)} />
-        //     </label>
-        // </div>
     );
 }
 
