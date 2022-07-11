@@ -7,7 +7,7 @@ export default function TableLg({campo1, campo2, campo3, campo4, campo5, campo6}
         id: "0087",
         nome: "João Sequeira",
         data: "11-7-2022",
-        estado: "Novo",
+        estado: "Em tratamento",
         valor: "500€"
     }
     const [infoOrcamento, setInfoOrcamento] = useState([teste]);
@@ -43,9 +43,11 @@ export default function TableLg({campo1, campo2, campo3, campo4, campo5, campo6}
 
                     <TableTrLg id="0088" nome="Marcelo Machado" valor="50,00€" data="20&frasl;março&frasl;2022" estado="Novo"/>
                         
-                    <TableTrLg id="0087" nome="Antonio Rodrigues" valor="100,00€" data="20&frasl;março&frasl;2022" estado="Novo"/>
+                    <TableTrLg id="0087" nome="Antonio Rodrigues" valor="100,00€" data="20&frasl;março&frasl;2022" estado="Enviado"/>
 
-                    <TableTrLg id="0086" nome="Rui Matias" valor="450,00€" data="19&frasl;março&frasl;2022" estado="Novo"/>
+                    <TableTrLg id="0086" nome="Rui Matias" valor="450,00€" data="19&frasl;março&frasl;2022" estado="Confirmado"/>
+
+                    <TableTrLg id="0086" nome="Rui Matias" valor="450,00€" data="19&frasl;março&frasl;2022" estado="Cancelado"/>
 
                     <LoadInfo />
                           

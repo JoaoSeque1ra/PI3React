@@ -33,7 +33,6 @@ input[type='number']::-webkit-inner-spin-button {
     --grayDashboard: #555555;
     --grayDashboardHover: #777777;
     --cardsColorDashboard: hsla(0, 0%, 0%, 0.03);
-
     --cardColorOpacity: #dddddd49;
 }
 
@@ -90,6 +89,10 @@ body {
 
 .bg-disable {
     background-color: var(--checkBoxColorDisable);
+}
+
+.bg-grayHover {
+    background-color: var(--grayDashboardHover);
 }
 
 /*----Text color----*/
