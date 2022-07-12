@@ -150,6 +150,10 @@ body {
     cursor: pointer;
 }
 
+.cursor-default {
+    cursor: default;
+}
+
 .h-70px {
     height: 70px;
 }

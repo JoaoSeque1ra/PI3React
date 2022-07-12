@@ -6,7 +6,7 @@ import ExportIcons from '../../../Helpers/ExportIcons';
 export default function NavbarItem({text, font, route}) {
     if(text === "Preços" || text === "Orçamento" || text === "Cliente"|| text === "Dados") {
         return(
-            <div className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
+            <div className={"nav-link rounded-0 rounded-start text-white cursor-default active " + font}>
                 {changeIcon(text)}
                 {text}
             </div>
