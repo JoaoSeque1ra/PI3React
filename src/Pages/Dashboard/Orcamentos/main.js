@@ -19,7 +19,7 @@ export default function Main() {
                             <BreadcrumbsDashboard route2="Orçamentos"/>
 
                             <div className="col-3 col-lg-4 text-end">
-                                <ButtonDashboard text="Novo Orçamento"/>
+                                <ButtonDashboard text="Novo Orçamento" to="/dashboard"/>
                             </div>
 
                             <div className="col-12">

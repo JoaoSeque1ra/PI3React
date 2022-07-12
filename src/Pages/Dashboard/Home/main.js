@@ -21,13 +21,13 @@ export default function Main() {
 
               <div className="col-2 col-lg-3 text-end">
 
-                <ButtonDashboard text="Novo Cliente" />
+                <ButtonDashboard text="Novo Cliente" to="/dashboard/novo-cliente"/>
 
               </div>
 
               <div className="col-2 col-lg-3 text-end">
 
-                <ButtonDashboard text="Novo Orçamento" />
+                <ButtonDashboard text="Novo Orçamento" to="/dashboard" />
 
               </div>
 
