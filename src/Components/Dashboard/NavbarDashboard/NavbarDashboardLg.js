@@ -9,9 +9,9 @@ export default function NavbarDashboardLg() {
     return (
         <nav className="sticky-top flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
 
-            <a className="mb-md-0 me-md-auto text-white text-decoration-none">
+            <Link className='mb-md-0 me-md-auto text-white text-decoration-none' to={"/dashboard"}>
                 <img src={Brand} width="180" className="d-none d-md-block cursor-pointer" alt="incommun" />
-            </a>
+            </Link>
 
             <hr />
 
@@ -23,13 +23,13 @@ export default function NavbarDashboardLg() {
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <NavbarItem text="Marketing Digital" font="fw-normal ps-5" />
+                        <NavbarItem text="Marketing Digital" font="fw-normal ps-5" route="marketing-digital"/>
 
-                        <NavbarItem text="Design Gráfico" font="fw-normal ps-5" />
+                        <NavbarItem text="Design Gráfico" font="fw-normal ps-5" route="design-grafico"/>
 
-                        <NavbarItem text="Website &#38; Loja Online" font="fw-normal ps-5" />
+                        <NavbarItem text="Website &#38; Loja Online" font="fw-normal ps-5" route="website-loja-online"/>
 
-                        <NavbarItem text="Comunicação &#38; Consultoria" font="fw-normal ps-5" />
+                        <NavbarItem text="Comunicação &#38; Consultoria" font="fw-normal ps-5" route="comunicacao-consultoria"/>
 
                     </ul>
 
@@ -41,9 +41,9 @@ export default function NavbarDashboardLg() {
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <NavbarItem text="Ver orçamentos" font="fw-normal ps-5" />
+                        <NavbarItem text="Ver orçamentos" font="fw-normal ps-5" route="ver-orcamentos"/>
 
-                        <NavbarItem text="Novo orçamento" font="fw-normal ps-5" />
+                        <NavbarItem text="Novo orçamento" font="fw-normal ps-5" route="novo-orcamento"/>
 
                     </ul>
 
@@ -55,9 +55,9 @@ export default function NavbarDashboardLg() {
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <NavbarItem text="Ver clientes" font="fw-normal ps-5" />
+                        <NavbarItem text="Ver clientes" font="fw-normal ps-5" route="ver-clientes"/>
 
-                        <NavbarItem text="Novo cliente" font="fw-normal ps-5" />
+                        <NavbarItem text="Novo cliente" font="fw-normal ps-5" route="novo-cliente"/>
 
                     </ul>
 
@@ -69,7 +69,7 @@ export default function NavbarDashboardLg() {
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <NavbarItem text="Ver dados" font="fw-normal ps-5" />
+                        <NavbarItem text="Ver dados" font="fw-normal ps-5" route="ver-dados"/>
 
                     </ul>
 
@@ -85,7 +85,9 @@ export default function NavbarDashboardLg() {
                     <strong>Mariana de Lurdes</strong>
                 </a>
                 <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a className="dropdown-item">Sair</a></li>
+                    <li>
+                        <a className="dropdown-item">Sair</a>
+                    </li>
                 </ul>
             </div>
 

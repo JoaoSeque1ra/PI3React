@@ -53,6 +53,9 @@ import { ReactComponent as AddClient } from '../Assets/Svg/addClient.svg';
 
 import { ReactComponent as Guardar } from '../Assets/Svg/guardar.svg';
 
+import { ReactComponent as ClienteBorder } from '../Assets/Svg/clienteBorder.svg';
+
+
 export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove, OrganizacaoEventos, 
 IdentidadeVisual, BrandingRebranding, EstrategiaMarca, RegistoMarca, DesignEditorial, AnaliseConcorrencia, CriacaoLogotipo, PaletaCores, SloganMarca, ManualNormasGraficas, Estacionario, Website, LojaOnlineEcommerce, SuporteManutencao, ServidorDominio, LandingPage,
-Portfolio, CriacaoConteudosTextuais, Alojamento, Dominio, Integracao, AssessoriaCriacaoConteudo, AddClient, EditOrcamento, Guardar };
+Portfolio, CriacaoConteudosTextuais, Alojamento, Dominio, Integracao, AssessoriaCriacaoConteudo, AddClient, EditOrcamento, Guardar, ClienteBorder };

@@ -27,7 +27,7 @@ export default function Main() {
                                 <div className="row py-4">
 
                                     <div className="col-12">
-                                        <div className="row pt-4">
+                                        <div className="row">
 
                                             <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                                 Gestão de redes Sociais
@@ -257,17 +257,17 @@ export default function Main() {
 
                             {/* Paid Media */}
 
-                            <div class="col-12 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
                                     
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Paid Media
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.Packs
                                             </div>
 
@@ -280,17 +280,17 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row py-4">
+                                    <div className="col-12">
+                                        <div className="row py-4">
 
-                                            <div class="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 2.Pack Personalizado
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.1.Estratégia Digital
                                                     </div>
 
@@ -303,10 +303,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.2.Criação de campanhas e anúncios
                                                     </div>
 
@@ -319,10 +319,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.3.Segmentação do público
                                                     </div>
 
@@ -335,10 +335,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.4.Otimização de campanha
                                                     </div>
 
@@ -351,10 +351,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.5.Relatório mensal
                                                     </div>
 
@@ -367,10 +367,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.6.Criação de conversões c/Google Tag Manager
                                                     </div>
 
@@ -383,10 +383,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.7.Gestão de campanhas
                                                     </div>
 
@@ -407,17 +407,17 @@ export default function Main() {
 
                             {/* Email & SMS Marketing */}
 
-                            <div class="col-12 mt-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 mt-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Email &#38; SMS Marketing
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row pt-4">
+                                    <div className="col-12">
+                                        <div className="row pt-4">
 
-                                            <div class="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.Packs
                                             </div>
 
@@ -430,19 +430,19 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12">
-                                        <div class="row py-4">
+                                    <div className="col-12">
+                                        <div className="row py-4">
 
-                                            <div class="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 2.Pack Personalizado
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.1.Email Marketing <br />
-                                                        <span class="fw-light">(envios)</span>
+                                                        <span className="fw-light">(envios)</span>
                                                     </div>
 
                                                     <PacksInput nomePack="1 000 Emails" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
@@ -454,12 +454,12 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.2.SMS Marketing<br/>
-                                                        <span class="fw-light">(envios)</span>
+                                                        <span className="fw-light">(envios)</span>
                                                     </div>
 
                                                     <PacksInput nomePack="1 000 sms" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
@@ -471,10 +471,10 @@ export default function Main() {
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 ps-lg-5">
-                                                <div class="row pt-4">
+                                            <div className="col-12 ps-lg-5">
+                                                <div className="row pt-4">
 
-                                                    <div class="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
+                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
                                                         2.3.Gestão newsletter
                                                     </div>
 
@@ -491,17 +491,17 @@ export default function Main() {
 
                             {/* Otimização & SEM */}
 
-                            <div class="col-12 my-5 bg-cardsDashboard">
-                                <div class="row py-4">
+                            <div className="col-12 my-5 bg-cardsDashboard">
+                                <div className="row py-4">
 
-                                    <div class="col-12 ps-lg-4 fs-4 font-weight-semiBold">
+                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                         Otimização SEO &#38; SEM
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 1.SEO Técnico
                                             </div>
 
@@ -510,10 +510,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 2.SEO On-Page
                                             </div>
 
@@ -522,10 +522,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 3.Conteúdos
                                             </div>
 
@@ -534,10 +534,10 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div class="col-12 col-lg-6">
-                                        <div class="row pt-4">
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
 
-                                            <div class="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
                                                 4.Copywriting
                                             </div>
 

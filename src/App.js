@@ -24,6 +24,7 @@ export default function App() {
         <Route path="client/gestao-redes-sociais" element={<Client.GestaoRedesSociais />}/>
         <Route path="client/paid-media" element={<Client.PaidMedia />}/>
 
+        <Route path="dashboard/Login" element={<Dashboard.Login />}/>
         <Route path="dashboard/" element={<Dashboard.Home />}/>
         <Route path="dashboard/marketing-digital" element={<Dashboard.MarketingDigital />}/>
         <Route path="dashboard/website-loja-online" element={<Dashboard.WebsiteLojaOnline />}/>
@@ -34,6 +35,8 @@ export default function App() {
         <Route path="dashboard/criar-cliente" element={<Dashboard.CriarCliente />}/>
         <Route path="dashboard/editar-cliente" element={<Dashboard.EditarCliente />}/>
         
+        <Route path="dashboard/ver-orcamentos" element={<Dashboard.Orcamentos />}/>
+        <Route path="dashboard/editar-orcamento/:id" element={<Dashboard.EditarOrcamento />}/>
       </Routes>
     </Router>
   );
