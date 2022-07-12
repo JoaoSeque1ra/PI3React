@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import ExportIcons from '../../../Helpers/ExportIcons';
 
-export default function NavbarItem({text, font}) {
+export default function NavbarItem({text, font, route}) {
     if(text === "Preços" || text === "Orçamento" || text === "Cliente"|| text === "Dados") {
         return(
             <div className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
@@ -14,10 +15,10 @@ export default function NavbarItem({text, font}) {
 
     return (
         <li className="nav-item">
-            <a className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font}>
+            <Link className={"nav-link rounded-0 rounded-start text-white cursor-pointer " + font} to={"/dashboard/" + route}>
                 {changeIcon(text)}
                 {text}
-            </a>
+            </Link>
         </li>
     )
     
