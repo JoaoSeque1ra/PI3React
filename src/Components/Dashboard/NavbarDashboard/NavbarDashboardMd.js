@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Brand from '../../../Assets/Images/logotipoincommun.png';
 import NavbarItem from './NavbarItem';
@@ -8,9 +9,9 @@ export default function NavbarDashboardMd() {
         <nav className="position-sticky top-0 navbar navbar-dark bg-gray d-flex d-lg-none" style={{zIndex: 2000}}>
             <div className="container-fluid">
 
-                <a className="navbar-brand">
+                <Link className="navbar-brand" to={"/dashboard"}>
                     <img src={Brand} alt="Incommun" height="24" className="d-inline-block align-text-top" />
-                </a>
+                </Link>
 
                 <button className="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
@@ -31,13 +32,13 @@ export default function NavbarDashboardMd() {
 
                             <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                                <NavbarItem text="Marketing Digital" font="fw-normal ps-5" />
+                                <NavbarItem text="Marketing Digital" font="fw-normal ps-5" route="marketing-digital"/>
 
-                                <NavbarItem text="Design Gráfico" font="fw-normal ps-5" />
+                                <NavbarItem text="Design Gráfico" font="fw-normal ps-5" route="design-grafico"/>
 
-                                <NavbarItem text="Website &#38; Loja Online" font="fw-normal ps-5" />
+                                <NavbarItem text="Website &#38; Loja Online" font="fw-normal ps-5" route="website-loja-online"/>
 
-                                <NavbarItem text="Comunicação &#38; Consultoria" font="fw-normal ps-5" />
+                                <NavbarItem text="Comunicação &#38; Consultoria" font="fw-normal ps-5" route="comunicacao-consultoria"/>
 
                             </ul>
 
@@ -47,10 +48,10 @@ export default function NavbarDashboardMd() {
                             <NavbarItem text="Orçamento" font="fs-5 font-weight-semiBold" />
 
                             <ul className="nav nav-pills flex-column mb-auto pt-1">
+                                
+                                <NavbarItem text="Ver orçamentos" font="fw-normal ps-5" route="ver-orcamentos"/>
 
-                                <NavbarItem text="Ver orçamentos" font="fw-normal ps-5" />
-
-                                <NavbarItem text="Novo orçamento" font="fw-normal ps-5" />
+                                <NavbarItem text="Novo orçamento" font="fw-normal ps-5" route="novo-orcamento"/>
 
                             </ul>
                         </li>
@@ -60,9 +61,9 @@ export default function NavbarDashboardMd() {
 
                             <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                                <NavbarItem text="Ver clientes" font="fw-normal ps-5" />
+                                <NavbarItem text="Ver clientes" font="fw-normal ps-5" route="ver-clientes"/>
 
-                                <NavbarItem text="Novo cliente" font="fw-normal ps-5" />
+                                <NavbarItem text="Novo cliente" font="fw-normal ps-5" route="novo-cliente"/>
 
                             </ul>
                         </li>
@@ -72,7 +73,7 @@ export default function NavbarDashboardMd() {
 
                             <ul className="nav nav-pills flex-column mb-auto pt-1">
                                 
-                                <NavbarItem text="Ver dados" font="fw-normal ps-5" />
+                                <NavbarItem text="Ver dados" font="fw-normal ps-5" route="ver-dados"/>
 
                             </ul>
 
