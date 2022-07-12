@@ -27,7 +27,7 @@ export default function Main() {
                                 <div className="row py-4">
 
                                     <div className="col-12">
-                                        <div className="row pt-4">
+                                        <div className="row">
 
                                             <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
                                                 Gestão de redes Sociais
