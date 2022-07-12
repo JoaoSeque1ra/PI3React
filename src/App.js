@@ -32,6 +32,7 @@ export default function App() {
         <Route path="dashboard/comunicacao-consultoria" element={<Dashboard.ComunicacaoConsultoria />}/>
         <Route path="dashboard/ver-orcamentos" element={<Dashboard.Orcamentos />}/>
         <Route path="dashboard/editar-orcamento/:id" element={<Dashboard.EditarOrcamento />}/>
+        <Route path="dashboard/ver-clientes" element={<Dashboard.Clientes />}/>
       </Routes>
     </Router>
   );
