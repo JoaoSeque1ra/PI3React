@@ -43,7 +43,7 @@ export default function NavbarDashboardLg() {
 
                         <NavbarItem text="Ver orçamentos" font="fw-normal ps-5" route="ver-orcamentos"/>
 
-                        <NavbarItem text="Novo orçamento" font="fw-normal ps-5" route="novo-orcamento"/>
+                        <NavbarItem text="Novo orçamento" font="fw-normal ps-5" route=""/>
 
                     </ul>
 
@@ -69,7 +69,7 @@ export default function NavbarDashboardLg() {
 
                     <ul className="nav nav-pills flex-column mb-auto pt-1">
 
-                        <NavbarItem text="Ver dados" font="fw-normal ps-5" route="ver-dados"/>
+                        <NavbarItem text="Ver dados" font="fw-normal ps-5" route=""/>
 
                     </ul>
 

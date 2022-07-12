@@ -3,7 +3,6 @@ import React from 'react';
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
-import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 export default function Main(){
     return(

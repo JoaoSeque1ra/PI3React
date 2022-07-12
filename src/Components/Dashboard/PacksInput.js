@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function PacksInput({ onChange, nomePack, valor, className, disabled }) {
+export default function PacksInput({ onChange, nomePack, valor, className }) {
     return (
         <div className={"col-12 text-end " + className}>
             <label htmlFor="basic-url" className="form-label fw-light">{nomePack}</label>
