@@ -363,7 +363,8 @@ input[type="checkbox"]:checked::after {
 }
 
 .bg-blue{
-    background-color: #8fb5c7 !important;
+    background-image: linear-gradient(to right, #008183, #64c3c7) !important;
+    
 }
 
 b {
