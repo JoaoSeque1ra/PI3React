@@ -10,7 +10,7 @@ export default function Main() {
                 <div className="row">
 
                     <div className="pt-pageLeft">
-                        <Breadcrumbs route="/ Marketing Digital / Paid Media" textColor="text-yellow"/>
+                        <Breadcrumbs route1="Orçamento" route2="/ Marketing Digital / Paid Media" textColor="text-yellow"/>
                     </div>
 
                     <div className="col-12 offset-lg-1 col-lg-10">

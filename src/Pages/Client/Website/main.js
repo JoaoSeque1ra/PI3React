@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
@@ -10,11 +10,15 @@ import Buttons from '../../../Components/Buttons';
 import ImagemWebsite from "../../../Assets/Images/lojas_online-1.png";
 
 export default function Main() {
-    const [website, setWebsite] = useState(false);
-    const [landingPage, setLandingPage] = useState(false);
+    const [website, setWebsite] = useState();
+    const [landingPage, setLandingPage] = useState();
     const [comPortfolio, setComPortfolio] = useState(false);
     const [comAlojamento, setComAlojamento] = useState(false);
     const [comDominio, setComDominio] = useState(false);
+
+    function handleClick() {
+        setWebsite(website => !website)
+    }
 
     return(
         <main>
@@ -22,12 +26,27 @@ export default function Main() {
                 <div className="row vh-100">
                     <div className="col-md-12 col-lg-7 pt-pageLeft">
                         <div className="row">
-                            <Breadcrumbs route="/ Website" textColor="text-purple"/>
+                            <Breadcrumbs route1="Orçamento" route2="/ Website" textColor="text-purple"/>
+
+                            <div className='col-12 col-lg-10 offset-lg-1'>
+                                <div className='row'>
+
+                                    <div className={landingPage ? "col-12" : "col-12 col-lg-6"}>
+
+                                        <CheckBox onClick={handleClick} onChange={() => console.log(website)} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+
+                                    </div>
+
+                                    <div className={website ? "col-12" : "col-lg-6"}>
+
+                                        <CheckBox onClick={()=> setLandingPage(landingPage => !landingPage)} onChange={() => console.log(landingPage)} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+
+                                    </div>
+
+                                </div>
+                            </div>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox onClick={() => setWebsite(!website)} onChange={teste} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
-
-                                <CheckBox onChange={()=> setLandingPage(!landingPage)} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                 <CheckBoxNumberPage colorIcon="colorIconWhite"/>
 
@@ -64,7 +83,4 @@ export default function Main() {
         </main>
     );
 
-    function teste() {
-        console.log(website)
-    }
 }

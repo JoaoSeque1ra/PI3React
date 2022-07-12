@@ -14,7 +14,7 @@ export default function Main() {
                 <div className="row vh-100">
                     <div className="col-md-12 col-lg-7 pt-pageLeft">
                         <div className="row">
-                            <Breadcrumbs route="/ Contactos" textColor="text-purple"/>
+                            <Breadcrumbs route1="Orçamento" route2="/ Contactos" textColor="text-purple"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
                                 <div className="mt-5">

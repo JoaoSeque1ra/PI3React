@@ -14,7 +14,7 @@ export default function Main() {
                 <div className="row vh-100">
                     <div className="col-md-12 col-lg-7 pt-pageLeft">
                         <div className="row">
-                            <Breadcrumbs route="/ Marketing Digital" textColor="text-yellow"/>
+                            <Breadcrumbs route1="Orçamento" route2="/ Marketing Digital" textColor="text-yellow"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
                                 <CheckBox function={countOnChange1} name="Gestão de redes Sociais" color="bg-checkBoxYellow" colorIcon="colorIconYellow" textColor="text-yellow" />

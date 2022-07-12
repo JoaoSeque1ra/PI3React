@@ -4,6 +4,7 @@ import Breadcrumbs from "../../../Components/Breadcrumb";
 import CheckBox from "../../../Components/CheckBox";
 import CardsCheckBox from "../../../Components/CardsCheckBox";
 import Buttons from "../../../Components/Buttons";
+import CheckBoxNumberPage from  "../../../Components/CheckBoxNumberPage"
 
 import ImagemLojaOnline from "../../../Assets/Images/lojas_online-1.png";
 
@@ -14,15 +15,10 @@ export default function Main() {
         <div className="row vh-100">
           <div className="col-md-12 col-lg-7 pt-pageLeft">
             <div className="row">
-              <Breadcrumbs route="/ Loja Online" textColor="text-purple" />
+              <Breadcrumbs route1="Orçamento" route2="/ Loja Online" textColor="text-purple" />
 
               <div className="col-md-12 col-lg-10 offset-lg-1">
-                <CheckBox
-                  name="Número de páginas"
-                  color="bg-checkBoxPurple"
-                  colorIcon="colorIconPurple"
-                  textColor="text-purple"
-                />
+                <CheckBoxNumberPage colorIcon="colorIconWhite"/>
 
                 <CheckBox
                   name="Com Integração"
