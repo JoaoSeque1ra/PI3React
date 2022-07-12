@@ -4,7 +4,6 @@ import { WebsiteLojaOnline } from "./WebsiteLojaOnline/index"
 import { DesignGrafico } from "./DesignGrafico/index"
 import { ComunicacaoConsultoria } from "./ComunicacaoConsultoria/index"
 import { Orcamentos } from "./Orcamentos/index"
+import { EditarOrcamento } from "./EditarOrcamento/index"
 
-
-
-export default { Home, MarketingDigital, WebsiteLojaOnline, DesignGrafico, ComunicacaoConsultoria, Orcamentos };
+export default { Home, MarketingDigital, WebsiteLojaOnline, DesignGrafico, ComunicacaoConsultoria, Orcamentos, EditarOrcamento };

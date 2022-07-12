@@ -32,7 +32,7 @@ input[type='number']::-webkit-inner-spin-button {
     --checkBoxColorDisable: #c9c9c9;
     --grayDashboard: #555555;
     --grayDashboardHover: #777777;
-    --cardsColorDashboard: hsla(0, 0%, 0%, 0.03);
+    --cardsColorDashboard: #00000008;
     --cardColorOpacity: #dddddd49;
 }
 

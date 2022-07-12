@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DataTable from 'react-data-table-component';
 
 import EstadoTabelas from './EstadoTabelas';
-import ButtonTeste from './ButtonTabelas';
+import ButtonTabelas from './ButtonTabelas';
 
 export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6}) {
     const columns = [
@@ -57,7 +57,7 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6})
             name: campo6,
             selector: row => row.campo6,
             button: true,
-            cell: (row) => <ButtonTeste id={row.campo1}/>
+            cell: (row) => <ButtonTabelas id={row.campo1}/>
         },
     ];
 
