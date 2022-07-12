@@ -8,5 +8,6 @@ import { CriarCliente } from "./CriarCliente/index"
 import { EditarCliente } from "./EditarCliente/index"
 import { Orcamentos } from "./Orcamentos/index"
 import { EditarOrcamento } from "./EditarOrcamento/index"
+import { Clientes } from "./Clientes/index"
 
-export default { Home, MarketingDigital, WebsiteLojaOnline, DesignGrafico, ComunicacaoConsultoria, Orcamentos, EditarOrcamento, Login, CriarCliente, EditarCliente };
+export default { Home, MarketingDigital, WebsiteLojaOnline, DesignGrafico, ComunicacaoConsultoria, Orcamentos, EditarOrcamento, Login, CriarCliente, EditarCliente, Clientes };

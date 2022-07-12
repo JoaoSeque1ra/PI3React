@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 
-import EstadoTabelas from './EstadoTabelas';
-import ButtonTabelas from './ButtonTabelas';
+import ButtonTabelas from '../TableOrcamentos/ButtonTabelas';
 
-export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6}) {
+export default function TablesClientes({campo1, campo2, campo3, campo4, campo5, campo6, nomeTabela}) {
     const columns = [
         {
             name: campo1,
@@ -18,6 +17,8 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6})
             name: campo2,
             selector: row => row.campo2,
             sortable: true,
+            wrap: true,
+            hide: 'md',
             style: {
                 fontSize: '1rem'
             },
@@ -27,6 +28,7 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6})
             selector: row => row.campo3,
             sortable: true,
             hide: 'md',
+            right: true,
             style: {
                 fontSize: '1rem'
             },
@@ -35,11 +37,7 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6})
             name: campo4,
             selector: row => row.campo4,
             sortable: true,
-            center: true,
-            hide: 'md',
-            cell: row => (
-                <EstadoTabelas estado={row.campo4}/>
-            ),
+            right: true,
             style: {
                 fontSize: '1rem'
             },
@@ -56,21 +54,27 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6})
         {
             name: campo6,
             selector: row => row.campo6,
+            wrap: true,
             button: true,
             cell: (row) => <ButtonTabelas id={row.campo1}/>
         },
     ];
 
-    const data = [
-        {
-            id: 1, //Não sou obrigado a meter
-            campo1: '88',
-            campo2:  'João Sequeira',
-            campo3: '12-07-2022',
-            campo4: 'Novo',
-            campo5: '500€',
-        }
-    ]
+    const [infoOrcamento, setInfoOrcamento] = useState([]);
+
+    useEffect(()=>{
+        setInfoOrcamento([
+            {
+                id: 1, //Não sou obrigado a meter
+                campo1: 'João Sequeira',
+                campo2: 'joaoSequeira28@hotmail.com',
+                campo3: '91093857',
+                campo4: '2',
+                campo5: '500€',
+            }
+        ])
+    },[])
+
 
     const paginationOptions = {
         rowsPerPageText: 'Filas por página',
@@ -78,7 +82,6 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6})
 
     };
 
-    const [infoOrcamento, setInfoOrcamento] = useState(data);
     
     return (  
         <DataTable columns={columns} data={infoOrcamento} pagination paginationComponentOptions={paginationOptions} />
