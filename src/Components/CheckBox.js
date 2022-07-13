@@ -5,11 +5,7 @@ import Icons from '../Helpers/ExportIcons';
 export default function CheckBox(props) {
     const [isActive, setIsActive] = useState(false);
 
-    useEffect(()=>{
-
-    },[])
-
-    function handleClick() {
+    const handleClick = () => {
         setIsActive(isActive => !isActive); //(current == false) => (current == true) TRUE -> foi selecionado
     };
 
@@ -87,20 +83,23 @@ export default function CheckBox(props) {
         }
     }
 
-    console.count("checkBox render: ")
+    console.count()
     return (
         <div className="d-flex align-items-center mt-5">
-            <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={nameCheckBox(props)}>
+            <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={props.nameCheckBox}>
                 {changeIcon(props)}
-                {changeNameLabel(props)}
-                <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={() => {handleClick(); createEventOnClick(props)}} onChange={createEventOnChange(props)} defaultValue={changeNameLabel(props)} />
+                {props.name}
+                <input 
+                    id={props.nameCheckBox} 
+                    type="checkbox" 
+                    className={changeColorCheck(props)}
+                    defaultChecked={isActive}
+                    defaultValue={props.name}
+                    onClick={valeu => {handleClick(); props.onClick(valeu)}}
+                />
             </label>
         </div>
     );
-}
-
-function nameCheckBox(props) {
-    return props.nameCheckBox
 }
 
 function changeColor(props) {
@@ -121,16 +120,4 @@ function onClickChangeColorIcon() {
 
 function changeColorCheck(props) {
     return "form-check-input float-end ms-0 me-3 " + props.textColor
-}
-
-function createEventOnChange(props) {
-    return props.onChange;
-}
-
-function createEventOnClick(props) {
-    return props.onClick;
-}
-
-function changeNameLabel(props) {
-    return props.name;
 }
