@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
 import CheckBoxNumberPage from '../../../Components/CheckBoxNumberPage';
-//import DoubleCheckBox from '../../../Components/DoubleCheckBox';
 import CardsCheckBox from '../../../Components/CardsCheckBox';
 import Buttons from '../../../Components/Buttons';
 
@@ -16,10 +15,6 @@ export default function Main() {
     const [comAlojamento, setComAlojamento] = useState(false);
     const [comDominio, setComDominio] = useState(false);
 
-    function handleClick() {
-        setWebsite(website => !website)
-    }
-
     return(
         <main>
             <div className="container-fluid">
@@ -31,15 +26,15 @@ export default function Main() {
                             <div className='col-12 col-lg-10 offset-lg-1'>
                                 <div className='row'>
 
-                                    <div className={landingPage ? "col-12" : "col-12 col-lg-6"}>
+                                    <div className={landingPage ? "d-none" : "col-12 col-lg-6"}>
 
-                                        <CheckBox onClick={handleClick} onChange={() => console.log(website)} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                        <CheckBox onClick={(valeu)=> setWebsite(valeu.target.checked)} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
 
-                                    <div className={website ? "col-12" : "col-lg-6"}>
+                                    <div className={website ? "d-none" : "col-lg-6"}>
 
-                                        <CheckBox onClick={()=> setLandingPage(landingPage => !landingPage)} onChange={() => console.log(landingPage)} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                        <CheckBox onChange={(valeu) => setLandingPage(valeu.target.checked)} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
 

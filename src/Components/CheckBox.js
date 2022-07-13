@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Icons from '../Helpers/ExportIcons';
 
 export default function CheckBox(props) {
     const [isActive, setIsActive] = useState(false);
+
+    useEffect(()=>{
+
+    },[])
 
     function handleClick() {
         setIsActive(isActive => !isActive); //(current == false) => (current == true) TRUE -> foi selecionado
@@ -83,12 +87,13 @@ export default function CheckBox(props) {
         }
     }
 
+    console.count("checkBox render: ")
     return (
         <div className="d-flex align-items-center mt-5">
             <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={nameCheckBox(props)}>
                 {changeIcon(props)}
                 {changeNameLabel(props)}
-                <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={() => {handleClick(); createEventOnClick(props)}} onChange={createEventOnChange(props)} value={changeNameLabel(props)} />
+                <input id={nameCheckBox(props)} type="checkbox" className={changeColorCheck(props)} onClick={() => {handleClick(); createEventOnClick(props)}} onChange={createEventOnChange(props)} defaultValue={changeNameLabel(props)} />
             </label>
         </div>
     );
