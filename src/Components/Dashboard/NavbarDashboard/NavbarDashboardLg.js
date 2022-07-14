@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function NavbarDashboardLg() {
     return (
-        <nav className="sticky-top flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
+        <nav className="sticky-top position-fixed flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
 
             <Link className='mb-md-0 me-md-auto text-white text-decoration-none' to={"/dashboard"}>
                 <img src={Brand} width="180" className="d-none d-md-block cursor-pointer" alt="incommun" />
