@@ -24,7 +24,7 @@ export default function Main() {
               <Breadcrumbs route1="Orçamento" route2="/ Loja Online" textColor="text-purple" />
 
               <div className="col-md-12 col-lg-10 offset-lg-1">
-                <CheckBoxNumberPage colorIcon="colorIconWhite"/>
+                <CheckBoxNumberPage Nsei={console.log("nsei")} colorIcon="colorIconWhite"/>
 
                 <CheckBox
                   onClick={value=>setComIntegracao(value.target.checked)} isActive={comIntegracao}
