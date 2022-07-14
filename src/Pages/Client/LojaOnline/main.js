@@ -4,7 +4,8 @@ import Breadcrumbs from "../../../Components/Breadcrumb";
 import CheckBox from "../../../Components/CheckBox";
 import CardsCheckBox from "../../../Components/CardsCheckBox";
 import Buttons from "../../../Components/Buttons";
-import CheckBoxNumberPage from  "../../../Components/CheckBoxNumberPage"
+
+import ExportIcons from "../../../Helpers/ExportIcons";
 
 import ImagemLojaOnline from "../../../Assets/Images/lojas_online-1.png";
 
@@ -24,7 +25,23 @@ export default function Main() {
               <Breadcrumbs route1="Orçamento" route2="/ Loja Online" textColor="text-purple" />
 
               <div className="col-md-12 col-lg-10 offset-lg-1">
-                <CheckBoxNumberPage onchange={() => setNumeroPaginas(numeroPaginas++)} colorIcon="colorIconWhite"/>
+
+                <div className="d-flex align-items-center mt-5">
+                    <label className="form-check ps-3 py-2 w-100 fs-5 border text-white bg-purple">
+                        <ExportIcons.NumeroPaginas className="me-2 colorIconWhite"/>
+                        Número de páginas
+
+                        <div className="btn-group float-end me-3">
+                            <a className="btn btn-sm btn-light rounded" onClick={setNumeroPaginas(numeroPaginas--)}>
+                                <ExportIcons.Remove width={22} height={22} />
+                            </a>
+                            <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numeroPaginas} min={1} max={12} disabled/>
+                            <a className="btn btn-sm btn-light rounded" onClick={setNumeroPaginas(numeroPaginas++)}>
+                                <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
+                            </a>
+                        </div>
+                    </label>
+                </div>
 
                 <CheckBox
                   onClick={value=>setComIntegracao(value.target.checked)} isActive={comIntegracao}

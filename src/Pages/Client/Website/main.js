@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
-import CheckBoxNumberPage from '../../../Components/CheckBoxNumberPage';
+// import CheckBoxNumberPage from '../../../Components/CheckBoxNumberPage';
 import CardsCheckBox from '../../../Components/CardsCheckBox';
 import Buttons from '../../../Components/Buttons';
 
@@ -45,7 +45,7 @@ export default function Main() {
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
 
-                                <CheckBoxNumberPage colorIcon="colorIconWhite"/>
+                                {/* <CheckBoxNumberPage colorIcon="colorIconWhite"/> */}
 
                                 <CheckBox onClick={valeu=>setComPortfolio(valeu.target.checked)} isActive={comPortfolio} name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um portfolio é uma coleção de trabalhos que ajuda o cliente a perceber o tipo de serviços que a sua empresa já realizou." />
