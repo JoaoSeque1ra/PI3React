@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Icons from '../Helpers/ExportIcons';
 
-export default function CheckBox() {
+export default function CheckBox(props) {
     const [isActive, setIsActive] = useState(false);
 
-    const handleClick = (event) => {
-        setIsActive(current => !current); //(current == false) => (current == true) TRUE -> foi selecionado
+    const handleClick = () => {
+        setIsActive(isActive => !isActive); //(current == false) => (current == true) TRUE -> foi selecionado
     };
 
     function changeIcon(props) {
@@ -83,9 +83,10 @@ export default function CheckBox() {
         }
     }
 
+    console.count()
     return (
         <div className="d-flex align-items-center mt-5">
-            <label className={isActive ? onClickChangeColor((props) => props.color) : changeColor(props)} htmlFor={props.nameCheckBox}>
+            <label className={isActive ? onClickChangeColor(props) : changeColor(props)} htmlFor={props.nameCheckBox}>
                 {changeIcon(props)}
                 {props.name}
                 <input 
@@ -93,8 +94,8 @@ export default function CheckBox() {
                     type="checkbox" 
                     className={changeColorCheck(props)}
                     defaultChecked={isActive}
-                    value={props.name}
-                    onClick={handleClick}
+                    defaultValue={props.name}
+                    onClick={valeu => {handleClick(); props.onClick(valeu)}}
                 />
             </label>
         </div>
@@ -102,7 +103,6 @@ export default function CheckBox() {
 }
 
 function changeColor(props) {
-    console.count(props.name)
     return "form-check ps-3 py-2 w-100 fs-5 border cursor-pointer bg-checkBox " + props.color;
 }
 
