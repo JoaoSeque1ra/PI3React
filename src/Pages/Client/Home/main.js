@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
@@ -29,7 +29,7 @@ export default function Main() {
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
-                                <Buttons color="btn-yellow" text="Seguinte" route="marketing-digital" />
+                                <Buttons color="btn-yellow" text="Seguinte" route="" />
                             </div>
                         </div>
                     </div>
