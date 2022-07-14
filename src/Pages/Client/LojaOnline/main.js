@@ -16,6 +16,24 @@ export default function Main() {
   const [alojamento, setAlojamento] = useState(false)
   const [dominio, setDominio] = useState(false)
 
+  const addNumeroPaginas = () => {
+    if(numeroPaginas === 12) {
+      alert("Número máximo atingido")
+      return
+    }
+    
+    setNumeroPaginas(numeroPaginas => numeroPaginas + 1)
+  }
+
+  const removeNumeroPaginas = () => {
+    if(numeroPaginas === 1) {
+      alert("Número mínimo atingido")
+      return
+    }
+    
+    setNumeroPaginas(numeroPaginas => numeroPaginas - 1)
+  }
+
   return (
     <main>
       <div className="container-fluid">
@@ -32,13 +50,13 @@ export default function Main() {
                         Número de páginas
 
                         <div className="btn-group float-end me-3">
-                            <a className="btn btn-sm btn-light rounded" onClick={setNumeroPaginas(numeroPaginas--)}>
-                                <ExportIcons.Remove width={22} height={22} />
-                            </a>
+                            <button className="btn btn-sm btn-light rounded" onClick={removeNumeroPaginas}>
+                              <ExportIcons.Remove width={22} height={22} />
+                            </button>
                             <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numeroPaginas} min={1} max={12} disabled/>
-                            <a className="btn btn-sm btn-light rounded" onClick={setNumeroPaginas(numeroPaginas++)}>
-                                <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
-                            </a>
+                            <button className="btn btn-sm btn-light rounded" onClick={addNumeroPaginas} >
+                              <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
+                            </button>
                         </div>
                     </label>
                 </div>
