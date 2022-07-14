@@ -33,7 +33,7 @@ export default function CheckBoxNumberPage(props) {
                     <a className="btn btn-sm btn-light rounded" onClick={removeClick}>
                         <Icons.Remove width={22} height={22} />
                     </a>
-                    <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numberPage} min={1} max={12} onChange={callOnChange(props)} disabled/>
+                    <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numberPage} min={1} max={12} disabled/>
                     <a className="btn btn-sm btn-light rounded" onClick={addClick}>
                         <Icons.Add className='colorIconBlack' width={22} height={22} />
                     </a>
