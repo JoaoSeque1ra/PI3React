@@ -1,0 +1,415 @@
+/*--------------GLOBAL---------------------*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
+input[type='number'] {
+    -moz-appearance: textfield;
+    width: 50px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+:root {
+    --incommunYellow: #ffcc00;
+    --incommunYellowDark: #deb200;
+    --incommunRed: #fc6049;
+    --incommunRedDark: #d01101;
+    --incommunOrange: #ffa373;
+    --incommunOrangeDark: #f55622;
+    --incommunBlue: #64c3c7;
+    --incommunBlueDark: #008183;
+    --incommunMarron: #dcd587;
+    --incommunMarronDark: #c8c059;
+    --incommunPurple: #caa9e8;
+    --incommunPurpleDark: #a46eae;
+    --incommunMenu: rgba(0,0,0,.2);
+    --white: #fff;
+    --black: #000;
+    --borderColor: #DDDDDD;
+    --checkBoxColor: #fbfbfb;
+    --checkBoxColorDisable: #c9c9c9;
+    --grayDashboard: #555555;
+    --grayDashboardHover: #777777;
+    --cardsColorDashboard: #00000008;
+    --cardColorOpacity: #dddddd49;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+/*----Background color----*/
+
+.bg-yellow {
+    background-color: var(--incommunYellow) !important;
+}
+
+.bg-orange {
+    background-color: var(--incommunOrange) !important;
+}
+
+.bg-blue {
+    background-color: var(--incommunBlue) !important;; 
+}
+
+.bg-red {
+    background-color: var(--incommunRed) !important;
+}
+
+.bg-blue-dark {
+    background-color: var(--incommunBlueDark) !important;; 
+}
+
+.bg-purple {
+    background-color: var(--incommunPurple) !important;
+}
+
+.bg-gray {
+    background-color: var(--grayDashboard) !important;
+}
+
+.bg-cardsDashboard {
+    background-color: var(--cardsColorDashboard) !important;
+}
+
+.bg-borderColor {
+    background-color: var(--borderColor) !important;
+}
+
+.bg-cardColorOpacity {
+    background-color: var(--cardColorOpacity) !important;
+}
+
+.bg-navBar {
+    background-color: var(--incommunMenu);
+}
+
+.bg-disable {
+    background-color: var(--checkBoxColorDisable);
+}
+
+.bg-grayHover {
+    background-color: var(--grayDashboardHover);
+}
+
+/*----Text color----*/
+
+.text-black {
+    color: var(--black) !important;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-yellow {
+    color: var(--incommunYellow) !important;
+}
+
+.text-orange {
+    color: var(--incommunOrange) !important;
+}
+
+.text-blue {
+    color: var(--incommunBlue) !important;
+}
+
+.text-blue-dark {
+    color: var(--incommunBlueDark) !important;
+}
+.text-purple {
+    color: var(--incommunPurple) !important;
+}
+
+/*----Text weight and size----*/
+
+.font-weight-semiBold {
+    font-weight: 600;
+}
+
+.font-weight-medium {
+    font-weight: 500;
+}
+
+/*----Padding Page----*/
+
+.pt-pageLeft {
+    padding-top: 9rem !important;
+}
+
+.pt-pageRight {
+    padding-top: 6rem !important;
+}
+
+/*----Global----*/
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.h-70px {
+    height: 70px;
+}
+
+.vh-35 {
+    height: 35vh;
+}
+
+/*--------------Navbar Client---------------------*/
+
+.navbar {
+    padding: 30px 50px !important;
+}
+
+.navbar-toggler {
+    border: 0 !important;
+    color: var(--white) !important;
+}
+
+/*--------------Icons checkBox---------------------*/
+
+.colorIconOrange {
+    fill: var(--incommunOrangeDark);
+}
+
+.colorIconYellow {
+    fill: var(--incommunYellow);
+}
+
+.colorIconPurple {
+    fill: var(--incommunPurple);
+}
+
+.colorIconWhite {
+    fill: var(--white) !important;
+}
+
+.colorIconBlack {
+    fill: var(--black);
+}
+
+/*--------------Icons Hover---------------------*/
+
+.bg-checkBox:hover .colorIconPurple{
+    fill: var(--white);
+}
+
+.bg-checkBox:hover .colorIconYellow{
+    fill: var(--white);
+}
+
+.bg-checkBox:hover .colorIconOrange{
+    fill: var(--white);
+}
+
+/*--------------CheckBox---------------------*/
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    appearance: none;
+    background-color: var(--white) !important;
+    border: var(--borderColor) 1px solid !important;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 15px;
+    content: "\f00c";
+    display: none;
+}
+
+input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+/*--------------CheckBox hover---------------------*/
+.bg-checkBoxYellow {
+    background-color: var(--incommunYellow) !important;
+}
+
+.bg-checkBoxOrange{
+    background-color: var(--incommunOrange) !important;
+}
+
+.bg-checkBoxBlue {
+    background-color: var(--incommunBlue) !important;
+}
+
+.bg-checkBoxPurple {
+    background-color: var(--incommunPurple) !important;
+}
+
+.bg-checkBoxYellow:hover {
+    background-color: var(--incommunYellowDark) !important;
+    color: var(--white) !important;
+}
+
+.bg-checkBoxOrange:hover {
+    background-color: var(--incommunOrangeDark) !important;
+    color: var(--white) !important;
+}
+
+.bg-checkBoxBlue:hover {
+    background-color: var(--incommunBlueDark) !important;
+    color: var(--white) !important;
+}
+
+.bg-checkBoxPurple:hover {
+    background-color: var(--incommunPurpleDark) !important;
+    color: var(--white) !important;
+}
+
+.bg-checkBox {
+    background-color: var(--checkBoxColor) !important;
+}
+
+/*-----------Botões Color-----------------*/
+
+.btn-yellow {
+    background-color: var(--incommunYellow) !important;
+    color: var(--white) !important;
+}
+
+.btn-orange {
+    background-color: var(--incommunOrange) !important;
+    color: var(--white) !important;
+}
+
+.btn-blue {
+    background-color: var(--incommunBlue) !important;
+    color: var(--white) !important;
+}
+
+.btn-purple {
+    background-color: var(--incommunPurple) !important;
+    color: var(--white) !important;
+}
+
+.btn-transparent {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+/*-----------Botões Hover-----------------*/
+
+.btn-yellow:hover {
+    background-color: var(--incommunYellowDark) !important;
+}
+
+.btn-orange:hover {
+    background-color: var(--incommunOrangeDark) !important;
+}
+
+.btn-purple:hover {
+    background-color: var(--incommunPurpleDark) !important;
+}
+
+/*-----------Cartões-----------------*/
+/*REVER FALAR COM A RAQUEL E O JOÃO*/
+.card-paidmedia-gestaoredessociais{
+    text-align: center !important;
+    height: 646px !important;
+    border: 1px solid var(--incommunYellow) !important;
+    border-radius: 3rem !important;
+}
+
+.card-personalizar{
+    border: 0px solid var(--cardColorOpacity) !important;
+}
+
+.card-text{
+    font-size:17px !important;
+}
+
+.card-title{
+    font-size: 22px !important;
+}
+
+.card-subtitle{
+    font-size: 17px !important;
+}
+
+/*-----------Agradecimento-----------------*/
+/*REVER FALAR COM A MARIANA*/
+
+.fundo-obrigada{
+    position:relative;
+    color:transparent;
+    text-align: center;
+    -webkit-text-stroke: 1px white;
+    font-size: 100px;
+    padding: 0%;
+    margin-top: 15%;
+}
+
+.texto-fundo{
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 0%;
+    font-size: 150%;
+}
+
+.bg-blue{
+    background-color: #8fb5c7 !important;
+}
+
+b {
+    position:relative;
+    color:transparent;
+    -webkit-text-stroke: 1px white;
+    padding: 0%;
+}
+
+/*-----------Dashboard-----------------*/
+/*--------------Navbar---------------------*/
+
+.nav-link:hover {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.active {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.barNav {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    border-left: 2px solid var(--grayDashboardHover);
+    height: 100%;
+}
+
+/*--------------Button---------------------*/
+
+.btn-gray {
+    background-color: var(--grayDashboard) !important;
+}
+
+.btn-gray:hover {
+    background-color: var(--grayDashboardHover) !important;
+}
+
+.btn-gray a {
+    color: var(--white) !important;
+}
+
+.page-link {
+    color: var(--black) !important;
+}
