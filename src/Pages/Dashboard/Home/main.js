@@ -2,7 +2,7 @@ import React from "react";
 
 import NavbarDashboardLg from "../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg";
 import ButtonDashboard from "../../../Components/Dashboard/Button";
-import Tables from "../../../Components/Dashboard/Table/Index";
+import Tables from "../../../Components/Dashboard/TableOrcamentos/Index";
 
 export default function Main() {
   return (
