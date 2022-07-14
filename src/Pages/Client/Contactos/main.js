@@ -4,6 +4,7 @@ import Breadcrumbs from '../../../Components/Breadcrumb';
 import Buttons from '../../../Components/Buttons';
 
 import ImagemWebsiteLojaOnline from "../../../Assets/Images/websites.jpg";
+import { Link } from 'react-router-dom';
 
 
 export default function Main() {
@@ -51,8 +52,7 @@ export default function Main() {
                                     </label>
                                 </div>
                                 <div className='mt-1 ms-4 text-purple'>
-                                    <a href="#" className="text-purple"> Termos aqui.</a>
-
+                                    <Link to={"/client/contactos"} className="text-purple"> Termos aqui.</Link>
                                 </div>
                             </div>
 

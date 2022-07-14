@@ -80,13 +80,13 @@ export default function NavbarDashboardLg() {
             <hr />
 
             <div className="dropdown">
-                <a className="d-flex align-items-center text-white text-decoration-none dropdown-toggle cursor-pointer"
+                <div className="d-flex align-items-center text-white text-decoration-none dropdown-toggle cursor-pointer"
                     id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                     <strong>Mariana de Lurdes</strong>
-                </a>
+                </div>
                 <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                     <li>
-                        <a className="dropdown-item">Sair</a>
+                        <div className="dropdown-item">Sair</div>
                     </li>
                 </ul>
             </div>

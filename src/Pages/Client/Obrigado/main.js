@@ -1,6 +1,5 @@
 import React from "react";
 
-import ImagemObrigado from "../../../Assets/Images/obrigada.jpg";
 import Buttons from "../../../Components/Buttons";
 
 export default function Main() {
