@@ -1,21 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Buttons(props) {
     return (
-        <button type="button" className= { changeColorButton(props) } onClick={createEvent(props)}>
-            { changeText(props) }
-        </button>
+        <Link to={"/client/" + props.route} className= { changeColorButton(props) }>
+            { props.text }
+        </Link>
     );
 }
 
 function changeColorButton(props) {
     return "btn btn-lg rounded-0 " + props.color;
-}
-
-function changeText(props) {
-    return props.text;
-}
-
-function createEvent(props) {
-    return props.function;
 }

@@ -9,9 +9,11 @@ import Buttons from '../../../Components/Buttons';
 import ImagemWebsite from "../../../Assets/Images/lojas_online-1.png";
 
 export default function Main() {
-    const [website, setWebsite] = useState();
-    const [landingPage, setLandingPage] = useState();
+    const [website, setWebsite] = useState(false);
+    const [landingPage, setLandingPage] = useState(false);
+    const [numeroPaginas, setNumeroPaginas] = useState(0)
     const [comPortfolio, setComPortfolio] = useState(false);
+    const [criacaoConteudos, setCriacaoConteudos] = useState(false);
     const [comAlojamento, setComAlojamento] = useState(false);
     const [comDominio, setComDominio] = useState(false);
 
@@ -28,13 +30,13 @@ export default function Main() {
 
                                     <div className={landingPage ? "d-none" : "col-12 col-lg-6"}>
 
-                                        <CheckBox onClick={(valeu)=> setWebsite(valeu.target.checked)} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                        <CheckBox onClick={valeu=>setWebsite(valeu.target.checked)} isActive={website} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
 
                                     <div className={website ? "d-none" : "col-lg-6"}>
 
-                                        <CheckBox onChange={(valeu) => setLandingPage(valeu.target.checked)} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                        <CheckBox onClick={valeu=>setLandingPage(valeu.target.checked)} isActive={landingPage} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
 
@@ -45,16 +47,16 @@ export default function Main() {
 
                                 <CheckBoxNumberPage colorIcon="colorIconWhite"/>
 
-                                <CheckBox name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setComPortfolio(valeu.target.checked)} isActive={comPortfolio} name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um portfolio é uma coleção de trabalhos que ajuda o cliente a perceber o tipo de serviços que a sua empresa já realizou." />
 
-                                <CheckBox name="Com criação de conteúdos textuais" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setCriacaoConteudos(valeu.target.checked)} isActive={criacaoConteudos} name="Com criação de conteúdos textuais" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommun?" />
 
-                                <CheckBox name="Com alojamento" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setComAlojamento(valeu.target.checked)} isActive={comAlojamento} name="Com alojamento" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="O alojamento web permite que a sua loja não só esteja online como atualiza regularmente o seu hardware para um melhor desempenho e maior proteção." />
 
-                                <CheckBox name="Com domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setComDominio(valeu.target.checked)} isActive={comDominio} name="Com domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="O url do seu site será a primeira coisa que os visitantes irão ver. O domínio torna mais fácil a identificação da loja e aumenta o reconhecimento da marca e da sua empresa." />
                             
                             </div>

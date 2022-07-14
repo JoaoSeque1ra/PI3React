@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
@@ -8,6 +8,11 @@ import Buttons from '../../../Components/Buttons';
 import ImagemWebsiteLojaOnline from "../../../Assets/Images/websites.jpg";
 
 export default function Main() {
+    const [website, setWebsite] = useState(false)
+    const [lojaOnline, setLojaOnline] = useState(false)
+    const [suporte, setSuporte] = useState(false)
+    const [servidor, setServico] = useState(false)
+
     return(
         <main>
             <div className="container-fluid">
@@ -17,21 +22,21 @@ export default function Main() {
                             <Breadcrumbs route1="Orçamento" route2="/ Website &#38; Loja Online" textColor="text-purple"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setWebsite(valeu.target.checked)} isActive={website} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um espaço online unicamente seu, que lhe permite estar ligado ao mundo e
                                 divulgar os seus produtos/serviços 24 sob 24 horas." />
 
-                                <CheckBox name="Lojas online | E-commerce" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setLojaOnline(valeu.target.checked)} isActive={lojaOnline} name="Lojas online | E-commerce" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="As vantagens de marcar uma presença online são realmente positivas: vendas sem
                                 limites geográficos, custos mais reduzidos do que um espaço físico, maior
                                 conforto dos clientes, acompanhamento do desempenho das vendas e muito mais." />
 
-                                <CheckBox name="Suporte &#38; manutenção" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setSuporte(valeu.target.checked)} isActive={suporte} name="Suporte &#38; manutenção" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Prestamos um serviço de apoio e manutenção em todos os websites desenvolvidos,
                                 possibilitando assim a facilidade de utilização por parte do cliente. Fácil e
                                 muito simples para que possa trabalhar no seu website sem dificuldades." />
 
-                                <CheckBox name="Servidor &#38; Domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>setServico(valeu.target.checked)} isActive={servidor} name="Servidor &#38; Domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Na incommun, registamos o domínio da sua marca e fornecemos, através de uma
                                 anuidade, serviços de hosting seguros e rápidos." />
                             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
@@ -8,6 +8,13 @@ import Buttons from '../../../Components/Buttons';
 import ImagemIdentidadeVisual from "../../../Assets/Images/identidadeVisual.png";
 
 export default function Main () {
+    const [analiseConcorrencia, setAnaliseConcorrencia] = useState(false)
+    const [criacaoLogotipo, setCriacaoLogotipo] = useState(false)
+    const [paletaCores, setPaletaCores] = useState(false)
+    const [sloganMarca, setSloganMarca] = useState(false)
+    const [manualNormas, setManualNormas] = useState(false)
+    const [estacionario, setEstacionario] = useState(false)
+
     return (
         <main>
             <div className="container-fluid">
@@ -18,26 +25,26 @@ export default function Main () {
                         
                             <div className="col-md-12 col-lg-10 offset-lg-1">
 
-                                <CheckBox name="Análise da Concorrência" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox onClick={valeu=>setAnaliseConcorrencia(valeu.target.checked)} isActive={analiseConcorrencia} name="Análise da Concorrência" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="Prática de monitorar regularmente os seus concorrentes, tendo em atenção negócios e serviços
                                 similares aos seus." />
 
-                                <CheckBox name="Criação do Logótipo" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox onClick={valeu=>setCriacaoLogotipo(valeu.target.checked)} isActive={criacaoLogotipo} name="Criação do Logótipo" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="É o ponto de identificação da sua empresa, comunica os valores da sua marca em cartões, flyers,
                                 websites, social media e, principalmente, na mente do consumidor." />
 
-                                <CheckBox name="Paleta de Cores" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox onClick={valeu=>setPaletaCores(valeu.target.checked)} isActive={paletaCores} name="Paleta de Cores" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="A paleta de cores gera uma identidade visual através de cores pré-selecionadas utilizadas de forma
                                 harmoniosa de forma a passar alguma ideia para o utilizador." />
 
-                                <CheckBox name="Slogan para Marca" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox onClick={valeu=>setSloganMarca(valeu.target.checked)} isActive={sloganMarca} name="Slogan para Marca" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="Slogan é uma forma de fazer os utilizadores associarem mentalmente uma frase simples a uma marca." />
 
-                                <CheckBox name="Manual de Normas Gráficas" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox onClick={valeu=>setManualNormas(valeu.target.checked)} isActive={manualNormas} name="Manual de Normas Gráficas" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="Manual de normas gráficas não passa de um documento com regras e restrições para que a identidade
                                 visual seja mantida independentemente da aplicação." />
 
-                                <CheckBox name="Estacionário" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
+                                <CheckBox onClick={valeu=>setEstacionario(valeu.target.checked)} isActive={estacionario} name="Estacionário" color="bg-checkBoxOrange" colorIcon="colorIconOrange" textColor="text-orange" />
                                 <CardsCheckBox text="Estacionário refere-se a todos os produtos que incorporem a identidade gráfica de uma organização,
                                 na maioria dos casos em suporte papel ou em formato digital." />
 

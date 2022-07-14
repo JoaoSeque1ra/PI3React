@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Breadcrumbs from "../../../Components/Breadcrumb";
 import CheckBox from "../../../Components/CheckBox";
@@ -9,6 +9,12 @@ import CheckBoxNumberPage from  "../../../Components/CheckBoxNumberPage"
 import ImagemLojaOnline from "../../../Assets/Images/lojas_online-1.png";
 
 export default function Main() {
+  const [numeroPaginas, setNumeroPaginas] = useState(0)
+  const [comIntegracao, setComIntegracao] = useState(false)
+  const [criacaoConteudos, setCriacaoConteudos] = useState(false)
+  const [alojamento, setAlojamento] = useState(false)
+  const [dominio, setDominio] = useState(false)
+
   return (
     <main>
       <div className="container-fluid">
@@ -21,6 +27,7 @@ export default function Main() {
                 <CheckBoxNumberPage colorIcon="colorIconWhite"/>
 
                 <CheckBox
+                  onClick={valeu=>setComIntegracao(valeu.target.checked)} isActive={comIntegracao}
                   name="Com Integração"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -77,6 +84,7 @@ export default function Main() {
                 </div>
 
                 <CheckBox
+                  onClick={valeu=>setCriacaoConteudos(valeu.target.checked)} isActive={criacaoConteudos}
                   name="Com criação de conteúdos textuais"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -85,6 +93,7 @@ export default function Main() {
                 <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommun?" />
 
                 <CheckBox
+                  onClick={valeu=>setAlojamento(valeu.target.checked)} isActive={alojamento}
                   name="Com alojamento"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -93,6 +102,7 @@ export default function Main() {
                 <CardsCheckBox text="O alojamento web permite que a sua loja não só esteja online como atualiza regularmente o seu hardware para um melhor desempenho e maior proteção." />
 
                 <CheckBox
+                  onClick={valeu=>setDominio(valeu.target.checked)} isActive={dominio}
                   name="Com domínio"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
