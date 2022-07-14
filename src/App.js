@@ -23,6 +23,8 @@ export default function App() {
         <Route path="client/obrigado" element={<Client.Obrigado />}/>
         <Route path="client/gestao-redes-sociais" element={<Client.GestaoRedesSociais />}/>
         <Route path="client/paid-media" element={<Client.PaidMedia />}/>
+        <Route path="client/gestao-redes-sociais/packs" element={<Client.PersonalizarGestaoRedesSociais />}/>
+
 
         <Route path="dashboard/Login" element={<Dashboard.Login />}/>
         <Route path="dashboard/" element={<Dashboard.Home />}/>

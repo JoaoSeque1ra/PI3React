@@ -55,7 +55,16 @@ import { ReactComponent as Guardar } from '../Assets/Svg/guardar.svg';
 
 import { ReactComponent as ClienteBorder } from '../Assets/Svg/clienteBorder.svg';
 
+import { ReactComponent as Facebook } from '../Assets/Svg/facebook.svg';
+import { ReactComponent as Insta } from '../Assets/Svg/insta.svg';
+import { ReactComponent as Twitter } from '../Assets/Svg/twitter.svg';
+import { ReactComponent as Tiktok } from '../Assets/Svg/tiktok.svg';
+import { ReactComponent as Pint } from '../Assets/Svg/pint.svg'
+import { ReactComponent as Google } from '../Assets/Svg/googleM.svg'
+import { ReactComponent as LinkDin } from '../Assets/Svg/linkDin.svg'
+import { ReactComponent as Youtube } from '../Assets/Svg/youtube.svg'
 
 export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove, OrganizacaoEventos, 
 IdentidadeVisual, BrandingRebranding, EstrategiaMarca, RegistoMarca, DesignEditorial, AnaliseConcorrencia, CriacaoLogotipo, PaletaCores, SloganMarca, ManualNormasGraficas, Estacionario, Website, LojaOnlineEcommerce, SuporteManutencao, ServidorDominio, LandingPage,
-Portfolio, CriacaoConteudosTextuais, Alojamento, Dominio, Integracao, AssessoriaCriacaoConteudo, AddClient, EditOrcamento, Guardar, ClienteBorder };
+Portfolio, CriacaoConteudosTextuais, Alojamento, Dominio, Integracao, AssessoriaCriacaoConteudo, AddClient, EditOrcamento, Guardar, ClienteBorder, Facebook, Insta, Twitter, Tiktok,
+Pint, Google, LinkDin, Youtube };
