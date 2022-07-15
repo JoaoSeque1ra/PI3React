@@ -56,20 +56,4 @@ export default function Main() {
             </div>
         </main>
     );
-
-    function countOnChange1() {
-        console.count("teste1: ");
-    }
-
-    function countOnChange2() {
-        console.count("teste2: ");
-    }
-
-    function countOnChange3() {
-        console.count("teste3: ");
-    }
-
-    function countOnChange4() {
-        console.count("teste4: ");
-    }
 }

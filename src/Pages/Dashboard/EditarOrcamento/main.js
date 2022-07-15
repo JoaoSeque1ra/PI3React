@@ -9,13 +9,13 @@ import EstadosOrcamento from '../../../Components/Dashboard/EstadosOrcamento';
 
 export default function Main() {
     const { idOrcamento } = useParams();
-    //console.log(idOrcamento)
+    console.log(idOrcamento)
 
     return (
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
 
-            <div className="container-fluid">
+            <div className="container-fluid changeSpace">
                 <div className="row mt-5">
 
                     <div className="col-lg-10 offset-lg-1">
@@ -82,7 +82,7 @@ export default function Main() {
                             </div>
 
                             <div className="col-12 fs-5 mt-3 mt-lg-0 mb-lg-3">
-                                Detalhes do orçamento #88
+                                Detalhes do orçamento #0088
                             </div>
 
                             {/* Informações do Orçamento */}

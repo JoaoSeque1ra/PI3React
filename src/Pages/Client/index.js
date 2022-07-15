@@ -10,6 +10,7 @@ import { Contactos } from "./Contactos/index";
 import { Obrigado } from "./Obrigado/index";
 import { GestaoRedesSociais } from "./GestaoRedesSociais/index";
 import { PaidMedia } from "./PaidMedia/index";
+import {PersonalizarGestaoRedesSociais} from "./PersonalizarGestaoRedesSociais/index"
 
 
-export default { Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline, Contactos, Obrigado, GestaoRedesSociais, PaidMedia };
+export default { PersonalizarGestaoRedesSociais, Home, IdentidadeVisual, MarketingDigital, DesignGrafico, ComunicacaoConsultoria, WebsiteLojaOnline, Website, LojaOnline, Contactos, Obrigado, GestaoRedesSociais, PaidMedia };

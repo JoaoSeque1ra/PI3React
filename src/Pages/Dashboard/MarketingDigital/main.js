@@ -8,9 +8,9 @@ import PacksInput from '../../../Components/Dashboard/PacksInput';
 export default function Main() {
     return (  
         <main className='overflow-auto d-flex'>
-            <NavbarDashboardLg />
+            <NavbarDashboardLg fixed="top" />
 
-            <div className="container-fluid">
+            <div className="container-fluid changeSpace">
                 <div className="row mt-5">
 
                     <div className="col-lg-10 offset-lg-1">

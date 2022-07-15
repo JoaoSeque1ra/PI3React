@@ -2,20 +2,39 @@ import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
-import CheckBoxNumberPage from '../../../Components/CheckBoxNumberPage';
 import CardsCheckBox from '../../../Components/CardsCheckBox';
 import Buttons from '../../../Components/Buttons';
+
+import ExportIcons from '../../../Helpers/ExportIcons';
 
 import ImagemWebsite from "../../../Assets/Images/lojas_online-1.png";
 
 export default function Main() {
     const [website, setWebsite] = useState(false);
     const [landingPage, setLandingPage] = useState(false);
-    const [numeroPaginas, setNumeroPaginas] = useState(0)
+    const [numeroPaginas, setNumeroPaginas] = useState(1)
     const [comPortfolio, setComPortfolio] = useState(false);
     const [criacaoConteudos, setCriacaoConteudos] = useState(false);
     const [comAlojamento, setComAlojamento] = useState(false);
     const [comDominio, setComDominio] = useState(false);
+
+    const addNumeroPaginas = () => {
+        if(numeroPaginas === 12) {
+          alert("Número máximo atingido")
+          return
+        }
+        
+        setNumeroPaginas(numeroPaginas => numeroPaginas + 1)
+      }
+    
+      const removeNumeroPaginas = () => {
+        if(numeroPaginas === 1) {
+          alert("Número mínimo atingido")
+          return
+        }
+        
+        setNumeroPaginas(numeroPaginas => numeroPaginas - 1)
+      }
 
     return(
         <main>
@@ -45,7 +64,22 @@ export default function Main() {
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
 
-                                <CheckBoxNumberPage colorIcon="colorIconWhite"/>
+                                <div className="d-flex align-items-center mt-5">
+                                    <label className="form-check ps-3 py-2 w-100 fs-5 border text-white bg-purple">
+                                        <ExportIcons.NumeroPaginas className="me-2 colorIconWhite"/>
+                                        Número de páginas
+
+                                        <div className="btn-group float-end me-3">
+                                            <button className="btn btn-sm btn-light rounded" onClick={removeNumeroPaginas}>
+                                            <ExportIcons.Remove width={22} height={22} />
+                                            </button>
+                                            <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numeroPaginas} min={1} max={12} disabled/>
+                                            <button className="btn btn-sm btn-light rounded" onClick={addNumeroPaginas} >
+                                            <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
+                                            </button>
+                                        </div>
+                                    </label>
+                                </div>
 
                                 <CheckBox onClick={valeu=>setComPortfolio(valeu.target.checked)} isActive={comPortfolio} name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um portfolio é uma coleção de trabalhos que ajuda o cliente a perceber o tipo de serviços que a sua empresa já realizou." />

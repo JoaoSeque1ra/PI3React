@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function NavbarDashboardLg() {
     return (
-        <nav className="sticky-top flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
+        <nav className="fixed-top flex-column flex-shrink-0 ps-3 py-3 text-white bg-gray vh-100 d-none d-lg-flex" style={{ width: "280px" }} >
 
             <Link className='mb-md-0 me-md-auto text-white text-decoration-none' to={"/dashboard"}>
                 <img src={Brand} width="180" className="d-none d-md-block cursor-pointer" alt="incommun" />
@@ -80,13 +80,13 @@ export default function NavbarDashboardLg() {
             <hr />
 
             <div className="dropdown">
-                <a className="d-flex align-items-center text-white text-decoration-none dropdown-toggle cursor-pointer"
+                <div className="d-flex align-items-center text-white text-decoration-none dropdown-toggle cursor-pointer"
                     id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                     <strong>Mariana de Lurdes</strong>
-                </a>
+                </div>
                 <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                     <li>
-                        <a className="dropdown-item">Sair</a>
+                        <div className="dropdown-item">Sair</div>
                     </li>
                 </ul>
             </div>

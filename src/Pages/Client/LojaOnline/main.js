@@ -4,16 +4,35 @@ import Breadcrumbs from "../../../Components/Breadcrumb";
 import CheckBox from "../../../Components/CheckBox";
 import CardsCheckBox from "../../../Components/CardsCheckBox";
 import Buttons from "../../../Components/Buttons";
-import CheckBoxNumberPage from  "../../../Components/CheckBoxNumberPage"
+
+import ExportIcons from "../../../Helpers/ExportIcons";
 
 import ImagemLojaOnline from "../../../Assets/Images/lojas_online-1.png";
 
 export default function Main() {
-  const [numeroPaginas, setNumeroPaginas] = useState(0)
+  const [numeroPaginas, setNumeroPaginas] = useState(1)
   const [comIntegracao, setComIntegracao] = useState(false)
   const [criacaoConteudos, setCriacaoConteudos] = useState(false)
   const [alojamento, setAlojamento] = useState(false)
   const [dominio, setDominio] = useState(false)
+
+  const addNumeroPaginas = () => {
+    if(numeroPaginas === 12) {
+      alert("Número máximo atingido")
+      return
+    }
+    
+    setNumeroPaginas(numeroPaginas => numeroPaginas + 1)
+  }
+
+  const removeNumeroPaginas = () => {
+    if(numeroPaginas === 1) {
+      alert("Número mínimo atingido")
+      return
+    }
+    
+    setNumeroPaginas(numeroPaginas => numeroPaginas - 1)
+  }
 
   return (
     <main>
@@ -24,58 +43,74 @@ export default function Main() {
               <Breadcrumbs route1="Orçamento" route2="/ Loja Online" textColor="text-purple" />
 
               <div className="col-md-12 col-lg-10 offset-lg-1">
-                <CheckBoxNumberPage colorIcon="colorIconWhite"/>
+
+                <div className="d-flex align-items-center mt-5">
+                    <label className="form-check ps-3 py-2 w-100 fs-5 border text-white bg-purple">
+                        <ExportIcons.NumeroPaginas className="me-2 colorIconWhite"/>
+                        Número de páginas
+
+                        <div className="btn-group float-end me-3">
+                            <button className="btn btn-sm btn-light rounded" onClick={removeNumeroPaginas}>
+                              <ExportIcons.Remove width={22} height={22} />
+                            </button>
+                            <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numeroPaginas} min={1} max={12} disabled/>
+                            <button className="btn btn-sm btn-light rounded" onClick={addNumeroPaginas} >
+                              <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
+                            </button>
+                        </div>
+                    </label>
+                </div>
 
                 <CheckBox
-                  onClick={valeu=>setComIntegracao(valeu.target.checked)} isActive={comIntegracao}
+                  onClick={value=>setComIntegracao(value.target.checked)} isActive={comIntegracao}
                   name="Com Integração"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
                   textColor="text-purple"
                 />
-                <div class="card rounded-0 border-top-0">
-                  <div class="card-body">
+                <div className="card rounded-0 border-top-0">
+                  <div className="card-body">
                     Para a criação da sua página online quais os tópicos que
                     gostaria de adicionar?
-                    <div class="ps-2 pt-4">
-                      <div class="form-check form-check-inline">
+                    <div className="ps-2 pt-4">
+                      <div className="form-check form-check-inline">
                         <input
-                          class="form-check-input text-purple cursor-pointer"
+                          className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
                           id="inlineCheckbox1"
                           value="Produtos"
                         />
-                        <label class="form-check-label" for="inlineCheckbox1">
+                        <label className="form-check-label" htmlFor="inlineCheckbox1">
                           Produtos
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
+                      <div className="form-check form-check-inline">
                         <input
-                          class="form-check-input text-purple cursor-pointer"
+                          className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
                           value="Contactos"
                         />
-                        <label class="form-check-label" for="inlineCheckbox2">
+                        <label className="form-check-label" htmlFor="inlineCheckbox2">
                           Contactos
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
+                      <div className="form-check form-check-inline">
                         <input
-                          class="form-check-input text-purple cursor-pointer"
+                          className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
                           value="Equipas"
                         />
-                        <label class="form-check-label" for="inlineCheckbox3">
+                        <label className="form-check-label" htmlFor="inlineCheckbox3">
                           Equipas
                         </label>
                       </div>
-                      <div class="form-check form-check-inline">
+                      <div className="form-check form-check-inline">
                         <input
-                          class="form-check-input text-purple cursor-pointer"
+                          className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
                           value="Outros"
                         />
-                        <label class="form-check-label" for="inlineCheckbox4">
+                        <label className="form-check-label" htmlFor="inlineCheckbox4">
                           Outros
                         </label>
                       </div>
@@ -84,7 +119,7 @@ export default function Main() {
                 </div>
 
                 <CheckBox
-                  onClick={valeu=>setCriacaoConteudos(valeu.target.checked)} isActive={criacaoConteudos}
+                  onClick={value=>setCriacaoConteudos(value.target.checked)} isActive={criacaoConteudos}
                   name="Com criação de conteúdos textuais"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -93,7 +128,7 @@ export default function Main() {
                 <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommun?" />
 
                 <CheckBox
-                  onClick={valeu=>setAlojamento(valeu.target.checked)} isActive={alojamento}
+                  onClick={value=>setAlojamento(value.target.checked)} isActive={alojamento}
                   name="Com alojamento"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -102,7 +137,7 @@ export default function Main() {
                 <CardsCheckBox text="O alojamento web permite que a sua loja não só esteja online como atualiza regularmente o seu hardware para um melhor desempenho e maior proteção." />
 
                 <CheckBox
-                  onClick={valeu=>setDominio(valeu.target.checked)} isActive={dominio}
+                  onClick={value=>setDominio(value.target.checked)} isActive={dominio}
                   name="Com domínio"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
