@@ -25,7 +25,7 @@ export default function Main() {
                             <div className='col-12'>
                                 <div className='row pt-5'>
 
-                                    <TablesClientes campo1="Nome" campo2="Email" campo3="Telefone" campo4="Orçamentos" campo5="Total"/>
+                                    <TablesClientes />
 
                                 </div>
                             </div>

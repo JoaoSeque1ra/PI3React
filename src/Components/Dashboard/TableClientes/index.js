@@ -1,21 +1,59 @@
 import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
+import axios from 'axios'
 
 import ButtonTabelas from '../TableOrcamentos/ButtonTabelas';
 
-export default function TablesClientes({campo1, campo2, campo3, campo4, campo5, campo6, nomeTabela}) {
+export default function TablesClientes() {
+    const [infoOrcamento, setInfoOrcamento] = useState([]);
+
+    let total;
+    useEffect(()=>{
+        const urlBase = "http://localhost:3001/orcamento/listClients"
+        axios.get(urlBase)
+        .then(response => {
+            if(response.data.success) {
+                // total = teste(response)
+                return setInfoOrcamento(response.data.data)
+            }
+
+            alert(response.data.message)
+        })
+        .catch(err=> {
+            alert("Erro: " + err)
+        })
+    },[infoOrcamento])
+
+    const teste = (response) => {
+        total = 0;
+        const array = response.data.data
+        
+        array.forEach(element => {
+            const arrayOrcamento = element.orcamentos
+            if(arrayOrcamento.length > 0) {
+                arrayOrcamento.forEach(element => {
+                    console.log(element)
+                    total = total + parseInt(element.valor)
+                })
+            }
+
+            return total
+        });
+
+    }
+
     const columns = [
         {
-            name: campo1,
-            selector: row => row.campo1,
+            name: "Nome",
+            selector: row => row.nome,
             sortable: true,
             style: {
                 fontSize: '1rem'
             },
         },
         {
-            name: campo2,
-            selector: row => row.campo2,
+            name: "Email",
+            selector: row => row.email,
             sortable: true,
             wrap: true,
             hide: 'md',
@@ -24,8 +62,8 @@ export default function TablesClientes({campo1, campo2, campo3, campo4, campo5, 
             },
         },
         {
-            name: campo3,
-            selector: row => row.campo3,
+            name: "Telefone",
+            selector: row => row.telefone,
             sortable: true,
             hide: 'md',
             right: true,
@@ -34,8 +72,8 @@ export default function TablesClientes({campo1, campo2, campo3, campo4, campo5, 
             },
         },
         {
-            name: campo4,
-            selector: row => row.campo4,
+            name: "Orcamento",
+            selector: row => row.orcamentos.length,
             sortable: true,
             right: true,
             style: {
@@ -43,8 +81,8 @@ export default function TablesClientes({campo1, campo2, campo3, campo4, campo5, 
             },
         },
         {
-            name: campo5,
-            selector: row => row.campo5,
+            name: "Total",
+            selector: row => row.total,
             sortable: true,
             right: true,
             style: {
@@ -52,29 +90,13 @@ export default function TablesClientes({campo1, campo2, campo3, campo4, campo5, 
             },
         },
         {
-            name: campo6,
+            name: "Ações",
             selector: row => row.campo6,
             wrap: true,
             button: true,
             cell: (row) => <ButtonTabelas id={row.campo1}/>
         },
     ];
-
-    const [infoOrcamento, setInfoOrcamento] = useState([]);
-
-    useEffect(()=>{
-        setInfoOrcamento([
-            {
-                id: 1, //Não sou obrigado a meter
-                campo1: 'João Sequeira',
-                campo2: 'joaoSequeira28@hotmail.com',
-                campo3: '91093857',
-                campo4: '2',
-                campo5: '500€',
-            }
-        ])
-    },[])
-
 
     const paginationOptions = {
         rowsPerPageText: 'Filas por página',
