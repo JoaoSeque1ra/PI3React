@@ -19,7 +19,7 @@ export default function Main() {
                             <div className="col-md-12 col-lg-10 offset-lg-1">
                                 <div className="mt-5">
                                     <div className="input-group input-group-lg border cursor-pointer ">
-                                        <input type="text" class="form-control cursor-pointer border-0 rounded-0" pattern="^[a-z0-9_-]{3,15}$" placeholder="Nome"/>
+                                        <input type="text" className="form-control cursor-pointer border-0 rounded-0" pattern="^[a-z0-9_-]{3,15}$" placeholder="Nome"/>
                                     </div>
                                 </div>
 
@@ -42,12 +42,12 @@ export default function Main() {
                                 </div> 
                                 <div className="mt-5 form-check form-check-inline">
                                     <input
-                                    class="form-check-input text-purple cursor-pointer"
+                                    className="form-check-input text-purple cursor-pointer"
                                     type="checkbox"
                                     id="inlineCheckbox1"
                                     name="Aceito todos os termos e condições"
                                     />
-                                    <label class="form-check-label" for="inlineCheckbox1">
+                                    <label className="form-check-label" for="inlineCheckbox1">
                                         Aceito todos os termos e condições
                                     </label>
                                 </div>

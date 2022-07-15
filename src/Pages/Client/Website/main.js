@@ -71,11 +71,13 @@ export default function Main() {
 
                                         <div className="btn-group float-end me-3">
                                             <button className="btn btn-sm btn-light rounded" onClick={removeNumeroPaginas}>
-                                            <ExportIcons.Remove width={22} height={22} />
+                                                <ExportIcons.Remove width={22} height={22} />
                                             </button>
+                                            
                                             <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numeroPaginas} min={1} max={12} disabled/>
+                                            
                                             <button className="btn btn-sm btn-light rounded" onClick={addNumeroPaginas} >
-                                            <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
+                                                <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
                                             </button>
                                         </div>
                                     </label>
