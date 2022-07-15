@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import DataTable, { createTheme } from 'react-data-table-component';
 
-export default function TablesVerOrcamento({campo1, campo2, campo3, campo4, campo5 }) {
+export default function TablesVerOrcamento({campo1, campo2, campo3, campo4, campo5, onchange1, onchange2 }) {
+    createTheme('teste', {
+        background: {
+            default: '#0000000'
+        }
+    })
+
     const columns = [
         {
             name: campo1,
@@ -13,7 +19,7 @@ export default function TablesVerOrcamento({campo1, campo2, campo3, campo4, camp
         {
             name: campo2,
             selector: row => row.campo2,
-            hide: 'sm',
+            cell: (row) => <input type="number" placeholder={row.campo2} defaultValue={row.campo2} onChange={valeu => console.log(valeu.target.value)} />,
             style: {
                 fontSize: '1rem',
             },
@@ -23,6 +29,7 @@ export default function TablesVerOrcamento({campo1, campo2, campo3, campo4, camp
             selector: row => row.campo3,
             sortable: true,
             center: true,
+            cell: (row) => <input type="number" placeholder={row.campo3} defaultValue={row.campo3} onChange={valeu => console.log(valeu.target.value)} />,
             style: {
                 fontSize: '1rem',
             },
@@ -39,6 +46,7 @@ export default function TablesVerOrcamento({campo1, campo2, campo3, campo4, camp
             name: campo5,
             selector: row => row.campo5,
             right: true,
+            hide: 'sm',
             style: {
                 fontSize: '1rem',
             },
@@ -63,12 +71,6 @@ export default function TablesVerOrcamento({campo1, campo2, campo3, campo4, camp
             campo5: '10€',
         },
     ]
-
-    createTheme('teste', {
-        background: {
-            default: '#0000000'
-        }
-    })
 
     const [infoOrcamento, setInfoOrcamento] = useState(data);
     
