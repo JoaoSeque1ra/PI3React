@@ -3,8 +3,12 @@ import React from 'react';
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
+import { useParams } from 'react-router-dom';
 
 export default function Main(){
+    const {idClient} = useParams()
+    console.log(idClient)
+
     return(
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
