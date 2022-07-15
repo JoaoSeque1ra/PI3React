@@ -7,7 +7,7 @@ export default function ClientInput(props) {
                 <label htmlFor={props.id} className="form-label">{props.text}</label>
             </div>
             <div className="col-lg-10">
-                <input type="text" className="form-control" id={props.id} value={props.value} onChange={(valeu) => props.onchange(valeu)}/>
+                <input type="text" className="form-control" id={props.id} defaultChecked={props.value} onChange={(valeu) => props.onchange(valeu)} pattern={props.pattern}/>
             </div>
         </>
     );

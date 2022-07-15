@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ExportIcons from '../../Helpers/ExportIcons';
 
-export default function ButtonDashboard({text, to}) {
+export default function ButtonDashboard({text, to, onClick}) {
     if(to != null) {
         return(
             <Link className="btn btn-gray btn-lg rounded-0 text-white text-break" to={to}>
@@ -16,7 +16,7 @@ export default function ButtonDashboard({text, to}) {
     }
 
     return (
-        <button type='button' className="btn btn-gray btn-lg rounded-0 text-white text-break">
+        <button type='button' className="btn btn-gray btn-lg rounded-0 text-white text-break" onClick={(value) => onClick(value)}>
             {changeIcon(text)}
             <div className='d-none d-md-inline'>
                 {text}
