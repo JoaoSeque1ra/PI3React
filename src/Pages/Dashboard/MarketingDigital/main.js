@@ -10,7 +10,7 @@ export default function Main() {
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg fixed="top" />
 
-            <div className="container-fluid offset-lg-1">
+            <div className="container-fluid changeSpace">
                 <div className="row mt-5">
 
                     <div className="col-lg-10 offset-lg-1">
