@@ -42,7 +42,7 @@ export default function Main() {
                 <div className="row vh-100">
                     <div className="col-md-12 col-lg-7 pt-pageLeft">
                         <div className="row">
-                            <Breadcrumbs route1="Orçamento" route2="/ Website" textColor="text-purple"/>
+                            <Breadcrumbs route1="Orçamento / Website &#38; Loja Online" route2="/ Website" textColor="text-purple"/>
 
                             <div className='col-12 col-lg-10 offset-lg-1'>
                                 <div className='row'>

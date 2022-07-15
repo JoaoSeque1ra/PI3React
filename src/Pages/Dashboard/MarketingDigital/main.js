@@ -406,103 +406,16 @@ export default function Main() {
                             </div>
 
                             {/* Email & SMS Marketing */}
-
-                            <div className="col-12 mt-5 bg-cardsDashboard">
-                                <div className="row py-4">
-
-                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
-                                        Email &#38; SMS Marketing
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="row pt-4">
-
-                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                1.Packs
-                                            </div>
-
-                                            <PacksInput nomePack="Start" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
-
-                                            <PacksInput nomePack="Boost" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("5: ")}/>
-
-                                            <PacksInput nomePack="Bomb" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("6: ")}/>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="row py-4">
-
-                                            <div className="col-12 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                2.Pack Personalizado
-                                            </div>
-
-                                            <div className="col-12 ps-lg-5">
-                                                <div className="row pt-4">
-
-                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
-                                                        2.1.Email Marketing <br />
-                                                        <span className="fw-light">(envios)</span>
-                                                    </div>
-
-                                                    <PacksInput nomePack="1 000 Emails" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
-
-                                                    <PacksInput nomePack="5 000 Emails" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("5: ")}/>
-
-                                                    <PacksInput nomePack="10 000 Emails" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("6: ")}/>
-
-                                                </div>
-                                            </div>
-
-                                            <div className="col-12 ps-lg-5">
-                                                <div className="row pt-4">
-
-                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
-                                                        2.2.SMS Marketing<br/>
-                                                        <span className="fw-light">(envios)</span>
-                                                    </div>
-
-                                                    <PacksInput nomePack="1 000 sms" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
-
-                                                    <PacksInput nomePack="5 000 sms" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("5: ")}/>
-
-                                                    <PacksInput nomePack="10 000 sms" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("6: ")}/>
-
-                                                </div>
-                                            </div>
-
-                                            <div className="col-12 ps-lg-5">
-                                                <div className="row pt-4">
-
-                                                    <div className="col-md-12 col-lg-2 ps-lg-5 align-self-center text-break">
-                                                        2.3.Gestão newsletter
-                                                    </div>
-
-                                                    <PacksInput nomePack="1 000 Emails" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
                             {/* Otimização & SEM */}
 
-                            <div className="col-12 my-5 bg-cardsDashboard">
-                                <div className="row py-4">
-
-                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
-                                        Otimização SEO &#38; SEM
-                                    </div>
+                            <div className="col-12 my-5">
+                                <div className="row gx-5">
 
                                     <div className="col-12 col-lg-6">
-                                        <div className="row pt-4">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                1.SEO Técnico
+                                            <div className="col-12 col-lg-4 ps-lg-4 fs-4 font-weight-semiBold align-self-center text-break">
+                                                Email &#38; SMS Marketing
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -510,42 +423,17 @@ export default function Main() {
                                         </div>
                                     </div>
 
-                                    <div className="col-12 col-lg-6">
-                                        <div className="row pt-4">
+                                    <div className="col-12 col-lg-6 mt-5 mt-lg-0">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                2.SEO On-Page
+                                            <div className="col-12 col-lg-4 ps-lg-4 fs-4 font-weight-semiBold align-self-center text-break">
+                                                Otimização SEO &#38; SEM
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>
-
-                                    <div className="col-12 col-lg-6">
-                                        <div className="row pt-4">
-
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                3.Conteúdos
-                                            </div>
-
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12 col-lg-6">
-                                        <div className="row pt-4">
-
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                4.Copywriting
-                                            </div>
-
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
-
-                                        </div>
-                                    </div>
-                                    
 
                                 </div>
                             </div>

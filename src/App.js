@@ -12,18 +12,23 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="client/" element={<Client.Home />}/>
-        <Route path="client/identidade-visual" element={<Client.IdentidadeVisual />}/>
+
         <Route path="client/marketing-digital" element={<Client.MarketingDigital />}/>
+        <Route path="client/marketing-digital/gestao-redes-sociais" element={<Client.GestaoRedesSociais />}/>
+        <Route path="client/marketing-digital/gestao-redes-sociais/packs" element={<Client.PersonalizarGestaoRedesSociais />}/>
+        <Route path="client/marketing-digital/paid-media" element={<Client.PaidMedia />}/>
+
         <Route path="client/design-grafico" element={<Client.DesignGrafico />}/>
+        <Route path="client/design-grafico/identidade-visual" element={<Client.IdentidadeVisual />}/>
+
         <Route path="client/comunicacao-consultoria" element={<Client.ComunicacaoConsultoria />}/>
+
         <Route path="client/website-loja-online" element={<Client.WebsiteLojaOnline />}/>
-        <Route path="client/website" element={<Client.Website />}/>
-        <Route path="client/loja-online" element={<Client.LojaOnline />}/>
+        <Route path="client/website-loja-online/website" element={<Client.Website />}/>
+        <Route path="client/website-loja-online/loja-online" element={<Client.LojaOnline />}/>
+
         <Route path="client/contactos" element={<Client.Contactos />}/>
         <Route path="client/obrigado" element={<Client.Obrigado />}/>
-        <Route path="client/gestao-redes-sociais" element={<Client.GestaoRedesSociais />}/>
-        <Route path="client/paid-media" element={<Client.PaidMedia />}/>
-        <Route path="client/gestao-redes-sociais/packs" element={<Client.PersonalizarGestaoRedesSociais />}/>
 
 
         <Route path="/dashboard/Login" element={<Dashboard.Login />}/>

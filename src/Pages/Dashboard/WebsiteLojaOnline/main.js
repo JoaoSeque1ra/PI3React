@@ -51,7 +51,7 @@ export default function Main() {
                                         <div className="row pt-4">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                2.Landing page
+                                                2.Website
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -63,7 +63,7 @@ export default function Main() {
                                         <div className="row pt-4">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                3.Portfólio
+                                                3.Landing page
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -75,7 +75,7 @@ export default function Main() {
                                         <div className="row pt-4">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                4.Criação de conteúdos textuais
+                                                4.Portfólio
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -87,7 +87,7 @@ export default function Main() {
                                         <div className="row pt-4">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                5.Com alojamento
+                                                5.Criação de conteúdos textuais
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -99,7 +99,19 @@ export default function Main() {
                                         <div className="row pt-4">
 
                                             <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                6.Com domínio
+                                                6.Com alojamento
+                                            </div>
+
+                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row pt-4">
+
+                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
+                                                7.Com domínio
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -239,142 +251,31 @@ export default function Main() {
                             </div>
 
                             {/* Suporte & Manutenção */}
-
-                            <div className="col-12 mt-5 bg-cardsDashboard">
-                                <div className="row py-4">
-
-                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
-                                        Suporte &#38; Manutenção
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="row pt-5">
-
-                                            <div className="col-12 col-lg-6">
-                                                <div className="row">
-
-                                                    <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                        1.Com domínio
-                                                    </div>
-
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
-
-                                                </div>
-                                            </div>
-
-                                            <div className="col-12 col-lg-6">
-                                                <div className="row">
-
-                                                    <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                        2.Suporte
-                                                    </div>
-
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
                             {/* Servidor & Domínio */}
 
-                            <div className="col-12 my-5 bg-cardsDashboard">
-                                <div className="row py-4">
+                            <div className="col-12 my-5">
+                                <div className="row gx-5">
 
-                                    <div className="col-12 ps-lg-4 fs-4 font-weight-semiBold">
-                                        Servidor &#38; Domínio
-                                    </div>
+                                    <div className="col-12 col-lg-6">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
-                                    <div className="col-12">
-                                        <div className="row pt-4">
-
-                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                1.Espaço disco SSD
+                                            <div className="col-12 col-lg-4 ps-lg-4 fs-4 font-weight-semiBold align-self-center text-break">
+                                                Suporte &#38; Manutenção
                                             </div>
 
-                                            <PacksInput nomePack="10 GB" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("1: ")}/>
-
-                                            <PacksInput nomePack="25 GB" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("2: ")}/>
-
-                                            <PacksInput nomePack="50 GB" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                            <PacksInput nomePack="100 GB" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
+                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>
 
-                                    <div className="col-12">
-                                        <div className="row pt-4">
+                                    <div className="col-12 col-lg-6 mt-5 mt-lg-0">
+                                        <div className="row py-4 bg-cardsDashboard h-100">
 
-                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                2.Domínios permitidos
+                                            <div className="col-12 col-lg-4 ps-lg-4 fs-4 font-weight-semiBold align-self-center text-break">
+                                                Servidor &#38; Domínio
                                             </div>
 
-                                            <PacksInput nomePack="1 domínio" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("1: ")}/>
-
-                                            <PacksInput nomePack="5 domínios" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("2: ")}/>
-
-                                            <PacksInput nomePack="10 domínios" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                            <PacksInput nomePack="15 domínios" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="row pt-4">
-
-                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                3.Base de dados
-                                            </div>
-
-                                            <PacksInput nomePack="1 base de dados" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("1: ")}/>
-
-                                            <PacksInput nomePack="5 base de dados" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("2: ")}/>
-
-                                            <PacksInput nomePack="10 base de dados" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                            <PacksInput nomePack="15 base de dados" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="row pt-4">
-
-                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                4.Contas de Email
-                                            </div>
-
-                                            <PacksInput nomePack="1 contas de email" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("1: ")}/>
-
-                                            <PacksInput nomePack="5 contas de email" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("2: ")}/>
-
-                                            <PacksInput nomePack="10 contas de email" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                            <PacksInput nomePack="15 contas de email" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12">
-                                        <div className="row pt-4">
-
-                                            <div className="col-md-12 col-lg-2 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                5.Certificado SSL
-                                            </div>
-
-                                            <PacksInput nomePack="Básico" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("1: ")}/>
-
-                                            <PacksInput nomePack="AlphaSSL WildCard" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("2: ")}/>
-
-                                            <PacksInput nomePack="OV" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
-
-                                            <PacksInput nomePack="EV" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
+                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>

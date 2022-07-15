@@ -28,8 +28,8 @@ export default function Main() {
                                     <div className="col-12 col-lg-6">
                                         <div className="row py-4 bg-cardsDashboard h-100">
 
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                1.Marketing
+                                            <div className="col-12 col-lg-4 ps-lg-4 fs-4 font-weight-semiBold align-self-center text-break">
+                                                Marketing e Comunicação
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -40,8 +40,8 @@ export default function Main() {
                                     <div className="col-12 col-lg-6 mt-5 mt-lg-0">
                                         <div className="row py-4 bg-cardsDashboard h-100">
 
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                2.Comunicação
+                                            <div className="col-12 col-lg-4 ps-lg-4 fs-4 font-weight-semiBold align-self-center text-break">
+                                                Organização de eventos
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -58,20 +58,8 @@ export default function Main() {
                                     <div className="col-12 col-lg-6">
                                         <div className="row py-4 bg-cardsDashboard h-100">
 
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                3.Evento
-                                            </div>
-
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="col-12 col-lg-6 mt-5 mt-lg-0">
-                                        <div className="row py-4 bg-cardsDashboard h-100">
-
-                                            <div className="col-12 col-lg-4 ps-lg-5 fs-5 font-weight-medium align-self-center text-break">
-                                                4.Assessoria
+                                            <div className="col-12 col-lg-4 ps-lg-4 fs-4 font-weight-semiBold align-self-center text-break">
+                                                Assessoria e criação de conteúdo
                                             </div>
 
                                             <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
@@ -80,8 +68,8 @@ export default function Main() {
                                     </div>
 
                                 </div>
-                            </div>                            
-
+                            </div>
+                           
                         </div>
                     </div>
 
