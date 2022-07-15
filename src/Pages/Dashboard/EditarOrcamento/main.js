@@ -170,10 +170,10 @@ export default function Main() {
                                         78€
                                     </div>
 
-                                    <div className='offset-7 col-3 offset-lg-8 col-lg-2 text-end mt-4 fw-bold fs-5 text-break'>
+                                    <div className='offset-6 col-3 offset-lg-8 col-lg-2 text-end mt-4 fw-bold fs-5 text-break'>
                                         IVA: 	
                                     </div>
-                                    <div className='col-2 text-end pe-4 mt-4 fw-bold fs-5'>
+                                    <div className='col-3 col-lg-2 text-end pe-4 mt-4 fw-bold fs-5'>
                                         27,25€
                                     </div>
 
