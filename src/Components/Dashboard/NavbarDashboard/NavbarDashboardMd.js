@@ -6,7 +6,7 @@ import NavbarItem from './NavbarItem';
 
 export default function NavbarDashboardMd() {
     return (
-        <nav className="fixed-top top-0 navbar navbar-dark bg-gray d-flex d-lg-none" style={{zIndex: 2000}}>
+        <nav className="sticky-top navbar navbar-dark bg-gray d-flex d-lg-none" style={{zIndex: 2000}}>
             <div className="container-fluid">
 
                 <Link className="navbar-brand" to={"/dashboard"}>
