@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
@@ -6,7 +7,25 @@ import ButtonDashboard from '../../../Components/Dashboard/Button';
 import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 export default function Main() {
-    return (  
+    const [marketingComunicacao, setMarketingComunicacao] = useState([])
+    const [organizacaoEventos, setOrganizacaoEventos] = useState([])
+    const [acessoria, setAcessoria] = useState([])
+
+    useEffect(()=>{
+        const baseUrl = "http://localhost:3001/orcamento/findServicosComunicacaoConsultoria"
+        axios.get(baseUrl)
+        .then(response => {
+            if(!response.data.success)
+                return alert(response.data.message)
+
+            const data = response.data.data
+            setMarketingComunicacao(data[0])
+            setOrganizacaoEventos(data[1])
+            setAcessoria(data[2])
+        })
+    }, [marketingComunicacao, organizacaoEventos, acessoria])
+
+    return (
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
 
@@ -32,7 +51,7 @@ export default function Main() {
                                                 Marketing e Comunicação
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>
