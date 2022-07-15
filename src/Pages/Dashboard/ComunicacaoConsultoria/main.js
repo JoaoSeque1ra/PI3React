@@ -13,6 +13,7 @@ export default function Main() {
 
     useEffect(()=>{
         const baseUrl = "http://localhost:3001/orcamento/findServicosComunicacaoConsultoria"
+
         axios.get(baseUrl)
         .then(response => {
             if(!response.data.success)
@@ -22,8 +23,13 @@ export default function Main() {
             setMarketingComunicacao(data[0])
             setOrganizacaoEventos(data[1])
             setAcessoria(data[2])
+
+            console.count(); //TESTE
         })
-    }, [marketingComunicacao, organizacaoEventos, acessoria])
+        .catch(err => {
+            alert(err)
+        })
+    }, [])
 
     return (
         <main className='overflow-auto d-flex'>
@@ -51,7 +57,7 @@ export default function Main() {
                                                 Marketing e Comunicação
                                             </div>
 
-                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" onChange={(value)=> setMarketingComunicacao(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -63,7 +69,7 @@ export default function Main() {
                                                 Organização de eventos
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" onChange={(value)=> setOrganizacaoEventos(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -81,7 +87,7 @@ export default function Main() {
                                                 Assessoria e criação de conteúdo
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={acessoria.preco} className="col-lg-4" onChange={(value)=> setAcessoria(value.target.value)}/>
 
                                         </div>
                                     </div>
