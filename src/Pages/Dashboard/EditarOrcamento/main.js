@@ -82,7 +82,7 @@ export default function Main() {
                             </div>
 
                             <div className="col-12 fs-5 mt-3 mt-lg-0 mb-lg-3">
-                                Detalhes do orçamento #88
+                                Detalhes do orçamento #0088
                             </div>
 
                             {/* Informações do Orçamento */}
