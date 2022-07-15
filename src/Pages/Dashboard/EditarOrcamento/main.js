@@ -9,7 +9,7 @@ import EstadosOrcamento from '../../../Components/Dashboard/EstadosOrcamento';
 
 export default function Main() {
     const { idOrcamento } = useParams();
-    //console.log(idOrcamento)
+    console.log(idOrcamento)
 
     return (
         <main className='overflow-auto d-flex'>
