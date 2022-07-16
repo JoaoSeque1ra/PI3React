@@ -223,23 +223,35 @@ export default function Main() {
     );
 
     function save() {
-        if(criacaoLogotipo.preco <= 0 || analiseConcorrencia.preco <= 0 || paletaCores.preco <= 0 || slogan.preco <= 0 || manual.preco <= 0 || estacionario.preco <= 0 || brandingRebranding.preco <= 0 || estrategia.preco <= 0 || registo.preco <= 0 || desginEditorial.preco <= 0)
+        const servicosArray = []
+
+        if(criacaoLogotipo.preco <= 0 || analiseConcorrencia.preco <= 0 || paletaCores.preco <= 0 || slogan.preco <= 0 || manual.preco <= 0 || estacionario.preco <= 0 || 
+        brandingRebranding.preco <= 0 || estrategia.preco <= 0 || registo.preco <= 0 || desginEditorial.preco <= 0)
             return alert("Introduza um valor acima de 0")
 
-        const baseUrl = ""
-        const data = {
-            // preco:
-        }
+        servicosArray.push(criacaoLogotipo, analiseConcorrencia, paletaCores, slogan, manual, estacionario, brandingRebranding, estrategia, registo, desginEditorial)
 
-        axios.post(baseUrl, data)
-        .then(response => {
-            if(response.data.success)
-                return alert(response.data.message)
+        servicosArray.map((data, index) => {
+            console.log(data)
+            const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + data.id
+            const newData = {
+                novoPreco: data.preco
+            }
 
-            alert("ERRO")
-        })
-        .catch(err=> {
-            alert("ERRO: " + err)
+            axios.post(baseUrl, newData)
+            .then(response => {
+                if(response.data.success)
+                    if(index === servicosArray.length - 1)
+                        return alert(response.data.message)
+
+                if(!response.data.success) {
+                    alert(response.data.message + " " + data.descricao)
+                }
+
+            })
+            .catch(err=> {
+                alert("ERRO: " + err)
+            })
         })
     }
 }

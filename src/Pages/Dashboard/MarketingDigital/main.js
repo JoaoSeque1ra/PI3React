@@ -184,7 +184,7 @@ export default function Main() {
                             <BreadcrumbsDashboard route1="Preços" route2="/ Marketing Digital"/>
 
                             <div className="col-3 col-lg-4 text-end">
-                                <ButtonDashboard text="Guardar"/>
+                                <ButtonDashboard text="Guardar" onClick={() => save()}/>
                             </div>
 
                             {/* Gestão de redes Sociais */}
@@ -611,4 +611,51 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function save() {
+        const servicosArray = []
+        
+        if(gestaoPackStart.preco <= 0 || gestaoPackBoost.preco <= 0 || gestaoPackBomb.preco <= 0 || facebookPublicacao.preco <= 0 || facebookStorie.preco <= 0 || 
+        facebookReel.preco <= 0 || instaPublicacao.preco <= 0 || instaStorie.preco <= 0 || instaReel.preco <= 0 || twitterPublicacao.preco <= 0 || twitterStorie.preco <= 0 ||
+        twitterReel.preco <= 0 || tiktokPublicacao.preco <= 0 || tiktokStorie.preco <= 0 || tiktokReel.preco <= 0 || linkedinPublicacao.preco <= 0 || linkedinStorie.preco <= 0 ||
+        linkedinReel.preco <= 0 || youtubePublicacao.preco <= 0 || youtubeStorie.preco <= 0 || youtubeReel.preco <= 0 || googlePublicacao.preco <= 0 || googleStorie.preco <= 0 ||
+        googleReel.preco <= 0 || cover.preco <= 0 || design.preco <= 0 || copywriting.preco <= 0 || planificacao.preco <= 0 || consultoria.preco <= 0 || gestao.preco <= 0 ||
+        relatorio.preco <= 0 || paidPackStart.preco <= 0 || paidPackBoost.preco <= 0 || paidPackBomb.preco <= 0 || estrategiaFacebook.preco <= 0 || estrategiaInsta.preco <= 0 ||
+        estrategiaGoogle.preco <= 0 || criacaoCampanhaFacebook.preco <= 0 || criacaoCampanhaInsta.preco <= 0 || criacaoCampanhaGoogle.preco <= 0 || segmentacaoFacebook.preco <= 0 ||
+        segmentacaoInsta.preco <= 0 || segmentacaoGoogle.preco <= 0 || otimizacaoFacebook.preco <= 0 || otimizacaoInsta.preco <= 0 ||
+        otimizacaoGoogle.preco <= 0 || relatorioFacebook.preco <= 0 || relatorioInsta.preco <= 0 || relatorioGoogle.preco <= 0 || googleTagFacebook.preco <= 0 ||
+        googleTagInsta.preco <= 0 || googleTagGoogle.preco <= 0 || gestaoFacebook.preco <= 0 || gestaoInsta.preco <= 0 || gestaoGoogle.preco <= 0 || emialSMS.preco <= 0 ||
+        otimizacaoSEOSEM.preco <= 0)
+            return alert("Introduza um valor acima de 0")
+            
+        servicosArray.push(gestaoPackStart, gestaoPackBoost, gestaoPackBomb, facebookPublicacao, facebookStorie, facebookReel, instaPublicacao, instaStorie,
+        instaReel, twitterPublicacao, twitterStorie, twitterReel, tiktokPublicacao, tiktokStorie, tiktokReel, linkedinPublicacao, linkedinStorie, linkedinReel, youtubePublicacao,
+        youtubeStorie, youtubeReel, googlePublicacao, googleStorie, googleReel, cover, design, copywriting, planificacao, consultoria, gestao, relatorio, paidPackStart,
+        paidPackBoost, paidPackBomb, estrategiaFacebook, estrategiaInsta, estrategiaGoogle, criacaoCampanhaFacebook, criacaoCampanhaInsta, criacaoCampanhaGoogle, segmentacaoFacebook,
+        segmentacaoInsta, segmentacaoGoogle, otimizacaoFacebook, otimizacaoInsta, otimizacaoGoogle, relatorioFacebook, relatorioInsta, relatorioGoogle, googleTagFacebook,
+        googleTagInsta, googleTagGoogle, gestaoFacebook, gestaoInsta, gestaoGoogle, emialSMS, otimizacaoSEOSEM)
+
+        servicosArray.map((data, index) => {
+            console.log(data)
+            const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + data.id
+            const newData = {
+                novoPreco: data.preco
+            }
+
+            axios.post(baseUrl, newData)
+            .then(response => {
+                if(response.data.success)
+                    if(index === servicosArray.length - 1)
+                        return alert(response.data.message)
+
+                if(!response.data.success) {
+                    alert(response.data.message + " " + data.descricao)
+                }
+
+            })
+            .catch(err=> {
+                alert("ERRO: " + err)
+            })
+        })
+    }
 }

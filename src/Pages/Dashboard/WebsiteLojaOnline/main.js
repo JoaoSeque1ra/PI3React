@@ -355,26 +355,40 @@ export default function Main() {
     );
 
     function save() {
+        const servicosArray = []
 
-        if(websiteNumeroPaginas5.preco <= 0 || websiteNumeroPaginas10.preco <= 0 || websiteNumeroPaginasMaior10.preco <= 0 || Website.preco <= 0 || LandingPage.preco <= 0 || portofolio.preco <= 0 || websiteCriacaoConteudos.preco <= 0 || websiteAlojamento.preco <= 0 || websiteDominio.preco <= 0 || lojaNumeroPaginas5.preco <= 0 || lojaNumeroPaginas10.preco <= 0 || 
-        lojaNumeroPaginasMaior10.preco <= 0 || produtos.preco <= 0 || contactos.preco <= 0 || equipas.preco <= 0 || outros.preco <= 0 
-        || lojaCriacaoConteudos.preco <= 0 || lojaAlojamento.preco <= 0 || lojaDominio.preco <= 0 || suporteManutencao.preco <= 0 || servidorDominio.preco <= 0) 
+        if(websiteNumeroPaginas5.preco <= 0 || websiteNumeroPaginas10.preco <= 0 || websiteNumeroPaginasMaior10.preco <= 0 || Website.preco <= 0 || 
+        LandingPage.preco <= 0 || portofolio.preco <= 0 || websiteCriacaoConteudos.preco <= 0 || websiteAlojamento.preco <= 0 || websiteDominio.preco <= 0 || lojaNumeroPaginas5.preco <= 0 || 
+        lojaNumeroPaginas10.preco <= 0 || lojaNumeroPaginasMaior10.preco <= 0 || produtos.preco <= 0 || contactos.preco <= 0 || equipas.preco <= 0 || outros.preco <= 0 || 
+        lojaCriacaoConteudos.preco <= 0 || lojaAlojamento.preco <= 0 || lojaDominio.preco <= 0 || suporteManutencao.preco <= 0 || servidorDominio.preco <= 0) 
             return alert("Introduza um valor acima de 0")
 
-        const baseUrl = ""
-        const data = {
-            // preco:
-        }
+        
+        servicosArray.push(websiteNumeroPaginas5, websiteNumeroPaginas10, websiteNumeroPaginasMaior10, Website, LandingPage, portofolio, websiteCriacaoConteudos, websiteAlojamento,
+        websiteDominio, lojaNumeroPaginas5, lojaNumeroPaginas10, lojaNumeroPaginasMaior10, produtos, contactos, equipas, outros, lojaCriacaoConteudos, lojaAlojamento, 
+        lojaDominio, suporteManutencao, servidorDominio)
+        
+        servicosArray.map((data, index) => {
+            const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + data.id
+            const newData = {
+                novoPreco: data.preco
+            }
 
-        axios.post(baseUrl, data)
-        .then(response => {
-            if(response.data.success)
-                return alert(response.data.message)
+            axios.post(baseUrl, newData)
+            .then(response => {
+                if(response.data.success)
+                    if(index === servicosArray.length - 1)
+                        return alert(response.data.message)
 
-            alert("ERRO")
+                if(!response.data.success) {
+                    alert(response.data.message + " " + data.descricao)
+                }
+
+            })
+            .catch(err=> {
+                alert("ERRO: " + err)
+            })
         })
-        .catch(err=> {
-            alert("ERRO: " + err)
-        })
+       
     }
 }

@@ -117,15 +117,14 @@ export default function Main() {
     );
 
     function save() {
-        const arrayTeste = []
-        const flag = false
+        const servicosArray = []
 
         if (marketingComunicacao.preco <= 0 || organizacaoEventos.preco <= 0 || acessoria.preco <= 0)
             return alert("Introduza um valor acima de 0")
 
-        arrayTeste.push(marketingComunicacao, organizacaoEventos, acessoria)
+        servicosArray.push(marketingComunicacao, organizacaoEventos, acessoria)
 
-        arrayTeste.map((data, index) => {
+        servicosArray.map((data, index) => {
             console.log(data)
             const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + data.id
             const newData = {
@@ -135,7 +134,7 @@ export default function Main() {
             axios.post(baseUrl, newData)
             .then(response => {
                 if(response.data.success)
-                    if(index === arrayTeste.length - 1)
+                    if(index === servicosArray.length - 1)
                         return alert(response.data.message)
 
                 if(!response.data.success) {
