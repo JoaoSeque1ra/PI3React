@@ -1,80 +1,71 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DataTable, { createTheme } from 'react-data-table-component';
 
-export default function TablesVerOrcamento({campo1, campo2, campo3, campo4, campo5, onchange1, onchange2 }) {
+export default function TablesVerOrcamento(props) {
     createTheme('teste', {
         background: {
             default: '#0000000'
         }
     })
 
+    const total = (row) => {
+        const total = parseFloat(row.valor * row.quantidade).toFixed(2)
+        return parseFloat(total * .23 + parseFloat(total)).toFixed(2)
+    }
+
+    const iva = (row) => {
+        const total = parseFloat(row.valor * row.quantidade).toFixed(2)
+
+        return parseFloat(total * .23).toFixed(2)
+    }
+
     const columns = [
         {
-            name: campo1,
-            selector: row => row.campo1,
+            name: "Serviço",
+            selector: row => row.descricaoServico.descricao,
             style: {
                 fontSize: '1rem',
             },
         },
         {
-            name: campo2,
-            selector: row => row.campo2,
-            cell: (row) => <input type="number" placeholder={row.campo2} defaultValue={row.campo2} onChange={valeu => console.log(valeu.target.value)} />,
+            name: "Custo",
+            selector: row => row.valor,
+            cell: (row) => <input id={row.id} type="number" className='w-100' onChange={(value) => props.onChangeValor(value)} defaultValue={row.valor} />,
             style: {
                 fontSize: '1rem',
             },
         },
         {
-            name: campo3,
-            selector: row => row.campo3,
+            name: "Quantidade",
+            selector: row => row.quantidade,
             sortable: true,
             center: true,
-            cell: (row) => <input type="number" placeholder={row.campo3} defaultValue={row.campo3} onChange={valeu => console.log(valeu.target.value)} />,
+            cell: (row) => <input id={row.id} type="number" className='w-100 text-center' defaultValue={row.quantidade} onChange={(value) => props.onChangeQuantidade(value)} />,
             style: {
                 fontSize: '1rem',
             },
         },
         {
-            name: campo4,
-            selector: row => row.campo4,
+            name: "Total",
+            selector: row => total(row),
             right: true,
             style: {
                 fontSize: '1rem',
             },
         },
         {
-            name: campo5,
-            selector: row => row.campo5,
+            name: "Iva",
+            selector: row => iva(row),
             right: true,
             hide: 'sm',
             style: {
                 fontSize: '1rem',
             },
         }
-    ];
+    ]   
 
-    const data = [
-        {
-            id: 1, //Não sou obrigado a meter
-            campo1: 'Design Logotipo',
-            campo2: '57,75€',
-            campo3: '12',
-            campo4: '57,75€',
-            campo5: '17,25€',
-        },
-        {
-            id: 2, //Não sou obrigado a meter
-            campo1: 'Paleta de Cores',
-            campo2: '20,25€',
-            campo3: '1',
-            campo4: '20,25€',
-            campo5: '10€',
-        },
-    ]
-
-    const [infoOrcamento, setInfoOrcamento] = useState(data);
-    
-    return (  
-        <DataTable columns={columns} data={infoOrcamento} theme="teste" />
-    );    
+    // console.log(props.contems)
+    return (
+        <DataTable columns={columns} data={props.contems} theme="teste"/>
+    );
 }

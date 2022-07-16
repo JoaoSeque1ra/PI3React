@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import axios from 'axios'
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
@@ -8,8 +9,57 @@ import TablesVerOrcamento from '../../../Components/Dashboard/TableVerOrcamento'
 import EstadosOrcamento from '../../../Components/Dashboard/EstadosOrcamento';
 
 export default function Main() {
+    const [infoOrcamento, setInfoOrcamento] = useState([])
+    const [cliente, setCliente] = useState([])
+    const [contems, setContems] = useState([])
+    const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
+
     const { idOrcamento } = useParams();
-    console.log(idOrcamento)
+
+    useEffect(()=>{
+        const urlBase = "http://localhost:3001/orcamento/findOrcamento/" + idOrcamento
+        axios.get(urlBase)
+        .then(response => {
+            if(response.data.success) {
+                const data = response.data.data
+                setInfoOrcamento(data)
+                setContems(data.contems)
+
+                return setCliente(data.cliente)
+            }
+
+            alert(response.data.message)
+        })
+        .catch(err=> {
+            alert("Erro: " + err)
+        })
+    },[])
+
+    const Subtotal = () => {
+        let subtotal = 0
+
+        contems.map((data, index) => {
+            subtotal = parseFloat(data.valor) * parseFloat(data.quantidade) + subtotal
+        })
+
+        return parseFloat(subtotal).toFixed(2)
+    }
+
+    const Iva = () => {
+        let subtotal = Subtotal()
+
+        return parseFloat(subtotal * .23).toFixed(2) 
+    }
+
+    const Total = () => {
+        let subtotal = Subtotal()
+        let iva = Iva()
+
+        console.log(subtotal)
+        console.log(iva)
+
+        return parseFloat(parseFloat(subtotal) + parseFloat(iva)).toFixed(2)
+    }
 
     return (
         <main className='overflow-auto d-flex'>
@@ -82,7 +132,7 @@ export default function Main() {
                             </div>
 
                             <div className="col-12 fs-5 mt-3 mt-lg-0 mb-lg-3">
-                                Detalhes do orçamento #{idOrcamento}
+                                Detalhes do orçamento #{infoOrcamento.id}
                             </div>
 
                             {/* Informações do Orçamento */}
@@ -97,9 +147,8 @@ export default function Main() {
                                                 Data de Criação:
                                             </div>
                                             <div className='col-7'>
-                                                12-07-2022
+                                                {infoOrcamento.data_orcamento}
                                             </div>
-
                                             <div className='col-5 fw-light mt-3'>
                                                 Estado:
                                             </div>
@@ -117,10 +166,10 @@ export default function Main() {
                                                 Cliente:
                                             </div>
                                             <div className='col-7 fs-5 mt-lg-2'>
-                                                João Sequeira
+                                                {cliente.nome}
                                             </div>
                                             <div className='col-12 col-lg-8 fw-light text-break'>
-                                                Rua do Bom Jesus, 45 - A 4700-005 Braga Portugal 
+                                                {cliente.morada}
                                             </div>
                                             
                                         </div>
@@ -133,21 +182,21 @@ export default function Main() {
                                                 Email:
                                             </div>
                                             <div className='col-10 text-break'>
-                                                joaoSequeira28@hotmail.com
+                                                {cliente.email}
                                             </div>
 
                                             <div className="col-4 fw-light text-break mt-2">
                                                 Telefone:
                                             </div>
                                             <div className='col-8 text-break mt-2'>
-                                                910933857
+                                                {cliente.telefone}
                                             </div>
 
                                             <div className="col-4 fw-light text-break mt-2">
                                                 NIF / NIPC:
                                             </div>
                                             <div className='col-8 text-break mt-2'>
-                                                186590111
+                                                {cliente.numero_fiscal}
                                             </div>
                                             
                                         </div>
@@ -161,27 +210,58 @@ export default function Main() {
                             <div className="col-12 mt-5 bg-cardsDashboard">
                                 <div className="row py-4">
 
-                                    <TablesVerOrcamento campo1="Serviço" campo2="Custo" campo3="Quantidade" campo4="Total" campo5="IVA" />
+                                    <TablesVerOrcamento contems={contems} 
+
+                                    onChangeValor={
+                                        (value) => {
+                                            const newValor = contems
+
+                                            newValor.map((data) => {
+                                                if(data.id == value.target.id) {
+                                                    data.valor = value.target.value
+                                                    return setContems(newValor)
+                                                }
+                                            })
+
+                                            forceUpdate()
+                                        }
+                                    }
+                                    
+                                    onChangeQuantidade={
+                                        (value) => {
+                                            const newQuantidade = contems
+
+                                            newQuantidade.map((data) => {
+                                                
+                                                if(data.id == value.target.id) {
+                                                    data.quantidade = parseInt(value.target.value)
+                                                    return setContems(newQuantidade)
+                                                }
+                                            })
+
+                                            forceUpdate()                                            
+                                        }
+                                    }/>
 
                                     <div className='offset-6 col-4 offset-lg-7 col-lg-3 text-end mt-4 fw-bold fs-5 text-break'>
                                         Subtotal: 	
                                     </div>
                                     <div className='col-2 text-end pe-4 mt-4 fw-bold fs-5'>
-                                        78€
+                                        <Subtotal />
                                     </div>
 
                                     <div className='offset-6 col-3 offset-lg-8 col-lg-2 text-end mt-4 fw-bold fs-5 text-break'>
                                         IVA: 	
                                     </div>
                                     <div className='col-3 col-lg-2 text-end pe-4 mt-4 fw-bold fs-5'>
-                                        27,25€
+                                        <Iva />
                                     </div>
 
                                     <div className='offset-3 col-7 offset-lg-5 col-lg-5 text-end mt-4 fw-bold fs-5 text-break'>
                                         Total do Orçamento:	
                                     </div>
                                     <div className='col-2 text-end pe-4 mt-4 fw-bold fs-5'>
-                                        78€
+                                        <Total />
                                     </div>
 
                                 </div>
@@ -192,7 +272,6 @@ export default function Main() {
 
                 </div>
             </div>
-
 
         </main >
     );
