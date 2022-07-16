@@ -58,7 +58,7 @@ export default function Main() {
                             <BreadcrumbsDashboard route1="Preços" route2="/ Design Gráfico" />
 
                             <div className="col-3 col-lg-4 text-end">
-                                <ButtonDashboard text="Guardar"/>
+                                <ButtonDashboard text="Guardar" onClick={() => save()}/>
                             </div>
 
                             {/* Identidade Visual */}
@@ -223,16 +223,23 @@ export default function Main() {
     );
 
     function save() {
-        // const [criacaoLogotipo, setCriacaoLogotipo] = useState([])
-        // const [analiseConcorrencia, setAnaliseConcorrencia] = useState([])
-        // const [paletaCores, setPaletaCores] = useState([])
-        // const [slogan, setSlogan] = useState([])
-        // const [manual, setManual] = useState([])
-        // const [estacionario, setEstacionario] = useState([])
-        // const [brandingRebranding, setBrandingRebranding] = useState([])
-        // const [estrategia, setEstrategia] = useState([])
-        // const [registo, setRegisto] = useState([])
-        // const [desginEditorial, setDesginEditorial] = useState([])
-        if(criacaoLogotipo.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0)
+        if(criacaoLogotipo.preco <= 0 || analiseConcorrencia.preco <= 0 || paletaCores.preco <= 0 || slogan.preco <= 0 || manual.preco <= 0 || estacionario.preco <= 0 || brandingRebranding.preco <= 0 || estrategia.preco <= 0 || registo.preco <= 0 || desginEditorial.preco <= 0)
+            return alert("Introduza um valor acima de 0")
+
+        const baseUrl = ""
+        const data = {
+            // preco:
+        }
+
+        axios.post(baseUrl, data)
+        .then(response => {
+            if(response.data.success)
+                return alert(response.data.message)
+
+            alert("ERRO")
+        })
+        .catch(err=> {
+            alert("ERRO: " + err)
+        })
     }
 }
