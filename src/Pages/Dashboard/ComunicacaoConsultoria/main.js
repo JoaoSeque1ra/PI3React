@@ -12,7 +12,7 @@ export default function Main() {
     const [acessoria, setAcessoria] = useState([])
 
     useEffect(() => {
-        const baseUrl = "http://localhost:3001/orcamento/findServicosComunicacaoConsultoria"
+        const baseUrl = "http://localhost:3001/orcamento/findDescricaoServicos/4"
 
         axios.get(baseUrl)
             .then(response => {
@@ -20,6 +20,7 @@ export default function Main() {
                     return alert(response.data.message)
 
                 const data = response.data.data
+                console.log(data)
                 setMarketingComunicacao(data[0])
                 setOrganizacaoEventos(data[1])
                 setAcessoria(data[2])
@@ -62,7 +63,11 @@ export default function Main() {
                                                 Marketing e Comunicação
                                             </div>
 
-                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => setMarketingComunicacao(value.target.value)} />
+                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
+                                                const newPreco = marketingComunicacao
+                                                newPreco.preco = parseInt(value.target.value)
+                                                setMarketingComunicacao(newPreco)
+                                            }} />
 
                                         </div>
                                     </div>
@@ -74,7 +79,11 @@ export default function Main() {
                                                 Organização de eventos
                                             </div>
 
-                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => setOrganizacaoEventos(parseInt(value.target.value))} />
+                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
+                                                const newPreco = organizacaoEventos
+                                                newPreco.preco = parseInt(value.target.value)
+                                                setOrganizacaoEventos(newPreco)
+                                            }} />
 
                                         </div>
                                     </div>
@@ -92,7 +101,12 @@ export default function Main() {
                                                 Assessoria e criação de conteúdo
                                             </div>
 
-                                            <PacksInput value={acessoria.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => setAcessoria(value.target.value)} />
+                                            <PacksInput type="number" value={acessoria.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" 
+                                            onChange={(value) => {
+                                                const newPreco = acessoria
+                                                newPreco.preco = parseInt(value.target.value)
+                                                setAcessoria(newPreco)
+                                            }} />
 
                                         </div>
                                     </div>
@@ -110,24 +124,38 @@ export default function Main() {
     );
 
     function save() {
+        const arrayTeste = []
+
         if (marketingComunicacao.preco <= 0 || organizacaoEventos.preco <= 0 || acessoria.preco <= 0)
             return alert("Introduza um valor acima de 0")
 
-        const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + 115
-        const data = {
-            novoPreco: marketingComunicacao
-        }
+        arrayTeste.push(marketingComunicacao, organizacaoEventos, acessoria)
 
-        axios.post(baseUrl, data)
-        .then(response => {
-            if(response.data.success)
-                return alert(response.data.message)
+        arrayTeste.map((data, index) => {
+            console.log(data)
+            const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + data.id
+            const newData = {
+                novoPreco: data.preco
+            }
 
-            alert("ERRO")
+            axios.post(baseUrl, newData)
+            .then(response => {
+                if(response.data.success)
+                    if(index === arrayTeste.length - 1)
+                        return alert(response.data.message)
+
+                if(!response.data.success)
+                    alert(response.data.message)
+
+            })
+            .catch(err=> {
+                alert("ERRO: " + err)
+            })
         })
-        .catch(err=> {
-            alert("ERRO: " + err)
-        })
+
+
+
+        
 
     }
 }
