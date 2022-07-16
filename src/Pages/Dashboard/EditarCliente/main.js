@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
@@ -6,6 +6,16 @@ import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
 import { useParams } from 'react-router-dom';
 
 export default function Main(){
+    const [nome, setNomeCliente] = useState("")
+    const [empresa, setEmpresaCliente] = useState("")
+    const [morada, setMoradaCliente] = useState("")
+    const [cidade, setCidadeCliente] = useState("")
+    const [codigoPostal, setCodigoPostalCliente] = useState("")
+    const [pais, setPaisCliente] = useState("")
+    const [telefone, setTelefoneCliente] = useState("")
+    const [email, setEmailCliente] = useState("")
+    const [nif, setNifCliente] = useState("")
+
     const {idClient} = useParams()
     console.log(idClient)
 
@@ -32,84 +42,23 @@ export default function Main(){
                                     <div className="col-12">
                                         <form className="row pt-4">
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="nomeCLiente" class="form-label">Nome:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="nomeCLiente" className="form-control" id="nomeCLiente" aria-describedby="nomeCliente" value="Marcelo Machado"/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setNomeCliente(value.target.value)} value={nome} text="NomeCliente:" id="nomeClient" />
 
-                                            <div className="W-100"></div>
+                                            <ClientInput onchange={(value) => setEmpresaCliente(value.target.value)} value={empresa} text="Empresa:" id="empresaCLiente" />
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="empresaCLiente" className="form-label">Empresa:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="empresaCLiente" className="form-control" id="empresaCLiente" aria-describedby="empresaCLiente" value=""/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setMoradaCliente(value.target.value)} value={morada} text="Morada:" id="moradaCLiente" />
 
-                                            <div className="W-100"></div>
+                                            <ClientInput onchange={(value) => setCidadeCliente(value.target.value)} value={cidade} text="Cidade:" id="cidadeCLiente" />
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="moradaCLiente" className="form-label">Morada:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="moradaCLiente" className="form-control" id="moradaCLiente" aria-describedby="moradaCLiente" value="Rua do Bom Jesus, 45 - A"/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setCodigoPostalCliente(value.target.value)} value={codigoPostal} text="Codigo Postal:" id="codigoPostalCliente" />
 
-                                            <div className="w-100"></div>
+                                            <ClientInput onchange={(value) => setPaisCliente(value.target.value)} value={pais} text="Pais:" id="paisCliente" />
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="cidadeCLiente" className="form-label">Cidade:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="cidadeCLiente" className="form-control" id="cidadeCLiente" aria-describedby="cidadeCLiente" value="Braga"/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setTelefoneCliente(value.target.value)} value={telefone} text="Telefone:" id="telefoneCliente" />
 
-                                            <div className="w-100"></div>
+                                            <ClientInput onchange={(value) => setEmailCliente(value.target.value)} value={email} text="Email:" id="emailCliente" />
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="codigoPostalCliente" className="form-label">Codigo Postal:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="codigoPostalCliente" className="form-control" id="codigoPostalCliente" aria-describedby="codigoPostalCliente" value="4700-005"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="paisCliente" className="form-label">Pais:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="paisCliente" className="form-control" id="paisCliente" aria-describedby="paisCliente" value="Portugal"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="telefoneCliente" className="form-label">Telefone:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="telefoneCliente" className="form-control" id="telefoneCliente" aria-describedby="telefoneCliente" value="964342988"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="emailCliente" className="form-label">Email:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="emailCliente" className="form-control" id="emailCliente" aria-describedby="emailCliente" value="mmachado@gmail.com"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="nifCliente" className="form-label">Nif:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="nifCliente" className="form-control" id="nifCliente" aria-describedby="nifCliente" value="186590111"/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setNifCliente(value.target.value)} value={nif} text="NIF:" id="nifCliente" />
                                         </form>
                                     </div>
                                 </div>
