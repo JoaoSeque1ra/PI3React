@@ -12,7 +12,7 @@ export default function Main() {
     const [acessoria, setAcessoria] = useState([])
 
     useEffect(() => {
-        const baseUrl = "http://localhost:3001/orcamento/findServicosComunicacaoConsultoria"
+        const baseUrl = "http://localhost:3001/orcamento/findDescricaoServicos/4"
 
         axios.get(baseUrl)
             .then(response => {

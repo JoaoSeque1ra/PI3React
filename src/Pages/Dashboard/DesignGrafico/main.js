@@ -20,7 +20,7 @@ export default function Main() {
     const [desginEditorial, setDesginEditorial] = useState([])
 
     useEffect(()=> {
-        const baseUrl = "http://localhost:3001/orcamento/findServicosDesignGrafico"
+        const baseUrl = "http://localhost:3001/orcamento/findDescricaoServicos/2"
 
         axios.get(baseUrl)
             .then(response => {
@@ -28,16 +28,17 @@ export default function Main() {
                     return alert(response.data.message)
 
                 const data = response.data.data
+                console.log(data)
                 setCriacaoLogotipo(data[0])
-                setAnaliseConcorrencia(data[7])
-                setPaletaCores(data[3])
-                setSlogan(data[9])
-                setManual(data[5])
-                setEstacionario(data[4])
+                setAnaliseConcorrencia(data[1])
+                setPaletaCores(data[2])
+                setSlogan(data[3])
+                setManual(data[4])
+                setEstacionario(data[5])
                 setBrandingRebranding(data[6])
-                setEstrategia(data[1])
-                setRegisto(data[2])
-                setDesginEditorial(data[8])
+                setEstrategia(data[7])
+                setRegisto(data[8])
+                setDesginEditorial(data[9])
             })
             .catch(err => {
                 alert(err)

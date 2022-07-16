@@ -30,7 +30,7 @@ export default function Main() {
     const [servidorDominio, setServidorDominio] = useState([])
 
     useEffect(() => {
-        const baseUrl = "http://localhost:3001/orcamento/findWebsiteLojaOnline"
+        const baseUrl = "http://localhost:3001/orcamento/findDescricaoServicos/3"
 
         axios.get(baseUrl)
             .then(response => {
@@ -42,25 +42,26 @@ export default function Main() {
                 setWebsiteNumeroPaginas5(data[0])
                 setWebsiteNumeroPaginas10(data[1])
                 setWebsiteNumeroPaginasMaior10(data[2])
-                setWebsite(data[8])
-                setLandingPage(data[3])
-                setPortofolio(data[4])
-                setWebsiteCriacaoConteudos(data[5])
-                setWebsiteAlojamento(data[6])
-                setWebsiteDominio(data[7])
+                setWebsite(data[3])
+                setLandingPage(data[4])
+                setPortofolio(data[5])
+                setWebsiteCriacaoConteudos(data[6])
+                setWebsiteAlojamento(data[7])
+                setWebsiteDominio(data[8])
 
-                setLojaNumeroPaginas5(data[0])
-                setLojaNumeroPaginas10(data[1])
-                setLojaNumeroPaginasMaior10(data[2])
-                setProdutos(data[8])
-                setContactos(data[9])
-                setEquipas(data[10])
-                setOutros(data[11])
-                setLojaCriacaoConteudos(data[12])
-                setLojaAlojamento(data[13])
-                setLojaDominio(data[15])
-                setSuporteManutencao(data[32])
-                setServidorDominio(data[15])
+                setLojaNumeroPaginas5(data[9])
+                setLojaNumeroPaginas10(data[10])
+                setLojaNumeroPaginasMaior10(data[11])
+                setProdutos(data[12])
+                setContactos(data[13])
+                setEquipas(data[14])
+                setOutros(data[15])
+
+                setLojaCriacaoConteudos(data[18])
+                setLojaAlojamento(data[17])
+                setLojaDominio(data[16])
+                setSuporteManutencao(data[19])
+                setServidorDominio(data[20])
             })
             .catch(err => {
                 alert(err)
