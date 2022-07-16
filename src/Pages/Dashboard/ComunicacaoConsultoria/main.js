@@ -30,13 +30,6 @@ export default function Main() {
             })
     }, [])
 
-    const updateArray = (index, data) => {
-        index.preco = parseInt(data)
-
-        setMarketingComunicacao(index)
-        console.log(marketingComunicacao)
-    }
-
     return (
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
@@ -63,9 +56,9 @@ export default function Main() {
                                                 Marketing e Comunicação
                                             </div>
 
-                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
+                                            <PacksInput type="number" value={marketingComunicacao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
                                                 const newPreco = marketingComunicacao
-                                                newPreco.preco = parseInt(value.target.value)
+                                                newPreco.preco = parseFloat(value.target.value)
                                                 setMarketingComunicacao(newPreco)
                                             }} />
 
@@ -79,9 +72,9 @@ export default function Main() {
                                                 Organização de eventos
                                             </div>
 
-                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
+                                            <PacksInput type="number" value={organizacaoEventos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
                                                 const newPreco = organizacaoEventos
-                                                newPreco.preco = parseInt(value.target.value)
+                                                newPreco.preco = parseFloat(value.target.value)
                                                 setOrganizacaoEventos(newPreco)
                                             }} />
 
@@ -104,7 +97,7 @@ export default function Main() {
                                             <PacksInput type="number" value={acessoria.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" 
                                             onChange={(value) => {
                                                 const newPreco = acessoria
-                                                newPreco.preco = parseInt(value.target.value)
+                                                newPreco.preco = parseFloat(value.target.value)
                                                 setAcessoria(newPreco)
                                             }} />
 
@@ -125,6 +118,7 @@ export default function Main() {
 
     function save() {
         const arrayTeste = []
+        const flag = false
 
         if (marketingComunicacao.preco <= 0 || organizacaoEventos.preco <= 0 || acessoria.preco <= 0)
             return alert("Introduza um valor acima de 0")
@@ -144,18 +138,14 @@ export default function Main() {
                     if(index === arrayTeste.length - 1)
                         return alert(response.data.message)
 
-                if(!response.data.success)
-                    alert(response.data.message)
+                if(!response.data.success) {
+                    alert(response.data.message + " " + data.descricao)
+                }
 
             })
             .catch(err=> {
                 alert("ERRO: " + err)
             })
         })
-
-
-
-        
-
     }
 }
