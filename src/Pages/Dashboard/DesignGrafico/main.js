@@ -76,7 +76,7 @@ export default function Main() {
                                                 1.Criação de Logótipo
                                             </div>
 
-                                            <PacksInput className="col-lg-4" value={criacaoLogotipo.preco} onChange={(value)=> setCriacaoLogotipo(value.target.value)}/>
+                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoLogotipo.preco} onChange={(value)=> setCriacaoLogotipo(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@ export default function Main() {
                                                 2.Análise da concorrência
                                             </div>
 
-                                            <PacksInput className="col-lg-4" value={analiseConcorrencia.preco} onChange={(value)=> setAnaliseConcorrencia(value.target.value)}/>
+                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={analiseConcorrencia.preco} onChange={(value)=> setAnaliseConcorrencia(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@ export default function Main() {
                                                 3.Paleta de cores
                                             </div>
 
-                                            <PacksInput value={paletaCores.preco} className="col-lg-4" onChange={(value)=> setPaletaCores(value.target.value)}/>
+                                            <PacksInput value={paletaCores.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setPaletaCores(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -112,7 +112,7 @@ export default function Main() {
                                                 4.Slogan para marca
                                             </div>
 
-                                            <PacksInput value={slogan.preco} className="col-lg-4" onChange={(value)=> setSlogan(value.target.value)}/>
+                                            <PacksInput value={slogan.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setSlogan(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -124,7 +124,7 @@ export default function Main() {
                                                 5.Manual normas gráficas
                                             </div>
 
-                                            <PacksInput value={manual.preco} className="col-lg-4" onChange={(value)=> setManual(value.target.value)}/>
+                                            <PacksInput value={manual.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setManual(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@ export default function Main() {
                                                 6.Estacionário
                                             </div>
 
-                                            <PacksInput value={estacionario.preco} className="col-lg-4" onChange={(value)=> setEstacionario(value.target.value) }/>
+                                            <PacksInput value={estacionario.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setEstacionario(value.target.value) }/>
 
                                         </div>
                                     </div>
@@ -157,7 +157,7 @@ export default function Main() {
                                                 Branding &#38; Rebranding
                                             </div>
 
-                                            <PacksInput value={brandingRebranding.preco} className="col-lg-4" onChange={(value)=> setBrandingRebranding(value.target.value) }/>
+                                            <PacksInput value={brandingRebranding.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setBrandingRebranding(value.target.value) }/>
 
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@ export default function Main() {
                                                 Estratégia de marca
                                             </div>
 
-                                            <PacksInput value={estrategia.preco} className="col-lg-4" onChange={(value)=> setEstacionario(value.target.value) }/>
+                                            <PacksInput value={estrategia.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setEstacionario(value.target.value) }/>
 
                                         </div>
                                     </div>
@@ -192,7 +192,7 @@ export default function Main() {
                                                 Registo de marca
                                             </div>
 
-                                            <PacksInput value={registo.preco} className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={registo.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>
@@ -204,7 +204,7 @@ export default function Main() {
                                                 Design editorial
                                             </div>
 
-                                            <PacksInput value={desginEditorial.preco} className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={desginEditorial.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>

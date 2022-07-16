@@ -99,11 +99,11 @@ export default function Main() {
                                                 1.Número de páginas
                                             </div>
 
-                                            <PacksInput nomePack="&lsaquo;5 páginas" value={websiteNumeroPaginas5.preco} className="col-lg-2" onChange={(value)=> setWebsiteNumeroPaginas5(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;5 páginas" value={websiteNumeroPaginas5.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteNumeroPaginas5(value.target.value)}/>
 
-                                            <PacksInput nomePack="&lsaquo;10 páginas" value={websiteNumeroPaginas10.preco} className="col-lg-2" onChange={(value)=> setWebsiteNumeroPaginas10(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;10 páginas" value={websiteNumeroPaginas10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteNumeroPaginas10(value.target.value)}/>
 
-                                            <PacksInput nomePack="&rsaquo;10 páginas" value={websiteNumeroPaginasMaior10.preco} className="col-lg-2" onChange={(value)=> setWebsiteNumeroPaginasMaior10(value.target.value)}/>
+                                            <PacksInput nomePack="&rsaquo;10 páginas" value={websiteNumeroPaginasMaior10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteNumeroPaginasMaior10(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -115,7 +115,7 @@ export default function Main() {
                                                 2.Website
                                             </div>
 
-                                            <PacksInput value={Website.preco} className="col-lg-4" onChange={(value)=> setWebsite(value.target.value)}/>
+                                            <PacksInput value={Website.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsite(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -127,7 +127,7 @@ export default function Main() {
                                                 3.Landing page
                                             </div>
 
-                                            <PacksInput value={LandingPage.preco} className="col-lg-4" onChange={(value)=> setLandingPage(value.target.value)}/>
+                                            <PacksInput value={LandingPage.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLandingPage(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -139,7 +139,7 @@ export default function Main() {
                                                 4.Portfólio
                                             </div>
 
-                                            <PacksInput value={portofolio.preco} className="col-lg-4" onChange={(value)=> setPortofolio(value.target.value)}/>
+                                            <PacksInput value={portofolio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setPortofolio(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -151,7 +151,7 @@ export default function Main() {
                                                 5.Criação de conteúdos textuais
                                             </div>
 
-                                            <PacksInput value={websiteCriacaoConteudos.preco} className="col-lg-4" onChange={(value)=> setWebsiteCriacaoConteudos(value.target.value)}/>
+                                            <PacksInput value={websiteCriacaoConteudos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteCriacaoConteudos(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -163,7 +163,7 @@ export default function Main() {
                                                 6.Com alojamento
                                             </div>
 
-                                            <PacksInput value={websiteAlojamento.preco} className="col-lg-4" onChange={(value)=> setWebsiteAlojamento(value.target.value)}/>
+                                            <PacksInput value={websiteAlojamento.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteAlojamento(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@ export default function Main() {
                                                 7.Com domínio
                                             </div>
 
-                                            <PacksInput value={websiteDominio.preco} className="col-lg-4" onChange={(value)=> setWebsiteDominio(value.target.value)}/>
+                                            <PacksInput value={websiteDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteDominio(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -199,11 +199,11 @@ export default function Main() {
                                                 1.Número de páginas
                                             </div>
 
-                                            <PacksInput nomePack="&lsaquo;5 páginas" value={lojaNumeroPaginas5.preco} className="col-lg-2" onChange={(value)=> setLojaNumeroPaginas5(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;5 páginas" value={lojaNumeroPaginas5.preco}  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaNumeroPaginas5(value.target.value)}/>
 
-                                            <PacksInput nomePack="&lsaquo;10 páginas" value={lojaNumeroPaginas10.preco} className="col-lg-2" onChange={(value)=> setLojaNumeroPaginas10(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;10 páginas" value={lojaNumeroPaginas10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaNumeroPaginas10(value.target.value)}/>
 
-                                            <PacksInput nomePack="&rsaquo;10 páginas" value={lojaNumeroPaginasMaior10.preco} className="col-lg-2" onChange={(value)=> setLojaNumeroPaginasMaior10(value.target.value)}/>
+                                            <PacksInput nomePack="&rsaquo;10 páginas" value={lojaNumeroPaginasMaior10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaNumeroPaginasMaior10(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -222,7 +222,7 @@ export default function Main() {
                                                         2.1.Produtos
                                                     </div>
 
-                                                    <PacksInput value={produtos.preco} className="col-lg-2" onChange={(value)=> setProdutos(value.target.value)}/>
+                                                    <PacksInput value={produtos.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setProdutos(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -234,7 +234,7 @@ export default function Main() {
                                                         2.2.Contactos
                                                     </div>
 
-                                                    <PacksInput value={contactos.preco} className="col-lg-2" onChange={(value)=> setContactos(value.target.value)}/>
+                                                    <PacksInput value={contactos.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setContactos(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -246,7 +246,7 @@ export default function Main() {
                                                         2.3.Equipas
                                                     </div>
 
-                                                    <PacksInput value={equipas.preco} className="col-lg-2" onChange={(value)=> setEquipas(value.target.value)}/>
+                                                    <PacksInput value={equipas.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setEquipas(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -258,7 +258,7 @@ export default function Main() {
                                                         2.4.Outros
                                                     </div>
 
-                                                    <PacksInput value={outros.preco} className="col-lg-2" onChange={(value)=> setOutros(value.target.value)}/>
+                                                    <PacksInput value={outros.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setOutros(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -276,7 +276,7 @@ export default function Main() {
                                                         3.Com domínio
                                                     </div>
 
-                                                    <PacksInput value={lojaDominio.preco} className="col-lg-4" onChange={(value)=> setLojaDominio(value.target.value)}/>
+                                                    <PacksInput value={lojaDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaDominio(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -288,7 +288,7 @@ export default function Main() {
                                                         4.Com alojamento
                                                     </div>
 
-                                                    <PacksInput value={lojaAlojamento.preco} className="col-lg-4" onChange={(value)=> setLojaAlojamento(value.target.value)}/>
+                                                    <PacksInput value={lojaAlojamento.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaAlojamento(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -300,7 +300,7 @@ export default function Main() {
                                                         5.Com criação de conteúdos textuais
                                                     </div>
 
-                                                    <PacksInput value={lojaCriacaoConteudos.preco} className="col-lg-4" onChange={(value)=> setLojaCriacaoConteudos(value.target.value)}/>
+                                                    <PacksInput value={lojaCriacaoConteudos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaCriacaoConteudos(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -324,7 +324,7 @@ export default function Main() {
                                                 Suporte &#38; Manutenção
                                             </div>
 
-                                            <PacksInput value={suporteManutencao.preco} className="col-lg-4" onChange={(value)=> setSuporteManutencao(value.target.value)}/>
+                                            <PacksInput value={suporteManutencao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setSuporteManutencao(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -336,7 +336,7 @@ export default function Main() {
                                                 Servidor &#38; Domínio
                                             </div>
 
-                                            <PacksInput value={servidorDominio.preco} className="col-lg-4" onChange={(value)=> setServidorDominio(value.target.value)}/>
+                                            <PacksInput value={servidorDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setServidorDominio(value.target.value)}/>
 
                                         </div>
                                     </div>

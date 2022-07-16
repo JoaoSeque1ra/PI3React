@@ -62,7 +62,7 @@ export default function Main() {
                                                 Marketing e Comunicação
                                             </div>
 
-                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" onChange={(value) => setMarketingComunicacao(value.target.value)} />
+                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => setMarketingComunicacao(value.target.value)} />
 
                                         </div>
                                     </div>
@@ -74,7 +74,7 @@ export default function Main() {
                                                 Organização de eventos
                                             </div>
 
-                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" onChange={(value) => setOrganizacaoEventos(parseInt(value.target.value))} />
+                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => setOrganizacaoEventos(parseInt(value.target.value))} />
 
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@ export default function Main() {
                                                 Assessoria e criação de conteúdo
                                             </div>
 
-                                            <PacksInput value={acessoria.preco} className="col-lg-4" onChange={(value) => setAcessoria(value.target.value)} />
+                                            <PacksInput value={acessoria.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => setAcessoria(value.target.value)} />
 
                                         </div>
                                     </div>
