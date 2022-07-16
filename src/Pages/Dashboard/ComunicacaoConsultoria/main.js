@@ -113,7 +113,9 @@ export default function Main() {
         if (marketingComunicacao.preco <= 0 || organizacaoEventos.preco <= 0 || acessoria.preco <= 0)
             return alert("Introduza um valor acima de 0")
 
-        const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + 115
+        console.log(marketingComunicacao)
+
+        const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" 
         const data = {
             novoPreco: marketingComunicacao
         }
