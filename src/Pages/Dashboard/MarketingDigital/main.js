@@ -165,7 +165,6 @@ export default function Main() {
             
                 setEmailSMS()
                 setOtimizacaoSEOSEM()
-
             })
             .catch(err => {
                 alert(err)
