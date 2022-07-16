@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+import axios from 'axios';
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
@@ -7,29 +7,34 @@ import ButtonDashboard from '../../../Components/Dashboard/Button';
 import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 export default function Main() {
-    const [marketingComunicacao, setMarketingComunicacao] = useState([])
+    const [marketingComunicacao, setMarketingComunicacao] = useState("")
     const [organizacaoEventos, setOrganizacaoEventos] = useState([])
     const [acessoria, setAcessoria] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         const baseUrl = "http://localhost:3001/orcamento/findServicosComunicacaoConsultoria"
 
         axios.get(baseUrl)
-        .then(response => {
-            if(!response.data.success)
-                return alert(response.data.message)
+            .then(response => {
+                if (!response.data.success)
+                    return alert(response.data.message)
 
-            const data = response.data.data
-            setMarketingComunicacao(data[0])
-            setOrganizacaoEventos(data[1])
-            setAcessoria(data[2])
-
-            console.count(); //TESTE
-        })
-        .catch(err => {
-            alert(err)
-        })
+                const data = response.data.data
+                setMarketingComunicacao(data[0])
+                setOrganizacaoEventos(data[1])
+                setAcessoria(data[2])
+            })
+            .catch(err => {
+                alert(err)
+            })
     }, [])
+
+    const updateArray = (index, data) => {
+        index.preco = parseInt(data)
+
+        setMarketingComunicacao(index)
+        console.log(marketingComunicacao)
+    }
 
     return (
         <main className='overflow-auto d-flex'>
@@ -44,7 +49,7 @@ export default function Main() {
                             <BreadcrumbsDashboard route1="Preços" route2="/ Comunicação &#38; Consultoria" />
 
                             <div className="col-3 col-lg-4 text-end">
-                                <ButtonDashboard text="Guardar"/>
+                                <ButtonDashboard text="Guardar" onClick={() => save()} />
                             </div>
 
                             <div className="col-12 mt-5">
@@ -57,7 +62,7 @@ export default function Main() {
                                                 Marketing e Comunicação
                                             </div>
 
-                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" onChange={(value)=> setMarketingComunicacao(value.target.value)}/>
+                                            <PacksInput value={marketingComunicacao.preco} className="col-lg-4" onChange={(value) => setMarketingComunicacao(value.target.value)} />
 
                                         </div>
                                     </div>
@@ -69,7 +74,7 @@ export default function Main() {
                                                 Organização de eventos
                                             </div>
 
-                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" onChange={(value)=> setOrganizacaoEventos(value.target.value)}/>
+                                            <PacksInput value={organizacaoEventos.preco} className="col-lg-4" onChange={(value) => setOrganizacaoEventos(parseInt(value.target.value))} />
 
                                         </div>
                                     </div>
@@ -87,14 +92,14 @@ export default function Main() {
                                                 Assessoria e criação de conteúdo
                                             </div>
 
-                                            <PacksInput value={acessoria.preco} className="col-lg-4" onChange={(value)=> setAcessoria(value.target.value)}/>
+                                            <PacksInput value={acessoria.preco} className="col-lg-4" onChange={(value) => setAcessoria(value.target.value)} />
 
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
 
@@ -103,4 +108,26 @@ export default function Main() {
 
         </main>
     );
+
+    function save() {
+        if (marketingComunicacao.preco <= 0 || organizacaoEventos.preco <= 0 || acessoria.preco <= 0)
+            return alert("Introduza um valor acima de 0")
+
+        const baseUrl = "http://localhost:3001/orcamento/updateDescricaoServicos/" + 115
+        const data = {
+            novoPreco: marketingComunicacao
+        }
+
+        axios.post(baseUrl, data)
+        .then(response => {
+            if(response.data.success)
+                return alert(response.data.message)
+
+            alert("ERRO")
+        })
+        .catch(err=> {
+            alert("ERRO: " + err)
+        })
+
+    }
 }

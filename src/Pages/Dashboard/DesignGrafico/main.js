@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
@@ -7,6 +8,33 @@ import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 
 export default function Main() {
+    const [criacaoLogotipo, setCriacaoLogotipo] = useState([])
+    const [analiseConcorrencia, setAnaliseConcorrencia] = useState([])
+    const [paletaCores, setPaletaCores] = useState([])
+    const [slogan, setSlogan] = useState([])
+    const [manual, setManual] = useState([])
+    const [estacionario, setEstacionario] = useState([])
+    const [brandingRebranding, setBrandingRebranding] = useState([])
+    const [estrategia, setEstrategia] = useState([])
+    const [registo, setRegisto] = useState([])
+    const [desginEditorial, setDesginEditorial] = useState([])
+
+    useEffect(()=> {
+        const baseUrl = "http://localhost:3001/orcamento/findServicosDesignGrafico"
+
+        axios.get(baseUrl)
+            .then(response => {
+                if (!response.data.success)
+                    return alert(response.data.message)
+
+                const data = response.data.data
+                console.log(data)
+            })
+            .catch(err => {
+                alert(err)
+            })
+    },[])
+
     return (  
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
