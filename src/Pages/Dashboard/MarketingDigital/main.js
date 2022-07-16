@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
@@ -6,6 +7,171 @@ import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
 import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 export default function Main() {
+    const [gestaoPackStart, setGestaoPackStart] = useState([])
+    const [gestaoPackBoost, setGestaoPackBoost] = useState([])
+    const [gestaoPackBomb, setGestaoPackBomb] = useState([])
+    const [facebookPublicacao, setFacebookPublicacao] = useState([])
+    const [facebookStorie, setFacebookStorie] = useState([])
+    const [facebookReel, setFacebookReel] = useState([])
+
+    const [instaPublicacao, setInstaPublicacao] = useState([])
+    const [instaStorie, setInstaStorie] = useState([])
+    const [instaReel, setInstaReel] = useState([])
+
+    const [twitterPublicacao, setTwitterPublicacao] = useState([])
+    const [twitterStorie, setTwitterStorie] = useState([])
+    const [twitterReel, setTwitterReel] = useState([])
+
+    const [tiktokPublicacao, setTiktokPublicacao] = useState([])
+    const [tiktokStorie, setTiktokStorie] = useState([])
+    const [tiktokReel, setTiktokReel] = useState([])
+
+    const [linkedinPublicacao, setLinkedinPublicacao] = useState([])
+    const [linkedinStorie, setLinkedinStorie] = useState([])
+    const [linkedinReel, setLinkedinReel] = useState([])
+
+    const [youtubePublicacao, setYoutubePublicacao] = useState([])
+    const [youtubeStorie, setYoutubeStorie] = useState([])
+    const [youtubeReel, setYoutubeReel] = useState([])
+
+    const [googlePublicacao, setGooglePublicacao] = useState([])
+    const [googleStorie, setGoogleStorie] = useState([])
+    const [googleReel, setGoogleReel] = useState([])
+
+    const [cover, setCover] = useState([])
+    const [design, setDesign] = useState([])
+    const [copywriting, setCopywriting] = useState([])
+    const [planificacao, setPlanificacao] = useState([])
+    const [consultoria, setConsultoria] = useState([])
+    const [gestao, setGestao] = useState([])
+    const [relatorio, setRelatorio] = useState([])
+
+    const [paidPackStart, setPaidPackStart] = useState([])
+    const [paidPackBoost, setPaidPackBoost] = useState([])
+    const [paidPackBomb, setPaidPackBomb] = useState([])
+
+    const [estrategiaFacebook, setEstrategiaFacebook] = useState([])
+    const [estrategiaInsta, setEstrategiaInsta] = useState([])
+    const [estrategiaGoogle, setEstrategiaGoogle] = useState([])
+
+    const [criacaoCampanhaFacebook, setCriacaoCampanhaFacebook] = useState([])
+    const [criacaoCampanhaInsta, setCriacaoCampanhaInsta] = useState([])
+    const [criacaoCampanhaGoogle, setCriacaoCampanhaGoogle] = useState([])
+
+    const [segmentacaoFacebook, setSegmentacaoFacebook] = useState([])
+    const [segmentacaoInsta, setSegmentacaoInsta] = useState([])
+    const [segmentacaoGoogle, setSegmentacaoGoogle] = useState([])
+
+    const [otimizacaoFacebook, setOtimizacaoFacebook] = useState([])
+    const [otimizacaoInsta, setOtimizacaoInsta] = useState([])
+    const [otimizacaoGoogle, setOtimizacaoGoogle] = useState([])
+
+    const [relatorioFacebook, setRelatorioFacebook] = useState([])
+    const [relatorioInsta, setRelatorioInsta] = useState([])
+    const [relatorioGoogle, setRelatorioGoogle] = useState([])
+
+    const [googleTagFacebook, setGoogleTagFacebook] = useState([])
+    const [googleTagInsta, setGoogleTagInsta] = useState([])
+    const [googleTagGoogle, setGoogleTagGoogle] = useState([])
+
+    const [gestaoFacebook, setGestaoFacebook] = useState([])
+    const [gestaoInsta, setGestaoInsta] = useState([])
+    const [gestaoGoogle, setGestaoGoogle] = useState([])
+
+    const [emialSMS, setEmailSMS] = useState([])
+    const [otimizacaoSEOSEM, setOtimizacaoSEOSEM] = useState([])
+
+    useEffect(() => {
+        const baseUrl ="http://localhost:3001/orcamento/findMarketingDigital"
+
+        axios.get(baseUrl)
+            .then(response => {
+                if (!response.data.success)
+                    return alert(response.data.message)
+
+                const data = response.data.data
+                console.log(data)
+                
+                setGestaoPackStart()
+                setGestaoPackBoost()
+                setGestaoPackBomb()
+                setFacebookPublicacao()
+                setFacebookStorie()
+                setFacebookReel()
+
+                setInstaPublicacao()
+                setInstaStorie()
+                setInstaReel()
+            
+                setTwitterPublicacao()
+                setTwitterStorie()
+                setTwitterReel()
+            
+                setTiktokPublicacao()
+                setTiktokStorie()
+                setTiktokReel()
+            
+                setLinkedinPublicacao()
+                setLinkedinStorie()
+                setLinkedinReel()
+            
+                setYoutubePublicacao()
+                setYoutubeStorie()
+                setYoutubeReel()
+            
+                setGooglePublicacao()
+                setGoogleStorie()
+                setGoogleReel()
+            
+                setCover()
+                setDesign()
+                setCopywriting()
+                setPlanificacao()
+                setConsultoria()
+                setGestao()
+                setRelatorio()
+            
+                setPaidPackStart()
+                setPaidPackBoost()
+                setPaidPackBomb()
+            
+                setEstrategiaFacebook()
+                setEstrategiaInsta()
+                setEstrategiaGoogle()
+            
+                setCriacaoCampanhaFacebook()
+                setCriacaoCampanhaInsta()
+                setCriacaoCampanhaGoogle()
+            
+                setSegmentacaoFacebook()
+                setSegmentacaoInsta()
+                setSegmentacaoGoogle()
+            
+                setOtimizacaoFacebook()
+                setOtimizacaoInsta()
+                setOtimizacaoGoogle()
+            
+                setRelatorioFacebook()
+                setRelatorioInsta()
+                setRelatorioGoogle()
+            
+                setGoogleTagFacebook()
+                setGoogleTagInsta()
+                setGoogleTagGoogle()
+            
+                setGestaoFacebook()
+                setGestaoInsta()
+                setGestaoGoogle()
+            
+                setEmailSMS()
+                setOtimizacaoSEOSEM()
+
+            })
+            .catch(err => {
+                alert(err)
+            })
+    }, [])
+
     return (  
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg fixed="top" />
