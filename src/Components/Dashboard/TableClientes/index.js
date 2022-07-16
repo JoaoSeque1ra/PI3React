@@ -7,13 +7,13 @@ import ButtonTabelas from '../TableOrcamentos/ButtonTabelas';
 export default function TablesClientes() {
     const [infoOrcamento, setInfoOrcamento] = useState([]);
 
-    let total;
+    let somar = 0;
     useEffect(()=>{
         const urlBase = "http://localhost:3001/orcamento/listClients"
         axios.get(urlBase)
         .then(response => {
             if(response.data.success) {
-                // total = teste(response)
+                // console.log(response.data.data)
                 return setInfoOrcamento(response.data.data)
             }
 
@@ -22,25 +22,7 @@ export default function TablesClientes() {
         .catch(err=> {
             alert("Erro: " + err)
         })
-    },[infoOrcamento])
-
-    const teste = (response) => {
-        total = 0;
-        const array = response.data.data
-        
-        array.forEach(element => {
-            const arrayOrcamento = element.orcamentos
-            if(arrayOrcamento.length > 0) {
-                arrayOrcamento.forEach(element => {
-                    console.log(element)
-                    total = total + parseInt(element.valor)
-                })
-            }
-
-            return total
-        });
-
-    }
+    },[])
 
     const columns = [
         {
@@ -82,7 +64,12 @@ export default function TablesClientes() {
         },
         {
             name: "Total",
-            selector: row => row.total,
+            selector: row => {
+                row.orcamentos.map((data) => {
+                    somar = somar + parseFloat(data.valor)
+                })
+                return somar
+            },
             sortable: true,
             right: true,
             style: {

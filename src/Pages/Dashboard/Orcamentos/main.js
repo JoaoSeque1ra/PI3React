@@ -2,7 +2,6 @@ import React from 'react';
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
-import ButtonDashboard from '../../../Components/Dashboard/Button';
 import Tables from '../../../Components/Dashboard/TableOrcamentos/Index';
 
 export default function Main() {
@@ -18,9 +17,9 @@ export default function Main() {
 
                             <BreadcrumbsDashboard route2="Orçamentos"/>
 
-                            <div className="col-3 col-lg-4 text-end">
+                            {/* <div className="col-3 col-lg-4 text-end">
                                 <ButtonDashboard text="Novo Orçamento" to="/dashboard"/>
-                            </div>
+                            </div> */}
 
                             <div className="col-12">
                                 <div className="row pt-5">

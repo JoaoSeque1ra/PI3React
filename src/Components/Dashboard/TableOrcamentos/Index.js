@@ -1,30 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
+import axios from 'axios'
 
 import EstadoTabelas from './EstadoTabelas';
 import ButtonTabelas from './ButtonTabelas';
 
-export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6, nomeTabela}) {
+export default function Tables() {
+    const [infoOrcamento, setInfoOrcamento] = useState([]);
+
+    useEffect(()=>{
+        const urlBase = "http://localhost:3001/orcamento/listOrcamento"
+        axios.get(urlBase)
+        .then(response => {
+            if(response.data.success) {
+                const data = response.data.data
+                console.log(data)
+                return setInfoOrcamento(response.data.data)
+            }
+
+            alert(response.data.message)
+        })
+        .catch(err=> {
+            alert("Erro: " + err)
+        })
+    },[])
+
+
     const columns = [
         {
-            name: campo1,
-            selector: row => row.campo1,
+            name: "Orçamentos",
+            selector: row => "#" + row.id,
             sortable: true,
             style: {
                 fontSize: '1rem'
             },
         },
         {
-            name: campo2,
-            selector: row => row.campo2,
+            name: "Nome",
+            selector: row => row.cliente.nome,
             sortable: true,
             style: {
                 fontSize: '1rem'
             },
         },
         {
-            name: campo3,
-            selector: row => row.campo3,
+            name: "Data",
+            selector: row => row.data_orcamento,
             sortable: true,
             hide: 'md',
             style: {
@@ -32,21 +53,21 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6, 
             },
         },
         {
-            name: campo4,
-            selector: row => row.campo4,
+            name: "Estado",
+            selector: row => row.estadoPedido.estado,
             sortable: true,
             center: true,
             hide: 'md',
             cell: row => (
-                <EstadoTabelas estado={row.campo4}/>
+                <EstadoTabelas estado={row.estadoPedido.estado}/>
             ),
             style: {
                 fontSize: '1rem'
             },
         },
         {
-            name: campo5,
-            selector: row => row.campo5,
+            name: "Total",
+            selector: row => row.valor + "€",
             sortable: true,
             right: true,
             style: {
@@ -54,28 +75,12 @@ export default function Tables({campo1, campo2, campo3, campo4, campo5, campo6, 
             },
         },
         {
-            name: campo6,
+            name: "Ações",
             selector: row => row.campo6,
             button: true,
-            cell: (row) => <ButtonTabelas id={row.campo1}/>
+            cell: (row) => <ButtonTabelas id={row.id}/>
         },
     ];
-
-    const [infoOrcamento, setInfoOrcamento] = useState([]);
-
-    useEffect(()=>{
-        setInfoOrcamento([
-            {
-                id: 1, //Não sou obrigado a meter
-                campo1: '88',
-                campo2: 'João Sequeira',
-                campo3: '12-07-2022',
-                campo4: 'Novo',
-                campo5: '500€',
-            }
-        ])
-    },[])
-
 
     const paginationOptions = {
         rowsPerPageText: 'Filas por página',
