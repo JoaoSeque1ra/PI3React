@@ -7,7 +7,7 @@ import ButtonDashboard from '../../../Components/Dashboard/Button';
 import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 export default function Main() {
-    const [marketingComunicacao, setMarketingComunicacao] = useState("")
+    const [marketingComunicacao, setMarketingComunicacao] = useState([])
     const [organizacaoEventos, setOrganizacaoEventos] = useState([])
     const [acessoria, setAcessoria] = useState([])
 

@@ -29,6 +29,16 @@ export default function Main() {
 
                 const data = response.data.data
                 console.log(data)
+                setCriacaoLogotipo(data[0])
+                setAnaliseConcorrencia(data[7])
+                setPaletaCores(data[3])
+                setSlogan(data[9])
+                setManual(data[5])
+                setEstacionario(data[4])
+                setBrandingRebranding(data[6])
+                setEstrategia(data[1])
+                setRegisto(data[2])
+                setDesginEditorial(data[8])
             })
             .catch(err => {
                 alert(err)
@@ -67,7 +77,7 @@ export default function Main() {
                                                 1.Criação de Logótipo
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("1: ")}/>
+                                            <PacksInput className="col-lg-4" value={criacaoLogotipo.preco} onChange={(value)=> setCriacaoLogotipo(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -79,7 +89,7 @@ export default function Main() {
                                                 2.Análise da concorrência
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput className="col-lg-4" value={analiseConcorrencia.preco} onChange={(value)=> setAnaliseConcorrencia(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -91,7 +101,7 @@ export default function Main() {
                                                 3.Paleta de cores
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={paletaCores.preco} className="col-lg-4" onChange={(value)=> setPaletaCores(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -103,7 +113,7 @@ export default function Main() {
                                                 4.Slogan para marca
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={slogan.preco} className="col-lg-4" onChange={(value)=> setSlogan(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -115,7 +125,7 @@ export default function Main() {
                                                 5.Manual normas gráficas
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={manual.preco} className="col-lg-4" onChange={(value)=> setManual(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -127,7 +137,7 @@ export default function Main() {
                                                 6.Estacionário
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={estacionario.preco} className="col-lg-4" onChange={(value)=> setEstacionario(value.target.value) }/>
 
                                         </div>
                                     </div>
@@ -148,7 +158,7 @@ export default function Main() {
                                                 Branding &#38; Rebranding
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={brandingRebranding.preco} className="col-lg-4" onChange={(value)=> setBrandingRebranding(value.target.value) }/>
 
                                         </div>
                                     </div>
@@ -160,7 +170,7 @@ export default function Main() {
                                                 Estratégia de marca
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={estrategia.preco} className="col-lg-4" onChange={(value)=> setEstacionario(value.target.value) }/>
 
                                         </div>
                                     </div>
@@ -183,7 +193,7 @@ export default function Main() {
                                                 Registo de marca
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={registo.preco} className="col-lg-4" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>
@@ -195,7 +205,7 @@ export default function Main() {
                                                 Design editorial
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={desginEditorial.preco} className="col-lg-4" onChange={()=> console.count("4: ")}/>
 
                                         </div>
                                     </div>
@@ -211,4 +221,18 @@ export default function Main() {
 
         </main>
     );
+
+    function save() {
+        // const [criacaoLogotipo, setCriacaoLogotipo] = useState([])
+        // const [analiseConcorrencia, setAnaliseConcorrencia] = useState([])
+        // const [paletaCores, setPaletaCores] = useState([])
+        // const [slogan, setSlogan] = useState([])
+        // const [manual, setManual] = useState([])
+        // const [estacionario, setEstacionario] = useState([])
+        // const [brandingRebranding, setBrandingRebranding] = useState([])
+        // const [estrategia, setEstrategia] = useState([])
+        // const [registo, setRegisto] = useState([])
+        // const [desginEditorial, setDesginEditorial] = useState([])
+        if(criacaoLogotipo.preco <= 0 ||)
+    }
 }
