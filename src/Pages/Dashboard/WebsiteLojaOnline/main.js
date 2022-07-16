@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
@@ -6,6 +7,66 @@ import ButtonDashboard from '../../../Components/Dashboard/Button';
 import PacksInput from '../../../Components/Dashboard/PacksInput';
 
 export default function Main() {
+    const [websiteNumeroPaginas5, setWebsiteNumeroPaginas5] = useState([])
+    const [websiteNumeroPaginas10, setWebsiteNumeroPaginas10] = useState([])
+    const [websiteNumeroPaginasMaior10, setWebsiteNumeroPaginasMaior10] = useState([])
+    const [Website, setWebsite] = useState([])
+    const [LandingPage, setLandingPage] = useState([])
+    const [portofolio, setPortofolio] = useState([])
+    const [websiteCriacaoConteudos, setWebsiteCriacaoConteudos] = useState([])
+    const [websiteAlojamento, setWebsiteAlojamento] = useState([])
+    const [websiteDominio, setWebsiteDominio] = useState([])
+    const [lojaNumeroPaginas5, setLojaNumeroPaginas5] = useState([])
+    const [lojaNumeroPaginas10, setLojaNumeroPaginas10] = useState([])
+    const [lojaNumeroPaginasMaior10, setLojaNumeroPaginasMaior10] = useState([])
+    const [produtos, setProdutos] = useState([])
+    const [contactos, setContactos] = useState([])
+    const [equipas, setEquipas] = useState([])
+    const [outros, setOutros] = useState([])
+    const [lojaCriacaoConteudos, setLojaCriacaoConteudos] = useState([])
+    const [lojaAlojamento, setLojaAlojamento] = useState([])
+    const [lojaDominio, setLojaDominio] = useState([])
+    const [suporteManutencao, setSuporteManutencao] = useState([])
+    const [servidorDominio, setServidorDominio] = useState([])
+
+    useEffect(() => {
+        const baseUrl = "http://localhost:3001/orcamento/findWebsiteLojaOnline"
+
+        axios.get(baseUrl)
+            .then(response => {
+                if (!response.data.success)
+                    return alert(response.data.message)
+
+                const data = response.data.data
+                console.log(data)
+                setWebsiteNumeroPaginas5(data[0])
+                setWebsiteNumeroPaginas10(data[1])
+                setWebsiteNumeroPaginasMaior10(data[2])
+                setWebsite(data[8])
+                setLandingPage(data[3])
+                setPortofolio(data[4])
+                setWebsiteCriacaoConteudos(data[5])
+                setWebsiteAlojamento(data[6])
+                setWebsiteDominio(data[7])
+
+                setLojaNumeroPaginas5(data[0])
+                setLojaNumeroPaginas10(data[1])
+                setLojaNumeroPaginasMaior10(data[2])
+                setProdutos(data[8])
+                setContactos(data[9])
+                setEquipas(data[10])
+                setOutros(data[11])
+                setLojaCriacaoConteudos(data[12])
+                setLojaAlojamento(data[13])
+                setLojaDominio(data[15])
+                setSuporteManutencao(data[32])
+                setServidorDominio(data[15])
+            })
+            .catch(err => {
+                alert(err)
+            })
+    }, [])
+
     return (
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
@@ -19,7 +80,7 @@ export default function Main() {
                             <BreadcrumbsDashboard route1="Preços" route2="/ Website &#38; Loja Online" />
 
                             <div className="col-3 col-lg-4 text-end">
-                                <ButtonDashboard text="Guardar"/>
+                                <ButtonDashboard text="Guardar" onClick={() => save()}/>
                             </div>
 
                             {/* Website */}
@@ -38,11 +99,11 @@ export default function Main() {
                                                 1.Número de páginas
                                             </div>
 
-                                            <PacksInput nomePack="&lsaquo;5 páginas" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("1: ")}/>
+                                            <PacksInput nomePack="&lsaquo;5 páginas" value={websiteNumeroPaginas5.preco} className="col-lg-2" onChange={(value)=> setWebsiteNumeroPaginas5(value.target.value)}/>
 
-                                            <PacksInput nomePack="&lsaquo;10 páginas" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("2: ")}/>
+                                            <PacksInput nomePack="&lsaquo;10 páginas" value={websiteNumeroPaginas10.preco} className="col-lg-2" onChange={(value)=> setWebsiteNumeroPaginas10(value.target.value)}/>
 
-                                            <PacksInput nomePack="&rsaquo;10 páginas" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
+                                            <PacksInput nomePack="&rsaquo;10 páginas" value={websiteNumeroPaginasMaior10.preco} className="col-lg-2" onChange={(value)=> setWebsiteNumeroPaginasMaior10(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -54,7 +115,7 @@ export default function Main() {
                                                 2.Website
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={Website.preco} className="col-lg-4" onChange={(value)=> setWebsite(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -66,7 +127,7 @@ export default function Main() {
                                                 3.Landing page
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={LandingPage.preco} className="col-lg-4" onChange={(value)=> setLandingPage(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -78,7 +139,7 @@ export default function Main() {
                                                 4.Portfólio
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={portofolio.preco} className="col-lg-4" onChange={(value)=> setPortofolio(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -90,7 +151,7 @@ export default function Main() {
                                                 5.Criação de conteúdos textuais
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={websiteCriacaoConteudos.preco} className="col-lg-4" onChange={(value)=> setWebsiteCriacaoConteudos(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -102,7 +163,7 @@ export default function Main() {
                                                 6.Com alojamento
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={websiteAlojamento.preco} className="col-lg-4" onChange={(value)=> setWebsiteAlojamento(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -114,7 +175,7 @@ export default function Main() {
                                                 7.Com domínio
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={websiteDominio.preco} className="col-lg-4" onChange={(value)=> setWebsiteDominio(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -138,11 +199,11 @@ export default function Main() {
                                                 1.Número de páginas
                                             </div>
 
-                                            <PacksInput nomePack="&lsaquo;5 páginas" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("1: ")}/>
+                                            <PacksInput nomePack="&lsaquo;5 páginas" value={lojaNumeroPaginas5.preco} className="col-lg-2" onChange={(value)=> setLojaNumeroPaginas5(value.target.value)}/>
 
-                                            <PacksInput nomePack="&lsaquo;10 páginas" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("2: ")}/>
+                                            <PacksInput nomePack="&lsaquo;10 páginas" value={lojaNumeroPaginas10.preco} className="col-lg-2" onChange={(value)=> setLojaNumeroPaginas10(value.target.value)}/>
 
-                                            <PacksInput nomePack="&rsaquo;10 páginas" valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("3: ")}/>
+                                            <PacksInput nomePack="&rsaquo;10 páginas" value={lojaNumeroPaginasMaior10.preco} className="col-lg-2" onChange={(value)=> setLojaNumeroPaginasMaior10(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -161,7 +222,7 @@ export default function Main() {
                                                         2.1.Produtos
                                                     </div>
 
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
+                                                    <PacksInput value={produtos.preco} className="col-lg-2" onChange={(value)=> setProdutos(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -173,7 +234,7 @@ export default function Main() {
                                                         2.2.Contactos
                                                     </div>
 
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
+                                                    <PacksInput value={contactos.preco} className="col-lg-2" onChange={(value)=> setContactos(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -185,7 +246,7 @@ export default function Main() {
                                                         2.3.Equipas
                                                     </div>
 
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
+                                                    <PacksInput value={equipas.preco} className="col-lg-2" onChange={(value)=> setEquipas(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -197,7 +258,7 @@ export default function Main() {
                                                         2.4.Outros
                                                     </div>
 
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-2" onChange={()=> console.count("4: ")}/>
+                                                    <PacksInput value={outros.preco} className="col-lg-2" onChange={(value)=> setOutros(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -215,7 +276,7 @@ export default function Main() {
                                                         3.Com domínio
                                                     </div>
 
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                                    <PacksInput value={lojaDominio.preco} className="col-lg-4" onChange={(value)=> setLojaDominio(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -227,7 +288,7 @@ export default function Main() {
                                                         4.Com alojamento
                                                     </div>
 
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                                    <PacksInput value={lojaAlojamento.preco} className="col-lg-4" onChange={(value)=> setLojaAlojamento(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -239,7 +300,7 @@ export default function Main() {
                                                         5.Com criação de conteúdos textuais
                                                     </div>
 
-                                                    <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                                    <PacksInput value={lojaCriacaoConteudos.preco} className="col-lg-4" onChange={(value)=> setLojaCriacaoConteudos(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -263,7 +324,7 @@ export default function Main() {
                                                 Suporte &#38; Manutenção
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={suporteManutencao.preco} className="col-lg-4" onChange={(value)=> setSuporteManutencao(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -275,7 +336,7 @@ export default function Main() {
                                                 Servidor &#38; Domínio
                                             </div>
 
-                                            <PacksInput valor="0,00&#8364;" className="col-lg-4" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={servidorDominio.preco} className="col-lg-4" onChange={(value)=> setServidorDominio(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -291,4 +352,28 @@ export default function Main() {
 
         </main>
     );
+
+    function save() {
+
+        if(websiteNumeroPaginas5.preco <= 0 || websiteNumeroPaginas10.preco <= 0 || websiteNumeroPaginasMaior10.preco <= 0 || Website.preco <= 0 || LandingPage.preco <= 0 || portofolio.preco <= 0 || websiteCriacaoConteudos.preco <= 0 || websiteAlojamento.preco <= 0 || websiteDominio.preco <= 0 || lojaNumeroPaginas5.preco <= 0 || lojaNumeroPaginas10.preco <= 0 || 
+        lojaNumeroPaginasMaior10.preco <= 0 || produtos.preco <= 0 || contactos.preco <= 0 || equipas.preco <= 0 || outros.preco <= 0 
+        || lojaCriacaoConteudos.preco <= 0 || lojaAlojamento.preco <= 0 || lojaDominio.preco <= 0 || suporteManutencao.preco <= 0 || servidorDominio.preco <= 0) 
+            return alert("Introduza um valor acima de 0")
+
+        const baseUrl = ""
+        const data = {
+            // preco:
+        }
+
+        axios.post(baseUrl, data)
+        .then(response => {
+            if(response.data.success)
+                return alert(response.data.message)
+
+            alert("ERRO")
+        })
+        .catch(err=> {
+            alert("ERRO: " + err)
+        })
+    }
 }

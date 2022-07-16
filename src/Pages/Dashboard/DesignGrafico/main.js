@@ -28,7 +28,6 @@ export default function Main() {
                     return alert(response.data.message)
 
                 const data = response.data.data
-                console.log(data)
                 setCriacaoLogotipo(data[0])
                 setAnaliseConcorrencia(data[7])
                 setPaletaCores(data[3])
