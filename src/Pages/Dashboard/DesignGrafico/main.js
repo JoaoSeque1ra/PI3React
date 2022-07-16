@@ -233,6 +233,6 @@ export default function Main() {
         // const [estrategia, setEstrategia] = useState([])
         // const [registo, setRegisto] = useState([])
         // const [desginEditorial, setDesginEditorial] = useState([])
-        if(criacaoLogotipo.preco <= 0 ||)
+        if(criacaoLogotipo.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0 || analiseConcorrencia.preco <= 0)
     }
 }
