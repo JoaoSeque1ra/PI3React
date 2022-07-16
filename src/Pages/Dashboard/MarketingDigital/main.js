@@ -203,11 +203,11 @@ export default function Main() {
                                                 1.Packs
                                             </div>
 
-                                            <PacksInput value={gestaoPackStart.preco} nomePack="Start" className="col-lg-2" onChange={(value)=> setGestaoPackStart(value.target.value)}/>
+                                            <PacksInput value={gestaoPackStart.preco} nomePack="Start" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setGestaoPackStart(value.target.value)}/>
 
-                                            <PacksInput value={gestaoPackBoost.preco} nomePack="Boost" className="col-lg-2" onChange={(value)=> setGestaoPackBoost(value.target.value)}/>
+                                            <PacksInput value={gestaoPackBoost.preco} nomePack="Boost" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setGestaoPackBoost(value.target.value)}/>
 
-                                            <PacksInput value={gestaoPackBomb.preco} nomePack="Bomb" className="col-lg-2" onChange={(value)=> setGestaoPackBomb(value.target.value)}/>
+                                            <PacksInput value={gestaoPackBomb.preco} nomePack="Bomb" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setGestaoPackBomb(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -226,11 +226,11 @@ export default function Main() {
                                                         2.1.Facebook
                                                     </div>
 
-                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" value={facebookPublicacao.preco} onChange={(value)=> setFacebookPublicacao(value.target.value)}/>
+                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={facebookPublicacao.preco} onChange={(value)=> setFacebookPublicacao(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" value={facebookStorie.preco} onChange={(value)=> setFacebookStorie(value.target.value)}/>
+                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={facebookStorie.preco} onChange={(value)=> setFacebookStorie(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" value={facebookReel.preco} onChange={(value)=> setFacebookReel(value.target.value)}/>
+                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={facebookReel.preco} onChange={(value)=> setFacebookReel(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -242,11 +242,11 @@ export default function Main() {
                                                         2.2.Instagram
                                                     </div>
 
-                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" value={instaPublicacao.preco} onChange={(value)=> setInstaPublicacao(value.target.value)}/>
+                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={instaPublicacao.preco} onChange={(value)=> setInstaPublicacao(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" value={instaStorie.preco} onChange={(value)=> setInstaStorie(value.target.value)}/>
+                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={instaStorie.preco} onChange={(value)=> setInstaStorie(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" value={instaReel.preco} onChange={(value)=> setInstaReel(value.target.value)}/>
+                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={instaReel.preco} onChange={(value)=> setInstaReel(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -258,11 +258,11 @@ export default function Main() {
                                                         2.3.Twitter
                                                     </div>
             
-                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" value={twitterPublicacao.preco} onChange={(value)=> setTwitterPublicacao(value.target.value)}/>
+                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={twitterPublicacao.preco} onChange={(value)=> setTwitterPublicacao(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" value={twitterStorie.preco} onChange={(value)=> setTwitterStorie(value.target.value)}/>
+                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={twitterStorie.preco} onChange={(value)=> setTwitterStorie(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por reel"  className="col-lg-2"value={twitterReel.preco} onChange={(value)=> setTwitterReel(value.target.value)} />
+                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={twitterReel.preco} onChange={(value)=> setTwitterReel(value.target.value)} />
 
                                                 </div>
                                             </div>
@@ -274,11 +274,11 @@ export default function Main() {
                                                         2.4.TikTok
                                                     </div>
             
-                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" value={tiktokPublicacao.preco} onChange={(value)=> setTiktokPublicacao(value.target.value)}/>
+                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={tiktokPublicacao.preco} onChange={(value)=> setTiktokPublicacao(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" value={tiktokStorie.preco} onChange={(value)=> setTiktokStorie(value.target.value)}/>
+                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={tiktokStorie.preco} onChange={(value)=> setTiktokStorie(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" value={tiktokReel.preco} onChange={(value)=> setTiktokReel(value.target.value)}/>
+                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={tiktokReel.preco} onChange={(value)=> setTiktokReel(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -290,11 +290,11 @@ export default function Main() {
                                                         2.5.Linkedin
                                                     </div>
             
-                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" value={linkedinPublicacao.preco} onChange={(value)=> setLinkedinPublicacao(value.target.value)}/>
+                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={linkedinPublicacao.preco} onChange={(value)=> setLinkedinPublicacao(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" value={linkedinStorie.preco} onChange={(value)=> setLinkedinStorie(value.target.value)}/>
+                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={linkedinStorie.preco} onChange={(value)=> setLinkedinStorie(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" value={linkedinReel.preco} onChange={(value)=> setLinkedinReel(value.target.value)}/>
+                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={linkedinReel.preco} onChange={(value)=> setLinkedinReel(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -306,11 +306,11 @@ export default function Main() {
                                                         2.6.Youtube
                                                     </div>
             
-                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" value={youtubePublicacao.preco} onChange={(value)=> setYoutubePublicacao(value.target.value)}/>
+                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={youtubePublicacao.preco} onChange={(value)=> setYoutubePublicacao(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" value={youtubeStorie.preco} onChange={(value)=> setYoutubeStorie(value.target.value)}/>
+                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={youtubeStorie.preco} onChange={(value)=> setYoutubeStorie(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" value={youtubeReel.preco} onChange={(value)=> setYoutubeReel(value.target.value)}/>
+                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={youtubeReel.preco} onChange={(value)=> setYoutubeReel(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -322,11 +322,11 @@ export default function Main() {
                                                         2.7.Google My Business
                                                     </div>
             
-                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" value={googlePublicacao.preco} onChange={(value)=> setGooglePublicacao(value.target.value)}/>
+                                                    <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googlePublicacao.preco} onChange={(value)=> setGooglePublicacao(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" value={googleStorie.preco} onChange={(value)=> setGoogleStorie(value.target.value)}/>
+                                                    <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleStorie.preco} onChange={(value)=> setGoogleStorie(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" value={googleReel.preco} onChange={(value)=> setGoogleReel(value.target.value)}/>
+                                                    <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleReel.preco} onChange={(value)=> setGoogleReel(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -341,7 +341,7 @@ export default function Main() {
                                                 2.8.Cover
                                             </div>
 
-                                            <PacksInput  className="col-lg-2" value={cover.preco} onChange={(value)=> setCover(value.target.value)}/>
+                                            <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={cover.preco} onChange={(value)=> setCover(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -353,7 +353,7 @@ export default function Main() {
                                                 2.9.Design para publicações
                                             </div>
 
-                                            <PacksInput  className="col-lg-2" value={design.preco} onChange={(value)=> setDesign(value.target.value)}/>
+                                            <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={design.preco} onChange={(value)=> setDesign(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -365,7 +365,7 @@ export default function Main() {
                                                 2.10.Copywriting
                                             </div>
 
-                                            <PacksInput  className="col-lg-2" value={copywriting.preco} onChange={(value)=> setCopywriting(value.target.value)}/>
+                                            <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={copywriting.preco} onChange={(value)=> setCopywriting(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -377,7 +377,7 @@ export default function Main() {
                                                 2.11.Planificação Editorial
                                             </div>
 
-                                            <PacksInput  className="col-lg-2" value={planificacao.preco} onChange={(value)=> setPlanificacao(value.target.value)}/>
+                                            <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={planificacao.preco} onChange={(value)=> setPlanificacao(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -389,7 +389,7 @@ export default function Main() {
                                                 2.12.Consultoria Digital
                                             </div>
 
-                                            <PacksInput  className="col-lg-2" value={consultoria.preco} onChange={(value)=> setConsultoria(value.target.value)}/>
+                                            <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={consultoria.preco} onChange={(value)=> setConsultoria(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -401,7 +401,7 @@ export default function Main() {
                                                 2.13.Gestão de Campanhas
                                             </div>
 
-                                            <PacksInput  className="col-lg-2" value={gestao.preco} onChange={(value)=> setGestao(value.target.value)}/>
+                                            <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestao.preco} onChange={(value)=> setGestao(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -413,7 +413,7 @@ export default function Main() {
                                                 2.14.Relatório Mensal
                                             </div>
 
-                                            <PacksInput  className="col-lg-2" value={relatorio.preco} onChange={(value)=> setRelatorio(value.target.value)}/>
+                                            <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorio.preco} onChange={(value)=> setRelatorio(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -437,11 +437,11 @@ export default function Main() {
                                                 1.Packs
                                             </div>
 
-                                            <PacksInput nomePack="Start" className="col-lg-2" value={paidPackStart.preco} onChange={(value)=> setPaidPackStart(value.target.value)}/>
+                                            <PacksInput nomePack="Start" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={paidPackStart.preco} onChange={(value)=> setPaidPackStart(value.target.value)}/>
 
-                                            <PacksInput nomePack="Boost" className="col-lg-2" value={paidPackBoost.preco} onChange={(value)=> setPaidPackBoost(value.target.value)}/>
+                                            <PacksInput nomePack="Boost" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={paidPackBoost.preco} onChange={(value)=> setPaidPackBoost(value.target.value)}/>
 
-                                            <PacksInput nomePack="Bomb" className="col-lg-2" value={paidPackBomb.preco} onChange={(value)=> setPaidPackBomb(value.target.value)}/>
+                                            <PacksInput nomePack="Bomb" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={paidPackBomb.preco} onChange={(value)=> setPaidPackBomb(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -460,11 +460,11 @@ export default function Main() {
                                                         2.1.Estratégia Digital
                                                     </div>
 
-                                                    <PacksInput nomePack="Facebook" className="col-lg-2" value={estrategiaFacebook.preco} onChange={(value)=> setEstrategiaFacebook(value.target.value)}/>
+                                                    <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={estrategiaFacebook.preco} onChange={(value)=> setEstrategiaFacebook(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Instagram" className="col-lg-2" value={estrategiaInsta.preco} onChange={(value)=> setEstrategiaInsta(value.target.value)}/>
+                                                    <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={estrategiaInsta.preco} onChange={(value)=> setEstrategiaInsta(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Google" className="col-lg-2" value={estrategiaGoogle.preco} onChange={(value)=> setEstrategiaGoogle(value.target.value)}/>
+                                                    <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={estrategiaGoogle.preco} onChange={(value)=> setEstrategiaGoogle(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -476,11 +476,11 @@ export default function Main() {
                                                         2.2.Criação de campanhas e anúncios
                                                     </div>
 
-                                                    <PacksInput nomePack="Facebook" className="col-lg-2" value={criacaoCampanhaFacebook.preco} onChange={(value)=> setCriacaoCampanhaFacebook(value.target.value)}/>
+                                                    <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoCampanhaFacebook.preco} onChange={(value)=> setCriacaoCampanhaFacebook(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Instagram" className="col-lg-2" value={criacaoCampanhaInsta.preco} onChange={(value)=> setCriacaoCampanhaInsta(value.target.value)}/>
+                                                    <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoCampanhaInsta.preco} onChange={(value)=> setCriacaoCampanhaInsta(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Google" className="col-lg-2" value={criacaoCampanhaGoogle.preco} onChange={(value)=> setCriacaoCampanhaGoogle(value.target.value)}/>
+                                                    <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoCampanhaGoogle.preco} onChange={(value)=> setCriacaoCampanhaGoogle(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -492,11 +492,11 @@ export default function Main() {
                                                         2.3.Segmentação do público
                                                     </div>
 
-                                                    <PacksInput nomePack="Facebook" className="col-lg-2" value={segmentacaoFacebook.preco} onChange={(value)=> setSegmentacaoFacebook(value.target.value)}/>
+                                                    <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={segmentacaoFacebook.preco} onChange={(value)=> setSegmentacaoFacebook(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Instagram" className="col-lg-2" value={segmentacaoInsta.preco} onChange={(value)=> setSegmentacaoInsta(value.target.value)}/>
+                                                    <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={segmentacaoInsta.preco} onChange={(value)=> setSegmentacaoInsta(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Google" className="col-lg-2" value={segmentacaoGoogle.preco} onChange={(value)=> setSegmentacaoGoogle(value.target.value)}/>
+                                                    <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={segmentacaoGoogle.preco} onChange={(value)=> setSegmentacaoGoogle(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -508,11 +508,11 @@ export default function Main() {
                                                         2.4.Otimização de campanha
                                                     </div>
 
-                                                    <PacksInput nomePack="Facebook" className="col-lg-2" value={otimizacaoFacebook.preco} onChange={(value)=> setOtimizacaoFacebook(value.target.value)}/>
+                                                    <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoFacebook.preco} onChange={(value)=> setOtimizacaoFacebook(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Instagram" className="col-lg-2" value={otimizacaoInsta.preco} onChange={(value)=> setOtimizacaoInsta(value.target.value)}/>
+                                                    <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoInsta.preco} onChange={(value)=> setOtimizacaoInsta(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Google" className="col-lg-2" value={otimizacaoGoogle.preco} onChange={(value)=> setOtimizacaoGoogle(value.target.value)}/>
+                                                    <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoGoogle.preco} onChange={(value)=> setOtimizacaoGoogle(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -524,11 +524,11 @@ export default function Main() {
                                                         2.5.Relatório mensal
                                                     </div>
 
-                                                    <PacksInput nomePack="Facebook" className="col-lg-2" value={relatorioFacebook.preco} onChange={(value)=> setRelatorioFacebook(value.target.value)}/>
+                                                    <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorioFacebook.preco} onChange={(value)=> setRelatorioFacebook(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Instagram" className="col-lg-2" value={relatorioInsta.preco} onChange={(value)=> setRelatorioInsta(value.target.value)}/>
+                                                    <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorioInsta.preco} onChange={(value)=> setRelatorioInsta(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Google" className="col-lg-2" value={relatorioGoogle.preco} onChange={(value)=> setRelatorioGoogle(value.target.value)}/>
+                                                    <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorioGoogle.preco} onChange={(value)=> setRelatorioGoogle(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -540,11 +540,11 @@ export default function Main() {
                                                         2.6.Criação de conversões c/Google Tag Manager
                                                     </div>
 
-                                                    <PacksInput nomePack="Facebook" className="col-lg-2" value={googleTagFacebook.preco} onChange={(value)=> setGoogleTagFacebook(value.target.value)}/>
+                                                    <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleTagFacebook.preco} onChange={(value)=> setGoogleTagFacebook(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Instagram" className="col-lg-2" value={googleTagInsta.preco} onChange={(value)=> setGoogleTagInsta(value.target.value)}/>
+                                                    <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleTagInsta.preco} onChange={(value)=> setGoogleTagInsta(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Google" className="col-lg-2" value={googleTagGoogle.preco} onChange={(value)=> setGoogleTagGoogle(value.target.value)}/>
+                                                    <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleTagGoogle.preco} onChange={(value)=> setGoogleTagGoogle(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -556,11 +556,11 @@ export default function Main() {
                                                         2.7.Gestão de campanhas
                                                     </div>
 
-                                                    <PacksInput nomePack="Facebook" className="col-lg-2" value={gestaoFacebook.preco} onChange={(value)=> setGestaoFacebook(value.target.value)}/>
+                                                    <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestaoFacebook.preco} onChange={(value)=> setGestaoFacebook(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Instagram" className="col-lg-2" value={gestaoInsta.preco} onChange={(value)=> setGestaoInsta(value.target.value)}/>
+                                                    <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestaoInsta.preco} onChange={(value)=> setGestaoInsta(value.target.value)}/>
 
-                                                    <PacksInput nomePack="Google" className="col-lg-2" value={gestaoGoogle.preco} onChange={(value)=> setGestaoGoogle(value.target.value)}/>
+                                                    <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestaoGoogle.preco} onChange={(value)=> setGestaoGoogle(value.target.value)}/>
 
                                                 </div>
                                             </div>
@@ -584,7 +584,7 @@ export default function Main() {
                                                 Email &#38; SMS Marketing
                                             </div>
 
-                                            <PacksInput className="col-lg-4" value={emialSMS.preco} onChange={(value)=> setEmailSMS(value.target.value)}/>
+                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={emialSMS.preco} onChange={(value)=> setEmailSMS(value.target.value)}/>
 
                                         </div>
                                     </div>
@@ -596,7 +596,7 @@ export default function Main() {
                                                 Otimização SEO &#38; SEM
                                             </div>
 
-                                            <PacksInput className="col-lg-4" value={otimizacaoSEOSEM.preco} onChange={(value)=> setOtimizacaoSEOSEM(value.target.value)}/>
+                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoSEOSEM.preco} onChange={(value)=> setOtimizacaoSEOSEM(value.target.value)}/>
 
                                         </div>
                                     </div>
