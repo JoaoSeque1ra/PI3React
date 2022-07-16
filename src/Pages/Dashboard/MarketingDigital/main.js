@@ -82,7 +82,7 @@ export default function Main() {
     const [otimizacaoSEOSEM, setOtimizacaoSEOSEM] = useState([])
 
     useEffect(() => {
-        const baseUrl ="http://localhost:3001/orcamento/findMarketingDigital"
+        const baseUrl ="http://localhost:3001/orcamento/findDescricaoServicos/1"
 
         axios.get(baseUrl)
             .then(response => {
