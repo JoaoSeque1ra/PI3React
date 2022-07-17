@@ -203,11 +203,23 @@ export default function Main() {
                                                 1.Packs
                                             </div>
 
-                                            <PacksInput value={gestaoPackStart.preco} nomePack="Start" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setGestaoPackStart(value.target.value)}/>
+                                            <PacksInput value={gestaoPackStart.preco} nomePack="Start" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = gestaoPackStart
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setGestaoPackStart(newPreco)
+                                            }}/>
 
-                                            <PacksInput value={gestaoPackBoost.preco} nomePack="Boost" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setGestaoPackBoost(value.target.value)}/>
+                                            <PacksInput value={gestaoPackBoost.preco} nomePack="Boost" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = gestaoPackBoost
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setGestaoPackBoost(newPreco)
+                                            }}/>
 
-                                            <PacksInput value={gestaoPackBomb.preco} nomePack="Bomb" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setGestaoPackBomb(value.target.value)}/>
+                                            <PacksInput value={gestaoPackBomb.preco} nomePack="Bomb" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = gestaoPackBomb
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setGestaoPackBomb(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
