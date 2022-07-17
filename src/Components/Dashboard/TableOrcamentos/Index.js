@@ -76,7 +76,7 @@ export default function Tables() {
         },
         {
             name: "Ações",
-            selector: row => row.campo6,
+            // selector: row => row.campo6,
             button: true,
             cell: (row) => <ButtonTabelas route={"/dashboard/editar-orcamento/"} id={row.id}/>
         },

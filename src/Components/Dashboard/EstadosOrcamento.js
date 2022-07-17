@@ -10,10 +10,8 @@ export default function EstadosOrcamento(props) {
 
         axios.get(baseUrl)
         .then(response => {
-            if(response.data.success) {
-                setEstadoEscolhido(props.estadoSelecionado)
+            if(response.data.success)
                 return setEstados(response.data.data)
-            }
 
             alert("Erro de Servidor ao carregar estados")
         })
@@ -21,17 +19,28 @@ export default function EstadosOrcamento(props) {
             alert(err)
         })
 
-        console.count()
+        setEstadoEscolhido(props.estadoSelecionado)
+
+        console.log(estadoEscolhido)
+        console.log(estados)
 
     }, [])
 
     return (
         <select className="form-select" onChange={(value) => setEstadoEscolhido(value.target.value)}>
             <option defaultChecked defaultValue={estadoEscolhido}>{estadoEscolhido}</option>
-            {/* <LoadEstados /> */}
+            <LoadEstados />
         </select>
     );
 
+    function LoadEstados() {
+        estados.map((data,index) => {
+            if(data != estadoEscolhido)
+                return(
+                    <option key={index} defaultValue={data}>{data}</option>
+                )
+        })
+    }
     // function LoadEstados() {
     //     return estados.map((data, index) => {
     //         if(data != estadoEscolhido) {

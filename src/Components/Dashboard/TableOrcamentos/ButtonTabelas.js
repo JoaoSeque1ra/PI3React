@@ -10,9 +10,6 @@ export default function ButtonTabelas(props) {
             <Link to={props.route + props.id} className="btn btn-light border border-light rounded me-2">
                 <ExportIcons.EditOrcamento />
             </Link>
-            <Link to={"/client"} className="btn btn-light border border-light rounded">
-                <ExportIcons.Ver />
-            </Link>
         </>
     )
 }

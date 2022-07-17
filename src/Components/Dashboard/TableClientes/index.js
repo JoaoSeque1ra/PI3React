@@ -63,20 +63,6 @@ export default function TablesClientes() {
             },
         },
         {
-            name: "Total",
-            selector: row => {
-                row.orcamentos.map((data) => {
-                    somar = somar + parseFloat(data.valor)
-                })
-                return somar
-            },
-            sortable: true,
-            right: true,
-            style: {
-                fontSize: '1rem'
-            },
-        },
-        {
             name: "Ações",
             selector: row => row.campo6,
             wrap: true,
@@ -88,7 +74,6 @@ export default function TablesClientes() {
     const paginationOptions = {
         rowsPerPageText: 'Filas por página',
         rangeSeparatorText: 'de',
-
     };
 
     

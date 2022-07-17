@@ -19,17 +19,17 @@ export default function Main() {
                 Últimos Orçamentos
               </div>
 
-              <div className="col-2 col-lg-3 text-end">
+              <div className="col-2 offset-2 col-lg-3 offset-lg-3 text-end">
 
                 <ButtonDashboard text="Novo Cliente" to="/dashboard/novo-cliente"/>
 
               </div>
 
-              <div className="col-2 col-lg-3 text-end">
+              {/* <div className="col-2 col-lg-3 text-end">
 
                 <ButtonDashboard text="Novo Orçamento" to="/dashboard" />
 
-              </div>
+              </div> */}
 
               {/* <div className="col-12">
                 <div className="row mt-4">

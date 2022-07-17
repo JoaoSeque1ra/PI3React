@@ -153,7 +153,7 @@ export default function Main() {
                                                 Estado:
                                             </div>
                                             <div className='col-7 mt-3'>
-                                                <EstadosOrcamento estadoSelecionado={estadoPedido.estado}/>
+                                                
                                             </div>
 
                                         </div>
@@ -275,6 +275,12 @@ export default function Main() {
 
         </main >
     );
+
+    function LoadEstado() {
+        return (
+            
+        )
+    }
 
     function save() {
         if(contems.quantidade <= 0)
