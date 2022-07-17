@@ -98,11 +98,11 @@ export default function Main(){
     );
 
     function save() {
-        if(nome === "")
+        if(document.getElementById("nomeClient").value === "")
             return alert("Introduza nome de cliente")
-        if(telefone === "")
+        if(document.getElementById("telefoneCliente").value === "")
             return alert("Introduza número de telefone")
-        if(email === "")
+        if(document.getElementById("emailCliente").value === "")
             return alert("Introduza emial do cliente")
 
         const baseUrl = "http://localhost:3001/orcamento/updateClient/" + idClient

@@ -14,7 +14,7 @@ export default function Main() {
     const [contems, setContems] = useState([])
 
     const [estadoPedido, setEstadoPedido] = useState([])
-    const [estado, setEstadoEscolhido] = useState()
+    // const [estado, setEstadoEscolhido] = useState()
 
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
 
@@ -46,7 +46,7 @@ export default function Main() {
 
     const Subtotal = () => {
         let subtotal = 0
-        contems.map((data, index) => {
+        contems.map((data) => {
             subtotal = parseFloat(data.valor) * parseFloat(data.quantidade) + subtotal
         })
 
@@ -225,7 +225,7 @@ export default function Main() {
                                             const newValor = contems
 
                                             newValor.map((data) => {
-                                                if(data.id == value.target.id) {
+                                                if(data.id === value.target.id) {
                                                     data.valor = value.target.value
                                                     return setContems(newValor)
                                                 }
@@ -241,7 +241,7 @@ export default function Main() {
 
                                             newQuantidade.map((data) => {
                                                 
-                                                if(data.id == value.target.id) {
+                                                if(data.id === value.target.id) {
                                                     data.quantidade = parseInt(value.target.value)
                                                     return setContems(newQuantidade)
                                                 }

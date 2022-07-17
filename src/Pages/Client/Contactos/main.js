@@ -92,7 +92,7 @@ export default function Main() {
 
     function rota() {
         if(terms)
-            if(nome != "" && telefone != "" && email != "") 
+            if(nome !== "" && telefone !== "" && email !== "") 
                 return "obrigado"
         
         return ""
