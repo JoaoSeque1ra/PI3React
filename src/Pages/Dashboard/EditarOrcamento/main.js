@@ -12,11 +12,15 @@ export default function Main() {
     const [infoOrcamento, setInfoOrcamento] = useState([])
     const [cliente, setCliente] = useState([])
     const [contems, setContems] = useState([])
+
     const [estadoPedido, setEstadoPedido] = useState([])
     const [estado, setEstadoEscolhido] = useState()
+
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
 
     const { idOrcamento } = useParams();
+
+    const pedidos = ["Novo", "Em tratamento", "Enviado", "Confirmado", "Cancelado"]
 
     useEffect(()=>{
         const urlBase = "http://localhost:3001/orcamento/findOrcamento/" + idOrcamento
@@ -35,7 +39,10 @@ export default function Main() {
         .catch(err=> {
             alert("Erro: " + err)
         })
+
     },[])
+
+
 
     const Subtotal = () => {
         let subtotal = 0
@@ -154,7 +161,7 @@ export default function Main() {
                                                 Estado:
                                             </div>
                                             <div className='col-7 mt-3'>
-                                                <LoadEstado />
+                                                <EstadosOrcamento />
                                             </div>
 
                                         </div>
@@ -276,20 +283,6 @@ export default function Main() {
 
         </main >
     );
-
-    function LoadEstado() {
-        return (
-            <>
-                <select className="form-select" onChange={(value) => setEstadoEscolhido(value.target.value)}>
-                    <option defaultValue={"Novo"}>Novo</option>
-                    <option defaultValue={"Em tratamento"}>Em tratamento</option>
-                    <option defaultValue={"Enviado"}>Enviado</option>
-                    <option defaultValue={"Confirmado"}>Confirmado</option>
-                    <option defaultValue={"Cancelado"}>Cancelado</option>
-                </select>
-            </>
-        )
-    }
 
     function save() {
         if(contems.quantidade <= 0)

@@ -10,8 +10,10 @@ export default function EstadosOrcamento(props) {
 
         axios.get(baseUrl)
         .then(response => {
-            if(response.data.success)
-                return setEstados(response.data.data)
+            if(response.data.success) {
+                setEstados(response.data.data)
+                return
+            }
 
             alert("Erro de Servidor ao carregar estados")
         })
@@ -20,8 +22,6 @@ export default function EstadosOrcamento(props) {
         })
 
         setEstadoEscolhido(props.estadoSelecionado)
-
-        console.log(estadoEscolhido)
         console.log(estados)
 
     }, [])
@@ -41,14 +41,4 @@ export default function EstadosOrcamento(props) {
                 )
         })
     }
-    // function LoadEstados() {
-    //     return estados.map((data, index) => {
-    //         if(data != estadoEscolhido) {
-    //             console.count()
-    //             return(
-    //                 <option key={index} defaultValue={data}>{data}</option>
-    //             )
-    //         }
-    //     })
-    // }
 }
