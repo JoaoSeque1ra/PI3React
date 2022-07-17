@@ -263,13 +263,13 @@ export default function Main() {
                                                     <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={instaStorie.preco} onChange={(value)=>{
                                                     const newPreco = instaStorie
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setInstaStorie(value.target.value)
+                                                    setInstaStorie(newPreco)
                                                     }} />
 
                                                     <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={instaReel.preco} onChange={(value)=> {
                                                     const newPreco = instaReel
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setInstaReel(value.target.value)
+                                                    setInstaReel(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -285,19 +285,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={twitterPublicacao.preco} onChange={(value)=> {
                                                     const newPreco = twitterPublicacao
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setTwitterPublicacao(value.target.value)
+                                                    setTwitterPublicacao(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={twitterStorie.preco} onChange={(value)=> {
                                                     const newPreco = twitterStorie
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setTwitterStorie(value.target.value)
+                                                    setTwitterStorie(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={twitterReel.preco} onChange={(value)=> {
                                                     const newPreco = twitterReel
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setTwitterReel(value.target.value)
+                                                    setTwitterReel(newPreco)
                                                     }} />
 
                                                 </div>
@@ -313,19 +313,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={tiktokPublicacao.preco} onChange={(value)=> {
                                                     const newPreco = tiktokPublicacao
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setTiktokPublicacao(value.target.value)
+                                                    setTiktokPublicacao(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={tiktokStorie.preco} onChange={(value)=> {
                                                     const newPreco = tiktokStorie
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setTiktokStorie(value.target.value)
+                                                    setTiktokStorie(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={tiktokReel.preco} onChange={(value)=> {
                                                     const newPreco = tiktokReel
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setTiktokReel(value.target.value)
+                                                    setTiktokReel(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -341,19 +341,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={linkedinPublicacao.preco} onChange={(value)=> {
                                                     const newPreco = linkedinPublicacao
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setLinkedinPublicacao(value.target.value)
+                                                    setLinkedinPublicacao(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={linkedinStorie.preco} onChange={(value)=> {
                                                     const newPreco = linkedinStorie
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setLinkedinStorie(value.target.value)
+                                                    setLinkedinStorie(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={linkedinReel.preco} onChange={(value)=> {
                                                     const newPreco = linkedinReel
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setLinkedinReel(value.target.value)
+                                                    setLinkedinReel(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -369,19 +369,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={youtubePublicacao.preco} onChange={(value)=> {
                                                     const newPreco = youtubePublicacao
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setYoutubePublicacao(value.target.value)
+                                                    setYoutubePublicacao(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={youtubeStorie.preco} onChange={(value)=> {
                                                     const newPreco = youtubeStorie
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setYoutubeStorie(value.target.value)
+                                                    setYoutubeStorie(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={youtubeReel.preco} onChange={(value)=> {
                                                     const newPreco = youtubeReel
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setYoutubeReel(value.target.value)
+                                                    setYoutubeReel(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -397,19 +397,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Por publicação"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googlePublicacao.preco} onChange={(value)=> {
                                                     const newPreco = googlePublicacao
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGooglePublicacao(value.target.value)    
+                                                    setGooglePublicacao(newPreco) 
                                                     }}/>
 
                                                     <PacksInput nomePack="Por storie"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleStorie.preco} onChange={(value)=> {
                                                     const newPreco = googleStorie
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGoogleStorie(value.target.value)
+                                                    setGoogleStorie(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Por reel"  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleReel.preco} onChange={(value)=> {
                                                     const newPreco = googleReel
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGoogleReel(value.target.value)
+                                                    setGoogleReel(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -428,7 +428,7 @@ export default function Main() {
                                             <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={cover.preco} onChange={(value)=> {
                                             const newPreco = cover
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setCover(value.target.value)
+                                            setCover(newPreco)
                                             }}/>
 
                                         </div>
@@ -444,7 +444,7 @@ export default function Main() {
                                             <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={design.preco} onChange={(value)=> {
                                             const newPreco = design
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setDesign(value.target.value)
+                                            setDesign(newPreco)
                                             }}/>
 
                                         </div>
@@ -460,7 +460,7 @@ export default function Main() {
                                             <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={copywriting.preco} onChange={(value)=> {
                                             const newPreco = copywriting
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setCopywriting(value.target.value)
+                                            setCopywriting(newPreco)
                                             }}/>
 
                                         </div>
@@ -476,7 +476,7 @@ export default function Main() {
                                             <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={planificacao.preco} onChange={(value)=>{
                                             const newPreco = planificacao
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setPlanificacao(value.target.value)
+                                            setPlanificacao(newPreco)
                                             }}/>
 
                                         </div>
@@ -492,7 +492,7 @@ export default function Main() {
                                             <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={consultoria.preco} onChange={(value)=> {
                                             const newPreco = consultoria
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setConsultoria(value.target.value)
+                                            setConsultoria(newPreco)
                                             }}/>
 
                                         </div>
@@ -508,7 +508,7 @@ export default function Main() {
                                             <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestao.preco} onChange={(value)=> {
                                             const newPreco = gestao
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setGestao(value.target.value)
+                                            setGestao(newPreco)
                                             }}/>
 
                                         </div>
@@ -524,7 +524,7 @@ export default function Main() {
                                             <PacksInput  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorio.preco} onChange={(value)=> {
                                             const newPreco = relatorio
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setRelatorio(value.target.value)
+                                            setRelatorio(newPreco)
                                             }}/>
 
                                         </div>
@@ -552,19 +552,19 @@ export default function Main() {
                                             <PacksInput nomePack="Start" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={paidPackStart.preco} onChange={(value)=> {
                                             const newPreco = paidPackStart
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setPaidPackStart(value.target.value)
+                                            setPaidPackStart(newPreco)
                                             }}/>
 
                                             <PacksInput nomePack="Boost" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={paidPackBoost.preco} onChange={(value)=> {
                                             const newPreco = paidPackBoost
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setPaidPackBoost(value.target.value)
+                                            setPaidPackBoost(newPreco)
                                             }}/>
 
                                             <PacksInput nomePack="Bomb" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={paidPackBomb.preco} onChange={(value)=> {
                                             const newPreco = paidPackBomb
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setPaidPackBomb(value.target.value)
+                                            setPaidPackBomb(newPreco)
                                             }}/>
 
                                         </div>
@@ -587,19 +587,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={estrategiaFacebook.preco} onChange={(value)=> {
                                                     const newPreco = estrategiaFacebook
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setEstrategiaFacebook(value.target.value)
+                                                    setEstrategiaFacebook(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={estrategiaInsta.preco} onChange={(value)=> {
                                                     const newPreco = estrategiaInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setEstrategiaInsta(value.target.value)
+                                                    setEstrategiaInsta(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={estrategiaGoogle.preco} onChange={(value)=> {
                                                     const newPreco = estrategiaGoogle
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setEstrategiaGoogle(value.target.value)
+                                                    setEstrategiaGoogle(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -615,19 +615,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoCampanhaFacebook.preco} onChange={(value)=> {
                                                     const newPreco = criacaoCampanhaFacebook
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setCriacaoCampanhaFacebook(value.target.value)
+                                                    setCriacaoCampanhaFacebook(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoCampanhaInsta.preco} onChange={(value)=> {
                                                     const newPreco = criacaoCampanhaInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setCriacaoCampanhaInsta(value.target.value)
+                                                    setCriacaoCampanhaInsta(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoCampanhaGoogle.preco} onChange={(value)=> {
                                                     const newPreco = criacaoCampanhaInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setCriacaoCampanhaGoogle(value.target.value)
+                                                    setCriacaoCampanhaGoogle(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -643,19 +643,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={segmentacaoFacebook.preco} onChange={(value)=> {
                                                     const newPreco = segmentacaoFacebook
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setSegmentacaoFacebook(value.target.value)
+                                                    setSegmentacaoFacebook(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={segmentacaoInsta.preco} onChange={(value)=> {
                                                     const newPreco = segmentacaoInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setSegmentacaoInsta(value.target.value)
+                                                    setSegmentacaoInsta(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={segmentacaoGoogle.preco} onChange={(value)=> {
                                                     const newPreco = segmentacaoGoogle
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setSegmentacaoGoogle(value.target.value)
+                                                    setSegmentacaoGoogle(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -671,19 +671,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoFacebook.preco} onChange={(value)=> {
                                                     const newPreco = otimizacaoFacebook
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setOtimizacaoFacebook(value.target.value)
+                                                    setOtimizacaoFacebook(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoInsta.preco} onChange={(value)=> {
                                                     const newPreco = otimizacaoInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setOtimizacaoInsta(value.target.value)
+                                                    setOtimizacaoInsta(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoGoogle.preco} onChange={(value)=> {
                                                     const newPreco = otimizacaoGoogle
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setOtimizacaoGoogle(value.target.value)
+                                                    setOtimizacaoGoogle(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -699,19 +699,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorioFacebook.preco} onChange={(value)=> {
                                                     const newPreco = relatorioFacebook
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setRelatorioFacebook(value.target.value)
+                                                    setRelatorioFacebook(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorioInsta.preco} onChange={(value)=> {
                                                     const newPreco = relatorioInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setRelatorioInsta(value.target.value)
+                                                    setRelatorioInsta(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={relatorioGoogle.preco} onChange={(value)=> {
                                                     const newPreco = relatorioGoogle
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setRelatorioGoogle(value.target.value)
+                                                    setRelatorioGoogle(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -727,19 +727,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleTagFacebook.preco} onChange={(value)=> {
                                                     const newPreco = googleTagFacebook
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGoogleTagFacebook(value.target.value)
+                                                    setGoogleTagFacebook(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleTagInsta.preco} onChange={(value)=> {
                                                     const newPreco = googleTagInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGoogleTagInsta(value.target.value)
+                                                    setGoogleTagInsta(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={googleTagGoogle.preco} onChange={(value)=> {
                                                     const newPreco = googleTagGoogle
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGoogleTagGoogle(value.target.value)
+                                                    setGoogleTagGoogle(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -755,19 +755,19 @@ export default function Main() {
                                                     <PacksInput nomePack="Facebook" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestaoFacebook.preco} onChange={(value)=> {
                                                     const newPreco = gestaoFacebook
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGestaoFacebook(value.target.value)
+                                                    setGestaoFacebook(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Instagram" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestaoInsta.preco} onChange={(value)=> {
                                                     const newPreco = gestaoInsta
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGestaoInsta(value.target.value)
+                                                    setGestaoInsta(newPreco)
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={gestaoGoogle.preco} onChange={(value)=> {
                                                     const newPreco = gestaoGoogle
                                                     newPreco.preco = parseFloat(value.target.value)
-                                                    setGestaoGoogle(value.target.value)
+                                                    setGestaoGoogle(newPreco)
                                                     }}/>
 
                                                 </div>
@@ -795,7 +795,7 @@ export default function Main() {
                                             <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={emialSMS.preco} onChange={(value)=> {
                                             const newPreco = emialSMS
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setEmailSMS(value.target.value)
+                                            setEmailSMS(newPreco)
                                             }}/>
 
                                         </div>
@@ -811,7 +811,7 @@ export default function Main() {
                                             <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={otimizacaoSEOSEM.preco} onChange={(value)=> {
                                             const newPreco = otimizacaoSEOSEM
                                             newPreco.preco = parseFloat(value.target.value)
-                                            setOtimizacaoSEOSEM(value.target.value)
+                                            setOtimizacaoSEOSEM(newPreco)
                                             }}/>
 
                                         </div>
