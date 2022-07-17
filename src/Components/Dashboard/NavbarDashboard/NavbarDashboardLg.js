@@ -43,7 +43,7 @@ export default function NavbarDashboardLg() {
 
                         <NavbarItem text="Ver orçamentos" font="fw-normal ps-5" route="ver-orcamentos"/>
 
-                        <NavbarItem text="Novo orçamento" font="fw-normal ps-5" route=""/>
+                        {/* <NavbarItem text="Novo orçamento" font="fw-normal ps-5" route=""/> */}
 
                     </ul>
 
@@ -63,7 +63,7 @@ export default function NavbarDashboardLg() {
 
                 </li>
 
-                <li className="pt-4">
+                {/* <li className="pt-4">
 
                     <NavbarItem text="Dados" font="fs-5 font-weight-semiBold" />
 
@@ -73,7 +73,7 @@ export default function NavbarDashboardLg() {
 
                     </ul>
 
-                </li>
+                </li> */}
 
             </ul>
 

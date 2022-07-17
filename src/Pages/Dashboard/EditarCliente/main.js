@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
-import { useParams } from 'react-router-dom';
+import ClientInput from '../../../Components/Dashboard/ClientInput';
 
 export default function Main(){
+    const [nome, setNome] = useState("")
+    const [empresa, setEmpresa] = useState("")
+    const [morada, setMorada] = useState("")
+    const [cidade, setCidade] = useState("")
+    const [codigoPostal, setCodigoPostal] = useState("")
+    const [localidade, setLocalidade] = useState("")
+    const [telefone, setTelefone] = useState("")
+    const [email, setEmail] = useState("")
+    const [nif, setNif] = useState("")
+
     const {idClient} = useParams()
-    console.log(idClient)
+
+    useEffect(() => {
+        const baseUrl = "http://localhost:3001/orcamento/findClient/" + idClient
+
+        axios.get(baseUrl)
+        .then(response => {
+            if(!response.data.success) 
+                return alert(response.data.message)
+
+            const data = response.data.data
+            setNome(data.nome)
+            setEmpresa(data.empresa)
+            setMorada(data.morada)
+            setCidade(data.cidade)
+            setCodigoPostal(data.codigo_postal)
+            setLocalidade(data.localidade)
+            setTelefone(data.telefone)
+            setEmail(data.email)
+            setNif(data.numero_fiscal)
+        })
+        .catch(err =>{
+            alert(err)
+        })
+
+    },[idClient])
 
     return(
         <main className='overflow-auto d-flex'>
@@ -21,7 +57,7 @@ export default function Main(){
                             <BreadcrumbsDashboard route1="Editar Cliente"/>
 
                             <div className="col-3 col-lg-4 text-end">
-                                <ButtonDashboard text="Guardar"/>
+                                <ButtonDashboard text="Guardar" onClick={() => save()}/>
                             </div>
 
                             {/* Campos editar cliente */}
@@ -32,84 +68,24 @@ export default function Main(){
                                     <div className="col-12">
                                         <form className="row pt-4">
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="nomeCLiente" class="form-label">Nome:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="nomeCLiente" className="form-control" id="nomeCLiente" aria-describedby="nomeCliente" value="Marcelo Machado"/>
-                                            </div>
+                                            <ClientInput value={nome} onchange={(value) => setNome(value.target.value)} text="Nome:" id="nomeClient" requerido={"required"}/>
 
-                                            <div className="W-100"></div>
+                                            <ClientInput onchange={(value) => setTelefone(value.target.value)} value={telefone} text="Telefone:" id="telefoneCliente" requerido={"required"}/>
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="empresaCLiente" className="form-label">Empresa:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="empresaCLiente" className="form-control" id="empresaCLiente" aria-describedby="empresaCLiente" value=""/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setEmail(value.target.value)} value={email} text="Email:" id="emailCliente" requerido={"required"}/>
 
-                                            <div className="W-100"></div>
+                                            <ClientInput onchange={(value) => setEmpresa(value.target.value)} value={empresa} text="Empresa:" id="empresaCLiente" />
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="moradaCLiente" className="form-label">Morada:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="moradaCLiente" className="form-control" id="moradaCLiente" aria-describedby="moradaCLiente" value="Rua do Bom Jesus, 45 - A"/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setMorada(value.target.value)} value={morada} text="Morada:" id="moradaCLiente" />
 
-                                            <div className="w-100"></div>
+                                            <ClientInput onchange={(value) => setCidade(value.target.value)} value={cidade} text="Cidade:" id="cidadeCLiente" />
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="cidadeCLiente" className="form-label">Cidade:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="cidadeCLiente" className="form-control" id="cidadeCLiente" aria-describedby="cidadeCLiente" value="Braga"/>
-                                            </div>
+                                            <ClientInput onchange={(value) => setCodigoPostal(value.target.value)} value={codigoPostal} text="Codigo Postal:" id="codigoPostalCliente" />
+                                            
+                                            <ClientInput onchange={(value) => setLocalidade(value.target.value)} value={localidade} text="Pais:" id="paisCliente" />
 
-                                            <div className="w-100"></div>
+                                            <ClientInput onchange={(value) => setNif(value.target.value)} value={nif} text="NIF:" id="nifCliente" />
 
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="codigoPostalCliente" className="form-label">Codigo Postal:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="codigoPostalCliente" className="form-control" id="codigoPostalCliente" aria-describedby="codigoPostalCliente" value="4700-005"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="paisCliente" className="form-label">Pais:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="paisCliente" className="form-control" id="paisCliente" aria-describedby="paisCliente" value="Portugal"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="telefoneCliente" className="form-label">Telefone:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="telefoneCliente" className="form-control" id="telefoneCliente" aria-describedby="telefoneCliente" value="964342988"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="emailCliente" className="form-label">Email:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="emailCliente" className="form-control" id="emailCliente" aria-describedby="emailCliente" value="mmachado@gmail.com"/>
-                                            </div>
-
-                                            <div className="w-100"></div>
-
-                                            <div className="col-lg-1 mb-3 pb-3 ms-5">
-                                                <label for="nifCliente" className="form-label">Nif:</label>
-                                            </div>
-                                            <div className="col-lg-10">
-                                                <input type="nifCliente" className="form-control" id="nifCliente" aria-describedby="nifCliente" value="186590111"/>
-                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -120,4 +96,37 @@ export default function Main(){
             </div>
         </main>
     );
+
+    function save() {
+        if(nome == false)
+            return alert("Introduza nome de cliente")
+        if(telefone === "")
+            return alert("Introduza número de telefone")
+        if(email === "")
+            return alert("Introduza emial do cliente")
+
+        const baseUrl = "http://localhost:3001/orcamento/updateClient/" + idClient
+        const newData = {
+            nome: nome,
+            telefone: telefone,
+            email: email,
+            empresa: empresa,
+            morada: morada,
+            codigo_postal: codigoPostal,
+            localidade: localidade,
+            numero_fiscal: nif
+        }
+
+        axios.post(baseUrl, newData)
+        .then(response => {
+            if(response.data.success)
+                return alert(response.data.message)
+            
+            alert("Erro na edição de cliente")
+        })
+        .catch(err => {
+            alert(err)
+        })
+
+    }
 }

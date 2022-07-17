@@ -40,7 +40,11 @@ export default function Main() {
                                     <div className="col-12">
                                         <form className="row pt-4">
 
-                                            <ClientInput onchange={(value) => setNome(value.target.value)} value={nome} text="Nome:" id="nomeClient" />
+                                            <ClientInput onchange={(value) => setNome(value.target.value)} value={nome} text="Nome:" id="nomeClient" requerido={"required"}/>
+
+                                            <ClientInput onchange={(value) => setTelefone(value.target.value)} value={telefone} text="Telefone:" id="telefoneCliente" requerido={"required"}/>
+
+                                            <ClientInput onchange={(value) => setEmail(value.target.value)} value={email} text="Email:" id="emailCliente" requerido={"required"}/>
 
                                             <ClientInput onchange={(value) => setEmpresa(value.target.value)} value={empresa} text="Empresa:" id="empresaCLiente" />
 
@@ -52,9 +56,6 @@ export default function Main() {
                                             
                                             <ClientInput onchange={(value) => setPais(value.target.value)} value={pais} text="Pais:" id="paisCliente" />
 
-                                            <ClientInput onchange={(value) => setTelefone(value.target.value)} value={telefone} text="Telefone:" id="telefoneCliente" />
-
-                                            <ClientInput onchange={(value) => setEmail(value.target.value)} value={email} text="Email:" id="emailCliente" />
 
                                             <ClientInput onchange={(value) => setNif(value.target.value)} value={nif} text="NIF:" id="nifCliente" />
 

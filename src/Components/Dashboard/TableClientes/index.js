@@ -81,7 +81,7 @@ export default function TablesClientes() {
             selector: row => row.campo6,
             wrap: true,
             button: true,
-            cell: (row) => <ButtonTabelas id={row.campo1}/>
+            cell: (row) => <ButtonTabelas route={"/dashboard/editar-cliente/"} id={row.id}/>
         },
     ];
 
