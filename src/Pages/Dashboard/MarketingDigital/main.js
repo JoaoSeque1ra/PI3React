@@ -637,7 +637,7 @@ export default function Main() {
                                                     }}/>
 
                                                     <PacksInput nomePack="Google" className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoCampanhaGoogle.preco} onChange={(value)=> {
-                                                    const newPreco = criacaoCampanhaInsta
+                                                    const newPreco = criacaoCampanhaGoogle
                                                     newPreco.preco = parseFloat(value.target.value)
                                                     setCriacaoCampanhaGoogle(newPreco)
                                                     }}/>
