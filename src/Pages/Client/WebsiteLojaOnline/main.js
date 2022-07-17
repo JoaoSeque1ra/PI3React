@@ -1,4 +1,4 @@
-import React, { lazy, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
@@ -13,6 +13,22 @@ export default function Main() {
     const [suporte, setSuporte] = useState(false)
     const [servidor, setServico] = useState(false)
 
+    useEffect(() => {
+        const localSave = localStorage
+
+        for(let i = 0; i < localSave.length; i++) {
+            console.log(localSave.key(i))
+            if(localSave.key(i) === "website")
+                setWebsite(true)
+            if(localSave.key(i) === "loja-online")
+                setLojaOnline(true)
+            if(localSave.key(i) === "87")
+                setSuporte(true)
+            if(localSave.key(i) === "88")
+                setServico(true)
+        }
+    },[])
+
     return(
         <main>
             <div className="container-fluid">
@@ -22,21 +38,34 @@ export default function Main() {
                             <Breadcrumbs route1="Orçamento" route2="/ Website &#38; Loja Online" textColor="text-purple"/>
 
                             <div className="col-md-12 col-lg-10 offset-lg-1">
-                                <CheckBox onClick={valeu=>setWebsite(valeu.target.checked)} isActive={website} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    console.log(valeu.target.checked)
+                                    setWebsite(valeu.target.checked)
+                                    saveLocal(valeu, "website")
+                                }} isActive={website} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um espaço online unicamente seu, que lhe permite estar ligado ao mundo e
                                 divulgar os seus produtos/serviços 24 sob 24 horas." />
 
-                                <CheckBox onClick={valeu=>setLojaOnline(valeu.target.checked)} isActive={lojaOnline} name="Lojas online | E-commerce" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    setLojaOnline(valeu.target.checked)
+                                    saveLocal(valeu, "loja-online")
+                                }} isActive={lojaOnline} name="Lojas online | E-commerce" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="As vantagens de marcar uma presença online são realmente positivas: vendas sem
                                 limites geográficos, custos mais reduzidos do que um espaço físico, maior
                                 conforto dos clientes, acompanhamento do desempenho das vendas e muito mais." />
 
-                                <CheckBox onClick={valeu=>setSuporte(valeu.target.checked)} isActive={suporte} name="Suporte &#38; manutenção" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    setSuporte(valeu.target.checked)
+                                    saveLocal(valeu, "87")
+                                }} isActive={suporte} name="Suporte &#38; manutenção" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Prestamos um serviço de apoio e manutenção em todos os websites desenvolvidos,
                                 possibilitando assim a facilidade de utilização por parte do cliente. Fácil e
                                 muito simples para que possa trabalhar no seu website sem dificuldades." />
 
-                                <CheckBox onClick={valeu=>setServico(valeu.target.checked)} isActive={servidor} name="Servidor &#38; Domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    setServico(valeu.target.checked)
+                                    saveLocal(valeu, "88")
+                                }} isActive={servidor} name="Servidor &#38; Domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Na incommun, registamos o domínio da sua marca e fornecemos, através de uma
                                 anuidade, serviços de hosting seguros e rápidos." />
                             </div>
@@ -60,12 +89,25 @@ export default function Main() {
         </main>
     );
 
-    function rotas() {
-        if(website)
-            return "website-loja-online/website"
+    function saveLocal(value, nome) {
+        if(value.target.checked)
+            return localStorage.setItem(nome,value.target.checked)
+        localStorage.removeItem(nome)
+    }
 
-        if(lojaOnline)
-            return "website-loja-online/loja-online"
+
+    function rotas() {
+        const localSave = localStorage
+
+        console.log(localSave.key(0))
+
+        for(let i = 0; i < localSave.length; i++) {
+            console.log(localSave.key(i))
+            if(localSave.key(i) === "website")
+                return "website-loja-online/website"
+            if(localSave.key(i) === "loja-online")
+                return "website-loja-online/loja-online"
+        }
 
         return "comunicacao-consultoria"
     }
