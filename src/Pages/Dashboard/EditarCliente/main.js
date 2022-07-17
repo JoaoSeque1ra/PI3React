@@ -45,6 +45,11 @@ export default function Main(){
 
     },[idClient])
 
+    let flagNome
+    let flagTelefone
+    const flagEmail = true
+
+
     return(
         <main className='overflow-auto d-flex'>
             <NavbarDashboardLg />
@@ -68,11 +73,20 @@ export default function Main(){
                                     <div className="col-12">
                                         <form className="row pt-4">
 
-                                            <ClientInput value={nome} onchange={(value) => setNome(value.target.value)} text="Nome:" id="nomeClient" requerido={"required"}/>
+                                            <ClientInput value={nome} onchange={(value) => {setNome(value.target.value)}} text="Nome:" id="nomeClient" requerido={"required"}/>
 
-                                            <ClientInput onchange={(value) => setTelefone(value.target.value)} value={telefone} text="Telefone:" id="telefoneCliente" requerido={"required"}/>
+                                            <ClientInput onchange={(value) => {
+                                                setTelefone(value.target.value); 
+                                                if(value.target.value === "") {
+                                                    flagTelefone = false
+                                                    console.log("Tentei")
+                                                    return console.log(flagTelefone)
+                                                }
+                                                flagTelefone =true
+                                                console.log(flagTelefone)
+                                            }} value={telefone} text="Telefone:" id="telefoneCliente" requerido={"required"}/>
 
-                                            <ClientInput onchange={(value) => setEmail(value.target.value)} value={email} text="Email:" id="emailCliente" requerido={"required"}/>
+                                            <ClientInput onchange={(value) => {setEmail(value.target.value)}} value={email} text="Email:" id="emailCliente" requerido={"required"}/>
 
                                             <ClientInput onchange={(value) => setEmpresa(value.target.value)} value={empresa} text="Empresa:" id="empresaCLiente" />
 
@@ -98,9 +112,9 @@ export default function Main(){
     );
 
     function save() {
-        if(nome == false)
+        if(flagNome)
             return alert("Introduza nome de cliente")
-        if(telefone === "")
+        if(!flagTelefone)
             return alert("Introduza número de telefone")
         if(email === "")
             return alert("Introduza emial do cliente")

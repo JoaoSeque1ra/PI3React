@@ -56,7 +56,6 @@ export default function Main() {
                                             
                                             <ClientInput onchange={(value) => setPais(value.target.value)} value={pais} text="Pais:" id="paisCliente" />
 
-
                                             <ClientInput onchange={(value) => setNif(value.target.value)} value={nif} text="NIF:" id="nifCliente" />
 
                                         </form>
