@@ -65,13 +65,15 @@ export default function Main() {
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
-                                <Buttons color="btn-transparent" text="Anterior" />
+                                <Buttons color="btn-transparent" text="Anterior" to="comunicacao-consultoria"/>
                                 <Buttons color="btn-purple" text="Seguinte" onClick={()=> {
                                     if(terms)
                                        return guardar()
                                     
                                     alert("Necessita de aceitar os termos e condições")
-                                    }}/>
+                                }}
+                                to={rota()}
+                                />
                             </div>
                         </div>
                     </div>
@@ -88,7 +90,15 @@ export default function Main() {
         </main>
     );
 
-    function guardar(){
+    function rota() {
+        if(terms)
+            if(nome != "" && telefone != "" && email != "") 
+                return "obrigado"
+        
+        return ""
+    }
+
+    function guardar() {
         if(nome === "")
             return alert("Introduza o Nome do cliente")
         if(telefone === "")

@@ -2,16 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Buttons(props) {
-    if(props.to != null) {
+    if(props.to != "") {
         return (
-            <Link to={"/client/" + props.route} className= { changeColorButton(props) }>
+            <Link to={"/client/" + props.to} className= { changeColorButton(props) } onClick={(value) => props.onClick(value)}>
                 { props.text }
             </Link>
         );
     }
 
     return (
-        <button to={"/client/" + props.route} className= { changeColorButton(props) } onClick={(value) => props.onClick(value)}>
+        <button className= { changeColorButton(props) } onClick={(value) => props.onClick(value)}>
             { props.text }
         </button>
     );

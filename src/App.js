@@ -11,6 +11,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
+
         <Route path="client/" element={<Client.Home />}/>
 
         <Route path="client/marketing-digital" element={<Client.MarketingDigital />}/>

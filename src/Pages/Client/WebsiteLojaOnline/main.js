@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { lazy, useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
@@ -42,8 +42,8 @@ export default function Main() {
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
-                                <Buttons color="btn-transparent" text="Anterior" />
-                                <Buttons color="btn-purple" text="Seguinte" />
+                                <Buttons color="btn-transparent" text="Anterior" to="design-grafico"/>
+                                <Buttons color="btn-purple" text="Seguinte" to={rotas()}/>
                             </div>
                         </div>
                     </div>
@@ -58,6 +58,15 @@ export default function Main() {
                 </div>
             </div>
         </main>
-
     );
+
+    function rotas() {
+        if(website)
+            return "website-loja-online/website"
+
+        if(lojaOnline)
+            return "website-loja-online/loja-online"
+
+        return "comunicacao-consultoria"
+    }
 }
