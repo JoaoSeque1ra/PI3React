@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/NavbarDashboardLg';
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
-import ExportIcons from '../../../Helpers/ExportIcons';
+import ButtonDashboard from '../../../Components/Dashboard/Button';
 import TablesVerOrcamento from '../../../Components/Dashboard/TableVerOrcamento';
 import EstadosOrcamento from '../../../Components/Dashboard/EstadosOrcamento';
 
@@ -12,6 +12,7 @@ export default function Main() {
     const [infoOrcamento, setInfoOrcamento] = useState([])
     const [cliente, setCliente] = useState([])
     const [contems, setContems] = useState([])
+    const [estadoPedido, setEstadoPedido] = useState([])
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
 
     const { idOrcamento } = useParams();
@@ -24,7 +25,7 @@ export default function Main() {
                 const data = response.data.data
                 setInfoOrcamento(data)
                 setContems(data.contems)
-
+                setEstadoPedido(data.estadoPedido)
                 return setCliente(data.cliente)
             }
 
@@ -37,7 +38,6 @@ export default function Main() {
 
     const Subtotal = () => {
         let subtotal = 0
-
         contems.map((data, index) => {
             subtotal = parseFloat(data.valor) * parseFloat(data.quantidade) + subtotal
         })
@@ -55,9 +55,6 @@ export default function Main() {
         let subtotal = Subtotal()
         let iva = Iva()
 
-        console.log(subtotal)
-        console.log(iva)
-
         return parseFloat(parseFloat(subtotal) + parseFloat(iva)).toFixed(2)
     }
 
@@ -73,7 +70,10 @@ export default function Main() {
 
                             <BreadcrumbsDashboard route2="Orçamento" />
 
-                            <div className="col-4 mt-4 col-lg-4 mt-lg-0">
+                            <div className="col-3 col-lg-4 text-end">
+                                <ButtonDashboard text="Guardar" onClick={() => save()}/>
+                            </div>
+                            {/* <div className="col-4 mt-4 col-lg-4 mt-lg-0">
                                 <div className="row">
 
                                     <div className="col-3">
@@ -129,7 +129,7 @@ export default function Main() {
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="col-12 fs-5 mt-3 mt-lg-0 mb-lg-3">
                                 Detalhes do orçamento #{infoOrcamento.id}
@@ -153,7 +153,7 @@ export default function Main() {
                                                 Estado:
                                             </div>
                                             <div className='col-7 mt-3'>
-                                                <EstadosOrcamento estadoSelecionado="Novo"/>
+                                                <EstadosOrcamento estadoSelecionado={estadoPedido.estado}/>
                                             </div>
 
                                         </div>
@@ -275,4 +275,34 @@ export default function Main() {
 
         </main >
     );
+
+    function save() {
+        if(contems.quantidade <= 0)
+            alert("Introduza uma quantidade acima de 0")
+        if(contems.valor <= 0)
+            alert("Introduza valor acima de 0")
+
+        const baseUrl = "http://localhost:3001/orcamento/updateOrcamentoValor/" + idOrcamento
+        
+        contems.map((data, index) => {
+            const newData = {
+                estado: "Em tratamento",
+                descricaoServicosId: data.descricao_servico_id,
+                quantidade: data.quantidade,
+                valorServico: data.valor
+            }
+
+            axios.post(baseUrl, newData)
+            .then(response => {
+                if(response.data.success)
+                    if(index === contems.length - 1)
+                    return alert(response.data.message)
+
+                alert("Erro no servidor")
+            })
+            .catch(err => {
+                alert(err)
+            })
+        })
+    }
 }
