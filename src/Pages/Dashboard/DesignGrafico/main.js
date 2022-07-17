@@ -77,7 +77,11 @@ export default function Main() {
                                                 1.Criação de Logótipo
                                             </div>
 
-                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoLogotipo.preco} onChange={(value)=> setCriacaoLogotipo(value.target.value)}/>
+                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={criacaoLogotipo.preco} onChange={(value)=> {
+                                            const newPreco = criacaoLogotipo
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setCriacaoLogotipo(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -89,7 +93,11 @@ export default function Main() {
                                                 2.Análise da concorrência
                                             </div>
 
-                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={analiseConcorrencia.preco} onChange={(value)=> setAnaliseConcorrencia(value.target.value)}/>
+                                            <PacksInput className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" value={analiseConcorrencia.preco} onChange={(value)=> {
+                                            const newPreco = analiseConcorrencia
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setAnaliseConcorrencia(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -101,7 +109,11 @@ export default function Main() {
                                                 3.Paleta de cores
                                             </div>
 
-                                            <PacksInput value={paletaCores.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setPaletaCores(value.target.value)}/>
+                                            <PacksInput value={paletaCores.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = paletaCores
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setPaletaCores(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -113,7 +125,11 @@ export default function Main() {
                                                 4.Slogan para marca
                                             </div>
 
-                                            <PacksInput value={slogan.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setSlogan(value.target.value)}/>
+                                            <PacksInput value={slogan.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = slogan
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setSlogan(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -125,7 +141,11 @@ export default function Main() {
                                                 5.Manual normas gráficas
                                             </div>
 
-                                            <PacksInput value={manual.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setManual(value.target.value)}/>
+                                            <PacksInput value={manual.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = manual
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setManual(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -137,7 +157,11 @@ export default function Main() {
                                                 6.Estacionário
                                             </div>
 
-                                            <PacksInput value={estacionario.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setEstacionario(value.target.value) }/>
+                                            <PacksInput value={estacionario.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = estacionario
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setEstacionario(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -158,7 +182,11 @@ export default function Main() {
                                                 Branding &#38; Rebranding
                                             </div>
 
-                                            <PacksInput value={brandingRebranding.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setBrandingRebranding(value.target.value) }/>
+                                            <PacksInput value={brandingRebranding.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = brandingRebranding
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setBrandingRebranding(newPreco)
+                                            } }/>
 
                                         </div>
                                     </div>
@@ -170,7 +198,11 @@ export default function Main() {
                                                 Estratégia de marca
                                             </div>
 
-                                            <PacksInput value={estrategia.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setEstacionario(value.target.value) }/>
+                                            <PacksInput value={estrategia.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = estrategia
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setEstrategia(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -193,7 +225,11 @@ export default function Main() {
                                                 Registo de marca
                                             </div>
 
-                                            <PacksInput value={registo.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={registo.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = registo
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setRegisto(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -205,7 +241,11 @@ export default function Main() {
                                                 Design editorial
                                             </div>
 
-                                            <PacksInput value={desginEditorial.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={()=> console.count("4: ")}/>
+                                            <PacksInput value={desginEditorial.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = desginEditorial
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setDesginEditorial(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
