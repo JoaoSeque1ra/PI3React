@@ -65,7 +65,7 @@ export default function Main() {
 
                                             <PacksInput value={marketingComunicacao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
                                                 const newPreco = marketingComunicacao
-                                                newPreco.preco = parseInt(value.target.value)
+                                                newPreco.preco = parseFloat(value.target.value)
                                                 setMarketingComunicacao(newPreco)
                                             }} />
 
@@ -81,7 +81,7 @@ export default function Main() {
 
                                             <PacksInput value={organizacaoEventos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value) => {
                                                 const newPreco = organizacaoEventos
-                                                newPreco.preco = parseInt(value.target.value)
+                                                newPreco.preco = parseFloat(value.target.value)
                                                 setOrganizacaoEventos(newPreco)
                                             }} />
 
@@ -104,7 +104,7 @@ export default function Main() {
                                             <PacksInput type="number" value={acessoria.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" 
                                             onChange={(value) => {
                                                 const newPreco = acessoria
-                                                newPreco.preco = parseInt(value.target.value)
+                                                newPreco.preco = parseFloat(value.target.value)
                                                 setAcessoria(newPreco)
                                             }} />
 
