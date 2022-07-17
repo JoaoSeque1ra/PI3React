@@ -13,6 +13,7 @@ export default function Main() {
     const [cliente, setCliente] = useState([])
     const [contems, setContems] = useState([])
     const [estadoPedido, setEstadoPedido] = useState([])
+    const [estado, setEstadoEscolhido] = useState()
     const [ignored, forceUpdate] = useReducer(x => x + 1, 0)
 
     const { idOrcamento } = useParams();
@@ -153,7 +154,7 @@ export default function Main() {
                                                 Estado:
                                             </div>
                                             <div className='col-7 mt-3'>
-                                                
+                                                <LoadEstado />
                                             </div>
 
                                         </div>
@@ -278,7 +279,15 @@ export default function Main() {
 
     function LoadEstado() {
         return (
-            
+            <>
+                <select className="form-select" onChange={(value) => setEstadoEscolhido(value.target.value)}>
+                    <option defaultValue={"Novo"}>Novo</option>
+                    <option defaultValue={"Em tratamento"}>Em tratamento</option>
+                    <option defaultValue={"Enviado"}>Enviado</option>
+                    <option defaultValue={"Confirmado"}>Confirmado</option>
+                    <option defaultValue={"Cancelado"}>Cancelado</option>
+                </select>
+            </>
         )
     }
 
