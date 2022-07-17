@@ -100,11 +100,23 @@ export default function Main() {
                                                 1.Número de páginas
                                             </div>
 
-                                            <PacksInput nomePack="&lsaquo;5 páginas" value={websiteNumeroPaginas5.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteNumeroPaginas5(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;5 páginas" value={websiteNumeroPaginas5.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = websiteNumeroPaginas5
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setWebsiteNumeroPaginas5(newPreco)
+                                            }}/>
 
-                                            <PacksInput nomePack="&lsaquo;10 páginas" value={websiteNumeroPaginas10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteNumeroPaginas10(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;10 páginas" value={websiteNumeroPaginas10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = websiteNumeroPaginas10
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setWebsiteNumeroPaginas10(newPreco)
+                                            }}/>
 
-                                            <PacksInput nomePack="&rsaquo;10 páginas" value={websiteNumeroPaginasMaior10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteNumeroPaginasMaior10(value.target.value)}/>
+                                            <PacksInput nomePack="&rsaquo;10 páginas" value={websiteNumeroPaginasMaior10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = websiteNumeroPaginasMaior10
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setWebsiteNumeroPaginasMaior10(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -116,7 +128,11 @@ export default function Main() {
                                                 2.Website
                                             </div>
 
-                                            <PacksInput value={Website.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsite(value.target.value)}/>
+                                            <PacksInput value={Website.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = Website
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setWebsite(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -128,7 +144,11 @@ export default function Main() {
                                                 3.Landing page
                                             </div>
 
-                                            <PacksInput value={LandingPage.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLandingPage(value.target.value)}/>
+                                            <PacksInput value={LandingPage.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = LandingPage
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setLandingPage(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -140,7 +160,11 @@ export default function Main() {
                                                 4.Portfólio
                                             </div>
 
-                                            <PacksInput value={portofolio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setPortofolio(value.target.value)}/>
+                                            <PacksInput value={portofolio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = portofolio
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setPortofolio(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -152,7 +176,11 @@ export default function Main() {
                                                 5.Criação de conteúdos textuais
                                             </div>
 
-                                            <PacksInput value={websiteCriacaoConteudos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteCriacaoConteudos(value.target.value)}/>
+                                            <PacksInput value={websiteCriacaoConteudos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = websiteCriacaoConteudos
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setWebsiteCriacaoConteudos(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -164,7 +192,11 @@ export default function Main() {
                                                 6.Com alojamento
                                             </div>
 
-                                            <PacksInput value={websiteAlojamento.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteAlojamento(value.target.value)}/>
+                                            <PacksInput value={websiteAlojamento.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = websiteAlojamento
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setWebsiteAlojamento(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -176,7 +208,11 @@ export default function Main() {
                                                 7.Com domínio
                                             </div>
 
-                                            <PacksInput value={websiteDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setWebsiteDominio(value.target.value)}/>
+                                            <PacksInput value={websiteDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = websiteDominio
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setWebsiteDominio(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -200,11 +236,23 @@ export default function Main() {
                                                 1.Número de páginas
                                             </div>
 
-                                            <PacksInput nomePack="&lsaquo;5 páginas" value={lojaNumeroPaginas5.preco}  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaNumeroPaginas5(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;5 páginas" value={lojaNumeroPaginas5.preco}  className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = lojaNumeroPaginas5
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setLojaNumeroPaginas5(newPreco)
+                                            }}/>
 
-                                            <PacksInput nomePack="&lsaquo;10 páginas" value={lojaNumeroPaginas10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaNumeroPaginas10(value.target.value)}/>
+                                            <PacksInput nomePack="&lsaquo;10 páginas" value={lojaNumeroPaginas10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = lojaNumeroPaginas10
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setLojaNumeroPaginas10(newPreco)
+                                            }}/>
 
-                                            <PacksInput nomePack="&rsaquo;10 páginas" value={lojaNumeroPaginasMaior10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaNumeroPaginasMaior10(value.target.value)}/>
+                                            <PacksInput nomePack="&rsaquo;10 páginas" value={lojaNumeroPaginasMaior10.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = lojaNumeroPaginasMaior10
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setLojaNumeroPaginasMaior10(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -223,7 +271,11 @@ export default function Main() {
                                                         2.1.Produtos
                                                     </div>
 
-                                                    <PacksInput value={produtos.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setProdutos(value.target.value)}/>
+                                                    <PacksInput value={produtos.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                                    const newPreco = produtos
+                                                    newPreco.preco = parseFloat(value.target.value)
+                                                    setProdutos(newPreco)
+                                                    }}/>
 
                                                 </div>
                                             </div>
@@ -235,7 +287,11 @@ export default function Main() {
                                                         2.2.Contactos
                                                     </div>
 
-                                                    <PacksInput value={contactos.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setContactos(value.target.value)}/>
+                                                    <PacksInput value={contactos.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                                    const newPreco = contactos
+                                                    newPreco.preco = parseFloat(value.target.value)
+                                                    setContactos(newPreco)
+                                                    }}/>
 
                                                 </div>
                                             </div>
@@ -247,7 +303,11 @@ export default function Main() {
                                                         2.3.Equipas
                                                     </div>
 
-                                                    <PacksInput value={equipas.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setEquipas(value.target.value)}/>
+                                                    <PacksInput value={equipas.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                                    const newPreco = equipas
+                                                    newPreco.preco = parseFloat(value.target.value)
+                                                    setEquipas(newPreco)
+                                                    }}/>
 
                                                 </div>
                                             </div>
@@ -259,7 +319,11 @@ export default function Main() {
                                                         2.4.Outros
                                                     </div>
 
-                                                    <PacksInput value={outros.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setOutros(value.target.value)}/>
+                                                    <PacksInput value={outros.preco} className="col-lg-2" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                                    const newPreco = outros
+                                                    newPreco.preco = parseFloat(value.target.value)
+                                                    setOutros(newPreco)
+                                                    }}/>
 
                                                 </div>
                                             </div>
@@ -277,7 +341,11 @@ export default function Main() {
                                                         3.Com domínio
                                                     </div>
 
-                                                    <PacksInput value={lojaDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaDominio(value.target.value)}/>
+                                                    <PacksInput value={lojaDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                                    const newPreco = lojaDominio
+                                                    newPreco.preco = parseFloat(value.target.value)
+                                                    setLojaDominio(newPreco)
+                                                    }}/>
 
                                                 </div>
                                             </div>
@@ -289,7 +357,11 @@ export default function Main() {
                                                         4.Com alojamento
                                                     </div>
 
-                                                    <PacksInput value={lojaAlojamento.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaAlojamento(value.target.value)}/>
+                                                    <PacksInput value={lojaAlojamento.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                                    const newPreco = lojaAlojamento
+                                                    newPreco.preco = parseFloat(value.target.value)
+                                                    setLojaAlojamento(newPreco)
+                                                    }}/>
 
                                                 </div>
                                             </div>
@@ -301,7 +373,11 @@ export default function Main() {
                                                         5.Com criação de conteúdos textuais
                                                     </div>
 
-                                                    <PacksInput value={lojaCriacaoConteudos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setLojaCriacaoConteudos(value.target.value)}/>
+                                                    <PacksInput value={lojaCriacaoConteudos.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                                    const newPreco = lojaCriacaoConteudos
+                                                    newPreco.preco = parseFloat(value.target.value)
+                                                    setLojaCriacaoConteudos(newPreco)
+                                                    }}/>
 
                                                 </div>
                                             </div>
@@ -325,7 +401,11 @@ export default function Main() {
                                                 Suporte &#38; Manutenção
                                             </div>
 
-                                            <PacksInput value={suporteManutencao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setSuporteManutencao(value.target.value)}/>
+                                            <PacksInput value={suporteManutencao.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = suporteManutencao
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setSuporteManutencao(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
@@ -337,7 +417,11 @@ export default function Main() {
                                                 Servidor &#38; Domínio
                                             </div>
 
-                                            <PacksInput value={servidorDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> setServidorDominio(value.target.value)}/>
+                                            <PacksInput value={servidorDominio.preco} className="col-lg-4" pattern="^[0-9]{0,12}([,][0-9]{1,2})?$" onChange={(value)=> {
+                                            const newPreco = servidorDominio
+                                            newPreco.preco = parseFloat(value.target.value)
+                                            setServidorDominio(newPreco)
+                                            }}/>
 
                                         </div>
                                     </div>
