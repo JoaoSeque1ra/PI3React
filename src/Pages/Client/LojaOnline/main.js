@@ -73,15 +73,12 @@ export default function Main() {
                     </label>
                 </div>
 
-                <CheckBox
-                  onClick={value=>{
-                    setComIntegracao(value.target.checked)
-                  }} isActive={comIntegracao}
-                  name="Com Integração"
-                  color="bg-checkBoxPurple"
-                  colorIcon="colorIconPurple"
-                  textColor="text-purple"
-                />
+                <div className="d-flex align-items-center mt-5">
+                    <label className="form-check ps-3 py-2 w-100 fs-5 border text-white bg-purple">
+                        <ExportIcons.Integracao className="me-2 colorIconWhite"/>
+                        Com Integração
+                    </label>
+                </div>
                 <div className="card rounded-0 border-top-0">
                   <div className="card-body">
                     Para a criação da sua página online quais os tópicos que

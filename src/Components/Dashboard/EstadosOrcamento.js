@@ -15,7 +15,7 @@ export default function EstadosOrcamento(props) {
                 return
             }
 
-            alert("Erro de Servidor ao carregar estados")
+            return alert("Erro de Servidor ao carregar estados")
         })
         .catch(err => {
             alert(err)
