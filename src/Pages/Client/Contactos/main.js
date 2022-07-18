@@ -14,6 +14,7 @@ export default function Main() {
     const [telefone, setTelefone] = useState("")
     const [empresa, setEmpresa] = useState("")
     const [terms, setTerms] = useState(false)
+    // const [idCliente, setIdCliente] = useState("")
 
     return(
         <main>
@@ -106,8 +107,40 @@ export default function Main() {
         if(email === "")
             return alert("Introduza o Email do cliente")
 
-        const baseUrl = "http://localhost:3001/orcamento/createClient"
-        const data = {
+        const localSave = localStorage
+
+        let idDescricao = ""
+
+        const ultimo = localSave.length - 1 
+
+        for(let i = 0; i < localSave.length; i++) {
+            if(i <= ultimo - 1)
+                idDescricao += localSave.key(i) + ","
+            else
+                idDescricao += localSave.key(i)
+        }
+
+        let quantidade = ""
+
+        for(let i = 0; i < localSave.length; i++) {
+            const key = localSave.key(i)
+            if(i <= ultimo - 1)
+                if(localSave.getItem(key) === "true")
+                    quantidade += "1" + ","
+                else
+                    quantidade += localSave.getItem(key) + ","
+            else
+                if(localSave.getItem(key) === "true")
+                    quantidade += "1"
+                else
+                    quantidade += localSave.getItem(key)
+        }
+
+        console.log(idDescricao)
+        console.log(quantidade)
+
+        const baseUrlCreateClient = "http://localhost:3001/orcamento/createClient"
+        const dataClient = {
             nome: nome,
             telefone: telefone,
             email: email,
@@ -115,12 +148,40 @@ export default function Main() {
             empresa: empresa,
         }
 
-        axios.post(baseUrl, data)
+        axios.post(baseUrlCreateClient, dataClient)
         .then(response => {
-            if(response.data.success)
-                return alert(response.data.message)
+            if(!response.data.success)
+                return alert("Erro no cliente")
+
+            const dataClientAxios = response.data.data
+
+            console.log("Info cliente")
+            console.log(dataClientAxios)
+
+            const idCliente = dataClientAxios.id
+            console.log(idCliente)
 
             alert(response.data.message)
+
+            const baseUrlCreateOrcamento = "http://localhost:3001/orcamento/createOrcamentoById"
+            const dataOrcamento = {
+                idCliente: idCliente, 
+                idDescricao: idDescricao, 
+                quantidade: quantidade
+            }
+    
+            console.log(dataOrcamento)
+            axios.post(baseUrlCreateOrcamento, dataOrcamento)
+            .then(response => {
+                if(!response.data.success)
+                    return alert("Erro no orçamento")
+    
+                alert(response.data.message)
+            })
+            .catch(err => {
+                alert("Erro 34: " + err)
+            })
+
         })
         .catch(err => {
             alert("Erro 34: " + err)
