@@ -24,7 +24,7 @@ export default function Main() {
                             <div className="col-12">
                                 <div className="row pt-5">
 
-                                    <Tables campo1="Orçamento" campo2="Nome" campo3="Data" campo4="Estado" campo5="Total" campo6="Ações"/>
+                                    <Tables />
 
                                 </div>
                             </div>

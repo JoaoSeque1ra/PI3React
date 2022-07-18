@@ -88,7 +88,6 @@ export default function Tables() {
 
     };
 
-    
     return (  
         <DataTable columns={columns} data={infoOrcamento} pagination paginationComponentOptions={paginationOptions} />
     );    
