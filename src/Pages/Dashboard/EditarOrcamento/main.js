@@ -225,7 +225,7 @@ export default function Main() {
                                             const newValor = contems
 
                                             newValor.map((data) => {
-                                                if(data.id === value.target.id) {
+                                                if(data.id == value.target.id) {
                                                     data.valor = value.target.value
                                                     return setContems(newValor)
                                                 }
@@ -241,7 +241,7 @@ export default function Main() {
 
                                             newQuantidade.map((data) => {
                                                 
-                                                if(data.id === value.target.id) {
+                                                if(data.id == value.target.id) {
                                                     data.quantidade = parseInt(value.target.value)
                                                     return setContems(newQuantidade)
                                                 }
@@ -304,9 +304,10 @@ export default function Main() {
             .then(response => {
                 if(response.data.success)
                     if(index === contems.length - 1)
-                    return alert(response.data.message)
+                        return alert(response.data.message)
 
-                alert("Erro no servidor")
+                if(!response.data.success)        
+                   return alert("Erro no servidor")
             })
             .catch(err => {
                 alert(err)
