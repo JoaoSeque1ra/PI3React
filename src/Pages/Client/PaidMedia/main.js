@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import Buttons from '../../../Components/Buttons';
@@ -6,13 +6,24 @@ import Buttons from '../../../Components/Buttons';
 export default function Main() {
     const [packSelect, setPackSelect] = useState("")
 
+    useEffect(() => {
+        for(let i = 0; i < localStorage.length; i++) {
+            if(localStorage.key(i) === "32")
+                localStorage.removeItem("32")
+            if(localStorage.key(i) === "33")
+                localStorage.removeItem("33")
+            if(localStorage.key(i) === "34")
+                localStorage.removeItem("34")
+        }
+    })
+
     return (
         <main>
             <div className="container-fluid">
                 <div className="row">
 
                     <div className="pt-pageLeft">
-                        <Breadcrumbs route1="Orçamento" route2="/ Marketing Digital / Paid Media" textColor="text-yellow"/>
+                        <Breadcrumbs route1="Orçamento / Marketing Digital " route2="/ Paid Media" textColor="text-yellow"/>
                     </div>
 
                     <div className="col-12 offset-lg-1 col-lg-10">
@@ -33,7 +44,10 @@ export default function Main() {
                             
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" onClick={() => {
+                                        setPackSelect("plano-basico")
+                                        saveLocal(true, "32")
+                                    }} to={rotas()}/>
                                 </div>
                             </div>
                             
@@ -53,7 +67,10 @@ export default function Main() {
                             
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" onClick={()=> {
+                                        setPackSelect("plano-premium")
+                                        saveLocal(true, "33")
+                                    }} to={rotas()}/>
                                 </div>
                             </div>
 
@@ -73,7 +90,10 @@ export default function Main() {
                             
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" onClick={() => {
+                                        setPackSelect("plano-profissional")
+                                        saveLocal(true, "34")
+                                    }} to={rotas()}/>
                                 </div>
                             </div>
                             
@@ -102,4 +122,22 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function saveLocal(value, nome) {
+        if(value) {
+            localStorage.removeItem("paid-media")
+            return localStorage.setItem(nome,value)
+        }
+
+        localStorage.removeItem(nome)
+    }
+
+    function rotas() {
+        for(let i = 0; i < localStorage.length; i++) {
+            if(localStorage.key(i) === "gestao-redes-sociais")
+                return "marketing-digital/gestao-redes-sociais"
+        }
+
+        return "design-grafico"
+    }
 }

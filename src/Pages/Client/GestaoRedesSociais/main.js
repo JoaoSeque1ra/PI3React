@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 
@@ -6,6 +6,17 @@ import Buttons from '../../../Components/Buttons';
 
 export default function Main() {
     const [packSelect, setPackSelect] = useState("")
+
+    useEffect(() => {
+        for(let i = 0; i < localStorage.length; i++) {
+            if(localStorage.key(i) === "1")
+                localStorage.removeItem("1")
+            if(localStorage.key(i) === "2")
+                localStorage.removeItem("2")
+            if(localStorage.key(i) === "3")
+                localStorage.removeItem("3")
+        }
+    })
 
     return (
         <main>
@@ -22,7 +33,7 @@ export default function Main() {
                             <div className="col-md-6 col-lg-3 mb-5 mt-2">
                                 <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"38rem" }}>
                                     <div className="card-body">
-                                    <h6 class="card-subtitle mt-3 text-muted">Plano Mensal</h6>
+                                    <h6 className="card-subtitle mt-3 text-muted">Plano Mensal</h6>
                                     <p className="card-text mb-5 text-yellow fw-bold">START</p>
                                     <p className="card-text">2 redes sociais</p>
                                     <p className="card-text">2 posts/semana</p>
@@ -38,7 +49,10 @@ export default function Main() {
                             
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" onClick={() => {
+                                        setPackSelect("pack-start")
+                                        saveLocal(true, "1")
+                                    }} to={rotas()}/>
                                 </div>
                             </div>
                             
@@ -60,7 +74,10 @@ export default function Main() {
                                     </div>
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" onClick={() => {
+                                        setPackSelect("pack-boost")
+                                        saveLocal(true, "2")
+                                    }} to={rotas()}/>
                                 </div>
                             </div>
 
@@ -84,14 +101,17 @@ export default function Main() {
                             
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" onClick={() => {
+                                        setPackSelect("pack-bomb")
+                                        saveLocal(true, "3")
+                                    }} to={rotas()}/>
                                 </div>
                             </div>
                             
                             <div className="col-md-6 col-lg-3 mb-5 mt-2">
                                 <div className="card text-center h-100 border-warning bg-yellow mt-5" style={{ borderRadius: "3rem", maxHeight:"38rem" }}>
                                     <div className="card-body">
-                                        <h6 clasNames="card-subtitle mt-3 text-muted">Plano Mensal/Anual</h6>
+                                        <h6 className="card-subtitle mt-3 text-muted">Plano Mensal/Anual</h6>
                                         <p className="card-text mb-5 text-white fw-bold">PERSONALIZADO</p>
                                         <p className="card-text mb-3">nº redes sociais</p>
                                         <p className="card-text mb-3">nº posts/semana</p>
@@ -107,7 +127,7 @@ export default function Main() {
                         
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" to="marketing-digital/gestao-redes-sociais/packs"/>
                                 </div>
                             </div>
 
@@ -117,4 +137,21 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function saveLocal(value, nome) {
+        if(value) {
+            localStorage.removeItem("gestao-redes-sociais")
+            return localStorage.setItem(nome,value)
+        }
+        localStorage.removeItem(nome)
+    }
+
+    function rotas() {
+        for(let i = 0; i < localStorage.length; i++) {
+            if(localStorage.key(i) === "paid-media")
+                return "marketing-digital/paid-media"
+        }
+
+        return "design-grafico"
+    }
 }
