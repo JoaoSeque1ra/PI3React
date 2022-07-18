@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import CheckBox from '../../../Components/CheckBox';
@@ -17,6 +17,10 @@ export default function Main() {
     const [criacaoConteudos, setCriacaoConteudos] = useState(false);
     const [comAlojamento, setComAlojamento] = useState(false);
     const [comDominio, setComDominio] = useState(false);
+
+    useEffect(() => {
+        saveLocalNumber(numeroPaginas)
+    }, [numeroPaginas])
 
     const addNumeroPaginas = () => {
         if(numeroPaginas === 12) {
@@ -51,6 +55,7 @@ export default function Main() {
 
                                         <CheckBox onClick={valeu=>{
                                             setWebsite(valeu.target.checked)
+                                            saveLocal(valeu, "71")
                                         }} isActive={website} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
@@ -59,6 +64,7 @@ export default function Main() {
 
                                         <CheckBox onClick={valeu=>{
                                             setLandingPage(valeu.target.checked)
+                                            saveLocal(valeu, "72")
                                         }} isActive={landingPage} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
@@ -76,7 +82,6 @@ export default function Main() {
                                         <div className="btn-group float-end me-3">
                                             <button className="btn btn-sm btn-light rounded" onClick={() => {
                                                 removeNumeroPaginas()
-                                                saveLocalNumber(numeroPaginas, "teste")
                                             }}>
                                                 <ExportIcons.Remove width={22} height={22} />
                                             </button>
@@ -85,7 +90,7 @@ export default function Main() {
                                             
                                             <button className="btn btn-sm btn-light rounded" onClick={() => {
                                                 addNumeroPaginas()
-                                                saveLocalNumber(numeroPaginas, "teste")
+                                                saveLocalNumber(numeroPaginas)
                                             }} >
                                                 <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
                                             </button>
@@ -95,21 +100,25 @@ export default function Main() {
 
                                 <CheckBox onClick={valeu=>{
                                     setComPortfolio(valeu.target.checked)
+                                    saveLocal(valeu, "73")
                                 }} isActive={comPortfolio} name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um portfolio é uma coleção de trabalhos que ajuda o cliente a perceber o tipo de serviços que a sua empresa já realizou." />
 
                                 <CheckBox onClick={valeu=>{
                                     setCriacaoConteudos(valeu.target.checked)
+                                    saveLocal(valeu, "74")
                                 }} isActive={criacaoConteudos} name="Com criação de conteúdos textuais" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommun?" />
 
                                 <CheckBox onClick={valeu=>{
                                     setComAlojamento(valeu.target.checked)
+                                    saveLocal(valeu, "75")
                                 }} isActive={comAlojamento} name="Com alojamento" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="O alojamento web permite que a sua loja não só esteja online como atualiza regularmente o seu hardware para um melhor desempenho e maior proteção." />
 
                                 <CheckBox onClick={valeu=>{
                                     setComDominio(valeu.target.checked)
+                                    saveLocal(valeu, "76")
                                 }} isActive={comDominio} name="Com domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="O url do seu site será a primeira coisa que os visitantes irão ver. O domínio torna mais fácil a identificação da loja e aumenta o reconhecimento da marca e da sua empresa." />
                             
@@ -117,7 +126,7 @@ export default function Main() {
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
                                 <Buttons color="btn-transparent" text="Anterior" />
-                                <Buttons color="btn-purple" text="Seguinte" />
+                                <Buttons color="btn-purple" text="Seguinte" to={"comunicacao-consultoria"}/>
                             </div>
                         </div>
                     </div>
@@ -135,13 +144,29 @@ export default function Main() {
     );
 
     function saveLocal(value, nome) {
-        if(value.target.checked)
+        if(value.target.checked) {
+            localStorage.removeItem("website")
             return localStorage.setItem(nome,value.target.checked)
+        }
         localStorage.removeItem(nome)
     }
 
-    function saveLocalNumber(value, nome) {
-        localStorage.setItem(nome,value)
+    function saveLocalNumber(value) {
+        console.log(value)
+        if(value < 5) {
+            localStorage.removeItem("69")
+            localStorage.removeItem("70")
+            return localStorage.setItem("68",true)
+        }
+        if(value < 10) {
+            localStorage.removeItem("68")
+            localStorage.removeItem("70")
+            return localStorage.setItem("69",true)
+        }
+
+        localStorage.removeItem("68")
+        localStorage.removeItem("69")
+        return localStorage.setItem("70",true)
     }
 
 }

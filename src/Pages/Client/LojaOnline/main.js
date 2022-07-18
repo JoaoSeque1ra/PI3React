@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Breadcrumbs from "../../../Components/Breadcrumb";
 import CheckBox from "../../../Components/CheckBox";
@@ -12,9 +12,19 @@ import ImagemLojaOnline from "../../../Assets/Images/lojas_online-1.png";
 export default function Main() {
   const [numeroPaginas, setNumeroPaginas] = useState(1)
   const [comIntegracao, setComIntegracao] = useState(false)
+
+  const [produto, setProduto] = useState(false)
+  const [contactos, setContactos] = useState(false)
+  const [equipa, setEquipa] = useState(false)
+  const [outros, setOutros] = useState(false)
+
   const [criacaoConteudos, setCriacaoConteudos] = useState(false)
   const [alojamento, setAlojamento] = useState(false)
   const [dominio, setDominio] = useState(false)
+
+  useEffect(() => {
+    saveLocalNumber(numeroPaginas)
+  }, [numeroPaginas])
 
   const addNumeroPaginas = () => {
     if(numeroPaginas === 12) {
@@ -53,7 +63,9 @@ export default function Main() {
                             <button className="btn btn-sm btn-light rounded" onClick={removeNumeroPaginas}>
                               <ExportIcons.Remove width={22} height={22} />
                             </button>
+                            
                             <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numeroPaginas} min={1} max={12} disabled/>
+
                             <button className="btn btn-sm btn-light rounded" onClick={addNumeroPaginas} >
                               <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
                             </button>
@@ -62,7 +74,9 @@ export default function Main() {
                 </div>
 
                 <CheckBox
-                  onClick={value=>setComIntegracao(value.target.checked)} isActive={comIntegracao}
+                  onClick={value=>{
+                    setComIntegracao(value.target.checked)
+                  }} isActive={comIntegracao}
                   name="Com Integração"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -77,10 +91,14 @@ export default function Main() {
                         <input
                           className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
-                          id="inlineCheckbox1"
+                          id="checkBoxProduto"
                           value="Produtos"
+                          onClick={value => {
+                            setProduto(value.target.checked)
+                            saveLocal(value, "80")
+                          }}
                         />
-                        <label className="form-check-label" htmlFor="inlineCheckbox1">
+                        <label className="form-check-label" htmlFor="checkBoxProduto">
                           Produtos
                         </label>
                       </div>
@@ -88,9 +106,14 @@ export default function Main() {
                         <input
                           className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
+                          id="checkBoxContactos"
                           value="Contactos"
+                          onClick={value => {
+                            setProduto(value.target.checked)
+                            saveLocal(value, "81")
+                          }}
                         />
-                        <label className="form-check-label" htmlFor="inlineCheckbox2">
+                        <label className="form-check-label" htmlFor="checkBoxContactos">
                           Contactos
                         </label>
                       </div>
@@ -98,9 +121,14 @@ export default function Main() {
                         <input
                           className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
+                          id="checkBoxEquipas"
                           value="Equipas"
+                          onClick={value => {
+                            setProduto(value.target.checked)
+                            saveLocal(value, "82")
+                          }}
                         />
-                        <label className="form-check-label" htmlFor="inlineCheckbox3">
+                        <label className="form-check-label" htmlFor="checkBoxEquipas">
                           Equipas
                         </label>
                       </div>
@@ -108,9 +136,14 @@ export default function Main() {
                         <input
                           className="form-check-input text-purple cursor-pointer"
                           type="checkbox"
+                          id="checkBoxOutros"
                           value="Outros"
+                          onClick={value => {
+                            setProduto(value.target.checked)
+                            saveLocal(value, "83")
+                          }}
                         />
-                        <label className="form-check-label" htmlFor="inlineCheckbox4">
+                        <label className="form-check-label" htmlFor="checkBoxOutros">
                           Outros
                         </label>
                       </div>
@@ -119,7 +152,10 @@ export default function Main() {
                 </div>
 
                 <CheckBox
-                  onClick={value=>setCriacaoConteudos(value.target.checked)} isActive={criacaoConteudos}
+                  onClick={value=>{
+                    setCriacaoConteudos(value.target.checked)
+                    saveLocal(value, "86")
+                  }} isActive={criacaoConteudos}
                   name="Com criação de conteúdos textuais"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -128,7 +164,10 @@ export default function Main() {
                 <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommun?" />
 
                 <CheckBox
-                  onClick={value=>setAlojamento(value.target.checked)} isActive={alojamento}
+                  onClick={value=>{
+                    setAlojamento(value.target.checked)
+                    saveLocal(value,"85")
+                  }} isActive={alojamento}
                   name="Com alojamento"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -137,7 +176,10 @@ export default function Main() {
                 <CardsCheckBox text="O alojamento web permite que a sua loja não só esteja online como atualiza regularmente o seu hardware para um melhor desempenho e maior proteção." />
 
                 <CheckBox
-                  onClick={value=>setDominio(value.target.checked)} isActive={dominio}
+                  onClick={value=>{
+                    setDominio(value.target.checked)
+                    saveLocal(value, "84")
+                  }} isActive={dominio}
                   name="Com domínio"
                   color="bg-checkBoxPurple"
                   colorIcon="colorIconPurple"
@@ -148,7 +190,7 @@ export default function Main() {
 
               <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
                 <Buttons color="btn-transparent" text="Anterior" />
-                <Buttons color="btn-purple" text="Seguinte" />
+                <Buttons color="btn-purple" text="Seguinte" to={"comunicacao-consultoria"}/>
               </div>
             </div>
           </div>
@@ -168,4 +210,31 @@ export default function Main() {
       </div>
     </main>
   );
+
+  function saveLocal(value, nome) {
+    if(value.target.checked) {
+        localStorage.removeItem("website")
+        return localStorage.setItem(nome,value.target.checked)
+    }
+    localStorage.removeItem(nome)
+  }
+
+  function saveLocalNumber(value) {
+      console.log(value)
+      if(value < 5) {
+          localStorage.removeItem("78")
+          localStorage.removeItem("79")
+          return localStorage.setItem("77",true)
+      }
+      if(value < 10) {
+          localStorage.removeItem("77")
+          localStorage.removeItem("79")
+          return localStorage.setItem("78",true)
+      }
+
+      localStorage.removeItem("77")
+      localStorage.removeItem("78")
+      return localStorage.setItem("79",true)
+  }
+
 }
