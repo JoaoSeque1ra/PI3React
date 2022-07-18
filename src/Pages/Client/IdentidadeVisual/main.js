@@ -114,6 +114,25 @@ export default function Main () {
 
     function rotas() {
         localStorage.removeItem("identidade-visual")
-        return "website-loja-online"
+
+        return rotas2()
+    }
+
+    function rotas2() {
+        const localSave = localStorage
+
+        console.log(localSave.key(0))
+
+        for(let i = 0; i < localSave.length; i++) {
+            console.log(localSave.key(i))
+            if(localSave.key(i) === "marketing-digital")
+                return "marketing-digital"
+            if(localSave.key(i) === "comunicacao-consultoria")
+                return "comunicacao-consultoria"
+            if(localSave.key(i) === "website-loja-online")
+                return "website-loja-online"
+        }
+
+        return "contactos"
     }
 }

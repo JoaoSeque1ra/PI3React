@@ -29,7 +29,7 @@ export default function Main() {
                     <div className="col-12 offset-lg-1 col-lg-10">
                         <div className="row">
 
-                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
+                            <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
                                 <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"44rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder">Facebook/ Instagram Ads</h5>
@@ -51,7 +51,7 @@ export default function Main() {
                                 </div>
                             </div>
                             
-                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
+                            <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
                                 <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"44rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder">Google Ads</h5>
@@ -74,7 +74,7 @@ export default function Main() {
                                 </div>
                             </div>
 
-                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
+                            <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
                                 <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"44rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder">Facebook/Instagram &#38; Google Ads</h5>
@@ -97,7 +97,7 @@ export default function Main() {
                                 </div>
                             </div>
                             
-                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
+                            {/* <div className="col-md-6 col-lg-3 mb-5 mt-2">
                                 <div className="card text-center h-100 border-warning bg-yellow mt-5" style={{ borderRadius: "3rem", maxHeight:"44rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder"> Facebook/Instagram Google Ads</h5>
@@ -114,7 +114,7 @@ export default function Main() {
                                 <div className="text-center mt-3 mb-2">
                                     <Buttons color="btn-yellow" text="Selecionar"/>
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
@@ -138,6 +138,24 @@ export default function Main() {
                 return "marketing-digital/gestao-redes-sociais"
         }
 
-        return "design-grafico"
+        return rotas2()
+    }
+
+    function rotas2() {
+        const localSave = localStorage
+
+        console.log(localSave.key(0))
+
+        for(let i = 0; i < localSave.length; i++) {
+            console.log(localSave.key(i))
+            if(localSave.key(i) === "design-grafico")
+                return "design-grafico"
+            if(localSave.key(i) === "comunicacao-consultoria")
+                return "comunicacao-consultoria"
+            if(localSave.key(i) === "website-loja-online")
+                return "website-loja-online"
+        }
+
+        return "contactos"
     }
 }

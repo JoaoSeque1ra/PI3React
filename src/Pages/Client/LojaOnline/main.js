@@ -187,7 +187,7 @@ export default function Main() {
 
               <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
                 <Buttons color="btn-transparent" text="Anterior" />
-                <Buttons color="btn-purple" text="Seguinte" to={"comunicacao-consultoria"}/>
+                <Buttons color="btn-purple" text="Seguinte" to={rotas2()}/>
               </div>
             </div>
           </div>
@@ -232,6 +232,33 @@ export default function Main() {
       localStorage.removeItem("77")
       localStorage.removeItem("78")
       return localStorage.setItem("79",true)
+  }
+
+  function rotas() {
+    for(let i = 0; i < localStorage.length; i++) {
+        if(localStorage.key(i) === "website")
+            return "website-loja-online/website"
+    }
+
+    return rotas2()
+  }
+
+  function rotas2() {
+      const localSave = localStorage
+
+      console.log(localSave.key(0))
+
+      for(let i = 0; i < localSave.length; i++) {
+          console.log(localSave.key(i))
+          if(localSave.key(i) === "design-grafico")
+              return "design-grafico"
+          if(localSave.key(i) === "comunicacao-consultoria")
+              return "comunicacao-consultoria"
+          if(localSave.key(i) === "marketing-digital")
+              return "marketing-digital"
+      }
+
+      return "contactos"
   }
 
 }
