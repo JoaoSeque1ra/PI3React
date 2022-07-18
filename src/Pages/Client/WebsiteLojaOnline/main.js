@@ -71,7 +71,7 @@ export default function Main() {
                             </div>
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
-                                <Buttons color="btn-transparent" text="Anterior" to="design-grafico"/>
+                                <Buttons color="btn-transparent" text="Anterior" to=" "/>
                                 <Buttons color="btn-purple" text="Seguinte" to={rotas()}/>
                             </div>
                         </div>
@@ -101,6 +101,8 @@ export default function Main() {
 
         console.log(localSave.key(0))
 
+        localSave.removeItem("website-loja-online")
+
         for(let i = 0; i < localSave.length; i++) {
             console.log(localSave.key(i))
             if(localSave.key(i) === "website")
@@ -109,6 +111,24 @@ export default function Main() {
                 return "website-loja-online/loja-online"
         }
 
-        return "comunicacao-consultoria"
+        return rotas2()
+    }
+
+    function rotas2() {
+        const localSave = localStorage
+
+        console.log(localSave.key(0))
+
+        for(let i = 0; i < localSave.length; i++) {
+            console.log(localSave.key(i))
+            if(localSave.key(i) === "marketing-digital")
+                return "marketing-digital"
+            if(localSave.key(i) === "comunicacao-consultoria")
+                return "comunicacao-consultoria"
+            if(localSave.key(i) === "design-grafico")
+                return "design-grafico"
+        }
+
+        return "contactos"
     }
 }
