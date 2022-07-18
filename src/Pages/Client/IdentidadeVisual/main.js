@@ -90,7 +90,7 @@ export default function Main () {
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
                                 <Buttons color="btn-transparent" text="Anterior" to={"design-grafico"}/>
-                                <Buttons color="btn-orange" text="Seguinte" to={"website-loja-online"}/>
+                                <Buttons color="btn-orange" text="Seguinte" to={rotas()}/>
                             </div>
                         </div>
                     </div>
@@ -110,5 +110,10 @@ export default function Main () {
         if(value.target.checked)
             return localStorage.setItem(nome,value.target.checked)
         localStorage.removeItem(nome)
+    }
+
+    function rotas() {
+        localStorage.removeItem("identidade-visual")
+        return "website-loja-online"
     }
 }

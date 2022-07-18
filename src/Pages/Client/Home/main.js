@@ -11,7 +11,7 @@ export default function Main() {
     const [comunicacaoConsultoria, setComunicacaoConsultoria] = useState(false)
 
     useEffect(() => {
-
+        localStorage.clear()
     })
 
     return (
