@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Breadcrumbs from '../../../Components/Breadcrumb';
 import RedesSociaisIcons from '../../../Components/RedesSociaisIcons';
@@ -6,6 +6,16 @@ import OptionsPacks from '../../../Components/OptionsPacks';
 import CheckBoxMini from '../../../Components/CheckBoxMini';
 
 export default function Main() {
+    const [selectFacebook, setSelectFacebook] = useState(true)
+    const [selectInsta, setSelectInsta] = useState(true)
+    const [selectTwitter, setSelectTwitter] = useState(true)
+    const [selectTiktok, setSelectTiktok] = useState(true)
+    const [selectPint, setSelectPint] = useState(true)
+    const [selectGoogle, setSelectGoogle] = useState(true)
+    const [selectLink, setSelectLink] = useState(true)
+    const [selectYoutube, setSelectYoutube] = useState(true)
+
+
     return (  
         <main className='container-fluid'>
             <div className='row vh-100'>
@@ -28,21 +38,38 @@ export default function Main() {
                                     <div className="container-fluid">
                                         <div className="row">
 
-                                        <RedesSociaisIcons nome="facebook" />
+                                        <RedesSociaisIcons nome="facebook" onClick={(value) => {
+                                            setSelectFacebook(current => !current)
+                                            saveLocal(selectFacebook, "4")
+                                        }}/>
 
-                                        <RedesSociaisIcons nome="insta" />
+                                        <RedesSociaisIcons nome="insta" onClick={(value) => {
+                                            setSelectInsta(current => !current)
+                                        }}/>
 
-                                        <RedesSociaisIcons nome="twitter" />
+                                        <RedesSociaisIcons nome="twitter" onClick={(value) => {
+                                            setSelectTwitter(current => !current)
+                                        }}/>
 
-                                        <RedesSociaisIcons nome="tiktok" />
+                                        <RedesSociaisIcons nome="tiktok" onClick={(value) => {
+                                            setSelectTiktok(current => !current)
+                                        }}/>
 
-                                        <RedesSociaisIcons nome="pint" />
+                                        <RedesSociaisIcons nome="pint" onClick={(value) => {
+                                            setSelectPint(current => !current)
+                                        }}/>
 
-                                        <RedesSociaisIcons nome="google" />
+                                        <RedesSociaisIcons nome="google" onClick={(value) => {
+                                            setSelectGoogle(current => !current)
+                                        }} />
 
-                                        <RedesSociaisIcons nome="link" />
+                                        <RedesSociaisIcons nome="link" onClick={(value) => {
+                                            setSelectLink(current => !current)
+                                        }}/>
                                         
-                                        <RedesSociaisIcons nome="youtube" />
+                                        <RedesSociaisIcons nome="youtube" onClick={(value) => {
+                                            setSelectYoutube(current => !current)
+                                        }}/>
 
                                         </div>
                                     </div>
@@ -133,4 +160,10 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function saveLocal(value, nome) {
+        if(value)
+            return localStorage.setItem(nome,value)
+        localStorage.removeItem(nome)
+    }
 }

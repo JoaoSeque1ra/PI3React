@@ -2,7 +2,7 @@ import React from 'react';
 
 import Icons from '../Helpers/ExportIcons';
 
-export default function RedesSociaisIcons({nome}) {
+export default function RedesSociaisIcons(props) {
     function changeIcon(nome) {
         switch (nome) {
             case "facebook":
@@ -28,8 +28,8 @@ export default function RedesSociaisIcons({nome}) {
     }
 
     return (
-        <button className="col-lg-2 mb-5 me-5 border-0 bg-transparent">
-            {changeIcon(nome)}
+        <button className="col-lg-2 mb-5 me-5 border-0 bg-transparent" onClick={(value) => props.onClick(value)}>
+            {changeIcon(props.nome)}
         </button>
     );
 }
