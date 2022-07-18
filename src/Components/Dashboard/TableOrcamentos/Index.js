@@ -31,6 +31,8 @@ export default function Tables() {
             name: "Orçamentos",
             selector: row => "#" + row.id,
             sortable: true,
+            minWidth: "10%",
+            maxWidth: "15%",
             style: {
                 fontSize: '1rem'
             },
@@ -38,6 +40,7 @@ export default function Tables() {
         {
             name: "Nome",
             selector: row => row.cliente.nome,
+            minWidth: "30%",
             sortable: true,
             style: {
                 fontSize: '1rem'
@@ -47,6 +50,7 @@ export default function Tables() {
             name: "Data",
             selector: row => row.data_orcamento,
             sortable: true,
+            minWidth: "15%",
             hide: 'md',
             style: {
                 fontSize: '1rem'
@@ -58,6 +62,7 @@ export default function Tables() {
             sortable: true,
             center: true,
             hide: 'md',
+            minWidth: "15%",
             cell: row => (
                 <EstadoTabelas estado={row.estadoPedido.estado}/>
             ),
@@ -70,12 +75,14 @@ export default function Tables() {
             selector: row => row.valor + "€",
             sortable: true,
             right: true,
+            minWidth: "15%",
             style: {
                 fontSize: '1rem'
             },
         },
         {
             name: "Ações",
+            minWidth: "15%",
             // selector: row => row.campo6,
             button: true,
             cell: (row) => <ButtonTabelas route={"/dashboard/editar-orcamento/"} id={row.id}/>
