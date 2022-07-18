@@ -30,7 +30,7 @@ export default function Main() {
                         <div className="row">
 
                             <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
-                                <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"44rem" }}>
+                                <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"35rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder">Facebook/ Instagram Ads</h5>
                                         <h6 className="card-subtitle text-muted">Plano Mensal</h6>
@@ -52,7 +52,7 @@ export default function Main() {
                             </div>
                             
                             <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
-                                <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"44rem" }}>
+                                <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"35rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder">Google Ads</h5>
                                         <h6 className="card-subtitle text-muted">Plano Mensal</h6>
@@ -75,7 +75,7 @@ export default function Main() {
                             </div>
 
                             <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
-                                <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"44rem" }}>
+                                <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"35rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder">Facebook/Instagram &#38; Google Ads</h5>
                                         <h6 className="card-subtitle text-muted">Plano Mensal</h6>

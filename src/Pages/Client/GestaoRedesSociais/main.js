@@ -31,7 +31,7 @@ export default function Main() {
                         <div className="row">
 
                             <div className="col-md-6 col-lg-3 mb-5 mt-2">
-                                <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"38rem" }}>
+                                <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"38rem" }}>
                                     <div className="card-body">
                                     <h6 className="card-subtitle mt-3 text-muted">Plano Mensal</h6>
                                     <p className="card-text mb-5 text-yellow fw-bold">START</p>
@@ -57,7 +57,7 @@ export default function Main() {
                             </div>
                             
                             <div className="col-md-6 col-lg-3 mb-5 mt-2">
-                                <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"38rem" }}>
+                                <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"38rem" }}>
                                     <div className="card-body">
                                         <h6 className="card-subtitle mt-3 text-muted">Plano Mensal</h6>
                                         <p className="card-text mb-5 text-yellow fw-bold">BOOST</p>
@@ -82,7 +82,7 @@ export default function Main() {
                             </div>
 
                             <div className="col-md-6 col-lg-3 mb-5 mt-2">
-                                <div className="card text-center h-100 border-warning mt-5" style={{ borderRadius: "3rem", maxHeight:"38rem" }}>
+                                <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"38rem" }}>
                                     <div className="card-body">
                                         <h6 className="card-subtitle mt-3 text-muted">Plano Mensal</h6>
                                         <p className="card-text mb-5 text-yellow fw-bold">BOMB</p>
@@ -109,7 +109,7 @@ export default function Main() {
                             </div>
                             
                             <div className="col-md-6 col-lg-3 mb-5 mt-2">
-                                <div className="card text-center h-100 border-warning bg-yellow mt-5" style={{ borderRadius: "3rem", maxHeight:"38rem" }}>
+                                <div className="card text-center border-warning bg-yellow mt-5" style={{ borderRadius: "3rem", minHeight:"38rem" }}>
                                     <div className="card-body">
                                         <h6 className="card-subtitle mt-3 text-muted">Plano Mensal/Anual</h6>
                                         <p className="card-text mb-5 text-white fw-bold">PERSONALIZADO</p>

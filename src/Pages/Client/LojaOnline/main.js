@@ -187,7 +187,7 @@ export default function Main() {
 
               <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
                 <Buttons color="btn-transparent" text="Anterior" to={"website-loja-online"}/>
-                <Buttons color="btn-purple" text="Seguinte" to={rotas2()}/>
+                <Buttons color="btn-purple" text="Seguinte" to={rotas()}/>
               </div>
             </div>
           </div>
@@ -235,6 +235,8 @@ export default function Main() {
   }
 
   function rotas() {
+    localStorage.removeItem("loja-online")
+
     for(let i = 0; i < localStorage.length; i++) {
         if(localStorage.key(i) === "website")
             return "website-loja-online/website"

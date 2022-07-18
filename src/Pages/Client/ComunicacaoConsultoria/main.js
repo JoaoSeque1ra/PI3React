@@ -61,7 +61,7 @@ export default function Main() {
 
                             <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
                                 <Buttons color="btn-transparent" text="Anterior" to=" "/>
-                                <Buttons color="btn-yellow" text="Seguinte" to="contactos"/>
+                                <Buttons color="btn-yellow" text="Seguinte" to={rotas()}/>
                             </div>
                         </div>
                     </div>
