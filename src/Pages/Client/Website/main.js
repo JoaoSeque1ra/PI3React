@@ -49,13 +49,17 @@ export default function Main() {
 
                                     <div className={landingPage ? "d-none" : "col-12 col-lg-6"}>
 
-                                        <CheckBox onClick={valeu=>setWebsite(valeu.target.checked)} isActive={website} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                        <CheckBox onClick={valeu=>{
+                                            setWebsite(valeu.target.checked)
+                                        }} isActive={website} name="Website" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
 
                                     <div className={website ? "d-none" : "col-lg-6"}>
 
-                                        <CheckBox onClick={valeu=>setLandingPage(valeu.target.checked)} isActive={landingPage} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                        <CheckBox onClick={valeu=>{
+                                            setLandingPage(valeu.target.checked)
+                                        }} isActive={landingPage} name="Landing Page" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
 
                                     </div>
 
@@ -70,29 +74,43 @@ export default function Main() {
                                         Número de páginas
 
                                         <div className="btn-group float-end me-3">
-                                            <button className="btn btn-sm btn-light rounded" onClick={removeNumeroPaginas}>
+                                            <button className="btn btn-sm btn-light rounded" onClick={() => {
+                                                removeNumeroPaginas()
+                                                saveLocalNumber(numeroPaginas, "teste")
+                                            }}>
                                                 <ExportIcons.Remove width={22} height={22} />
                                             </button>
                                             
                                             <input type="number" className="text-white text-center bg-transparent border-0 px-3" value={numeroPaginas} min={1} max={12} disabled/>
                                             
-                                            <button className="btn btn-sm btn-light rounded" onClick={addNumeroPaginas} >
+                                            <button className="btn btn-sm btn-light rounded" onClick={() => {
+                                                addNumeroPaginas()
+                                                saveLocalNumber(numeroPaginas, "teste")
+                                            }} >
                                                 <ExportIcons.Add className='colorIconBlack' width={22} height={22} />
                                             </button>
                                         </div>
                                     </label>
                                 </div>
 
-                                <CheckBox onClick={valeu=>setComPortfolio(valeu.target.checked)} isActive={comPortfolio} name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    setComPortfolio(valeu.target.checked)
+                                }} isActive={comPortfolio} name="Com portfólio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Um portfolio é uma coleção de trabalhos que ajuda o cliente a perceber o tipo de serviços que a sua empresa já realizou." />
 
-                                <CheckBox onClick={valeu=>setCriacaoConteudos(valeu.target.checked)} isActive={criacaoConteudos} name="Com criação de conteúdos textuais" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    setCriacaoConteudos(valeu.target.checked)
+                                }} isActive={criacaoConteudos} name="Com criação de conteúdos textuais" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="Pretende que todos os conteúdos textuais a ser implementados na loja online sejam realizados pela Incommun?" />
 
-                                <CheckBox onClick={valeu=>setComAlojamento(valeu.target.checked)} isActive={comAlojamento} name="Com alojamento" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    setComAlojamento(valeu.target.checked)
+                                }} isActive={comAlojamento} name="Com alojamento" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="O alojamento web permite que a sua loja não só esteja online como atualiza regularmente o seu hardware para um melhor desempenho e maior proteção." />
 
-                                <CheckBox onClick={valeu=>setComDominio(valeu.target.checked)} isActive={comDominio} name="Com domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
+                                <CheckBox onClick={valeu=>{
+                                    setComDominio(valeu.target.checked)
+                                }} isActive={comDominio} name="Com domínio" color="bg-checkBoxPurple" colorIcon="colorIconPurple" textColor="text-purple" />
                                 <CardsCheckBox text="O url do seu site será a primeira coisa que os visitantes irão ver. O domínio torna mais fácil a identificação da loja e aumenta o reconhecimento da marca e da sua empresa." />
                             
                             </div>
@@ -115,5 +133,15 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function saveLocal(value, nome) {
+        if(value.target.checked)
+            return localStorage.setItem(nome,value.target.checked)
+        localStorage.removeItem(nome)
+    }
+
+    function saveLocalNumber(value, nome) {
+        localStorage.setItem(nome,value)
+    }
 
 }
