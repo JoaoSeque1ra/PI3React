@@ -59,12 +59,20 @@ import { ReactComponent as Facebook } from '../Assets/Svg/facebook.svg';
 import { ReactComponent as Insta } from '../Assets/Svg/insta.svg';
 import { ReactComponent as Twitter } from '../Assets/Svg/twitter.svg';
 import { ReactComponent as Tiktok } from '../Assets/Svg/tiktok.svg';
-import { ReactComponent as Pint } from '../Assets/Svg/pint.svg'
 import { ReactComponent as Google } from '../Assets/Svg/googleM.svg'
 import { ReactComponent as LinkDin } from '../Assets/Svg/linkDin.svg'
 import { ReactComponent as Youtube } from '../Assets/Svg/youtube.svg'
 
+import { ReactComponent as FacebookSelect } from '../Assets/Svg/facebookSelect.svg'
+import { ReactComponent as InstaSelect } from '../Assets/Svg/instaSelect.svg';
+import { ReactComponent as TwitterSelect } from '../Assets/Svg/twitterSelect.svg';
+import { ReactComponent as TiktokSelect } from '../Assets/Svg/tiktokSelect.svg';
+import { ReactComponent as GoogleSelect } from '../Assets/Svg/googleSelect.svg'
+import { ReactComponent as LinkDinSelect } from '../Assets/Svg/LinkSelect.svg'
+import { ReactComponent as YoutubeSelect } from '../Assets/Svg/youtubeSelect.svg'
+
+
 export default { MarketingDigitalIcon, DesignGrafico, WebsiteLojaOnline, ComunicacaoConsultoria, GestaoRedesSociais, PaidMedia, EmailSMS, OtimizacaoSEOSEM, Preco, Orcamento, Ver, Novo, Cliente, Dados, MarketingComunicacao, NumeroPaginas, Add, Remove, OrganizacaoEventos, 
 IdentidadeVisual, BrandingRebranding, EstrategiaMarca, RegistoMarca, DesignEditorial, AnaliseConcorrencia, CriacaoLogotipo, PaletaCores, SloganMarca, ManualNormasGraficas, Estacionario, Website, LojaOnlineEcommerce, SuporteManutencao, ServidorDominio, LandingPage,
 Portfolio, CriacaoConteudosTextuais, Alojamento, Dominio, Integracao, AssessoriaCriacaoConteudo, AddClient, EditOrcamento, Guardar, ClienteBorder, Facebook, Insta, Twitter, Tiktok,
-Pint, Google, LinkDin, Youtube };
+Google, LinkDin, Youtube, FacebookSelect, InstaSelect, TwitterSelect, TiktokSelect, GoogleSelect, LinkDinSelect, YoutubeSelect};

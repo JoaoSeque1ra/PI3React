@@ -2,14 +2,15 @@ import React from 'react';
 
 export default function OptionsPacks(props) {
     const array = []
-    
+
     return (
         <>
             <div className='col-4 text-blue mt-4'>
                 {props.text}
             </div>
             <div className='col-5 mt-4'>
-                <select className="form-select">
+                <select className="form-select" onChange={(value)=>props.onChange(value)}>
+                    <option>Selecione...</option>
                     <LoadOptions />
                 </select>
             </div>
