@@ -56,7 +56,7 @@ export default function Main() {
                                 </div>
                             </div>
                             
-                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
+                            <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
                                 <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"38rem" }}>
                                     <div className="card-body">
                                         <h6 className="card-subtitle mt-3 text-muted">Plano Mensal</h6>
@@ -81,7 +81,7 @@ export default function Main() {
                                 </div>
                             </div>
 
-                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
+                            <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
                                 <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"38rem" }}>
                                     <div className="card-body">
                                         <h6 className="card-subtitle mt-3 text-muted">Plano Mensal</h6>
@@ -108,7 +108,7 @@ export default function Main() {
                                 </div>
                             </div>
                             
-                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
+                            {/* <div className="col-md-6 col-lg-3 mb-5 mt-2">
                                 <div className="card text-center border-warning bg-yellow mt-5" style={{ borderRadius: "3rem", minHeight:"38rem" }}>
                                     <div className="card-body">
                                         <h6 className="card-subtitle mt-3 text-muted">Plano Mensal/Anual</h6>
@@ -129,7 +129,7 @@ export default function Main() {
                                 <div className="text-center mt-3 mb-2">
                                     <Buttons color="btn-yellow" text="Selecionar" to="marketing-digital/gestao-redes-sociais/packs"/>
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>

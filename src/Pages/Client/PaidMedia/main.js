@@ -29,7 +29,7 @@ export default function Main() {
                     <div className="col-12 offset-lg-1 col-lg-10">
                         <div className="row">
 
-                            <div className="col-md-6 col-lg-3 offset-lg-1 mb-5 mt-2">
+                            <div className="col-md-6 col-lg-3 mb-5 mt-2">
                                 <div className="card text-center border-warning mt-5" style={{ borderRadius: "3rem", minHeight:"35rem" }}>
                                     <div className="card-body">
                                         <h5 className="card-title mb-5 mt-2 fw-bolder">Facebook/ Instagram Ads</h5>
