@@ -181,7 +181,7 @@ export default function Main() {
 
                         <div className="col-md-5 offset-md-7 col-lg-6 offset-lg-5 text-end my-5">
                             <Buttons color="btn-transparent" text="Anterior" to=" "/>
-                            <Buttons color="btn-blue" text="Seguinte" to={rotas2()}/>
+                            <Buttons color="btn-blue" text="Seguinte" to={rotas()}/>
                         </div>
 
                     </div>
@@ -192,6 +192,22 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function rotas() {
+        const localSave = localStorage
+
+        console.log(localSave.key(0))
+
+        localSave.removeItem("gestao-redes-sociais")
+
+        for(let i = 0; i < localSave.length; i++) {
+            console.log(localSave.key(i))
+            if(localSave.key(i) === "paid-media")
+                return "marketing-digital/paid-media"
+        }
+
+        return rotas2()
+    }
 
     function rotas2() {
         const localSave = localStorage

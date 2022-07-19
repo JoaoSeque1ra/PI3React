@@ -127,7 +127,7 @@ export default function Main() {
                         
                                 </div>
                                 <div className="text-center mt-3 mb-2">
-                                    <Buttons color="btn-yellow" text="Selecionar" to="marketing-digital/gestao-redes-sociais/packs"/>
+                                    <Buttons color="btn-yellow" text="Selecionar" to={rotasPacks()}/>
                                 </div>
                             </div>
 
@@ -137,6 +137,16 @@ export default function Main() {
             </div>
         </main>
     );
+
+    function rotasPacks() {
+        const localSave = localStorage
+
+        console.log(localSave.key(0))
+
+        localStorage.removeItem("gestao-redes-sociais")
+
+        return "marketing-digital/gestao-redes-sociais/packs"
+    }
 
     function saveLocal(value, nome) {
         if(value) {
