@@ -7,6 +7,7 @@ export function ComunicacaoConsultoria() {
     useEffect(()=>{
         document.title ="Comunicação e Consultoria"
     })
+    
     return (  
         <>
             <Navbar />
