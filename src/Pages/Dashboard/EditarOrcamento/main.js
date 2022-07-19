@@ -6,7 +6,7 @@ import NavbarDashboardLg from '../../../Components/Dashboard/NavbarDashboard/Nav
 import BreadcrumbsDashboard from '../../../Components/Dashboard/Breadcrumb';
 import ButtonDashboard from '../../../Components/Dashboard/Button';
 import TablesVerOrcamento from '../../../Components/Dashboard/TableVerOrcamento';
-import EstadosOrcamento from '../../../Components/Dashboard/EstadosOrcamento';
+// import EstadosOrcamento from '../../../Components/Dashboard/EstadosOrcamento';
 
 export default function Main() {
     const [infoOrcamento, setInfoOrcamento] = useState([])
@@ -161,7 +161,20 @@ export default function Main() {
                                                 Estado:
                                             </div>
                                             <div className='col-7 mt-3'>
-                                                <EstadosOrcamento />
+                                                
+                                                <select id="estadosPedido" className='form-select' onChange={(value)=> {
+                                                    setEstadoPedido(value.target.value)
+                                                }}>
+
+                                                    <option defaultValue value={estadoPedido.estado}>{estadoPedido.estado}</option>
+                                                    <option value={"Novo"}>Novo</option>
+                                                    <option value={"Em tratamento"}>Em tratamento</option>
+                                                    <option value={"Enviado"}>Enviado</option>
+                                                    <option value={"Confirmado"}>Confirmado</option>
+                                                    <option value={"Cancelado"}>Cancelado</option>
+
+                                                </select>
+
                                             </div>
 
                                         </div>
@@ -294,7 +307,7 @@ export default function Main() {
         
         contems.map((data, index) => {
             const newData = {
-                estado: "Em tratamento",
+                estado: estadoPedido,
                 descricaoServicosId: data.descricao_servico_id,
                 quantidade: data.quantidade,
                 valorServico: data.valor
