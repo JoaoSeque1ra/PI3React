@@ -5,7 +5,7 @@ export default function Main() {
   return (
     <main>
 
-      <div className="card-img-overlay bg-blue">
+      <div className="card-img-overlay bg-blue-degrade">
 
         <h6 className="fundo-obrigada w-1">OBRIGADA</h6>
 

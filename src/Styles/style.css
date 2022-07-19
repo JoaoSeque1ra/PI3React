@@ -362,7 +362,7 @@ input[type="checkbox"]:checked::after {
     font-size: 150%;
 }
 
-.bg-blue{
+.bg-blue-degrade{
     background-image: linear-gradient(to right, #008183, #64c3c7) !important;
     
 }
