@@ -45,7 +45,7 @@ export default function Main() {
 
                                 <div className="mt-5">
                                     <div className="input-group input-group-lg border cursor-pointer ">
-                                        <input onChange={(value)=> setEmpresa(value.target.value)} type="text" className="form-control cursor-pointer border-0 rounded-0" pattern="^[a-z0-9_-]{3,15}$" placeholder="Empresa*"/>
+                                        <input onChange={(value)=> setEmpresa(value.target.value)} type="text" className="form-control cursor-pointer border-0 rounded-0" pattern="^[a-z0-9_-]{3,15}$" placeholder="Empresa(opcional)"/>
                                     </div>
                                 </div> 
                                 <div className="mt-5 form-check form-check-inline">
